@@ -1,1 +1,0 @@
-All resources (images, ModTheSpire.json config file, custom strings)
