@@ -1,8 +1,8 @@
 {
-  "modid": "example_mod_id_123",
-  "name": "Example Mod Name",
+  "modid": "pengupack",
+  "name": "Pengu Pack",
   "author_list": ["Brandon Duong"],
-  "description": "An example mod to be an example.",
+  "description": "A pack (or mod) all about penguins!",
   "version": "0.1",
   "sts_version": "01-23-2020",
   "mts_version": "3.15.0",
