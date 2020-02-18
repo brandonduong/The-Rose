@@ -18,7 +18,7 @@ import theRose.util.TextureLoader;
 import static theRose.ModInitializer.makeRelicOutlinePath;
 import static theRose.ModInitializer.makeRelicPath;
 
-public class DefaultClickableRelic extends CustomRelic implements ClickableRelic { // You must implement things you want to use from StSlib
+public class ChickenWings extends CustomRelic implements ClickableRelic { // You must implement things you want to use from StSlib
     /*
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
      * StSLib for Clickable Relics
@@ -27,15 +27,15 @@ public class DefaultClickableRelic extends CustomRelic implements ClickableRelic
      */
 
     // ID, images, text.
-    public static final String ID = ModInitializer.makeID("DefaultClickableRelic");
+    public static final String ID = ModInitializer.makeID("ChickenWings");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("default_clickable_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("default_clickable_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("chicken_wings.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("chicken_wings.png"));
 
     private boolean usedThisFight = false; // You can also have a relic be only usable once per combat. Check out Hubris for more examples, including other StSlib things.
     private boolean isPlayerTurn = false; // We should make sure the relic is only activateable during our turn, not the enemies'.
 
-    public DefaultClickableRelic() {
+    public ChickenWings() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.CLINK);
 
         tips.clear();

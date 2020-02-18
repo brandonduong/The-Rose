@@ -24,7 +24,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theRose.ModInitializer;
 import theRose.cards.*;
-import theRose.relics.DefaultClickableRelic;
+import theRose.relics.ChickenWings;
 import theRose.relics.PenguinWings;
 // import theRose.relics.PlaceholderRelic2;
 
@@ -183,11 +183,11 @@ public class TheRose extends CustomPlayer {
 
         retVal.add(PenguinWings.ID); // First starting relic
         // retVal.add(PlaceholderRelic2.ID);
-        retVal.add(DefaultClickableRelic.ID); // Second starting relic
+        retVal.add(ChickenWings.ID); // Second starting relic
 
         UnlockTracker.markRelicAsSeen(PenguinWings.ID);
         // UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
-        // UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
+        // UnlockTracker.markRelicAsSeen(ChickenWings.ID);
 
         return retVal;
     }

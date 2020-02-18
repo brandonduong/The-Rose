@@ -28,8 +28,8 @@ public class PenguinWings extends CustomRelic {
     // ID, images, text.
     public static final String ID = ModInitializer.makeID("PenguinWings");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("penguin_wings.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("penguin_wings.png"));
 
     public PenguinWings() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);

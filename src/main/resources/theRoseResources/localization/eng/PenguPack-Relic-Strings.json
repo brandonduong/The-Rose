@@ -3,7 +3,7 @@
     "NAME": "Penguin Wings",
     "FLAVOR": "Chicken wing defence.",
     "DESCRIPTIONS": [
-      "Gain #b1 Flight."
+      "Gain #b1 Flight at the start of every battle."
     ]
   },
   "theRose:PlaceholderRelic2": {
@@ -13,11 +13,11 @@
       "At the start of each combat, gain #b1 #yStrength."
     ]
   },
-  "theRose:DefaultClickableRelic": {
+  "theRose:ChickenWings": {
     "NAME": "Chicken Wings",
     "FLAVOR": "Tasty. She acquired this cannibalistic taste from her sweet carer.",
     "DESCRIPTIONS": [
-      "[#2aecd7]Usable [#2aecd7]once [#2aecd7]per [#2aecd7]turn.[] NL #yHeal for 10% of your current block + 5% for every food relic.",
+      "[#2aecd7]Usable [#2aecd7]once [#2aecd7]per [#2aecd7]battle.[] NL #yHeal for 10% of your current block + 5% for every food relic.",
       "Mmm!"
     ]
   },

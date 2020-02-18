@@ -13,16 +13,19 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theRose.characters.TheRose;
 
 
+import theRose.powers.PenguinPower;
+import theRose.relics.ChickenWings;
 import theRose.relics.PenguinWings;
-import theRose.relics.DefaultClickableRelic;
 import theRose.util.TextureLoader;
 import theRose.util.IDCheckDontTouchPls;
 import theRose.variables.RoseCustomVariable;
@@ -75,7 +78,8 @@ public class ModInitializer implements
         EditStringsSubscriber,
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
-        PostInitializeSubscriber {
+        PostInitializeSubscriber
+{
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
     public static final Logger logger = LogManager.getLogger(ModInitializer.class.getName());
@@ -377,7 +381,7 @@ public class ModInitializer implements
 
         // BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
 
-        BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheRose.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new ChickenWings(), TheRose.Enums.COLOR_GRAY);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         //BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
