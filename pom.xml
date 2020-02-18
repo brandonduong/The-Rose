@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>pengupack</groupId>
-    <artifactId>pengupack</artifactId>
+    <groupId>theRose</groupId>
+    <artifactId>theRose</artifactId>
     <version>v0.0.1</version>
     <packaging>jar</packaging>
 
@@ -31,10 +31,18 @@
             <scope>system</scope>
             <systemPath>${basedir}/../lib/ModTheSpire.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>com.evacipated.cardcrawl.mod</groupId>
+            <artifactId>StSLib</artifactId>
+            <version>1.18.1</version>
+            <scope>system</scope>
+            <systemPath>C:/Users/tt/Documents/my_mods/lib/StSLib.jar</systemPath>
+            <!--<systemPath>${basedir}/../lib/StSLib.jar</systemPath>-->
+        </dependency>
     </dependencies>
 
     <build>
-        <finalName>Pengu-Pack</finalName>
+        <finalName>theRose</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -54,7 +62,7 @@
                         <phase>package</phase>
                         <configuration>
                             <target>
-                                <copy file="target/Pengu-Pack.jar" tofile="../lib/Pengu-Pack.jar"/>
+                                <copy file="target/theRose.jar" tofile="../lib/theRose.jar"/>
                             </target>
                         </configuration>
                         <goals>

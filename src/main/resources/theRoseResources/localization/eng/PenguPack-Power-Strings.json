@@ -1,0 +1,15 @@
+{
+"theDefault:CommonPower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["You applied #b", " keyword.", " keywords."]
+},
+"theDefault:RarePower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+},
+"theRose:PenguinFlight": {
+        "NAME": "Penguin Flight",
+        "DESCRIPTIONS": ["Reduce #yAttack damage taken by #b50%. Cancelled if dealt #yAttack damage ",
+                " times in one turn."]
+}
+}
