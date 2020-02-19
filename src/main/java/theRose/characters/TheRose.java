@@ -9,7 +9,6 @@ import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.blue.Strike_Blue;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -156,9 +155,12 @@ public class TheRose extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        retVal.add(Strike_Blue.ID);
+        retVal.add(Strike_Rose.ID);
+        retVal.add(Strike_Rose.ID);
+        retVal.add(Strike_Rose.ID);
+        retVal.add(Strike_Rose.ID);
+        retVal.add(Strike_Rose.ID);
         /*
-        retVal.add(DefaultCommonAttack.ID);
         retVal.add(DefaultUncommonAttack.ID);
         retVal.add(DefaultRareAttack.ID);
 
@@ -241,7 +243,7 @@ public class TheRose extends CustomPlayer {
     //Which card should be obtainable from the Match and Keep event?
     @Override
     public AbstractCard getStartCardForEvent() {
-        return new DefaultCommonAttack();
+        return new Strike_Rose();
     }
 
     // The class name as it appears next to your player name in-game

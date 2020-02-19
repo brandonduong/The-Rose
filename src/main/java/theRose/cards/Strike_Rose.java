@@ -1,9 +1,9 @@
 package theRose.cards;
 
 import basemod.abstracts.CustomCard;
-import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -24,17 +24,16 @@ import static theRose.ModInitializer.makeCardPath;
 // Abstract Dynamic Card builds up on Abstract Default Card even more and makes it so that you don't need to add
 // the NAME and the DESCRIPTION into your card - it'll get it automatically. Of course, this functionality could have easily
 // Been added to the default card rather than creating a new Dynamic one, but was done so to deliberately.
-public class DefaultCommonAttack extends CustomCard {
-
+public class Strike_Rose extends CustomCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Strike Deal 7(9) damage.
+     * Strike Deal 6(9) damage.
      */
 
     // TEXT DECLARATION
 
-    public static final String ID = ModInitializer.makeID(DefaultCommonAttack.class.getSimpleName());
+    public static final String ID = ModInitializer.makeID("Strike_Rose");
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public static final String IMG = makeCardPath("Attack.png");
@@ -69,7 +68,7 @@ public class DefaultCommonAttack extends CustomCard {
 
     // /STAT DECLARATION/
 
-    public DefaultCommonAttack() {
+    public Strike_Rose() {
         super(ID, NAME, IMG, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
         // Aside from baseDamage/MagicNumber/Block there's also a few more.
@@ -77,7 +76,7 @@ public class DefaultCommonAttack extends CustomCard {
 
         baseDamage = DAMAGE;
 
-        this.tags.add(BaseModCardTags.BASIC_STRIKE); //Tag your strike, defend and form (Wraith form, Demon form, Echo form, etc.) cards so that they function correctly.
+        this.tags.add(CardTags.STARTER_STRIKE); //Tag your strike, defend and form (Wraith form, Demon form, Echo form, etc.) cards so that they function correctly.
         this.tags.add(CardTags.STRIKE);
     }
 
@@ -96,6 +95,10 @@ public class DefaultCommonAttack extends CustomCard {
                         // I.e. i want energy gain or card draw, lemme check out Adrenaline
                         // P.s. if you want to damage ALL enemies OUTSIDE of a card, check out the custom orb.
                         AbstractGameAction.AttackEffect.SLASH_HORIZONTAL)); // The animation the damage action uses to hit.
+    }
+
+    public AbstractCard makeCopy() {
+        return new Strike_Rose();
     }
 
     // Upgraded stats.
