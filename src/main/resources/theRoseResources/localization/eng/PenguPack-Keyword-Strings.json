@@ -7,14 +7,13 @@
     "DESCRIPTION": "Whenever you play a card, gain 1 dexterity this turn only."
   },
   {
-    "PROPER_NAME": "Multiword Keyword",
+    "PROPER_NAME": "Penguin Flight",
     "NAMES": [
-      "Multiword Keyword",
-      "multiword_keyword",
-      "multiword_keywords",
-      "multikey",
-      "multikeyword"
+      "Penguin Flight",
+      "penguin_flight",
+      "penguin flight",
+      "Penguin_Flight"
     ],
-    "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest is to match keywords like the single word keyword."
+    "DESCRIPTION": "Reduce #yAttack damage taken by #b50%. Cancelled if dealt #yAttack damage X times in one turn."
   }
 ]

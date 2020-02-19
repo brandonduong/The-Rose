@@ -3,7 +3,7 @@
     "NAME": "Penguin Wings",
     "FLAVOR": "Chicken wing defence.",
     "DESCRIPTIONS": [
-      "Gain #b1 Flight at the start of every battle."
+      "Gain #b1 Penguin_Flight at the start of every battle."
     ]
   },
   "theRose:PlaceholderRelic2": {

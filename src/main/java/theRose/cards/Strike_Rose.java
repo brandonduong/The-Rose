@@ -33,7 +33,7 @@ public class Strike_Rose extends CustomCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = ModInitializer.makeID("Strike_Rose");
+    public static final String ID = ModInitializer.makeID(Strike_Rose.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public static final String IMG = makeCardPath("Attack.png");

@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import theRose.cards.Defend_Rose;
 import theRose.cards.Strike_Rose;
 import theRose.characters.TheRose;
 
@@ -413,6 +414,7 @@ public class ModInitializer implements
         // when generating card rewards/shop screen items.
 
         BaseMod.addCard(new Strike_Rose());
+        BaseMod.addCard(new Defend_Rose());
 
         /*
         BaseMod.addCard(new OrbSkill());
@@ -434,6 +436,7 @@ public class ModInitializer implements
         // before playing your mod.
 
         UnlockTracker.unlockCard(Strike_Rose.ID);
+        UnlockTracker.unlockCard(Defend_Rose.ID);
         /*
         UnlockTracker.unlockCard(OrbSkill.ID);
         UnlockTracker.unlockCard(DefaultSecondMagicNumberSkill.ID);
@@ -519,7 +522,7 @@ public class ModInitializer implements
 
         if (keywords != null) {
             for (Keyword keyword : keywords) {
-                BaseMod.addKeyword(getModID().toLowerCase(), keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
+                BaseMod.addKeyword(keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
                 //  getModID().toLowerCase() makes your keyword mod specific (it won't show up in other cards that use that word)
             }
         }
