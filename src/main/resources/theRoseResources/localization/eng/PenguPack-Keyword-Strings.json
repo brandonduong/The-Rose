@@ -7,13 +7,11 @@
     "DESCRIPTION": "Whenever you play a card, gain 1 dexterity this turn only."
   },
   {
-    "PROPER_NAME": "Penguin Flight",
+    "PROPER_NAME": "Penguin-Flight",
     "NAMES": [
-      "Penguin Flight",
-      "penguin flight",
-      "Penguin flight",
-      "flight",
-      "Flight"
+      "Penguin-Flight",
+      "penguin-flight",
+      "Penguin-flight"
     ],
     "DESCRIPTION": "Reduce #yAttack damage taken by #b50%. Cancelled if dealt #yAttack damage X times in one turn."
   }

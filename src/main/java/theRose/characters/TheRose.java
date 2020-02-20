@@ -168,6 +168,7 @@ public class TheRose extends CustomPlayer {
         retVal.add(Defend_Rose.ID);
 
         retVal.add(BeakDrill.ID);
+        retVal.add(Fly.ID);
         /*
         retVal.add(DefaultUncommonAttack.ID);
         retVal.add(DefaultRareAttack.ID);

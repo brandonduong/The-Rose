@@ -21,6 +21,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theRose.cards.BeakDrill;
 import theRose.cards.Defend_Rose;
+import theRose.cards.Fly;
 import theRose.cards.Strike_Rose;
 import theRose.characters.TheRose;
 
@@ -417,6 +418,7 @@ public class ModInitializer implements
         BaseMod.addCard(new Strike_Rose());
         BaseMod.addCard(new Defend_Rose());
         BaseMod.addCard(new BeakDrill());
+        BaseMod.addCard(new Fly());
 
         /*
         BaseMod.addCard(new OrbSkill());
@@ -440,6 +442,7 @@ public class ModInitializer implements
         UnlockTracker.unlockCard(Strike_Rose.ID);
         UnlockTracker.unlockCard(Defend_Rose.ID);
         UnlockTracker.unlockCard(BeakDrill.ID);
+        UnlockTracker.unlockCard(Fly.ID);
         /*
         UnlockTracker.unlockCard(OrbSkill.ID);
         UnlockTracker.unlockCard(DefaultSecondMagicNumberSkill.ID);

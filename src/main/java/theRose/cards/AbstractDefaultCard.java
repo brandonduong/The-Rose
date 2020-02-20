@@ -5,10 +5,10 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class AbstractDefaultCard extends CustomCard{
-    public int defaultSecondMagicNumber; // New modifiable stat
-    public int defaultBaseSecondMagicNumber;
-    public boolean upgradedDefaultSecondMagicNumber; // True if card is upgraded
-    public boolean isDefaultSecondMagicNumberModified; // True if card is modified
+    public int SecondMagicNumber; // New modifiable stat
+    public int BaseSecondMagicNumber;
+    public boolean upgradedSecondMagicNumber; // True if card is upgraded
+    public boolean isSecondMagicNumberModified; // True if card is modified
 
     public AbstractDefaultCard(final String id,
                                final String name,
@@ -28,21 +28,21 @@ public class AbstractDefaultCard extends CustomCard{
         isDamageModified = false;
         isBlockModified = false;
         isMagicNumberModified = false;
-        isDefaultSecondMagicNumberModified = false;
+        isSecondMagicNumberModified = false;
     }
 
     public void displayUpgrades() { // Display the upgrade (when click on card to upgrade)
         super.displayUpgrades();
-        if (upgradedDefaultSecondMagicNumber) { // If card is upgraded
-            defaultSecondMagicNumber = defaultBaseSecondMagicNumber; // Show how the number changes out of combat
-            isDefaultSecondMagicNumberModified = true; // True, to highlight the number changing to green
+        if (upgradedSecondMagicNumber) { // If card is upgraded
+            SecondMagicNumber = BaseSecondMagicNumber; // Show how the number changes out of combat
+            isSecondMagicNumberModified = true; // True, to highlight the number changing to green
         }
     }
 
     public void upgradeDefaultSecondMagicNumber(int amount) { // Handles upgrading
-        defaultBaseSecondMagicNumber += amount; // Upgrade the number by amount
-        defaultSecondMagicNumber = defaultBaseSecondMagicNumber;
-        upgradedDefaultSecondMagicNumber = true; // Trigger flag (now upgraded)
+        BaseSecondMagicNumber += amount; // Upgrade the number by amount
+        SecondMagicNumber = BaseSecondMagicNumber;
+        upgradedSecondMagicNumber = true; // Trigger flag (now upgraded)
     }
 
     public void upgrade(){

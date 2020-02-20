@@ -12,6 +12,11 @@
     "DESCRIPTION": "Deal ( X times 2 ) times !D! damage.",
     "UPGRADE_DESCRIPTION": "Deal ( X times 2 ) times !D! damage."
   },
+  "theRose:Fly": {
+    "NAME": "Fly High to the Sky!",
+    "DESCRIPTION": "Gain 1 Penguin-Flight.",
+    "UPGRADE_DESCRIPTION": "Gain 2 Penguin-Flight."
+  },
 
   "theRose:DefaultCommonPower": {
     "NAME": "Hold Place",

@@ -3,14 +3,7 @@
     "NAME": "Penguin Wings",
     "FLAVOR": "Chicken wing defence.",
     "DESCRIPTIONS": [
-      "Gain #b1 #yPenguin #yFlight at the start of every battle."
-    ]
-  },
-  "theRose:PlaceholderRelic2": {
-    "NAME": "Placeholder Relic 2",
-    "FLAVOR": "You feel stronger.",
-    "DESCRIPTIONS": [
-      "At the start of each combat, gain #b1 #yStrength."
+      "Gain #b1 #yPenguin-Flight at the start of every battle."
     ]
   },
   "theRose:ChickenWings": {
