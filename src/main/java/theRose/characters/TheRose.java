@@ -159,9 +159,7 @@ public class TheRose extends CustomPlayer {
         retVal.add(Strike_Rose.ID);
         retVal.add(Strike_Rose.ID);
         retVal.add(Strike_Rose.ID);
-        retVal.add(Strike_Rose.ID);
 
-        retVal.add(Defend_Rose.ID);
         retVal.add(Defend_Rose.ID);
         retVal.add(Defend_Rose.ID);
         retVal.add(Defend_Rose.ID);

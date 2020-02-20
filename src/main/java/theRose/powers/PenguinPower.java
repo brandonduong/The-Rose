@@ -20,14 +20,12 @@ public class PenguinPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private int storedAmount;
 
     public PenguinPower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = "Flight";
         this.owner = owner;
         this.amount = amount;
-        this.storedAmount = amount;
         this.updateDescription();
         this.loadRegion("flight");
         this.priority = 50;
@@ -42,7 +40,6 @@ public class PenguinPower extends AbstractPower {
     }
 
     public void atStartOfTurn() {
-        this.amount = this.storedAmount;
         this.updateDescription();
     }
 

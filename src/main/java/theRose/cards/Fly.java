@@ -21,7 +21,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class Fly extends AbstractDynamicCard {
 
     /*
-     * Fly: Gain 1 Penguin Flight
+     * Fly High to the Sky!: Gain 1 Penguin Flight
      */
 
     // TEXT DECLARATION
@@ -54,7 +54,7 @@ public class Fly extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Create an int which equals to your current energy times 2.
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                 new PenguinPower(AbstractDungeon.player, baseMagicNumber)));
 
     }
