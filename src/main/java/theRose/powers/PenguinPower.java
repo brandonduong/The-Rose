@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.FlightPower;
+import com.megacrit.cardcrawl.powers.FrailPower;
 import theRose.ModInitializer;
 
 public class PenguinPower extends AbstractPower {
@@ -48,6 +49,10 @@ public class PenguinPower extends AbstractPower {
     public float atDamageFinalReceive(float damage, DamageType type) {
         return this.calculateDamageTakenAmount(damage, type);
     }
+
+    public float modifyBlock(float blockAmount) {
+        return blockAmount * 0.50F;
+    } // Reduce block by 50%
 
     private float calculateDamageTakenAmount(float damage, DamageType type) {
         return type != DamageType.HP_LOSS && type != DamageType.THORNS ? damage / 2.0F : damage;

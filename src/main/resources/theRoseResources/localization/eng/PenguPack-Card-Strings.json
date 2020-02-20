@@ -9,7 +9,8 @@
   },
   "theRose:BeakDrill": {
     "NAME": "Beak Drill",
-    "DESCRIPTION": "Deal !D! Damage (X * 2) times. NL (Deal !theRose: * 2! damage total.)"
+    "DESCRIPTION": "Deal ( X times 2 ) times !D! damage.",
+    "UPGRADE_DESCRIPTION": "Deal ( X times 2 ) times !D! damage."
   },
 
   "theRose:DefaultCommonPower": {
