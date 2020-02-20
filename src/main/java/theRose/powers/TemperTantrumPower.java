@@ -50,6 +50,7 @@ public class TemperTantrumPower extends AbstractPower implements CloneablePowerI
 
     @Override
     public void atStartOfTurn() { // At the start of your turn
+        // Create a Flipper Flap in hand
         for(int i = 0; i < this.amount; ++i) {
             AbstractCard card = new FlipperFlap();
             this.addToBot(new MakeTempCardInHandAction(card));

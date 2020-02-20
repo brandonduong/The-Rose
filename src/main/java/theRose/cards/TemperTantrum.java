@@ -54,6 +54,7 @@ public class TemperTantrum extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        // Apply Temper Tantrum power to self
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
                 new TemperTantrumPower(AbstractDungeon.player, AbstractDungeon.player, baseMagicNumber)));
     }

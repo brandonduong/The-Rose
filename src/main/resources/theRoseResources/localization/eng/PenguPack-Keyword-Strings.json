@@ -14,5 +14,16 @@
       "Penguin-flight"
     ],
     "DESCRIPTION": "Reduce #yAttack damage taken by #b50%. Cancelled if dealt #yAttack damage X times in one turn."
+  },
+  {
+    "PROPER_NAME": "Flipper Flap",
+    "NAMES": [
+      "Flipper Flap",
+      "Flipper",
+      "Flap",
+      "flipper",
+      "flap"
+    ],
+    "DESCRIPTION": "Flipper Flaps are 0-cost Attack cards dealing 1 damage times 2 (3)."
   }
 ]
