@@ -36,7 +36,7 @@ public class Strike_Rose extends CustomCard {
     public static final String ID = ModInitializer.makeID(Strike_Rose.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("Attack.png");
+    public static final String IMG = makeCardPath("Strike_Rose.png");
     // Setting the image as as easy as can possibly be now. You just need to provide the image name
     // and make sure it's in the correct folder. That's all.
     // There's makeCardPath, makeRelicPath, power, orb, event, etc..

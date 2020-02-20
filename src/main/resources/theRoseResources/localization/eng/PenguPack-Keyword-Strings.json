@@ -10,9 +10,10 @@
     "PROPER_NAME": "Penguin Flight",
     "NAMES": [
       "Penguin Flight",
-      "penguin_flight",
       "penguin flight",
-      "Penguin_Flight"
+      "Penguin flight",
+      "flight",
+      "Flight"
     ],
     "DESCRIPTION": "Reduce #yAttack damage taken by #b50%. Cancelled if dealt #yAttack damage X times in one turn."
   }

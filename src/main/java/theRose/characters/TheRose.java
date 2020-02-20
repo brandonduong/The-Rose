@@ -64,7 +64,7 @@ public class TheRose extends CustomPlayer {
     public static final int STARTING_HP = 75;
     public static final int MAX_HP = 75;
     public static final int STARTING_GOLD = 99;
-    public static final int CARD_DRAW = 9;
+    public static final int CARD_DRAW = 5;
     public static final int ORB_SLOTS = 0;
 
     // =============== /BASE STATS/ =================
@@ -167,6 +167,7 @@ public class TheRose extends CustomPlayer {
         retVal.add(Defend_Rose.ID);
         retVal.add(Defend_Rose.ID);
 
+        retVal.add(BeakDrill.ID);
         /*
         retVal.add(DefaultUncommonAttack.ID);
         retVal.add(DefaultRareAttack.ID);

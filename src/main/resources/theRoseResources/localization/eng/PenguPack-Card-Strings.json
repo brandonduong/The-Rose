@@ -7,6 +7,11 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
+  "theRose:BeakDrill": {
+    "NAME": "Beak Drill",
+    "DESCRIPTION": "Deal !D! Damage (X * 2) times. NL (Deal !theRose: * 2! damage total.)"
+  },
+
   "theRose:DefaultCommonPower": {
     "NAME": "Hold Place",
     "DESCRIPTION": "Gain !M! theRose:Keyword.",
@@ -37,10 +42,6 @@
   "theRose:DefaultRarePower": {
     "NAME": "In-Progress Form",
     "DESCRIPTION": "At the start of your turn, play a TOUCH."
-  },
-  "theRose:DefaultAttackWithVariable": {
-    "NAME": "Special Strike",
-    "DESCRIPTION": "Deal !D! Damage [E] times. NL (Deal !theRose:ENERGY_DAMAGE! damage total.)"
   },
   "theRose:DefaultSecondMagicNumberSkill": {
     "NAME": "Cool 2 Number Card",

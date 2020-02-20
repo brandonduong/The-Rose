@@ -27,7 +27,7 @@ public class Defend_Rose extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = ModInitializer.makeID(Defend_Rose.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Defend_Rose.png");
 
     // /TEXT DECLARATION/
 
