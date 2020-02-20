@@ -421,6 +421,7 @@ public class ModInitializer implements
         // Rest of the cards
         BaseMod.addCard(new Workout());
         BaseMod.addCard(new FlipperFlap());
+        BaseMod.addCard(new TemperTantrum());
 
         /*
         BaseMod.addCard(new OrbSkill());

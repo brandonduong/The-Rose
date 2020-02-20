@@ -11,5 +11,9 @@
         "NAME": "Penguin Flight",
         "DESCRIPTIONS": ["Reduce #yAttack damage taken by #b50%. Reduce #yBlock received by #b50%. Cancelled if dealt #yAttack damage ",
                 " times in one turn."]
+},
+"theRose:TemperTantrumPower": {
+        "NAME": "Temper Tantrum",
+        "DESCRIPTIONS": ["At the beginning of each turn, gain #b", " Flipper Flap."]
 }
 }

@@ -27,6 +27,12 @@
     "DESCRIPTION": "Deal !D! damage 2 times.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage 3 times."
   },
+  "theRose:TemperTantrum": {
+    "NAME": "Temper Tantrum",
+    "DESCRIPTION": "At the start of each turn, gain !M! Flipper Flap."
+
+  },
+
   "theRose:DefaultUncommonAttack": {
     "NAME": "Big slap",
     "DESCRIPTION": "Deal !D! Damage."

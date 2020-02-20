@@ -170,9 +170,11 @@ public class TheRose extends CustomPlayer {
         retVal.add(Fly.ID);
 
 
+
         // TESTING ONLY (THESE ARE NOT STARTING DECK CARDS)
         retVal.add(Workout.ID);
         retVal.add(FlipperFlap.ID);
+        retVal.add(TemperTantrum.ID);
 
         return retVal;
     }
