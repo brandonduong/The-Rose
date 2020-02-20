@@ -17,11 +17,15 @@
     "DESCRIPTION": "Gain 1 Penguin-Flight.",
     "UPGRADE_DESCRIPTION": "Gain 2 Penguin-Flight."
   },
-
-  "theRose:DefaultCommonPower": {
-    "NAME": "Hold Place",
-    "DESCRIPTION": "Gain !M! theRose:Keyword.",
-    "UPGRADE_DESCRIPTION": "Gain !M! theRose:Keywords."
+  "theRose:Workout": {
+    "NAME": "Workout",
+    "DESCRIPTION": "Gain 1 Strength.",
+    "UPGRADE_DESCRIPTION": "Gain 2 Strength."
+  },
+  "theRose:FlipperFlap": {
+    "NAME": "Flipper Flap",
+    "DESCRIPTION": "Deal !D! damage 2 times.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage 3 times."
   },
   "theRose:DefaultUncommonAttack": {
     "NAME": "Big slap",

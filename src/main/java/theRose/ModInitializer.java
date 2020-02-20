@@ -19,10 +19,7 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import theRose.cards.BeakDrill;
-import theRose.cards.Defend_Rose;
-import theRose.cards.Fly;
-import theRose.cards.Strike_Rose;
+import theRose.cards.*;
 import theRose.characters.TheRose;
 
 
@@ -415,10 +412,15 @@ public class ModInitializer implements
         // Don't comment out/delete these cards (yet). You need 1 of each type and rarity (technically) for your game not to crash
         // when generating card rewards/shop screen items.
 
+        // Starting deck cards
         BaseMod.addCard(new Strike_Rose());
         BaseMod.addCard(new Defend_Rose());
         BaseMod.addCard(new BeakDrill());
         BaseMod.addCard(new Fly());
+
+        // Rest of the cards
+        BaseMod.addCard(new Workout());
+        BaseMod.addCard(new FlipperFlap());
 
         /*
         BaseMod.addCard(new OrbSkill());
@@ -443,6 +445,7 @@ public class ModInitializer implements
         UnlockTracker.unlockCard(Defend_Rose.ID);
         UnlockTracker.unlockCard(BeakDrill.ID);
         UnlockTracker.unlockCard(Fly.ID);
+
         /*
         UnlockTracker.unlockCard(OrbSkill.ID);
         UnlockTracker.unlockCard(DefaultSecondMagicNumberSkill.ID);

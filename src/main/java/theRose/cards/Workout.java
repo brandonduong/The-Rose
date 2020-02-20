@@ -10,7 +10,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import com.sun.corba.se.spi.orbutil.threadpool.Work;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
 import theRose.powers.PenguinPower;
@@ -18,16 +20,16 @@ import theRose.variables.RoseSecondMagicNumber;
 
 import static theRose.ModInitializer.makeCardPath;
 
-public class Fly extends AbstractDynamicCard {
+public class Workout extends AbstractDynamicCard {
 
     /*
-     * Fly High to the Sky!: Gain 1 Penguin Flight
+     * Workout: Gain 1 (2) Strength
      */
 
     // TEXT DECLARATION
 
-    public static final String ID = ModInitializer.makeID(Fly.class.getSimpleName());
-    public static final String IMG = makeCardPath("Fly.png");
+    public static final String ID = ModInitializer.makeID(Workout.class.getSimpleName());
+    public static final String IMG = makeCardPath("Power.png");
 
     // /TEXT DECLARATION/
 
@@ -36,16 +38,16 @@ public class Fly extends AbstractDynamicCard {
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 2;
-    private static final int BUFF = 1; // Give 1 Penguin Flight
+    private static final int COST = 1;
+    private static final int BUFF = 1; // Give 1 Strength
     private static final int BUFF_UPGRADE = 1; // Add 1 to upgrade
 
     // /STAT DECLARATION/
 
-    public Fly() {
+    public Workout() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = BUFF;
     }
@@ -55,7 +57,7 @@ public class Fly extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Create an int which equals to your current energy times 2.
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new PenguinPower(AbstractDungeon.player, baseMagicNumber)));
+                new StrengthPower(AbstractDungeon.player, baseMagicNumber)));
 
     }
 

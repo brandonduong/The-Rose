@@ -1,8 +1,6 @@
 package theRose.cards;
 
-import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,50 +11,57 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
-import theRose.powers.PenguinPower;
-import theRose.variables.RoseSecondMagicNumber;
 
 import static theRose.ModInitializer.makeCardPath;
 
-public class Fly extends AbstractDynamicCard {
+public class FlipperFlap extends AbstractDynamicCard {
 
     /*
-     * Fly High to the Sky!: Gain 1 Penguin Flight
+     * Flipper Flap: Deal 1 damage 2 (3) times.
      */
 
     // TEXT DECLARATION
 
-    public static final String ID = ModInitializer.makeID(Fly.class.getSimpleName());
-    public static final String IMG = makeCardPath("Fly.png");
+    public static final String ID = ModInitializer.makeID(FlipperFlap.class.getSimpleName());
+    public static final String IMG = makeCardPath("Attack.png");
 
     // /TEXT DECLARATION/
 
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 2;
-    private static final int BUFF = 1; // Give 1 Penguin Flight
-    private static final int BUFF_UPGRADE = 1; // Add 1 to upgrade
+    private static final int COST = 0;
+    private static final int DAMAGE = 1;
+    private static final int TIMES = 2;
+    private static final int UPGRADE_TIMES = 1;
+
+    public int specialDamage;
 
     // /STAT DECLARATION/
 
-    public Fly() {
+    public FlipperFlap() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = BUFF;
+        baseDamage = DAMAGE;
+        baseMagicNumber = TIMES;
+
+        isMultiDamage = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Create an int which equals to your current energy times 2.
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new PenguinPower(AbstractDungeon.player, baseMagicNumber)));
 
+        // Create damage actions
+        for (int i = 0; i < baseMagicNumber; i++) {
+            AbstractDungeon.actionManager.addToBottom(
+                    new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+                            AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        }
     }
 
     // Upgraded stats.
@@ -64,7 +69,7 @@ public class Fly extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(BUFF_UPGRADE);
+            upgradeMagicNumber(UPGRADE_TIMES);
             initializeDescription();
         }
     }
