@@ -1,5 +1,6 @@
 package theRose.cards;
 
+import basemod.patches.com.megacrit.cardcrawl.powers.CloneablePowersPatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -9,21 +10,23 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
 
 import static theRose.ModInitializer.makeCardPath;
 
-public class FlipperFlap extends AbstractDynamicCard {
+public class Peck extends AbstractDynamicCard {
 
     /*
-     * Flipper Flap: Deal 1 damage 2 (3) times.
+     * Peck: Apply 1 vulnerable. If in flight, apply 1 (2) weak too.
      */
 
     // TEXT DECLARATION
 
-    public static final String ID = ModInitializer.makeID(FlipperFlap.class.getSimpleName());
+    public static final String ID = ModInitializer.makeID(Peck.class.getSimpleName());
     public static final String IMG = makeCardPath("Attack.png");
 
     // /TEXT DECLARATION/
@@ -31,36 +34,38 @@ public class FlipperFlap extends AbstractDynamicCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 0;
-    private static final int DAMAGE = 1;
-    private static final int TIMES = 2;
-    private static final int UPGRADE_TIMES = 1;
+    private static final int COST = 1;
+    private static final int BUFF = 1; // Vulnerable stacks
+    private static final int BUFF_2 = 1; // Weak stacks
+    private static final int UPGRADE_BUFF_2 = 1;
 
     // /STAT DECLARATION/
 
-    public FlipperFlap() {
+    public Peck() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
-        baseMagicNumber = TIMES;
-
-        isMultiDamage = true;
+        baseMagicNumber = BUFF;
+        SecondMagicNumber = BaseSecondMagicNumber = BUFF_2;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        // Create damage actions
-        for (int i = 0; i < baseMagicNumber; i++) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
-                            AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        // Always apply vulnerable
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player,
+                new VulnerablePower(p, baseMagicNumber, false), baseMagicNumber));
+
+        // Only apply weak if in flight
+        if (AbstractDungeon.player.hasPower("Flight")) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player,
+                    new WeakPower(p, SecondMagicNumber, false), SecondMagicNumber));
         }
+
     }
 
     // Upgraded stats.
@@ -68,7 +73,7 @@ public class FlipperFlap extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_TIMES);
+            upgradeSecondMagicNumber(UPGRADE_BUFF_2);
             initializeDescription();
         }
     }

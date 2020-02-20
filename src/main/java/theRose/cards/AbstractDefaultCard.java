@@ -39,7 +39,7 @@ public class AbstractDefaultCard extends CustomCard{
         }
     }
 
-    public void upgradeDefaultSecondMagicNumber(int amount) { // Handles upgrading
+    public void upgradeSecondMagicNumber(int amount) { // Handles upgrading
         BaseSecondMagicNumber += amount; // Upgrade the number by amount
         SecondMagicNumber = BaseSecondMagicNumber;
         upgradedSecondMagicNumber = true; // Trigger flag (now upgraded)

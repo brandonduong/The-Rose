@@ -24,14 +24,20 @@
   },
   "theRose:FlipperFlap": {
     "NAME": "Flipper Flap",
-    "DESCRIPTION": "Deal !D! damage 2 times.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage 3 times."
+    "DESCRIPTION": "Deal !D! damage !M! times."
   },
   "theRose:TemperTantrum": {
     "NAME": "Temper Tantrum",
     "DESCRIPTION": "At the start of each turn, gain !M! Flipper Flap."
 
   },
+  "theRose:Peck": {
+    "NAME": "Peck",
+    "DESCRIPTION":"Apply !M! vulnerable. If in flight, apply !theRose:SecondMagic! weak too."
+  },
+
+
+
 
   "theRose:DefaultUncommonAttack": {
     "NAME": "Big slap",

@@ -175,6 +175,7 @@ public class TheRose extends CustomPlayer {
         retVal.add(Workout.ID);
         retVal.add(FlipperFlap.ID);
         retVal.add(TemperTantrum.ID);
+        retVal.add(Peck.ID);
 
         return retVal;
     }
