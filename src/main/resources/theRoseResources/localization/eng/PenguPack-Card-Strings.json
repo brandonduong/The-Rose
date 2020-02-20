@@ -14,8 +14,7 @@
   },
   "theRose:Fly": {
     "NAME": "Fly High to the Sky!",
-    "DESCRIPTION": "Gain 1 Penguin-Flight.",
-    "UPGRADE_DESCRIPTION": "Gain 2 Penguin-Flight."
+    "DESCRIPTION": "Gain !M! Penguin-Flight."
   },
   "theRose:Workout": {
     "NAME": "Workout",
@@ -29,8 +28,12 @@
   "theRose:TemperTantrum": {
     "NAME": "Temper Tantrum",
     "DESCRIPTION": "At the start of each turn, gain !M! Flipper Flap."
-
   },
+  "theRose:BeakDive": {
+    "NAME": "Beak Dive",
+    "DESCRIPTION": "Can only be played when in flight. Deal !D! damage. Lose all flight."
+  },
+
   "theRose:Peck": {
     "NAME": "Peck",
     "DESCRIPTION":"Apply !M! vulnerable. If in flight, apply !theRose:SecondMagic! weak too."
