@@ -429,6 +429,8 @@ public class ModInitializer implements
         BaseMod.addCard(new EnergyDrink());
         BaseMod.addCard(new Donut());
         BaseMod.addCard(new FriedChicken());
+        BaseMod.addCard(new Sushi());
+        BaseMod.addCard(new Hamburger());
 
         /*
         BaseMod.addCard(new OrbSkill());
