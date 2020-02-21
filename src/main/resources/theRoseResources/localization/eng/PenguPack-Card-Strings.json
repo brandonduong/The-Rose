@@ -39,7 +39,7 @@
   },
   "theRose:Foodies": {
     "NAME": "Foodies!",
-    "DESCRIPTION": "Create !M! food items in your discard pile."
+    "DESCRIPTION": "Create !M! random food items in your discard pile."
   },
   "theRose:HungryForm": {
     "NAME": "Hungry Form",
@@ -52,6 +52,10 @@
   "theRose:Donut": {
     "NAME": "Donut",
     "DESCRIPTION": "Draw !M! Card. Lose !theRose:SecondMagic! Flight. Exhaust."
+  },
+  "theRose:FriedChicken": {
+    "NAME": "Fried Chicken",
+    "DESCRIPTION": "Gain 2 Strength. At the end of this turn, lose 2 Strength. Exhaust."
   },
 
 

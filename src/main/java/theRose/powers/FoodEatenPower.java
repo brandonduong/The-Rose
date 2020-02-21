@@ -13,10 +13,10 @@ import theRose.ModInitializer;
 import theRose.cards.FlipperFlap;
 import theRose.util.TextureLoader;
 
-public class TemperTantrumPower extends AbstractPower implements CloneablePowerInterface {
+public class FoodEatenPower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
-    public static final String POWER_ID = ModInitializer.makeID("TemperTantrumPower");
+    public static final String POWER_ID = ModInitializer.makeID("FoodEatenPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -25,7 +25,7 @@ public class TemperTantrumPower extends AbstractPower implements CloneablePowerI
     private static final Texture tex84 = TextureLoader.getTexture("theRoseResources/images/powers/placeholder_power84.png");
     private static final Texture tex32 = TextureLoader.getTexture("theRoseResources/images/powers/placeholder_power32.png");
 
-    public TemperTantrumPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
+    public FoodEatenPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
         ID = POWER_ID;
 
@@ -45,11 +45,7 @@ public class TemperTantrumPower extends AbstractPower implements CloneablePowerI
 
     @Override
     public void atStartOfTurn() { // At the start of your turn
-        // Create a Flipper Flap in hand
-        for(int i = 0; i < this.amount; ++i) {
-            AbstractCard card = new FlipperFlap();
-            this.addToBot(new MakeTempCardInHandAction(card));
-        }
+
     }
 
     @Override

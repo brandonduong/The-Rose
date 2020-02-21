@@ -15,5 +15,9 @@
 "theRose:TemperTantrumPower": {
         "NAME": "Temper Tantrum",
         "DESCRIPTIONS": ["At the beginning of each turn, gain #b", " Flipper Flap."]
+},
+"theRose:FoodEatenPower": {
+        "NAME": "Food Eaten",
+        "DESCRIPTIONS": ["Eaten ", " Food items."]
 }
 }
