@@ -18,8 +18,7 @@
   },
   "theRose:Workout": {
     "NAME": "Workout",
-    "DESCRIPTION": "Gain 1 Strength.",
-    "UPGRADE_DESCRIPTION": "Gain 2 Strength."
+    "DESCRIPTION": "Gain !M! Strength."
   },
   "theRose:FlipperFlap": {
     "NAME": "Flipper Flap",
@@ -37,9 +36,9 @@
     "NAME": "Peck",
     "DESCRIPTION": "Apply !M! vulnerable. If in flight, apply !theRose:SecondMagic! weak too."
   },
-  "theRose:Foodies": {
-    "NAME": "Foodies!",
-    "DESCRIPTION": "Create !M! random food items in your discard pile."
+  "theRose:UberDishes": {
+    "NAME": "UberDishes",
+    "DESCRIPTION": "Create !M! random (upgraded) food items in your discard pile."
   },
   "theRose:HungryForm": {
     "NAME": "Hungry Form",

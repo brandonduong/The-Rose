@@ -2,8 +2,8 @@ package theRose.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
@@ -53,7 +53,7 @@ public class Hamburger extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Gain Block
-        this.addToBot(new GainBlockAction(p, p, baseBlock));
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
 
         // Food eaten += 3
         this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, FOOD_VALUE)));

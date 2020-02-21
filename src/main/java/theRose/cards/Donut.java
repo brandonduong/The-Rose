@@ -71,10 +71,12 @@ public class Donut extends AbstractDynamicCard {
         }
 
         // Remove Flight if stacks will go to 0
+        ModInitializer.logger.info("HELLO");
         if (p.getPower("Flight").amount == 1) {
             AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Flight"));
         }
 
+        ModInitializer.logger.info("HELLO");
         // Food eaten += 1
         this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, FOOD_VALUE)));
 
