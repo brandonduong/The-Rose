@@ -26,7 +26,6 @@ import theRose.ModInitializer;
 import theRose.cards.*;
 import theRose.relics.ChickenWings;
 import theRose.relics.PenguinWings;
-// import theRose.relics.PlaceholderRelic2;
 
 import java.util.ArrayList;
 
@@ -177,6 +176,8 @@ public class TheRose extends CustomPlayer {
         retVal.add(TemperTantrum.ID);
         retVal.add(Peck.ID);
         retVal.add(BeakDive.ID);
+        retVal.add(EnergyDrink.ID);
+        retVal.add(Donut.ID);
 
         return retVal;
     }

@@ -1,21 +1,16 @@
 package theRose.cards;
 
-import basemod.patches.com.megacrit.cardcrawl.powers.CloneablePowersPatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
+
+import java.util.Iterator;
 
 import static theRose.ModInitializer.makeCardPath;
 
@@ -54,11 +49,32 @@ public class BeakDive extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+
+        // Deal damage
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                         AbstractGameAction.AttackEffect.SMASH));
 
+        // Lose all flight
         AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Flight"));
+    }
+
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        boolean canUse = super.canUse(p, m);
+        if (!canUse) {
+            return false;
+        } else {
+            // Can only use if in flight
+            if (p.hasPower("Flight")) {
+                canUse = true;
+            }
+            else {
+                canUse = false;
+                this.cantUseMessage = "Can only be used in flight.";
+            }
+
+            return canUse;
+        }
     }
 
     // Upgraded stats.

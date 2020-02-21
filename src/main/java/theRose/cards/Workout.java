@@ -1,22 +1,12 @@
 package theRose.cards;
 
-import basemod.helpers.BaseModCardTags;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import com.sun.corba.se.spi.orbutil.threadpool.Work;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
-import theRose.powers.PenguinPower;
-import theRose.variables.RoseSecondMagicNumber;
 
 import static theRose.ModInitializer.makeCardPath;
 

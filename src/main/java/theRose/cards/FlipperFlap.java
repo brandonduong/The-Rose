@@ -1,15 +1,11 @@
 package theRose.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
 
@@ -18,7 +14,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class FlipperFlap extends AbstractDynamicCard {
 
     /*
-     * Flipper Flap: Deal 1 damage 2 (3) times.
+     * Flipper Flap: Deal 1 damage 2 (3) times. Exhaust.
      */
 
     // TEXT DECLARATION
@@ -48,6 +44,7 @@ public class FlipperFlap extends AbstractDynamicCard {
         baseDamage = DAMAGE;
         baseMagicNumber = TIMES;
 
+        this.exhaust = true;
         isMultiDamage = true;
     }
 

@@ -1,6 +1,7 @@
 package theRose.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -10,53 +11,63 @@ import theRose.powers.PenguinPower;
 
 import static theRose.ModInitializer.makeCardPath;
 
-public class Fly extends AbstractDynamicCard {
+public class EnergyDrink extends AbstractDynamicCard {
 
     /*
-     * Fly High to the Sky!: Gain 1 Penguin Flight
+     * Energy Drink: Gain 1 energy. Gain 1 Flight. Exhaust.
      */
 
     // TEXT DECLARATION
 
-    public static final String ID = ModInitializer.makeID(Fly.class.getSimpleName());
-    public static final String IMG = makeCardPath("Fly.png");
+    public static final String ID = ModInitializer.makeID(EnergyDrink.class.getSimpleName());
+    public static final String IMG = makeCardPath("Skill.png");
 
     // /TEXT DECLARATION/
 
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 2;
-    private static final int BUFF = 1; // Give 1 Penguin Flight
-    private static final int BUFF_UPGRADE = 1; // Add 1 to upgrade
+    private static final int COST = 1;
+    private static final int UPGRADE_COST = 0;
+
+    private static final int ENERGY_GAIN = 1;
+    private static final int FLIGHT = 1;
 
     // /STAT DECLARATION/
 
-    public Fly() {
+    public EnergyDrink() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = BUFF;
+        baseMagicNumber = ENERGY_GAIN;
+        SecondMagicNumber = BaseSecondMagicNumber = FLIGHT;
+
+
+        exhaust = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Gain flight (Penguin Power)
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new PenguinPower(p, baseMagicNumber)));
+        // Gain Energy
+        AbstractDungeon.actionManager.addToBottom(
+                new GainEnergyAction(ENERGY_GAIN));
 
+        // Gain Flight
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                new PenguinPower(p, SecondMagicNumber)));
     }
+
 
     // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(BUFF_UPGRADE);
+            upgradeBaseCost(UPGRADE_COST);
             initializeDescription();
         }
     }
