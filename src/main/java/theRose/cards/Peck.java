@@ -50,13 +50,11 @@ public class Peck extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         // Always apply vulnerable
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player,
-                new VulnerablePower(p, baseMagicNumber, false), baseMagicNumber));
+        this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.baseMagicNumber, false), this.baseMagicNumber));
 
         // Only apply weak if in flight
         if (AbstractDungeon.player.hasPower("Flight")) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, AbstractDungeon.player,
-                    new WeakPower(p, SecondMagicNumber, false), SecondMagicNumber));
+            this.addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.SecondMagicNumber, false), this.SecondMagicNumber));
         }
 
     }
