@@ -45,6 +45,7 @@ public class FriedChicken extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = BUFF;
 
+        this.tags.add(CustomTags.FOOD);
         exhaust = true;
     }
 

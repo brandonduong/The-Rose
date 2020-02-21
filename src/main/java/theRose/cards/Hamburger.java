@@ -45,6 +45,7 @@ public class Hamburger extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
 
+        this.tags.add(CustomTags.FOOD);
         exhaust = true;
     }
 

@@ -1,8 +1,10 @@
 package theRose.cards;
 
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -10,6 +12,7 @@ import theRose.ModInitializer;
 import theRose.characters.TheRose;
 import theRose.powers.FoodEatenPower;
 import theRose.powers.PenguinPower;
+import theRose.cards.CustomTags;
 
 import static theRose.ModInitializer.makeCardPath;
 
@@ -50,6 +53,7 @@ public class Donut extends AbstractDynamicCard {
         SecondMagicNumber = FLIGHT;
         BaseSecondMagicNumber = - FLIGHT; // Display integer for description
 
+        this.tags.add(CustomTags.FOOD);
         exhaust = true;
     }
 
@@ -60,15 +64,15 @@ public class Donut extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new DrawCardAction(p, baseMagicNumber));
 
-        // Remove Flight if stacks will go to 0
-        if (p.getPower("Flight").amount == 1) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Flight"));
-        }
-
         // Lose Flight
         if (p.hasPower("Flight")) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                     new PenguinPower(p, SecondMagicNumber)));
+        }
+
+        // Remove Flight if stacks will go to 0
+        if (p.getPower("Flight").amount == 1) {
+            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Flight"));
         }
 
         // Food eaten += 1

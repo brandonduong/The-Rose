@@ -48,6 +48,7 @@ public class EnergyDrink extends AbstractDynamicCard {
         baseMagicNumber = ENERGY_GAIN;
         SecondMagicNumber = BaseSecondMagicNumber = FLIGHT;
 
+        this.tags.add(CustomTags.FOOD);
         exhaust = true;
     }
 

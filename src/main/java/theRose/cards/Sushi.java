@@ -44,6 +44,7 @@ public class Sushi extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = HEAL;
 
+        this.tags.add(CustomTags.FOOD);
         exhaust = true;
     }
 
