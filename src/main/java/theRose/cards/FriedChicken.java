@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
+import theRose.powers.FoodEatenPower;
 
 import static theRose.ModInitializer.makeCardPath;
 
@@ -36,6 +37,8 @@ public class FriedChicken extends AbstractDynamicCard {
 
     private static final int BUFF = 2;
 
+    private static final int FOOD_VALUE = 1;
+
     // /STAT DECLARATION/
 
     public FriedChicken() {
@@ -54,6 +57,8 @@ public class FriedChicken extends AbstractDynamicCard {
         // Gain 2 Stacks of Lose Strength Power
         this.addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, baseMagicNumber), baseMagicNumber));
 
+        // Food eaten += 1
+        this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, FOOD_VALUE)));
     }
 
 

@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
+import theRose.powers.FoodEatenPower;
 import theRose.powers.PenguinPower;
 
 import static theRose.ModInitializer.makeCardPath;
@@ -38,13 +39,14 @@ public class EnergyDrink extends AbstractDynamicCard {
     private static final int ENERGY_GAIN = 1;
     private static final int FLIGHT = 1;
 
+    private static final int FOOD_VALUE = 1;
+
     // /STAT DECLARATION/
 
     public EnergyDrink() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = ENERGY_GAIN;
         SecondMagicNumber = BaseSecondMagicNumber = FLIGHT;
-
 
         exhaust = true;
     }
@@ -59,6 +61,9 @@ public class EnergyDrink extends AbstractDynamicCard {
         // Gain Flight
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new PenguinPower(p, SecondMagicNumber)));
+
+        // Food eaten += 1
+        this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, FOOD_VALUE)));
     }
 
 

@@ -50,7 +50,12 @@ public class FoodEatenPower extends AbstractPower implements CloneablePowerInter
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        if (this.amount == 1) {
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        }
+        else {
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
+        }
     }
 
     @Override

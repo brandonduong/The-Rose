@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
+import theRose.powers.FoodEatenPower;
 import theRose.powers.PenguinPower;
 
 import static theRose.ModInitializer.makeCardPath;
@@ -39,6 +40,8 @@ public class Donut extends AbstractDynamicCard {
     private static final int DRAW = 1;
     private static final int FLIGHT = -1;
 
+    private static final int FOOD_VALUE = 1;
+
     // /STAT DECLARATION/
 
     public Donut() {
@@ -67,6 +70,9 @@ public class Donut extends AbstractDynamicCard {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                     new PenguinPower(p, SecondMagicNumber)));
         }
+
+        // Food eaten += 1
+        this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, FOOD_VALUE)));
 
     }
 
