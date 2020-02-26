@@ -1,15 +1,13 @@
 package theRose.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.purple.Collect;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
-import theRose.powers.FoodEatenPower;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -25,6 +23,10 @@ public class UberDishes extends AbstractDynamicCard {
 
     public static final String ID = ModInitializer.makeID(UberDishes.class.getSimpleName());
     public static final String IMG = makeCardPath("Skill.png");
+
+    // Upgraded description
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -60,7 +62,7 @@ public class UberDishes extends AbstractDynamicCard {
             randomNum = ThreadLocalRandom.current().nextInt(0, 5); // Random num better [0, 4]
             card = foodCards[randomNum];
 
-            if (this.upgraded == true) { // If this card is upgraded, create upgraded food cards.
+            if (this.upgraded) { // If this card is upgraded, create upgraded food cards.
                 card.upgrade();
             }
 
@@ -74,6 +76,7 @@ public class UberDishes extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

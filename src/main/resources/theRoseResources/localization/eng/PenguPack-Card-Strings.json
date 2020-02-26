@@ -38,7 +38,8 @@
   },
   "theRose:UberDishes": {
     "NAME": "UberDishes",
-    "DESCRIPTION": "Create !M! random (upgraded) food items in your discard pile."
+    "DESCRIPTION": "Create !M! random food items in your discard pile.",
+    "UPGRADE_DESCRIPTION": "Create !M! random Upgraded food items in your discard pile."
   },
   "theRose:HungryForm": {
     "NAME": "Hungry Form",
