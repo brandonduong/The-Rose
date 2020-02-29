@@ -80,7 +80,7 @@
 
   "theRose:Reorder": {
     "NAME": "Reorder",
-    "DESCRIPTION": "Return !M! random Exhausted Food items into your hand."
+    "DESCRIPTION": "Return all Exhausted Food items to your hand. NL Exhaust."
   },
   "theRose:BellyBump": {
     "NAME": "Belly Bump",
