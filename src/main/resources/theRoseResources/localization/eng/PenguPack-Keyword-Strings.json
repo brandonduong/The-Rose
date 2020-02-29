@@ -12,7 +12,8 @@
       "Penguin-Flight",
       "penguin-flight",
       "Penguin-flight",
-      "flight"
+      "flight",
+      "Flight"
     ],
     "DESCRIPTION": "Reduce #yAttack damage taken by #b50%. Reduce #yBlock gained by #b50%. Cancelled if dealt #yAttack damage X times in one turn."
   },
@@ -26,5 +27,20 @@
       "flap"
     ],
     "DESCRIPTION": "Flipper Flaps are 0-cost Attack cards dealing 1 damage times 2 (3). Exhaust."
+  },
+  {
+    "NAMES": [
+      "Food",
+      "food"
+    ],
+    "DESCRIPTION": "Food items are a variety of Skill cards that grant small bonuses. Exhaust."
+  },
+  {
+    "NAMES": [
+      "Bribe",
+      "bribe"
+    ],
+    "DESCRIPTION": "Each Bribe has a chance to inflict a Debuff. Chance + Debuff quality increases with Bribe."
   }
+
 ]

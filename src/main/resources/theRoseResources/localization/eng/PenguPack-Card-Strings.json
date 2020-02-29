@@ -7,15 +7,12 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
-  "theRose:BeakDrill": {
-    "NAME": "Beak Drill",
-    "DESCRIPTION": "Deal ( X times 2 ) times !D! damage.",
-    "UPGRADE_DESCRIPTION": "Deal ( X times 2 ) times !D! damage."
-  },
   "theRose:Fly": {
     "NAME": "Fly High to the Sky!",
     "DESCRIPTION": "Gain !M! Penguin-Flight."
   },
+
+
   "theRose:Workout": {
     "NAME": "Workout",
     "DESCRIPTION": "Gain !M! Strength."
@@ -26,24 +23,33 @@
   },
   "theRose:TemperTantrum": {
     "NAME": "Temper Tantrum",
-    "DESCRIPTION": "At the start of each turn, gain !M! Flipper Flap."
+    "DESCRIPTION": "At the start of each turn, add !M! Flipper Flap into your hand."
   },
+  "theRose:BeakDrill": {
+    "NAME": "Beak Drill",
+    "DESCRIPTION": "Deal ( X times 2 ) times !D! damage."
+  },
+
+
+
+
   "theRose:BeakDive": {
     "NAME": "Beak Dive",
-    "DESCRIPTION": "Can only be played when in flight. Deal !D! damage. Lose all flight."
+    "DESCRIPTION": "Can only be played when in Flight. Deal !D! damage. Lose all flight."
   },
   "theRose:Peck": {
     "NAME": "Peck",
-    "DESCRIPTION": "Apply !M! vulnerable. If in flight, apply !theRose:SecondMagic! weak too."
+    "DESCRIPTION": "Apply !M! vulnerable. If in Flight, apply !theRose:SecondMagic! weak too."
   },
+
+
+
+
+
   "theRose:UberDishes": {
     "NAME": "UberDishes",
-    "DESCRIPTION": "Create !M! random food items in your discard pile.",
-    "UPGRADE_DESCRIPTION": "Create !M! random Upgraded food items in your discard pile."
-  },
-  "theRose:HungryForm": {
-    "NAME": "Hungry Form",
-    "DESCRIPTION": "At the start of your turn, consume a random food item."
+    "DESCRIPTION": "Create !M! random Food items in your discard pile.",
+    "UPGRADE_DESCRIPTION": "Create !M! random Upgraded Food items in your discard pile."
   },
   "theRose:EnergyDrink": {
     "NAME": "Energy Drink",
@@ -64,6 +70,38 @@
   "theRose:Hamburger": {
     "NAME": "Hamburger",
     "DESCRIPTION": "Gain !B! Block. This cards counts as 3 Food items. Exhaust."
+  },
+  "theRose:HungryForm": {
+    "NAME": "Hungry Form",
+    "DESCRIPTION": "At the start of your turn, consume !M! random Food item.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, consume !M! random Food items."
+  },
+
+
+  "theRose:Reorder": {
+    "NAME": "Reorder",
+    "DESCRIPTION": "Return !M! random Exhausted Food items into your hand."
+  },
+  "theRose:BellyBump": {
+    "NAME": "Belly Bump",
+    "DESCRIPTION": "Deal damage equal to the number of Food items eaten this combat. Reset the counter."
+  },
+  "theRose:Bribe": {
+    "NAME": "Bribe",
+    "DESCRIPTION": "Apply Bribe equal to the number of Food items in your hand."
+  },
+
+  "theRose:NappyTime": {
+    "NAME": "Nappy Time!",
+    "DESCRIPTION": "Gain 1 Plated Armor. End your turn."
+  },
+  "theRose:LucidDream": {
+    "NAME": "Lucid Dream",
+    "DESCRIPTION": "Can only be played out of Flight. Create 1 random Food item. Gain 1 Flight. Lose 1 Flight at the end of your turn."
+  },
+  "theRose:PerfectLanding": {
+    "NAME": "Perfect Landing",
+    "DESCRIPTION": ""
   },
 
 
