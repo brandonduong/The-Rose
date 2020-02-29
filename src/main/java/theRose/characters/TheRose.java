@@ -179,6 +179,7 @@ public class TheRose extends CustomPlayer {
         retVal.add(UberDishes.ID);
         retVal.add(HungryForm.ID);
         retVal.add(Reorder.ID);
+        retVal.add(BellyBump.ID);
 
         return retVal;
     }

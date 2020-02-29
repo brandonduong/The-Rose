@@ -60,6 +60,6 @@ public class FoodEatenPower extends AbstractPower implements CloneablePowerInter
 
     @Override
     public AbstractPower makeCopy() {
-        return new TemperTantrumPower(owner, source, amount);
+        return new FoodEatenPower(owner, source, amount);
     }
 }

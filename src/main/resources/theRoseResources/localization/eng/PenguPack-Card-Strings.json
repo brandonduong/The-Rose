@@ -76,15 +76,17 @@
     "DESCRIPTION": "At the start of your turn, consume !M! random Food item.",
     "UPGRADE_DESCRIPTION": "At the start of your turn, consume !M! random Food items."
   },
-
-
   "theRose:Reorder": {
     "NAME": "Reorder",
     "DESCRIPTION": "Return all Exhausted Food items to your hand. NL Exhaust."
   },
+
+
+
   "theRose:BellyBump": {
     "NAME": "Belly Bump",
-    "DESCRIPTION": "Deal damage equal to the number of Food items eaten this combat. Reset the counter."
+    "DESCRIPTION": "Deal damage equal to the number of Food items eaten this combat. Set the counter to a quarter.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to the number of Food items eaten this combat. Set the counter to a half."
   },
   "theRose:Bribe": {
     "NAME": "Bribe",
