@@ -40,7 +40,7 @@
       "Bribe",
       "bribe"
     ],
-    "DESCRIPTION": "Each Bribe has a chance to inflict a Debuff. Chance + Debuff quality increases with Bribe."
+    "DESCRIPTION": "Reach certain milestones of Bribe to inflict debuffs. Milestones are reached at every 25% of the enemy's HP. Once stacks reach 100% of the enemy's HP, they flee."
   }
 
 ]

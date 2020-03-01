@@ -80,17 +80,18 @@
     "NAME": "Reorder",
     "DESCRIPTION": "Return all Exhausted Food items to your hand. NL Exhaust."
   },
-
-
-
   "theRose:BellyBump": {
     "NAME": "Belly Bump",
     "DESCRIPTION": "Deal damage equal to the number of Food items eaten this combat. Set the counter to a quarter.",
     "UPGRADE_DESCRIPTION": "Deal damage equal to the number of Food items eaten this combat. Set the counter to a half."
   },
-  "theRose:Bribe": {
-    "NAME": "Bribe",
-    "DESCRIPTION": "Apply Bribe equal to the number of Food items in your hand."
+
+
+
+
+  "theRose:SharingIsCaring": {
+    "NAME": "Sharing Is Caring",
+    "DESCRIPTION": "Apply !M! Bribe for the number of Food items in your hand. Apply all Food items."
   },
 
   "theRose:NappyTime": {

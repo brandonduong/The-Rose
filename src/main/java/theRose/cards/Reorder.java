@@ -48,6 +48,7 @@ public class Reorder extends AbstractDynamicCard {
 
     public Reorder() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        exhaust = true;
     }
 
     // Actions the card should do.
