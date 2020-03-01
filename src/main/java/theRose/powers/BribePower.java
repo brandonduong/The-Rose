@@ -3,22 +3,20 @@ package theRose.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.utility.HideHealthBarAction;
+import com.megacrit.cardcrawl.actions.common.EscapeAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.*;
 import theRose.ModInitializer;
-import theRose.cards.*;
-import theRose.util.TextureLoader;
 
-import java.util.concurrent.ThreadLocalRandom;
+import theRose.util.TextureLoader;
 
 public class BribePower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
@@ -62,15 +60,28 @@ public class BribePower extends AbstractPower implements CloneablePowerInterface
             this.addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new WeakPower(this.owner, 2, false)));
         }
         // Second milestone reached at >= 50% current HP
-        else if (milestone == 1 && this.amount >= this.owner.currentHealth / 2) {
+        if (milestone == 1 && this.amount >= this.owner.currentHealth / 2) {
             milestone += 1;
+            this.addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new VulnerablePower(this.owner, 2, false)));
+        }
 
+        // Third milestone reached at >= 75% current HP
+        if (milestone == 2 && this.amount >= (this.owner.currentHealth / 4) * 3) {
+            milestone += 1;
+            this.addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new StrengthPower(this.owner, -2), -2, true));
+        }
+
+        // Fourth milestone reached at >= 100% current HP
+        if (milestone == 3 && this.amount >= this.owner.currentHealth) {
+            milestone += 1;
             // Flee handling
-            AbstractDungeon.actionManager.addToTop(new HideHealthBarAction(this.owner));
-            this.owner.currentHealth = 0;
-            this.owner.isDead = true;
-            this.owner.flipHorizontal = true;
-            this.owner.escapeTimer = 2.0F;
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this.owner, "Thanks for the food!", 0.3F, 2.5F));
+            AbstractDungeon.actionManager.addToBottom(new EscapeAction((AbstractMonster) this.owner));
+        }
+
+        // Prevents softlocks
+        if (AbstractDungeon.getCurrRoom().monsters.monsters.isEmpty()) {
+            AbstractDungeon.getCurrRoom().cannotLose = false;
         }
 
     }

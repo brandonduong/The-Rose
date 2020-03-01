@@ -1,14 +1,11 @@
 package theRose.cards;
 
-import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
 import theRose.powers.BribePower;
@@ -18,7 +15,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class SharingIsCaring extends AbstractDynamicCard {
 
     /*
-     * Sharing is Caring: Apply 3 Bribe for the number of Food items in your hand. Apply all Food items.
+     * Sharing is Caring: Apply 3 Bribe for the number of Food items in your hand. Exhaust all Food items.
      */
 
     // TEXT DECLARATION
@@ -56,6 +53,9 @@ public class SharingIsCaring extends AbstractDynamicCard {
             if (c.tags.contains(CustomTags.FOOD)) {
                 // Apply Bribe
                 this.addToBot(new ApplyPowerAction(m, p, new BribePower(m, p, this.baseMagicNumber), this.baseMagicNumber));
+
+                // Exhaust all Food items
+                this.addToBot(new ExhaustSpecificCardAction(c, foodCards));
             }
         }
 

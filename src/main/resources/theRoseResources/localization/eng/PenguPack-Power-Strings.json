@@ -26,6 +26,6 @@
 },
 "theRose:BribePower": {
         "NAME": "Bribe",
-        "DESCRIPTIONS": ["Current Milestone: ", ". Milestones are reached at every 25% of the enemy's HP. Once stacks reach 100% of the enemy's HP, they flee."]
+        "DESCRIPTIONS": ["Current Milestone: ", ". Milestones are reached at every 25% of the enemy's current HP. Once stacks reach 100% of the enemy's current HP, they flee."]
 }
 }

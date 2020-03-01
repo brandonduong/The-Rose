@@ -85,15 +85,17 @@
     "DESCRIPTION": "Deal damage equal to the number of Food items eaten this combat. Set the counter to a quarter.",
     "UPGRADE_DESCRIPTION": "Deal damage equal to the number of Food items eaten this combat. Set the counter to a half."
   },
-
-
-
-
   "theRose:SharingIsCaring": {
     "NAME": "Sharing Is Caring",
-    "DESCRIPTION": "Apply !M! Bribe for the number of Food items in your hand. Apply all Food items."
+    "DESCRIPTION": "Apply !M! Bribe for the number of Food items in your hand. Exhaust all Food items."
   },
 
+
+  "theRose:ChefRose": {
+    "NAME": "Chef Rose",
+    "DESCRIPTION": "Deal !D! Damage. Add a random Food item to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage. Add a random Upgraded Food item to your hand."
+  },
   "theRose:NappyTime": {
     "NAME": "Nappy Time!",
     "DESCRIPTION": "Gain 1 Plated Armor. End your turn."
