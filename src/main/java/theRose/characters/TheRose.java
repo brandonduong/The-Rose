@@ -182,6 +182,7 @@ public class TheRose extends CustomPlayer {
         retVal.add(BellyBump.ID);
         retVal.add(SharingIsCaring.ID);
         retVal.add(ChefRose.ID);
+        retVal.add(TakesiesBacksies.ID);
 
         return retVal;
     }
