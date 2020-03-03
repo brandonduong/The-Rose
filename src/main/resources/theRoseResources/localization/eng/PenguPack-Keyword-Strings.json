@@ -38,7 +38,9 @@
   {
     "NAMES": [
       "Bribe",
-      "bribe"
+      "bribe",
+      "Bribed",
+      "bribed"
     ],
     "DESCRIPTION": "Reach certain milestones of Bribe to inflict debuffs. Milestones are reached at every 25% of the enemy's current HP. Once stacks reach 100% of the enemy's current HP, they flee."
   }

@@ -436,6 +436,9 @@ public class ModInitializer implements
         BaseMod.addCard(new Reorder());
         BaseMod.addCard(new BellyBump());
         BaseMod.addCard(new SharingIsCaring());
+        BaseMod.addCard(new ChefRose());
+
+
 
         /*
         BaseMod.addCard(new OrbSkill());

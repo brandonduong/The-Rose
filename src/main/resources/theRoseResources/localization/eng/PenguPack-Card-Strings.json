@@ -39,7 +39,7 @@
   },
   "theRose:Peck": {
     "NAME": "Peck",
-    "DESCRIPTION": "Apply !M! vulnerable. If in Flight, apply !theRose:SecondMagic! weak too."
+    "DESCRIPTION": "Apply !M! vulnerable. If in Flight, apply !theRose:SecondMagic! Weak."
   },
 
 
@@ -96,9 +96,26 @@
     "DESCRIPTION": "Deal !D! Damage. Add a random Food item to your hand.",
     "UPGRADE_DESCRIPTION": "Deal !D! Damage. Add a random Upgraded Food item to your hand."
   },
+  "theRose:TakesiesBacksies" : {
+    "NAME": "Takesies Backsies",
+    "DESCRIPTION": "Can only be played on Bribed enemies. For every !M! Bribe, deal !D! damage and play a random Exhausted Food item."
+  },
   "theRose:NappyTime": {
     "NAME": "Nappy Time!",
     "DESCRIPTION": "Gain 1 Plated Armor. End your turn."
+  },
+  "theRose:Chub": {
+    "NAME": "Chub",
+    "DESCRIPTION": "Gain !B! Block for every Food item eaten this combat. Set the counter to a quarter.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block for every Food item eaten this combat. Set the counter to a half."
+  },
+  "theRose:PermanentChub": {
+    "NAME": "Permanent Chub",
+    "DESCRIPTION": "Gain !B! Block for every Food item eaten this game. Reset this counter. Exhaust."
+  },
+  "theRose:BellySlide": {
+    "NAME": "Belly Slide",
+    "DESCRIPTION": "Can only be played out of Flight. Apply !M! Weak. Draw 1 card."
   },
   "theRose:LucidDream": {
     "NAME": "Lucid Dream",
@@ -107,6 +124,10 @@
   "theRose:PerfectLanding": {
     "NAME": "Perfect Landing",
     "DESCRIPTION": ""
+  },
+  "theRose:MidflightSnack": {
+    "NAME": "Midflight Snack",
+    "DESCRIPPTION": "Can only be played in Flight. Draw 1 card. Create 1 random Food item. Lose 1 Flight."
   },
 
 

@@ -19,7 +19,6 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import com.sun.corba.se.spi.orbutil.threadpool.Work;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theRose.ModInitializer;
@@ -155,7 +154,7 @@ public class TheRose extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        retVal.add(Strike_Rose.ID);
+        // retVal.add(Strike_Rose.ID);
         // retVal.add(Strike_Rose.ID);
         // retVal.add(Strike_Rose.ID);
         // retVal.add(Strike_Rose.ID);
@@ -163,7 +162,7 @@ public class TheRose extends CustomPlayer {
         // retVal.add(Defend_Rose.ID);
         // retVal.add(Defend_Rose.ID);
         // retVal.add(Defend_Rose.ID);
-        retVal.add(Defend_Rose.ID);
+        // retVal.add(Defend_Rose.ID);
 
         retVal.add(BeakDrill.ID);
         retVal.add(Fly.ID);
@@ -182,6 +181,7 @@ public class TheRose extends CustomPlayer {
         retVal.add(Reorder.ID);
         retVal.add(BellyBump.ID);
         retVal.add(SharingIsCaring.ID);
+        retVal.add(ChefRose.ID);
 
         return retVal;
     }
