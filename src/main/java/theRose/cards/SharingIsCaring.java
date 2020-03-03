@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
-import theRose.powers.BribePower;
+import theRose.powers.PassivityPower;
 
 import static theRose.ModInitializer.makeCardPath;
 
@@ -52,7 +52,7 @@ public class SharingIsCaring extends AbstractDynamicCard {
         for (AbstractCard c : foodCards.group) {
             if (c.tags.contains(CustomTags.FOOD)) {
                 // Apply Bribe
-                this.addToBot(new ApplyPowerAction(m, p, new BribePower(m, p, this.baseMagicNumber), this.baseMagicNumber));
+                this.addToBot(new ApplyPowerAction(m, p, new PassivityPower(m, p, this.baseMagicNumber), this.baseMagicNumber));
 
                 // Exhaust all Food items
                 this.addToBot(new ExhaustSpecificCardAction(c, foodCards));

@@ -24,8 +24,8 @@
         "NAME": "Hungry Form",
         "DESCRIPTIONS": ["At the start of your turn, consume #b", " Food item.", " Food items."]
 },
-"theRose:BribePower": {
-        "NAME": "Bribe",
+"theRose:PassivityPower": {
+        "NAME": "Passivity",
         "DESCRIPTIONS": ["Current Milestone: ", ". Milestones are reached at every 25% of the enemy's current HP. Once stacks reach 100% of the enemy's current HP, they flee."]
 }
 }

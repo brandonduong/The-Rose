@@ -37,12 +37,10 @@
   },
   {
     "NAMES": [
-      "Bribe",
-      "bribe",
-      "Bribed",
-      "bribed"
+      "Passivity",
+      "passivity"
     ],
-    "DESCRIPTION": "Reach certain milestones of Bribe to inflict debuffs. Milestones are reached at every 25% of the enemy's current HP. Once stacks reach 100% of the enemy's current HP, they flee."
+    "DESCRIPTION": "Reach certain milestones of Passivity to inflict debuffs. Milestones are reached at every 25% of the enemy's current HP. Once stacks reach 100% of the enemy's current HP, they flee."
   }
 
 ]

@@ -18,10 +18,10 @@ import theRose.ModInitializer;
 
 import theRose.util.TextureLoader;
 
-public class BribePower extends AbstractPower implements CloneablePowerInterface {
+public class PassivityPower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
-    public static final String POWER_ID = ModInitializer.makeID("BribePower");
+    public static final String POWER_ID = ModInitializer.makeID("PassivityPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -33,7 +33,7 @@ public class BribePower extends AbstractPower implements CloneablePowerInterface
     private static final Texture tex84 = TextureLoader.getTexture("theRoseResources/images/powers/placeholder_power84.png");
     private static final Texture tex32 = TextureLoader.getTexture("theRoseResources/images/powers/placeholder_power32.png");
 
-    public BribePower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
+    public PassivityPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
         ID = POWER_ID;
 
@@ -75,7 +75,7 @@ public class BribePower extends AbstractPower implements CloneablePowerInterface
         if (milestone == 3 && this.amount >= this.owner.currentHealth) {
             milestone += 1;
             // Flee handling
-            AbstractDungeon.actionManager.addToBottom(new TalkAction(this.owner, "Thanks for the food!", 0.3F, 2.5F));
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this.owner, "Have a good day!", 0.3F, 2.5F));
             AbstractDungeon.actionManager.addToBottom(new EscapeAction((AbstractMonster) this.owner));
         }
 
@@ -93,6 +93,6 @@ public class BribePower extends AbstractPower implements CloneablePowerInterface
 
     @Override
     public AbstractPower makeCopy() {
-        return new BribePower(owner, source, amount);
+        return new PassivityPower(owner, source, amount);
     }
 }

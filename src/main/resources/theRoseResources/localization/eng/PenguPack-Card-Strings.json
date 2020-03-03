@@ -87,18 +87,42 @@
   },
   "theRose:SharingIsCaring": {
     "NAME": "Sharing Is Caring",
-    "DESCRIPTION": "Apply !M! Bribe for the number of Food items in your hand. Exhaust all Food items."
+    "DESCRIPTION": "Apply !M! Passivity for the number of Food items in your hand. Exhaust all Food items."
   },
   "theRose:ChefRose": {
     "NAME": "Chef Rose",
     "DESCRIPTION": "Deal !D! Damage. Add a random Food item to your hand.",
     "UPGRADE_DESCRIPTION": "Deal !D! Damage. Add a random Upgraded Food item to your hand."
   },
-
-
   "theRose:TakesiesBacksies" : {
     "NAME": "Takesies Backsies",
-    "DESCRIPTION": "For every !M! Bribe, reduce Bribe by !M!, deal !D! damage, and consume a random Food item."
+    "DESCRIPTION": "For every !M! Passivity, reduce Passivity by !M!, deal !D! damage, and consume a random Food item."
+  },
+
+
+  "theRose:HeadPat": {
+    "NAME": "Head Pat",
+    "DESCRIPTION": "Deal !D! damage. Apply !M! Passivity."
+  },
+  "theRose:DontMove": {
+    "NAME": "Don't Move!",
+    "DESCRIPTION": "Can only be played if no Attack was played. Apply !M! Passivity. End your turn."
+  },
+  "theRose:PenguinBackRide": {
+    "NAME": "Penguin Back Ride",
+    "DESCRIPTION": "Apply Passivity equal to !M! times your Flight. Lose all Flight."
+  },
+  "theRose:Smile": {
+    "NAME": "Smile!",
+    "DESCRIPTION": "Apply !M! Passivity and !theRose:SecondMagic! Weak to all enemies."
+  },
+  "theRose:Kissies": {
+    "NAME": "Kissies!",
+    "DESCRIPTION": "Double the enemy's Passivity. Exhaust."
+  },
+  "theRose:Betray": {
+    "NAME": "Betray",
+    "DESCRIPTION": "Deal damage equal to 2 times an enemy's Passivity. Reduce Passivity to 0."
   },
 
 

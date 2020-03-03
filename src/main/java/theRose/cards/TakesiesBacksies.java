@@ -60,11 +60,11 @@ public class TakesiesBacksies extends AbstractDynamicCard {
         AbstractCard[] foodCards = {new Donut(), new EnergyDrink(), new FriedChicken(), new Hamburger(), new Sushi()};
         int randomNum;
 
-        if (m.hasPower("theRose:BribePower")) {
-            for (int i = m.getPower("theRose:BribePower").amount; i > baseMagicNumber; i -= baseMagicNumber) {
+        if (m.hasPower("theRose:PassivityPower")) {
+            for (int i = m.getPower("theRose:PassivityPower").amount; i > baseMagicNumber; i -= baseMagicNumber) {
 
                 // Reduce Bribe
-                this.addToBot(new ReducePowerAction(m, p, "theRose:BribePower", baseMagicNumber));
+                this.addToBot(new ReducePowerAction(m, p, "theRose:PassivityPower", baseMagicNumber));
 
                 // Deal damage
                 this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));

@@ -13,7 +13,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class TemperTantrum extends AbstractDynamicCard {
 
     /*
-     * Temper Tantrum: Add the start of every turn, add a Flipper Flap to your hand.
+     * Temper Tantrum: At the start of every turn, add a Flipper Flap to your hand.
      */
 
     // TEXT DECLARATION
