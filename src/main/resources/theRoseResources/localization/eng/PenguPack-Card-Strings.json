@@ -104,8 +104,14 @@
   },
 
 
-  "theRose:DontMove": {
-    "NAME": "Don't Move!",
+  "theRose:FlyingFlap": {
+    "NAME": "Flying Flap",
+    "DESCRIPTION": ""
+  },
+
+
+  "theRose:StayStill": {
+    "NAME": "Stay Still!",
     "DESCRIPTION": "Can only be played if no Attack was played. Apply !M! Passivity. End your turn."
   },
   "theRose:PenguinBackRide": {
@@ -141,7 +147,7 @@
   },
   "theRose:BellySlide": {
     "NAME": "Belly Slide",
-    "DESCRIPTION": "Can only be played out of Flight. Apply !M! Weak. Draw 1 card."
+    "DESCRIPTION": "Can only be played out of Flight. Apply !M! Vulnerable. Draw 1 card."
   },
   "theRose:LucidDream": {
     "NAME": "Lucid Dream",

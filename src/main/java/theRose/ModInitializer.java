@@ -13,6 +13,7 @@ import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -79,7 +80,9 @@ public class ModInitializer implements
         EditStringsSubscriber,
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
-        PostInitializeSubscriber
+        PostInitializeSubscriber,
+        OnCardUseSubscriber,
+        PostEnergyRechargeSubscriber
 {
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
@@ -557,6 +560,23 @@ public class ModInitializer implements
         }
     }
 
+    public static boolean playedAttack; // True if player played an attack in current turn
+
+    @Override
+    public void receivePostEnergyRecharge() {
+        // Run at start of every player's turn
+        playedAttack = false;
+    }
+
+    @Override
+    public void receiveCardUsed(AbstractCard card) {
+        // Run every time a card is used
+        if (card.type == AbstractCard.CardType.ATTACK) {
+            playedAttack = true;
+        }
+
+    }
+
     // ================ /LOAD THE KEYWORDS/ ===================
 
     // this adds "ModName:" before the ID of any card/relic/power etc.
@@ -564,4 +584,5 @@ public class ModInitializer implements
     public static String makeID(String idText) {
         return getModID() + ":" + idText;
     }
+
 }
