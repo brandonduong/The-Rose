@@ -52,7 +52,7 @@ public class HeadPat extends AbstractDynamicCard {
         // Deal Damage
         this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
-        // Apply Bribe
+        // Apply Passivity
         this.addToBot(new ApplyPowerAction(m, p, new PassivityPower(m, p, this.baseMagicNumber), this.baseMagicNumber));
     }
 

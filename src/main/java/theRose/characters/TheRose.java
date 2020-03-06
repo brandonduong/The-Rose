@@ -184,6 +184,7 @@ public class TheRose extends CustomPlayer {
         retVal.add(ChefRose.ID);
         retVal.add(TakesiesBacksies.ID);
         retVal.add(HeadPat.ID);
+        retVal.add(StayStill.ID);
 
         return retVal;
     }

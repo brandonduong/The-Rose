@@ -442,6 +442,7 @@ public class ModInitializer implements
         BaseMod.addCard(new ChefRose());
         BaseMod.addCard(new TakesiesBacksies());
         BaseMod.addCard(new HeadPat());
+        BaseMod.addCard(new StayStill());
 
 
 

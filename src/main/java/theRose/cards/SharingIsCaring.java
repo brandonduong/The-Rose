@@ -51,7 +51,7 @@ public class SharingIsCaring extends AbstractDynamicCard {
         CardGroup foodCards = p.hand;
         for (AbstractCard c : foodCards.group) {
             if (c.tags.contains(CustomTags.FOOD)) {
-                // Apply Bribe
+                // Apply Passivity
                 this.addToBot(new ApplyPowerAction(m, p, new PassivityPower(m, p, this.baseMagicNumber), this.baseMagicNumber));
 
                 // Exhaust all Food items
