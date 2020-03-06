@@ -98,12 +98,12 @@
     "NAME": "Takesies Backsies",
     "DESCRIPTION": "For every !M! Passivity, reduce Passivity by !M!, deal !D! damage, and consume a random Food item."
   },
-
-
   "theRose:HeadPat": {
     "NAME": "Head Pat",
     "DESCRIPTION": "Deal !D! damage. Apply !M! Passivity."
   },
+
+
   "theRose:DontMove": {
     "NAME": "Don't Move!",
     "DESCRIPTION": "Can only be played if no Attack was played. Apply !M! Passivity. End your turn."
