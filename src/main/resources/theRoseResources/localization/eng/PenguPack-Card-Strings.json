@@ -102,17 +102,15 @@
     "NAME": "Head Pat",
     "DESCRIPTION": "Deal !D! damage. Apply !M! Passivity."
   },
+  "theRose:StayStill": {
+    "NAME": "Stay Still!",
+    "DESCRIPTION": "Can only be played if no Attack was played. Apply !M! Passivity. End your turn."
+  },
 
 
   "theRose:FlyingFlap": {
     "NAME": "Flying Flap",
     "DESCRIPTION": ""
-  },
-
-
-  "theRose:StayStill": {
-    "NAME": "Stay Still!",
-    "DESCRIPTION": "Can only be played if no Attack was played. Apply !M! Passivity. End your turn."
   },
   "theRose:PenguinBackRide": {
     "NAME": "Penguin Back Ride",
@@ -130,8 +128,6 @@
     "NAME": "Betray",
     "DESCRIPTION": "Deal damage equal to 2 times an enemy's Passivity. Reduce Passivity to 0."
   },
-
-
   "theRose:NappyTime": {
     "NAME": "Nappy Time!",
     "DESCRIPTION": "Gain 1 Plated Armor. End your turn."
