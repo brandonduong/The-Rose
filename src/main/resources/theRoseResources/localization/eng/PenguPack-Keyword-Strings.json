@@ -26,7 +26,7 @@
       "flipper",
       "flap"
     ],
-    "DESCRIPTION": "Flipper Flaps are 0-cost Attack cards dealing 1 damage times 2 (3). Exhaust."
+    "DESCRIPTION": "Flipper Flaps are 0-cost Attack cards dealing 1 damage to a random enemy 2 (3) times. Exhaust."
   },
   {
     "NAMES": [

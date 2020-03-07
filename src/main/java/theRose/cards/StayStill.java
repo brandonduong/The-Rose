@@ -1,19 +1,25 @@
 package theRose.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.GainStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
 import theRose.powers.PassivityPower;
+
+import java.util.Iterator;
 
 import static theRose.ModInitializer.makeCardPath;
 
 public class StayStill extends AbstractDynamicCard {
 
     /*
-     * Stay Still: Can only be played if no Attack was played this turn. Apply !M! Passivity. End your turn.
+     * Stay Still: Can only be played if no Attack was played this turn. Apply !M! Passivity to all enemies. End your turn.
      */
 
     // TEXT DECLARATION
@@ -27,7 +33,7 @@ public class StayStill extends AbstractDynamicCard {
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
@@ -46,8 +52,15 @@ public class StayStill extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        // Apply Passivity
-        this.addToBot(new ApplyPowerAction(m, p, new PassivityPower(m, p, this.baseMagicNumber), this.baseMagicNumber));
+        // Apply Passivity to all enemies
+
+        Iterator monster_list = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
+        AbstractMonster monster;
+        while(monster_list.hasNext()) {
+            monster = (AbstractMonster)monster_list.next();
+            this.addToBot(new ApplyPowerAction(monster, p, new PassivityPower(m, p, this.baseMagicNumber), this.baseMagicNumber));
+        }
 
         // End turn
         this.addToBot(new PressEndTurnButtonAction());
