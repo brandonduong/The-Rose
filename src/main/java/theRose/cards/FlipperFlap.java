@@ -1,8 +1,6 @@
 package theRose.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -14,7 +12,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class FlipperFlap extends AbstractDynamicCard {
 
     /*
-     * Flipper Flap: Deal 1 damage 2 (3) times. Exhaust.
+     * Flipper Flap: Deal 1 damage to a random enemy 2 (3) times. Exhaust.
      */
 
     // TEXT DECLARATION
@@ -28,7 +26,7 @@ public class FlipperFlap extends AbstractDynamicCard {
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.SPECIAL;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
@@ -55,8 +53,7 @@ public class FlipperFlap extends AbstractDynamicCard {
         // Create damage actions
         for (int i = 0; i < baseMagicNumber; i++) {
             AbstractDungeon.actionManager.addToBottom(
-                    new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
-                            AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+                    new AttackDamageRandomEnemyAction(this));
         }
     }
 
