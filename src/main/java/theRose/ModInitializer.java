@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.beyond.Donu;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -82,7 +83,8 @@ public class ModInitializer implements
         EditCharactersSubscriber,
         PostInitializeSubscriber,
         OnCardUseSubscriber,
-        PostEnergyRechargeSubscriber
+        PostEnergyRechargeSubscriber,
+        PostBattleSubscriber
 {
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
@@ -570,6 +572,13 @@ public class ModInitializer implements
     @Override
     public void receivePostEnergyRecharge() {
         // Run at start of every player's turn
+        playedAttack = false;
+        playedFood = false;
+    }
+
+    @Override
+    public void receivePostBattle(AbstractRoom room) {
+        // Run at end of each battle
         playedAttack = false;
         playedFood = false;
     }
