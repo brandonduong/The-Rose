@@ -1,15 +1,9 @@
 package theRose.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.EndTurnAction;
 import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.purple.Conclude;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
 import theRose.powers.PassivityPower;
@@ -19,7 +13,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class StayStill extends AbstractDynamicCard {
 
     /*
-     * Stay Still: Can only be played if no Attack was played. Apply !M! Passivity. End your turn.
+     * Stay Still: Can only be played if no Attack was played this turn. Apply !M! Passivity. End your turn.
      */
 
     // TEXT DECLARATION
