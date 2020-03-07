@@ -13,7 +13,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class Fly extends AbstractDynamicCard {
 
     /*
-     * Fly High to the Sky!: Gain 1 Penguin Flight
+     * Fly High to the Sky!: Gain !M! Penguin Flight
      */
 
     // TEXT DECLARATION

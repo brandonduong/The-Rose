@@ -154,28 +154,27 @@ public class TheRose extends CustomPlayer {
 
         logger.info("Begin loading starter Deck Strings");
 
-        // retVal.add(Strike_Rose.ID);
-        // retVal.add(Strike_Rose.ID);
-        // retVal.add(Strike_Rose.ID);
-        // retVal.add(Strike_Rose.ID);
+        retVal.add(Strike_Rose.ID);
+        retVal.add(Strike_Rose.ID);
+        retVal.add(Strike_Rose.ID);
+        retVal.add(Strike_Rose.ID);
 
-        // retVal.add(Defend_Rose.ID);
-        // retVal.add(Defend_Rose.ID);
-        // retVal.add(Defend_Rose.ID);
-        // retVal.add(Defend_Rose.ID);
+        retVal.add(Defend_Rose.ID);
+        retVal.add(Defend_Rose.ID);
+        retVal.add(Defend_Rose.ID);
+        retVal.add(Defend_Rose.ID);
 
-        retVal.add(BeakDrill.ID);
         retVal.add(Fly.ID);
 
 
 
         // TESTING ONLY (THESE ARE NOT STARTING DECK CARDS)
         /*retVal.add(Workout.ID);
+        retVal.add(BeakDrill.ID);
         retVal.add(FlipperFlap.ID);
         retVal.add(TemperTantrum.ID);
         retVal.add(Peck.ID);
         retVal.add(BeakDive.ID);
-         */
         retVal.add(UberDishes.ID);
         retVal.add(HungryForm.ID);
         retVal.add(Reorder.ID);
@@ -186,6 +185,7 @@ public class TheRose extends CustomPlayer {
         retVal.add(HeadPat.ID);
         retVal.add(StayStill.ID);
         retVal.add(Sprint.ID);
+         */
 
         return retVal;
     }

@@ -108,7 +108,7 @@
   },
   "theRose:Sprint": {
     "NAME": "Sprint",
-    "DESCRIPTION": "Can only be played if no Food item was played this turn and not in Flight. Draw !M! Cards."
+    "DESCRIPTION": "Can only be played if no Food item was played this turn and not in Flight. NL Draw !M! Cards."
   },
 
 
