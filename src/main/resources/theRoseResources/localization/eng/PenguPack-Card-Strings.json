@@ -104,7 +104,11 @@
   },
   "theRose:StayStill": {
     "NAME": "Stay Still!",
-    "DESCRIPTION": "Can only be played if no Attack was played. Apply !M! Passivity. End your turn."
+    "DESCRIPTION": "Can only be played if no Attack was played this turn. Apply !M! Passivity. End your turn."
+  },
+  "theRose:Sprint": {
+    "NAME": "Sprint",
+    "DESCRIPTION": "Can only be played if no Food item was played this turn and not in Flight. Draw !M! Cards."
   },
 
 

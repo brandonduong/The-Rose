@@ -185,6 +185,7 @@ public class TheRose extends CustomPlayer {
         retVal.add(TakesiesBacksies.ID);
         retVal.add(HeadPat.ID);
         retVal.add(StayStill.ID);
+        retVal.add(Sprint.ID);
 
         return retVal;
     }
@@ -194,10 +195,10 @@ public class TheRose extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
 
         retVal.add(PenguinWings.ID); // First starting relic
-        retVal.add(ChickenWings.ID); // Second starting relic
+        //retVal.add(ChickenWings.ID); // Second starting relic
 
         UnlockTracker.markRelicAsSeen(PenguinWings.ID);
-        UnlockTracker.markRelicAsSeen(ChickenWings.ID);
+        //UnlockTracker.markRelicAsSeen(ChickenWings.ID);
 
         return retVal;
     }

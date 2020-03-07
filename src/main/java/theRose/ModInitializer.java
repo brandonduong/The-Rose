@@ -443,6 +443,7 @@ public class ModInitializer implements
         BaseMod.addCard(new TakesiesBacksies());
         BaseMod.addCard(new HeadPat());
         BaseMod.addCard(new StayStill());
+        BaseMod.addCard(new Sprint());
 
 
 
@@ -561,12 +562,16 @@ public class ModInitializer implements
         }
     }
 
+
+    // ================ /HOOKS FOR CARD FUNCTIONALITY/ ===================
     public static boolean playedAttack; // True if player played an attack in current turn
+    public static boolean playedFood; // True if player played a Food item in current turn
 
     @Override
     public void receivePostEnergyRecharge() {
         // Run at start of every player's turn
         playedAttack = false;
+        playedFood = false;
     }
 
     @Override
@@ -574,6 +579,10 @@ public class ModInitializer implements
         // Run every time a card is used
         if (card.type == AbstractCard.CardType.ATTACK) {
             playedAttack = true;
+        }
+
+        else if (card.tags.contains(CustomTags.FOOD)) {
+            playedFood = true;
         }
 
     }
