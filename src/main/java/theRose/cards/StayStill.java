@@ -3,6 +3,7 @@ package theRose.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
+import com.megacrit.cardcrawl.cards.red.ThunderClap;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -56,10 +57,11 @@ public class StayStill extends AbstractDynamicCard {
 
         Iterator monster_list = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
+
         AbstractMonster monster;
         while(monster_list.hasNext()) {
             monster = (AbstractMonster)monster_list.next();
-            this.addToBot(new ApplyPowerAction(monster, p, new PassivityPower(m, p, this.baseMagicNumber), this.baseMagicNumber));
+            this.addToBot(new ApplyPowerAction(monster, p, new PassivityPower(monster, p, this.baseMagicNumber), this.baseMagicNumber, true, AbstractGameAction.AttackEffect.NONE));
         }
 
         // End turn
