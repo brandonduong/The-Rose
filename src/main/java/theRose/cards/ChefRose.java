@@ -55,7 +55,7 @@ public class ChefRose extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         // Deal damage
-        this.addToBot(new DamageAction(m, new DamageInfo(p, baseDamage), AbstractGameAction.AttackEffect.FIRE));
+        this.addToBot(new DamageAction(m, new DamageInfo(p, damage), AbstractGameAction.AttackEffect.FIRE));
 
         // Create random food item
         this.addToBot(new RandomFoodAction(this.upgraded));
