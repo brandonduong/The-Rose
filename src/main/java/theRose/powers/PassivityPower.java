@@ -75,7 +75,9 @@ public class PassivityPower extends AbstractPower implements CloneablePowerInter
         if (milestone == 3 && this.amount >= this.owner.currentHealth) {
             milestone += 1;
             // Flee handling
-            AbstractDungeon.actionManager.addToBottom(new TalkAction(this.owner, "Have a good day!", 0.3F, 2.5F));
+            if (!this.owner.isDying) {
+                AbstractDungeon.actionManager.addToBottom(new TalkAction(this.owner, "Have a good day!", 0.3F, 2.5F));
+            }
             AbstractDungeon.actionManager.addToBottom(new EscapeAction((AbstractMonster) this.owner));
         }
 
@@ -83,6 +85,8 @@ public class PassivityPower extends AbstractPower implements CloneablePowerInter
         if (AbstractDungeon.getCurrRoom().monsters.monsters.isEmpty()) {
             AbstractDungeon.getCurrRoom().cannotLose = false;
         }
+
+        updateDescription();
 
     }
 

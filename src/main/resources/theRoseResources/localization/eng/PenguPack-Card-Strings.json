@@ -104,7 +104,7 @@
   },
   "theRose:StayStill": {
     "NAME": "Stay Still!",
-    "DESCRIPTION": "Can only be played if no Attack was played this turn. Apply !M! Passivity. End your turn."
+    "DESCRIPTION": "Can only be played if no Attack was played this turn. Apply !M! Passivity to all enemies. End your turn."
   },
   "theRose:Sprint": {
     "NAME": "Sprint",
