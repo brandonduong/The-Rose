@@ -1,5 +1,7 @@
 package theRose.cards;
 
+import basemod.BaseMod;
+import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -45,6 +47,7 @@ public class HungryForm extends AbstractDynamicCard {
     public HungryForm() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = CONSUME;
+        this.tags.add(BaseModCardTags.FORM);
     }
 
     // Actions the card should do.
