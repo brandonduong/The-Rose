@@ -17,7 +17,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class BeakDive extends AbstractDynamicCard {
 
     /*
-     * Beak Dive: Can only be played when in flight. Deal 25 (35) damage. Lose all flight.
+     * Beak Dive: Can only be played when in flight. Deal 15 (20) damage. Lose all flight.
      */
 
     // TEXT DECLARATION
@@ -30,14 +30,14 @@ public class BeakDive extends AbstractDynamicCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 3;
-    private static final int DAMAGE = 25;
-    private static final int UPGRADE_DAMAGE = 10;
+    private static final int COST = 1;
+    private static final int DAMAGE = 15;
+    private static final int UPGRADE_DAMAGE = 5;
 
     // /STAT DECLARATION/
 
