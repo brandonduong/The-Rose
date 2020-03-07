@@ -19,6 +19,7 @@ tastefully flavoured around penguins, and the arctic.
 ### Download ###
 * ModTheSpire (https://github.com/kiooeht/ModTheSpire/releases)
 * BaseMod (https://github.com/daviscook477/BaseMod/releases)
+* StSLib (https://github.com/kiooeht/StSLib/releases)
 * TheRose(https://github.com/brandonduong/The-Rose/releases)
 ### Installation ###
 1. Unzip `ModTheSpire.zip`,copy `ModTheSpire.jar` to your Slay the Spire install directory.
