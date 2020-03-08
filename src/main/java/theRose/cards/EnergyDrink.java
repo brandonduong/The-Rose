@@ -33,19 +33,19 @@ public class EnergyDrink extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
-    private static final int UPGRADE_COST = 0;
+    private static final int COST = 0;
 
     private static final int ENERGY_GAIN = 1;
     private static final int FLIGHT = 1;
 
     private static final int FOOD_VALUE = 1;
+    private static final int UPGRADE_VALUE = 1;
 
     // /STAT DECLARATION/
 
     public EnergyDrink() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = ENERGY_GAIN;
+        baseMagicNumber = FOOD_VALUE;
         SecondMagicNumber = BaseSecondMagicNumber = FLIGHT;
 
         this.tags.add(CustomTags.FOOD);
@@ -64,7 +64,7 @@ public class EnergyDrink extends AbstractDynamicCard {
                 new PenguinPower(p, SecondMagicNumber)));
 
         // Food eaten += 1
-        this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, FOOD_VALUE)));
+        this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, baseMagicNumber)));
     }
 
 
@@ -73,7 +73,7 @@ public class EnergyDrink extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADE_COST);
+            upgradeMagicNumber(UPGRADE_VALUE);
             initializeDescription();
         }
     }

@@ -53,7 +53,7 @@
   },
   "theRose:EnergyDrink": {
     "NAME": "Energy Drink",
-    "DESCRIPTION": "Gain !M! Energy. Gain !theRose:SecondMagic! Flight. Exhaust."
+    "DESCRIPTION": "Gain 1 Energy. Gain !theRose:SecondMagic! Flight. Exhaust."
   },
   "theRose:Donut": {
     "NAME": "Donut",

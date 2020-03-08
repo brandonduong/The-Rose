@@ -32,18 +32,19 @@ public class FriedChicken extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
-    private static final int UPGRADE_COST = 0;
+    private static final int COST = 0;
 
     private static final int BUFF = 2;
 
     private static final int FOOD_VALUE = 1;
+    private static final int UPGRADE_VALUE = 1;
 
     // /STAT DECLARATION/
 
     public FriedChicken() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = BUFF;
+        BaseSecondMagicNumber = FOOD_VALUE;
 
         this.tags.add(CustomTags.FOOD);
         exhaust = true;
@@ -59,7 +60,7 @@ public class FriedChicken extends AbstractDynamicCard {
         this.addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, baseMagicNumber), baseMagicNumber));
 
         // Food eaten += 1
-        this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, FOOD_VALUE)));
+        this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, BaseSecondMagicNumber)));
     }
 
 
@@ -68,7 +69,7 @@ public class FriedChicken extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADE_COST);
+            upgradeSecondMagicNumber(UPGRADE_VALUE);
             initializeDescription();
         }
     }

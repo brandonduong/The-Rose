@@ -37,21 +37,23 @@ public class Donut extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
-    private static final int UPGRADE_COST = 0;
+    private static final int COST = 0;
 
     private static final int DRAW = 1;
     private static final int FLIGHT = -1;
 
     private static final int FOOD_VALUE = 1;
+    private static final int UPGRADE_VALUE = 1;
 
     // /STAT DECLARATION/
 
     public Donut() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = DRAW;
+        baseDraw = DRAW;
         SecondMagicNumber = FLIGHT;
         BaseSecondMagicNumber = - FLIGHT; // Display integer for description
+
+        baseMagicNumber = FOOD_VALUE;
 
         this.tags.add(CustomTags.FOOD);
         exhaust = true;
@@ -62,7 +64,7 @@ public class Donut extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Draw cards
         AbstractDungeon.actionManager.addToBottom(
-                new DrawCardAction(p, baseMagicNumber));
+                new DrawCardAction(p, baseDraw));
 
         // Remove Flight if stacks will go to 0
         if (p.hasPower("Flight") && p.getPower("Flight").amount == 1) {
@@ -75,9 +77,8 @@ public class Donut extends AbstractDynamicCard {
                     new PenguinPower(p, SecondMagicNumber)));
         }
 
-        ModInitializer.logger.info("HELLO");
         // Food eaten += 1
-        this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, FOOD_VALUE)));
+        this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, baseMagicNumber)));
 
     }
 
@@ -87,7 +88,7 @@ public class Donut extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADE_COST);
+            upgradeMagicNumber(UPGRADE_VALUE);
             initializeDescription();
         }
     }

@@ -32,18 +32,19 @@ public class Hamburger extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
-    private static final int UPGRADE_COST = 0;
+    private static final int COST = 0;
 
     private static final int BLOCK = 6;
 
     private static final int FOOD_VALUE = 3;
+    private static final int UPGRADE_VALUE = 3;
 
     // /STAT DECLARATION/
 
     public Hamburger() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
+        baseMagicNumber = FOOD_VALUE;
 
         this.tags.add(CustomTags.FOOD);
         exhaust = true;
@@ -56,7 +57,7 @@ public class Hamburger extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
 
         // Food eaten += 3
-        this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, FOOD_VALUE)));
+        this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, baseMagicNumber)));
     }
 
 
@@ -65,7 +66,7 @@ public class Hamburger extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADE_COST);
+            upgradeMagicNumber(UPGRADE_VALUE);
             initializeDescription();
         }
     }

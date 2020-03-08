@@ -31,18 +31,19 @@ public class Sushi extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
-    private static final int UPGRADE_COST = 0;
+    private static final int COST = 0;
 
     private static final int HEAL = 1;
 
     private static final int FOOD_VALUE = 1;
+    private static final int UPGRADE_VALUE = 1;
 
     // /STAT DECLARATION/
 
     public Sushi() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = HEAL;
+        baseHeal = HEAL;
+        baseMagicNumber = FOOD_VALUE;
 
         this.tags.add(CustomTags.FOOD);
         exhaust = true;
@@ -52,10 +53,10 @@ public class Sushi extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Heal 1
-        this.addToBot(new HealAction(p, p, this.baseMagicNumber));
+        this.addToBot(new HealAction(p, p, baseHeal));
 
         // Food eaten += 1
-        this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, FOOD_VALUE)));
+        this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, baseMagicNumber)));
     }
 
 
@@ -64,7 +65,7 @@ public class Sushi extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADE_COST);
+            upgradeMagicNumber(UPGRADE_VALUE);
             initializeDescription();
         }
     }
