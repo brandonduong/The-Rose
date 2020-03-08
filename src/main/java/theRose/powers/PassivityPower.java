@@ -55,18 +55,18 @@ public class PassivityPower extends AbstractPower implements CloneablePowerInter
     @Override
     public void onAfterUseCard(final AbstractCard card, final UseCardAction action) {
         // First milestone reached at >= 25% current HP
-        if (milestone == 0 && this.amount >= this.owner.currentHealth / 4) {
+        if (milestone == 0 && this.amount >= this.owner.currentHealth * 0.25F) {
             milestone += 1;
             this.addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new WeakPower(this.owner, 2, false)));
         }
         // Second milestone reached at >= 50% current HP
-        if (milestone == 1 && this.amount >= this.owner.currentHealth / 2) {
+        if (milestone == 1 && this.amount >= this.owner.currentHealth * 0.5F) {
             milestone += 1;
             this.addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new VulnerablePower(this.owner, 2, false)));
         }
 
         // Third milestone reached at >= 75% current HP
-        if (milestone == 2 && this.amount >= (this.owner.currentHealth / 4) * 3) {
+        if (milestone == 2 && this.amount >= (this.owner.currentHealth * 0.75F) ) {
             milestone += 1;
             this.addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new StrengthPower(this.owner, -2), -2, true));
         }
