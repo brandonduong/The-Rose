@@ -77,8 +77,8 @@ public class PassivityPower extends AbstractPower implements CloneablePowerInter
             // Flee handling
             if (!this.owner.isDying) {
                 AbstractDungeon.actionManager.addToBottom(new TalkAction(this.owner, "Have a good day!", 0.3F, 2.5F));
+                AbstractDungeon.actionManager.addToBottom(new EscapeAction((AbstractMonster) this.owner));
             }
-            AbstractDungeon.actionManager.addToBottom(new EscapeAction((AbstractMonster) this.owner));
         }
 
         // Prevents softlocks
