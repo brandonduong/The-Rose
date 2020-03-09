@@ -100,7 +100,7 @@
   },
   "theRose:HeadPat": {
     "NAME": "Head Pat",
-    "DESCRIPTION": "Deal !D! damage. Apply !M! Passivity."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Passivity. NL Add a copy of this card to your discard pile."
   },
   "theRose:StayStill": {
     "NAME": "Stay Still!",
@@ -111,11 +111,12 @@
     "DESCRIPTION": "Can only be played if no Food item was played this turn and not in Flight. NL Draw !M! Cards."
   },
 
+
+
   "theRose:TripleJump": {
     "NAME": "Triple Jump",
     "DESCRIPTION": "Deal !D! damage 3 times. Gain 1 Flight."
   },
-  "theRose:"
 
 
   "theRose:FlyHigher": {

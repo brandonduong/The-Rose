@@ -3,6 +3,7 @@ package theRose.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -15,7 +16,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class HeadPat extends AbstractDynamicCard {
 
     /*
-     * HeadPat: Deal !D! damage. Apply !M! Passivity.
+     * HeadPat: Deal !D! damage. Apply !M! Passivity. Add a copy of this card to your discard pile.
      */
 
     // TEXT DECLARATION
@@ -54,6 +55,9 @@ public class HeadPat extends AbstractDynamicCard {
 
         // Apply Passivity
         this.addToBot(new ApplyPowerAction(m, p, new PassivityPower(m, p, this.baseMagicNumber), this.baseMagicNumber));
+
+        // Add copy to discard
+        this.addToBot(new MakeTempCardInDiscardAction(this, 1));
     }
 
     // Upgraded stats.
