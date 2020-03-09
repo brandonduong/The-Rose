@@ -41,6 +41,7 @@ public class UberDishes extends AbstractDynamicCard {
     private static final int COST = 1;
 
     private static final int CREATE = 2; // How many random food cards to create
+    private static final int UPGRADE_CREATE = 1;
 
     // /STAT DECLARATION/
 
@@ -76,6 +77,7 @@ public class UberDishes extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeMagicNumber(UPGRADE_CREATE);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
