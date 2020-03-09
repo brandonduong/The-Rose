@@ -21,7 +21,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class TakesiesBacksies extends AbstractDynamicCard {
 
     /*
-     * Takesies Backsies: For every !M! Bribe, reduce Bribe by !M!, deal !D! damage, and consume a random Food item.
+     * Takesies Backsies: For every !M! Passivity, reduce Passivity by !M!, deal !D! damage, and consume a random Food item.
      */
 
     // TEXT DECLARATION
@@ -34,7 +34,7 @@ public class TakesiesBacksies extends AbstractDynamicCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
