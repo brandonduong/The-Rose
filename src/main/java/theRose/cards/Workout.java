@@ -13,7 +13,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class Workout extends AbstractDynamicCard {
 
     /*
-     * Workout: Gain 1 (2) Strength
+     * Workout: Gain 2 (3) Strength
      */
 
     // TEXT DECLARATION
@@ -32,7 +32,7 @@ public class Workout extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int BUFF = 1; // Give 1 Strength
+    private static final int BUFF = 2; // Give 2 Strength
     private static final int BUFF_UPGRADE = 1; // Add 1 to upgrade
 
     // /STAT DECLARATION/

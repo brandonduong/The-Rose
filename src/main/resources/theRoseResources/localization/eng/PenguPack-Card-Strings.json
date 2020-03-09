@@ -73,7 +73,7 @@
   },
   "theRose:HungryForm": {
     "NAME": "Hungry Form",
-    "DESCRIPTION": "At the start of your turn, consume !M! random Food items.",
+    "DESCRIPTION": "At the start of your turn, consume !M! random Food items."
   },
   "theRose:Reorder": {
     "NAME": "Reorder",
