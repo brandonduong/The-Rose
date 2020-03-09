@@ -17,7 +17,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class HungryForm extends AbstractDynamicCard {
 
     /*
-     * Hungry Form: At the start of your turn, consume 1 (2) random food item(s).
+     * Hungry Form: At the start of your turn, consume 2 (3) random food item(s).
      */
 
     // TEXT DECLARATION
@@ -39,7 +39,7 @@ public class HungryForm extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 3;
-    private static final int CONSUME = 1; // Consume 1
+    private static final int CONSUME = 2; // Consume 1
     private static final int CONSUME_UPGRADE = 1; // Add 1 to upgrade
 
     // /STAT DECLARATION/
@@ -65,7 +65,6 @@ public class HungryForm extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(CONSUME_UPGRADE);
-            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }
