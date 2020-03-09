@@ -65,7 +65,7 @@
   },
   "theRose:Sushi": {
     "NAME": "Sushi",
-    "DESCRIPTION": "Heal !M!. Exhaust."
+    "DESCRIPTION": "Gain !M! Dexterity. At the end of this turn, lose !M! Dexterity. Exhaust."
   },
   "theRose:Hamburger": {
     "NAME": "Hamburger",

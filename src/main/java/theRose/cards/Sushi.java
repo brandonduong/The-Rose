@@ -1,9 +1,12 @@
 package theRose.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.LoseDexterityPower;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
 import theRose.powers.FoodEatenPower;
@@ -13,7 +16,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class Sushi extends AbstractDynamicCard {
 
     /*
-     * Sushi: Heal 1. Exhaust.
+     * Sushi: Gain 2 Dexterity. At the end of this turn, lose 2 Dexterity. Exhaust.
      */
 
     // TEXT DECLARATION
@@ -33,7 +36,7 @@ public class Sushi extends AbstractDynamicCard {
 
     private static final int COST = 0;
 
-    private static final int HEAL = 1;
+    private static final int BUFF = 2;
 
     private static final int FOOD_VALUE = 1;
     private static final int UPGRADE_VALUE = 1;
@@ -42,8 +45,8 @@ public class Sushi extends AbstractDynamicCard {
 
     public Sushi() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseHeal = HEAL;
-        baseMagicNumber = FOOD_VALUE;
+        baseMagicNumber = BUFF;
+        BaseSecondMagicNumber = FOOD_VALUE;
 
         this.tags.add(CustomTags.FOOD);
         exhaust = true;
@@ -52,11 +55,14 @@ public class Sushi extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Heal 1
-        this.addToBot(new HealAction(p, p, baseHeal));
+        // Gain 2 Dexterity
+        this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, baseMagicNumber), baseMagicNumber));
+
+        // Gain 2 Stacks of Lose Dexterity Power
+        this.addToBot(new ApplyPowerAction(p, p, new LoseDexterityPower(p, baseMagicNumber), baseMagicNumber));
 
         // Food eaten += 1
-        this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, baseMagicNumber)));
+        this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, BaseSecondMagicNumber)));
     }
 
 
@@ -65,7 +71,7 @@ public class Sushi extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_VALUE);
+            upgradeSecondMagicNumber(UPGRADE_VALUE);
             initializeDescription();
         }
     }
