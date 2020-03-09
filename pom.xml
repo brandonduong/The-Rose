@@ -36,7 +36,7 @@
             <artifactId>StSLib</artifactId>
             <version>1.18.1</version>
             <scope>system</scope>
-            <systemPath>C:/Users/tt/Documents/my_mods/lib/StSLib.jar</systemPath>
+            <systemPath>${basedir}/../lib/StSLib.jar</systemPath>
             <!--<systemPath>${basedir}/../lib/StSLib.jar</systemPath>-->
         </dependency>
     </dependencies>
