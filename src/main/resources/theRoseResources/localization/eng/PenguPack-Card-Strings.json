@@ -116,6 +116,18 @@
     "NAME": "Triple Jump",
     "DESCRIPTION": "Deal !D! damage 3 times. Gain 1 Flight."
   },
+  "theRose:NeverendingAppetite": {
+    "NAME": "Neverending Apetite",
+    "DESCRIPTION": "Whenever you play a Food item, draw a card."
+  },
+  "theRose:Challenge": {
+    "NAME": "Challenge",
+    "DESCRIPTION": "If an enemy intends to attack, multi-hit attacks hit one more time this turn."
+  },
+  "theRose:TalkItOut": {
+    "NAME": "Talk It Out",
+    "DESCRIPTION": "If an enemy does not intend to attack, apply !M! Passivity. Increase this card's Passivity by !theRose:SecondMagic! for this combat."
+  },
 
 
   "theRose:FlyHigher": {
