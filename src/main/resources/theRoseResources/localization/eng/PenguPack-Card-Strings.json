@@ -111,6 +111,12 @@
     "DESCRIPTION": "Can only be played if no Food item was played this turn and not in Flight. NL Draw !M! Cards."
   },
 
+  "theRose:TripleJump": {
+    "NAME": "Triple Jump",
+    "DESCRIPTION": "Deal !D! damage 3 times. Gain 1 Flight."
+  },
+  "theRose:"
+
 
   "theRose:FlyHigher": {
     "NAME": "Fly Higher!",
