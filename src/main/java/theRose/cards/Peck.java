@@ -14,7 +14,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class Peck extends AbstractDynamicCard {
 
     /*
-     * Peck: Apply 1 vulnerable. If in flight, apply 1 (2) weak too.
+     * Peck: Apply 1 (2) vulnerable. If in flight, apply 1 (2) weak too.
      */
 
     // TEXT DECLARATION
@@ -34,6 +34,7 @@ public class Peck extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int BUFF = 1; // Vulnerable stacks
+    private static final int UPGRADE_BUFF = 1;
     private static final int BUFF_2 = 1; // Weak stacks
     private static final int UPGRADE_BUFF_2 = 1;
 
@@ -64,6 +65,7 @@ public class Peck extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeMagicNumber(UPGRADE_BUFF);
             upgradeSecondMagicNumber(UPGRADE_BUFF_2);
             initializeDescription();
         }
