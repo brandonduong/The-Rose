@@ -4,6 +4,8 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
 import theRose.actions.RandomFoodAction;
@@ -25,11 +27,14 @@ public class EarlyBird extends AbstractDynamicCard {
 
     // /TEXT DECLARATION/
 
+    // Upgraded description
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
@@ -44,7 +49,7 @@ public class EarlyBird extends AbstractDynamicCard {
     public EarlyBird() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = BUFF;
-        BaseSecondMagicNumber = CREATE;
+        BaseSecondMagicNumber = SecondMagicNumber = CREATE;
 
     }
 
@@ -67,6 +72,7 @@ public class EarlyBird extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeSecondMagicNumber(UPGRADE_CREATE);
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }
