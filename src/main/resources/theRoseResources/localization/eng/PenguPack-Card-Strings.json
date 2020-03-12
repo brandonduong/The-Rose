@@ -109,13 +109,18 @@
     "NAME": "Sprint",
     "DESCRIPTION": "Can only be played if no Food item was played this turn and not in Flight. NL Draw !M! Cards."
   },
-
-
-
   "theRose:TripleJump": {
     "NAME": "Triple Jump",
     "DESCRIPTION": "Deal !D! damage 3 times. Gain !M! Flight."
   },
+  "theRose:EarlyBird": {
+    "NAME": "Early Bird",
+    "DESCRIPTION": "Gain !M! Flight. Add a random Food item to your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Flight. Add !theRose:SecondMagic! random Food items to your hand."
+  },
+
+
+
   "theRose:ConveyorBeltSushi": {
     "NAME": "Conveyor Belt Sushi",
     "DESCRIPTION": "Whenever you play a Food item, draw a card."
@@ -127,11 +132,6 @@
   "theRose:TalkItOut": {
     "NAME": "Talk It Out",
     "DESCRIPTION": "If an enemy does not intend to attack, apply !M! Passivity. Increase this card's Passivity by !theRose:SecondMagic! for this combat."
-  },
-  "theRose:EarlyBird": {
-    "NAME": "Early Bird",
-    "DESCRIPTION": "Gain !M! Flight. Add a random Food item to your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Flight. Add 2 random Food items to your hand."
   },
   "theRose:AFishADay": {
     "NAME": "A Fish a Day!",

@@ -16,7 +16,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class UberDishes extends AbstractDynamicCard {
 
     /*
-     * UberDishes: Create 2 random (upgraded) food items in your discard pile.
+     * UberDishes: Create 3 (4) random (upgraded) food items in your discard pile.
      */
 
     // TEXT DECLARATION
@@ -40,7 +40,7 @@ public class UberDishes extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int CREATE = 2; // How many random food cards to create
+    private static final int CREATE = 3; // How many random food cards to create
     private static final int UPGRADE_CREATE = 1;
 
     // /STAT DECLARATION/
