@@ -122,6 +122,10 @@
     "NAME": "Chat",
     "DESCRIPTION": "If an enemy does not intend to attack, apply !M! Passivity. Increase this card's Passivity by !theRose:SecondMagic! for this combat."
   },
+  "theRose:AFishADay": {
+    "NAME": "A Fish a Day!",
+    "DESCRIPTION": "Gain !M! Artifact. At the end of this turn, lose !M! Artifact. Exhaust."
+  },
 
 
 
@@ -132,10 +136,6 @@
   "theRose:Challenge": {
     "NAME": "Challenge",
     "DESCRIPTION": "If an enemy intends to attack, multi-hit attacks hit one more time this turn."
-  },
-  "theRose:AFishADay": {
-    "NAME": "A Fish a Day!",
-    "DESCRIPTION": "Gain 1 Artifact. At the end of this turn, lose 1 Artifact. Exhaust."
   },
   "theRose:Compost": {
     "NAME": "Compost",

@@ -27,5 +27,9 @@
 "theRose:PassivityPower": {
         "NAME": "Passivity",
         "DESCRIPTIONS": ["Current Milestone: ", ". Milestones are reached at every 25% of the enemy's current HP. Once stacks reach 100% of the enemy's current HP, they flee."]
+},
+"theRose:LoseArtifactPower": {
+        "NAME": "Artifact Down",
+        "DESCRIPTIONS": ["Lose #b", "Artifact at the end of this turn."]
 }
 }

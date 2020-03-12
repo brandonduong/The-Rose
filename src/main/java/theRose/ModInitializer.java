@@ -448,7 +448,8 @@ public class ModInitializer implements
         BaseMod.addCard(new Sprint());
         BaseMod.addCard(new TripleJump());
         BaseMod.addCard(new EarlyBird());
-
+        BaseMod.addCard(new Chat());
+        BaseMod.addCard(new AFishADay());
 
         /*
         BaseMod.addCard(new OrbSkill());
