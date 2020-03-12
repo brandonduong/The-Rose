@@ -3,25 +3,15 @@ package theRose.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.EscapeAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
 import theRose.ModInitializer;
 
-import theRose.cards.*;
 import theRose.util.TextureLoader;
-
-import java.util.concurrent.ThreadLocalRandom;
 
 public class LoseArtifactPower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
@@ -58,7 +48,7 @@ public class LoseArtifactPower extends AbstractPower implements CloneablePowerIn
     public void atEndOfTurn(boolean isPlayer) { // At the start of your turn
         this.flash();
         this.addToBot(new ApplyPowerAction(this.owner, this.owner, new ArtifactPower(this.owner, -this.amount), -this.amount));
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "Artifact"));
+        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "theRose:LoseArtifactPower"));
     }
 
 

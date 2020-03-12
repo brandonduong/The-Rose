@@ -50,12 +50,11 @@ public class AFishADay extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Gain 2 Strength
-        this.addToBot(new ApplyPowerAction(p, p, new ArtifactPower(p, baseMagicNumber), baseMagicNumber));
-
         // Gain 2 Stacks of Lose Artifact Power
         this.addToBot(new ApplyPowerAction(p, p, new LoseArtifactPower(p, p, baseMagicNumber), baseMagicNumber));
 
+        // Gain 2 Strength
+        this.addToBot(new ApplyPowerAction(p, p, new ArtifactPower(p, baseMagicNumber), baseMagicNumber));
     }
 
 

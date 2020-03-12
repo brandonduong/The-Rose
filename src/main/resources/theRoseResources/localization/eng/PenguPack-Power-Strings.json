@@ -9,7 +9,7 @@
 },
 "theRose:PenguinFlight": {
         "NAME": "Penguin Flight",
-        "DESCRIPTIONS": ["Reduce #yAttack damage taken by #b25%. Reduce #yBlock gained by #b25%. Cancelled if dealt #yAttack damage ",
+        "DESCRIPTIONS": ["Reduce #yAttack damage taken by #b50%. Reduce #yBlock gained by #b25%. Cancelled if dealt #yAttack damage ",
                 " times in one turn."]
 },
 "theRose:TemperTantrumPower": {

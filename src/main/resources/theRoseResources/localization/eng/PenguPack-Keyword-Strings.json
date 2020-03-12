@@ -15,7 +15,7 @@
       "flight",
       "Flight"
     ],
-    "DESCRIPTION": "Reduce #yAttack damage taken by #b25%. Reduce #yBlock gained by #b25%. Cancelled if dealt #yAttack damage X times in one turn."
+    "DESCRIPTION": "Reduce #yAttack damage taken by #b50%. Reduce #yBlock gained by #b25%. Cancelled if dealt #yAttack damage X times in one turn."
   },
   {
     "PROPER_NAME": "Flipper Flap",
