@@ -48,7 +48,7 @@ public class PenguinPower extends AbstractPower {
     } // Reduce block by 25%
 
     private float calculateDamageTakenAmount(float damage, DamageType type) {
-        return type != DamageType.HP_LOSS && type != DamageType.THORNS ? damage * 0.75F : damage;
+        return type != DamageType.HP_LOSS && type != DamageType.THORNS ? damage / 2.0F : damage;
     }
 
     public int onAttacked(DamageInfo info, int damageAmount) {
