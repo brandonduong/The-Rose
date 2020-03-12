@@ -1,5 +1,6 @@
 package theRose.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -36,6 +37,7 @@ public class TripleJump extends AbstractDynamicCard {
     private static final int DAMAGE = 2;
     private static final int UPGRADE_DAMAGE = 1;
     private static final int BUFF = 1; // Give 1 Penguin Flight
+    private static final int TIMES = 3; // Number of times to deal damage
 
 
     // /STAT DECLARATION/
@@ -44,6 +46,7 @@ public class TripleJump extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         baseMagicNumber = BUFF;
+        BaseSecondMagicNumber = SecondMagicNumber = TIMES;
 
         isMultiDamage = true;
     }
@@ -55,7 +58,10 @@ public class TripleJump extends AbstractDynamicCard {
         this.addToBot(new ApplyPowerAction(p, p, new PenguinPower(p, baseMagicNumber)));
 
         // Deal damage
-        this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn)));
+        for (int i = 0; i < SecondMagicNumber; i++) {
+            this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+                    AbstractGameAction.AttackEffect.SMASH));
+        }
 
     }
 
