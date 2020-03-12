@@ -176,7 +176,7 @@
   },
   "theRose:PermanentChub": {
     "NAME": "Permanent Chub",
-    "DESCRIPTION": "Gain !B! Block for every Food item eaten this game. Reset this counter. Exhaust."
+    "DESCRIPTION": "Gain !B! Block for every Food item eaten this game. Reset this counter (or maybe subtract amount of damage taken).  Exhaust."
   },
   "theRose:BellySlide": {
     "NAME": "Belly Slide",
