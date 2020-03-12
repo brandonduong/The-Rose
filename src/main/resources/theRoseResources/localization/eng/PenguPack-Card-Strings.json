@@ -114,10 +114,10 @@
 
   "theRose:TripleJump": {
     "NAME": "Triple Jump",
-    "DESCRIPTION": "Deal !D! damage 3 times. Gain 1 Flight."
+    "DESCRIPTION": "Deal !D! damage 3 times. Gain !M! Flight."
   },
-  "theRose:NeverendingAppetite": {
-    "NAME": "Neverending Apetite",
+  "theRose:ConveyorBeltSushi": {
+    "NAME": "Conveyor Belt Sushi",
     "DESCRIPTION": "Whenever you play a Food item, draw a card."
   },
   "theRose:Challenge": {
@@ -128,8 +128,19 @@
     "NAME": "Talk It Out",
     "DESCRIPTION": "If an enemy does not intend to attack, apply !M! Passivity. Increase this card's Passivity by !theRose:SecondMagic! for this combat."
   },
-
-
+  "theRose:EarlyBird": {
+    "NAME": "Early Bird",
+    "DESCRIPTION": "Gain !M! Flight. Add a random Food item to your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Flight. Add 2 random Food items to your hand."
+  },
+  "theRose:AFishADay": {
+    "NAME": "A Fish a Day!",
+    "DESCRIPTION": "Gain 1 Artifact. At the end of this turn, lose 1 Artifact. Exhaust."
+  },
+  "theRose:Compost": {
+    "NAME": "Compost",
+    "DESCRIPTION": "Exhaust a random card. Create !M! random Food items in your discard pile."
+  },
   "theRose:FlyHigher": {
     "NAME": "Fly Higher!",
     "DESCRIPTION": "Flight reduces Attack damage taken by 50% this turn. Can't gain block the rest of this turn."
