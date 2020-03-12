@@ -36,7 +36,7 @@ public class Sushi extends AbstractDynamicCard {
 
     private static final int COST = 0;
 
-    private static final int BUFF = 2;
+    private static final int BUFF = 1;
 
     private static final int FOOD_VALUE = 1;
     private static final int UPGRADE_VALUE = 1;
@@ -55,10 +55,10 @@ public class Sushi extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Gain 2 Dexterity
+        // Gain 1 Dexterity
         this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, baseMagicNumber), baseMagicNumber));
 
-        // Gain 2 Stacks of Lose Dexterity Power
+        // Gain 1 Stacks of Lose Dexterity Power
         this.addToBot(new ApplyPowerAction(p, p, new LoseDexterityPower(p, baseMagicNumber), baseMagicNumber));
 
         // Food eaten += 1

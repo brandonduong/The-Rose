@@ -34,7 +34,7 @@ public class FriedChicken extends AbstractDynamicCard {
 
     private static final int COST = 0;
 
-    private static final int BUFF = 2;
+    private static final int BUFF = 1;
 
     private static final int FOOD_VALUE = 1;
     private static final int UPGRADE_VALUE = 1;
@@ -53,10 +53,10 @@ public class FriedChicken extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Gain 2 Strength
+        // Gain 1 Strength
         this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, baseMagicNumber), baseMagicNumber));
 
-        // Gain 2 Stacks of Lose Strength Power
+        // Gain 1 Stacks of Lose Strength Power
         this.addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, baseMagicNumber), baseMagicNumber));
 
         // Food eaten += 1
