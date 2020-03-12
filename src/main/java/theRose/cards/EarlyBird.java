@@ -21,7 +21,7 @@ public class EarlyBird extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = ModInitializer.makeID(EarlyBird.class.getSimpleName());
-    public static final String IMG = makeCardPath("EarlyBird.png");
+    public static final String IMG = makeCardPath("Skill.png");
 
     // /TEXT DECLARATION/
 

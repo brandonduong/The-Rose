@@ -20,7 +20,7 @@ public class TripleJump extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = ModInitializer.makeID(TripleJump.class.getSimpleName());
-    public static final String IMG = makeCardPath("TripleJump.png");
+    public static final String IMG = makeCardPath("Attack.png");
 
     // /TEXT DECLARATION/
 
