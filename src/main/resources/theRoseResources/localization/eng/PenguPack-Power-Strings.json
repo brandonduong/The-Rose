@@ -30,6 +30,6 @@
 },
 "theRose:LoseArtifactPower": {
         "NAME": "Artifact Down",
-        "DESCRIPTIONS": ["Lose #b", "Artifact at the end of this turn."]
+        "DESCRIPTIONS": ["Lose #b", " Artifact at the end of this turn."]
 }
 }

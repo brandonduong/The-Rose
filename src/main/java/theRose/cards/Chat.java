@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.green.GlassKnife;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
@@ -45,17 +46,22 @@ public class Chat extends AbstractDynamicCard {
     public Chat() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = STACKS;
-        BaseSecondMagicNumber = INCREASE;
+        BaseSecondMagicNumber = SecondMagicNumber = INCREASE;
+
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Apply Passivity
-        this.addToBot(new ApplyPowerAction(m, p, new PassivityPower(m, p, this.baseMagicNumber), this.baseMagicNumber));
+        // Only do effect if monster doesn't intend to do damage
+        if (m != null && m.getIntentBaseDmg() <= 0) {
+            // Apply Passivity
+            this.addToBot(new ApplyPowerAction(m, p, new PassivityPower(m, p, this.baseMagicNumber), this.baseMagicNumber));
 
-        // Increase amount of stacks to give next use
-        baseMagicNumber += BaseSecondMagicNumber;
+            // Increase amount of stacks to give next use
+            this.baseMagicNumber += this.BaseSecondMagicNumber;
+        }
+
     }
 
     // Upgraded stats.

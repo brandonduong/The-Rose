@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.*;
 import theRose.ModInitializer;
@@ -47,7 +48,18 @@ public class LoseArtifactPower extends AbstractPower implements CloneablePowerIn
     @Override
     public void atEndOfTurn(boolean isPlayer) { // At the start of your turn
         this.flash();
-        this.addToBot(new ApplyPowerAction(this.owner, this.owner, new ArtifactPower(this.owner, -this.amount), -this.amount));
+        // Remove Artifact if stacks will go to 0
+        if (owner.hasPower("Artifact") && owner.getPower("Artifact").amount == 1) {
+            this.addToBot(new RemoveSpecificPowerAction(owner, owner, "Artifact"));
+        }
+
+        // Lose Artifact
+        else if (owner.hasPower("Artifact")) {
+            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new ArtifactPower(this.owner, -this.amount), -this.amount));
+
+        }
+
+        // Remove LoseArtifactPower
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "theRose:LoseArtifactPower"));
     }
 
