@@ -118,6 +118,10 @@
     "DESCRIPTION": "Gain !M! Flight. Add a random Food item to your hand.",
     "UPGRADE_DESCRIPTION": "Gain !M! Flight. Add !theRose:SecondMagic! random Food items to your hand."
   },
+  "theRose:Chat": {
+    "NAME": "Chat",
+    "DESCRIPTION": "If an enemy does not intend to attack, apply !M! Passivity. Increase this card's Passivity by !theRose:SecondMagic! for this combat."
+  },
 
 
 
@@ -128,10 +132,6 @@
   "theRose:Challenge": {
     "NAME": "Challenge",
     "DESCRIPTION": "If an enemy intends to attack, multi-hit attacks hit one more time this turn."
-  },
-  "theRose:TalkItOut": {
-    "NAME": "Talk It Out",
-    "DESCRIPTION": "If an enemy does not intend to attack, apply !M! Passivity. Increase this card's Passivity by !theRose:SecondMagic! for this combat."
   },
   "theRose:AFishADay": {
     "NAME": "A Fish a Day!",
