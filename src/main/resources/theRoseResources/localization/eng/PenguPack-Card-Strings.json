@@ -9,7 +9,7 @@
   },
   "theRose:Fly": {
     "NAME": "Fly High to the Sky!",
-    "DESCRIPTION": "Gain !M! Penguin-Flight."
+    "DESCRIPTION": "Gain !B! Block. Gain !M! Penguin-Flight."
   },
 
 
@@ -129,6 +129,87 @@
 
 
 
+  "theRose:Angy": {
+    "NAME": "Angy!",
+    "DESCRIPTION": "If you took damage last turn, gain !M! Strength."
+  },
+  "theRose:FoodFight": {
+    "NAME": "Food Fight!",
+    "DESCRIPTION": "Whenever you play a Food item, deal !D! damage to a random enemy."
+  },
+  "theRose:RefrigeratorRaid": {
+    "NAME": "Refrigerator Raid!",
+    "DESCRIPTION": "Gain !M! Intangible. Fill your hand with Food items."
+  },
+  "theRose:FurFlex": {
+    "NAME": "Fur Flex",
+    "DESCRIPTION": "Gain !M! Thorns."
+  },
+  "theRose:Slap": {
+    "NAME": "Slap",
+    "DESCRIPTION": "Deal !D! damage. This card's damage is lowered by !M! this combat."
+  },
+  "theRose:FoodFit": {
+    "NAME": "Food Fit",
+    "DESCRIPTION": "Deal !D! damage to all enemies. If no Food item was played this turn, deal !M! instead."
+  },
+  "theRose:OutOfSight": {
+    "NAME": "Out Of Sight",
+    "DESCRIPTION": "Whenever you gain Flight, apply !M! Weak to a random enemy."
+  },
+  "theRose:Chomp": {
+    "NAME": "Chomp",
+    "DESCRIPTION": "Deal damage equal to 5% of the enemy's max health. Heal HP equal to unblocked damage. Exhaust."
+  },
+  "theRose:Reunion": {
+    "NAME": "Reunion",
+    "DESCRIPTION": "If the enemy is bird-like, they flee. Ethereal."
+  },
+  "theRose:BubbleButt": {
+    "NAME": "Bubble Butt",
+    "DESCRIPTION": "Reduce damage taken by !M! for the rest of this combat."
+  },
+  "theRose:FoodRush": {
+    "NAME": "Food Rush",
+    "DESCRIPTION": "Whenever you consume a Food item, have your next Attack deal !M! additional damage."
+  },
+  "theRose:Squish": {
+    "NAME": "Squish",
+    "DESCRIPTION": "If your current health is !M! times the enemy's, set their HP to 0. Exhaust."
+  },
+  "theRose:BellySlide": {
+    "NAME": "Belly Slide",
+    "DESCRIPTION": "Deal !D! damage to all enemies. Apply Vulnerable to all enemies."
+  },
+  "theRose:TossTheSalad": {
+    "NAME": "Toss The Salad",
+    "DESCRIPTION": "Deal !D! damage. Apply !M! Ranch."
+  },
+  "theRose:Hibernate": {
+    "NAME": "Hibernate",
+    "DESCRIPTION": "Create 5 random Food items. Next turn, gain 1 !E!. Exhaust."
+  },
+  "theRose:TripleFlap": {
+    "NAME": "Triple Flap",
+    "DESCRIPTION": "Add !M! Flipper Flap to your hand."
+  },
+  "theRose:FollowUpFlap": {
+    "NAME": "Follow-Up Flap",
+    "DESCRIPTION": "Deal !D! damage. Add !M! Flipper Flap to your hand."
+  },
+  "theRose:FlapFrenzy": {
+    "NAME": "Flap Frenzy",
+    "DESCRIPTION": "Play !M! Flipper Flaps for each Flipper Flap played this combat."
+  },
+  "theRose:FullOfFlaps": {
+    "NAME": "Full Of Flaps",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Deals an additional !theRose:SecondMagic! damage for all your cards containing \"Flap\""
+  },
+
+
+
+
+
   "theRose:ConveyorBeltSushi": {
     "NAME": "Conveyor Belt Sushi",
     "DESCRIPTION": "Whenever you play a Food item, draw a card."
@@ -177,10 +258,6 @@
   "theRose:PermanentChub": {
     "NAME": "Permanent Chub",
     "DESCRIPTION": "Gain !B! Block for every Food item eaten this game. Reset this counter (or maybe subtract amount of damage taken).  Exhaust."
-  },
-  "theRose:BellySlide": {
-    "NAME": "Belly Slide",
-    "DESCRIPTION": "Can only be played out of Flight. Apply !M! Vulnerable. Draw 1 card."
   },
   "theRose:LucidDream": {
     "NAME": "Lucid Dream",
