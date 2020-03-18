@@ -1,6 +1,7 @@
 package theRose.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -13,7 +14,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class Fly extends AbstractDynamicCard {
 
     /*
-     * Fly High to the Sky!: Gain !M! Penguin Flight
+     * Fly High to the Sky!: Gain !B! Block. Gain !M! Penguin Flight
      */
 
     // TEXT DECLARATION
@@ -32,6 +33,7 @@ public class Fly extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
+    private static final int BLOCK = 3;
     private static final int BUFF = 1; // Give 1 Penguin Flight
     private static final int BUFF_UPGRADE = 1; // Add 1 to upgrade
 
@@ -40,11 +42,15 @@ public class Fly extends AbstractDynamicCard {
     public Fly() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = BUFF;
+        baseBlock = BLOCK;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        // Gain block
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+
         // Gain flight (Penguin Power)
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
                 new PenguinPower(p, baseMagicNumber)));
