@@ -128,7 +128,7 @@
   },
   "theRose:FoodFight": {
     "NAME": "Food Fight!",
-    "DESCRIPTION": "Whenever you play a Food item, deal !D! damage to a random enemy."
+    "DESCRIPTION": "Whenever you play a Food item, deal !M! damage to a random enemy."
   },
 
 

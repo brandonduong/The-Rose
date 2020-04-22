@@ -18,7 +18,7 @@ public class FoodFight extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = ModInitializer.makeID(FoodFight.class.getSimpleName());
-    public static final String IMG = makeCardPath("FoodFight.png");
+    public static final String IMG = makeCardPath("Power.png");
 
     // /TEXT DECLARATION/
 
@@ -27,7 +27,7 @@ public class FoodFight extends AbstractDynamicCard {
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
