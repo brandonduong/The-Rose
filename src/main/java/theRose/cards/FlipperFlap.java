@@ -1,6 +1,9 @@
 package theRose.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -52,8 +55,8 @@ public class FlipperFlap extends AbstractDynamicCard {
 
         // Create damage actions
         for (int i = 0; i < baseMagicNumber; i++) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new AttackDamageRandomEnemyAction(this));
+            this.addToBot(new DamageRandomEnemyAction(new DamageInfo(p, baseDamage),
+                    AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
     }
 
