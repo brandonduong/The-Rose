@@ -126,16 +126,15 @@
     "NAME": "A Fish a Day!",
     "DESCRIPTION": "Gain !M! Artifact. At the end of this turn, lose !M! Artifact. Exhaust."
   },
-
+  "theRose:FoodFight": {
+    "NAME": "Food Fight!",
+    "DESCRIPTION": "Whenever you play a Food item, deal !D! damage to a random enemy."
+  },
 
 
   "theRose:Angy": {
     "NAME": "Angy!",
     "DESCRIPTION": "If you took damage last turn, gain !M! Strength."
-  },
-  "theRose:FoodFight": {
-    "NAME": "Food Fight!",
-    "DESCRIPTION": "Whenever you play a Food item, deal !D! damage to a random enemy."
   },
   "theRose:RefrigeratorRaid": {
     "NAME": "Refrigerator Raid!",

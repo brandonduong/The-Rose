@@ -184,6 +184,7 @@ public class TheRose extends CustomPlayer {
         retVal.add(StayStill.ID);
         retVal.add(Sprint.ID);
          */
+        retVal.add(FoodFight.ID);
 
         return retVal;
     }

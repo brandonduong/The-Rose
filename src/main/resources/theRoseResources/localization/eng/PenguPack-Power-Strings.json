@@ -31,5 +31,9 @@
 "theRose:LoseArtifactPower": {
         "NAME": "Artifact Down",
         "DESCRIPTIONS": ["Lose #b", " Artifact at the end of this turn."]
+},
+"theRose:FoodFightPower": {
+        "NAME": "Food Fight!",
+        "DESCRIPTIONS": ["Whenever you play a Food item, deal #b", " damage to a random enemy."]
 }
 }
