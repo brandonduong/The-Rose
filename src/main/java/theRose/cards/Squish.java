@@ -1,6 +1,9 @@
 package theRose.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
@@ -45,7 +48,7 @@ public class Squish extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m.currentHealth * 2 <= p.currentHealth) { // If enemy health below threshold, kill
-            this.addToTop(new InstantKillAction(m));
+            this.addToBot(new DamageAction(m, new DamageInfo(p, p.currentHealth), AbstractGameAction.AttackEffect.SMASH));
         }
     }
 

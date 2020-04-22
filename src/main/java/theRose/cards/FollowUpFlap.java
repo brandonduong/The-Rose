@@ -50,7 +50,7 @@ public class FollowUpFlap extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         baseMagicNumber = TIMES;
-        SecondMagicNumber = CREATE;
+        BaseSecondMagicNumber = CREATE;
 
         isMultiDamage = true;
     }
