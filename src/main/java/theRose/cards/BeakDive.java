@@ -51,12 +51,11 @@ public class BeakDive extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         // Deal damage
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+        this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                         AbstractGameAction.AttackEffect.SMASH));
 
         // Lose all flight
-        AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Flight"));
+        this.addToBot(new RemoveSpecificPowerAction(p, p, "Flight"));
     }
 
     @Override

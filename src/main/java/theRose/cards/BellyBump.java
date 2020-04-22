@@ -60,7 +60,7 @@ public class BellyBump extends AbstractDynamicCard {
         }
 
         // Deal damage
-        AbstractDungeon.actionManager.addToBottom(
+        this.addToBot(
                 new DamageAction(m, new DamageInfo(p, AbstractDungeon.player.getPower("theRose:FoodEatenPower").amount, damageTypeForTurn),
                         AbstractGameAction.AttackEffect.SMASH));
 
@@ -71,7 +71,7 @@ public class BellyBump extends AbstractDynamicCard {
             reduce *= 3;
         }
 
-        AbstractDungeon.actionManager.addToBottom(new ReducePowerAction(p, p, "theRose:FoodEatenPower", reduce));
+        this.addToBot(new ReducePowerAction(p, p, "theRose:FoodEatenPower", reduce));
     }
 
 

@@ -187,7 +187,7 @@
   },
   "theRose:Hibernate": {
     "NAME": "Hibernate",
-    "DESCRIPTION": "Create 5 random Food items. Next turn, gain 1 !E!. Exhaust."
+    "DESCRIPTION": "Consume 5 random Food items. Next turn, gain 1 !E!. End your turn. Exhaust."
   },
   "theRose:TripleFlap": {
     "NAME": "Triple Flap",

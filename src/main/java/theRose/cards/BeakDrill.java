@@ -59,8 +59,7 @@ public class BeakDrill extends AbstractDynamicCard {
         AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, AbstractGameAction.AttackEffect.SLASH_VERTICAL};
         // For each energy, create 2 damage action.
         for (int i = 0; i < effect; i++) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+            this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                             slashes[i % 3]));
         }
         EnergyPanel.totalCount = 0; // Use up all energy
