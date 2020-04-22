@@ -49,10 +49,10 @@ public class Fly extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Gain block
-        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+        this.addToBot(new GainBlockAction(p, p, block));
 
         // Gain flight (Penguin Power)
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+        this.addToBot(new ApplyPowerAction(p, p,
                 new PenguinPower(p, baseMagicNumber)));
 
     }
