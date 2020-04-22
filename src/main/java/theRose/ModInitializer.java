@@ -451,6 +451,9 @@ public class ModInitializer implements
         BaseMod.addCard(new Chat());
         BaseMod.addCard(new AFishADay());
         BaseMod.addCard(new FoodFight());
+        BaseMod.addCard(new Squish());
+        BaseMod.addCard(new TriplerFlap());
+        BaseMod.addCard(new FollowUpFlap());
 
         /*
         BaseMod.addCard(new OrbSkill());

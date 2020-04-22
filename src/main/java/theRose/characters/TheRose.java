@@ -183,8 +183,13 @@ public class TheRose extends CustomPlayer {
         retVal.add(HeadPat.ID);
         retVal.add(StayStill.ID);
         retVal.add(Sprint.ID);
-         */
         retVal.add(FoodFight.ID);
+         */
+        retVal.add(Squish.ID);
+        retVal.add(Squish.ID);
+        retVal.add(TriplerFlap.ID);
+        retVal.add(FollowUpFlap.ID);
+
 
         return retVal;
     }

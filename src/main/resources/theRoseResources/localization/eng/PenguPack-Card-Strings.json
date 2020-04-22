@@ -130,6 +130,24 @@
     "NAME": "Food Fight!",
     "DESCRIPTION": "Whenever you play a Food item, deal !M! damage to a random enemy."
   },
+  "theRose:Squish": {
+    "NAME": "Squish",
+    "DESCRIPTION": "If your current HP is !M! times the enemy's, set their HP to 0. Exhaust."
+  },
+  "theRose:TriplerFlap": {
+    "NAME": "Tripler Flap",
+    "DESCRIPTION": "Add !M! Flipper Flap to your hand.",
+    "UPGRADE_DESCRIPTION": "Add !M! Upgraded Flipper Flap to your hand."
+  },
+  "theRose:FollowUpFlap": {
+    "NAME": "Follow-Up Flap",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Add !theRose:SecondMagic! Flipper Flap to your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Add !theRose:SecondMagic! Upgraded Flipper Flap to your hand."
+  },
+  "theRose:FlapFlurry": {
+    "NAME": "Flap Flurry",
+    "DESCRIPTION": "Whenever you deal damage randomly, deal !D! damage to a random enemy."
+  },
 
 
   "theRose:Angy": {
@@ -172,10 +190,6 @@
     "NAME": "Food Rush",
     "DESCRIPTION": "Whenever you consume a Food item, have your next Attack deal !M! additional damage."
   },
-  "theRose:Squish": {
-    "NAME": "Squish",
-    "DESCRIPTION": "If your current health is !M! times the enemy's, set their HP to 0. Exhaust."
-  },
   "theRose:BellySlide": {
     "NAME": "Belly Slide",
     "DESCRIPTION": "Deal !D! damage to all enemies. Apply Vulnerable to all enemies."
@@ -188,22 +202,24 @@
     "NAME": "Hibernate",
     "DESCRIPTION": "Consume 5 random Food items. Next turn, gain 1 !E!. End your turn. Exhaust."
   },
-  "theRose:TripleFlap": {
-    "NAME": "Triple Flap",
-    "DESCRIPTION": "Add !M! Flipper Flap to your hand."
-  },
-  "theRose:FollowUpFlap": {
-    "NAME": "Follow-Up Flap",
-    "DESCRIPTION": "Deal !D! damage. Add !M! Flipper Flap to your hand."
-  },
   "theRose:FlapFrenzy": {
     "NAME": "Flap Frenzy",
     "DESCRIPTION": "Play !M! Flipper Flaps for each Flipper Flap played this combat."
   },
-  "theRose:FullOfFlaps": {
-    "NAME": "Full Of Flaps",
+  "theRose:FullOfFlap": {
+    "NAME": "Full Of Flap",
     "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Deals an additional !theRose:SecondMagic! damage for all your cards containing \"Flap\""
   },
+  "theRose:FlexedUpFlap": {
+    "NAME": "Flexed Up Flap",
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Gain !theRose:SecondMagic! Strength. At the end of your turn, lose !theRose:SecondMagic! Strength."
+  },
+
+  "theRose:BodySlap": {
+    "NAME": "Body Slam",
+    "DESCRIPTION": "Deal damage equal to 1/2 of your current HP. Lose HP equal to 1/4 of your current HP."
+  },
+
 
 
 
