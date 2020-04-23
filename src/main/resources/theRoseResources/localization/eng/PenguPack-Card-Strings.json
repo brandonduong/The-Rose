@@ -144,10 +144,7 @@
     "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Add !theRose:SecondMagic! Flipper Flap to your hand.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Add !theRose:SecondMagic! Upgraded Flipper Flap to your hand."
   },
-  "theRose:FlapFlurry": {
-    "NAME": "Flap Flurry",
-    "DESCRIPTION": "Whenever you deal damage randomly, deal !D! damage to a random enemy."
-  },
+
 
 
   "theRose:Angy": {
@@ -214,10 +211,17 @@
     "NAME": "Flexed Up Flap",
     "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Gain !theRose:SecondMagic! Strength. At the end of your turn, lose !theRose:SecondMagic! Strength."
   },
-
+  "theRose:FlipperFlexer": {
+    "NAME": "Flipper Flexer",
+    "DESCRIPTION": "All cards containing \"Flap\" deal !M! more damage."
+  },
   "theRose:BodySlap": {
     "NAME": "Body Slam",
     "DESCRIPTION": "Deal damage equal to 1/2 of your current HP. Lose HP equal to 1/4 of your current HP."
+  },
+  "theRose:TestBuff": {
+    "NAME": "Test Buff",
+    "DESCRIPTION": "Gain !M! Strength. After you play a card, lose !M! Strength."
   },
 
 
