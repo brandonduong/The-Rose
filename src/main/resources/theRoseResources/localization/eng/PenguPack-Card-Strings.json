@@ -149,6 +149,10 @@
     "DESCRIPTION": "Play 1 Flipper Flap for each Flipper Flap played this combat. Exhaust.",
     "UPGRADE_DESCRIPTION": "Play 1 Upgraded Flipper Flap for each Flipper Flap played this combat. Exhaust."
   },
+  "theRose:FluffyFurFlex": {
+    "NAME": "Fluffy Fur Flex",
+    "DESCRIPTION": "Gain !B! Block. Gain !M! Thorns. At the end of your turn, lose !M! Thorns."
+  },
 
 
 
@@ -159,10 +163,6 @@
   "theRose:RefrigeratorRaid": {
     "NAME": "Refrigerator Raid!",
     "DESCRIPTION": "Gain !M! Intangible. Fill your hand with Food items."
-  },
-  "theRose:FurFlex": {
-    "NAME": "Fur Flex",
-    "DESCRIPTION": "Gain !M! Thorns."
   },
   "theRose:Slap": {
     "NAME": "Slap",
@@ -240,7 +240,7 @@
   },
   "theRose:Compost": {
     "NAME": "Compost",
-    "DESCRIPTION": "Exhaust a random card. Create !M! random Food items in your discard pile."
+    "DESCRIPTION": "Exhaust a random card. Create !M! random Food items in your hand."
   },
   "theRose:FlyHigher": {
     "NAME": "Fly Higher!",

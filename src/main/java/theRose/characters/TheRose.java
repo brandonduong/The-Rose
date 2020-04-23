@@ -190,6 +190,7 @@ public class TheRose extends CustomPlayer {
         retVal.add(TriplerFlap.ID);
         retVal.add(FollowUpFlap.ID);
         retVal.add(FlapFrenzy.ID);
+        retVal.add(FluffyFurFlex.ID);
 
 
         return retVal;
