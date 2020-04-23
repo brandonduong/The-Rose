@@ -11,9 +11,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.orbs.Frost;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
 
+import java.util.Iterator;
 import java.util.concurrent.ThreadLocalRandom;
 
 import static theRose.ModInitializer.makeCardPath;
@@ -22,7 +25,7 @@ import static theRose.ModInitializer.playedFlipperFlappers;
 public class FlapFrenzy extends AbstractDynamicCard {
 
     /*
-     * Flap Frenzy: Play !M! Flipper Flaps for each Flipper Flap played this combat. Exhaust.
+     * Flap Frenzy: Play 1 Flipper Flap for each Flipper Flap played this combat. Exhaust.
      */
 
     // TEXT DECLARATION
@@ -44,22 +47,31 @@ public class FlapFrenzy extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 3;
-    private static final int TIMES = playedFlipperFlappers;
 
     // /STAT DECLARATION/
 
     public FlapFrenzy() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = TIMES;
+        baseMagicNumber = 0;
         exhaust = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int flipperFlaps = 0;
+
+        Iterator cardsPlayed = AbstractDungeon.actionManager.cardsPlayedThisCombat.iterator();
+        while(cardsPlayed.hasNext()) {
+            AbstractCard card = (AbstractCard)cardsPlayed.next();
+            if (card instanceof FlipperFlap) {
+                flipperFlaps++;
+            }
+        }
+        this.baseMagicNumber = flipperFlaps;
 
         AbstractCard card = new FlipperFlap();
-        for (int i = 0; i < baseMagicNumber; i++) {
+        for (int i = 0; i < flipperFlaps; i++) {
             // Play x Flipper Flappers
             AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card,
                     null, card.energyOnUse, true, true), true);

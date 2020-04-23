@@ -34,7 +34,7 @@ public class FollowUpFlap extends AbstractDynamicCard {
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
@@ -61,7 +61,7 @@ public class FollowUpFlap extends AbstractDynamicCard {
 
         // Create damage actions
         for (int i = 0; i < baseMagicNumber; i++) {
-            this.addToBot(new DamageRandomEnemyAction(new DamageInfo(p, baseDamage),
+            this.addToBot(new DamageRandomEnemyAction(new DamageInfo(p, damage),
                     AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
 

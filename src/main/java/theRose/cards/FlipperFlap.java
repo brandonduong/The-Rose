@@ -55,7 +55,7 @@ public class FlipperFlap extends AbstractDynamicCard {
 
         // Create damage actions
         for (int i = 0; i < baseMagicNumber; i++) {
-            this.addToBot(new DamageRandomEnemyAction(new DamageInfo(p, baseDamage),
+            this.addToBot(new DamageRandomEnemyAction(new DamageInfo(p, damage),
                     AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
     }

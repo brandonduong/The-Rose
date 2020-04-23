@@ -589,7 +589,6 @@ public class ModInitializer implements
         // Run at end of each battle
         playedAttack = false;
         playedFood = false;
-        playedFlipperFlappers = 0;
     }
 
     @Override
@@ -602,11 +601,6 @@ public class ModInitializer implements
         if (card.tags.contains(CustomTags.FOOD)) {
             playedFood = true;
         }
-
-        if (card instanceof FlipperFlap) {
-            playedFlipperFlappers += 1;
-        }
-
     }
 
     // ================ /LOAD THE KEYWORDS/ ===================
