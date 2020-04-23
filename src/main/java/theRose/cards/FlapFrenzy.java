@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.orbs.Frost;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
 
@@ -65,14 +66,14 @@ public class FlapFrenzy extends AbstractDynamicCard {
         while(cardsPlayed.hasNext()) {
             AbstractCard card = (AbstractCard)cardsPlayed.next();
             if (card instanceof FlipperFlap) {
-                flipperFlaps++;
+                ++flipperFlaps;
             }
         }
-        this.baseMagicNumber = flipperFlaps;
 
         AbstractCard card = new FlipperFlap();
         for (int i = 0; i < flipperFlaps; i++) {
             // Play x Flipper Flappers
+            card.purgeOnUse = true;
             AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card,
                     null, card.energyOnUse, true, true), true);
         }

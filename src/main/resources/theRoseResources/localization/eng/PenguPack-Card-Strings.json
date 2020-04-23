@@ -146,8 +146,8 @@
   },
   "theRose:FlapFrenzy": {
     "NAME": "Flap Frenzy",
-    "DESCRIPTION": "Play !M! Flipper Flaps for each Flipper Flap played this combat. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Play !M! Upgraded Flipper Flaps for each Flipper Flap played this combat. Exhaust."
+    "DESCRIPTION": "Play 1 Flipper Flap for each Flipper Flap played this combat. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Play 1 Upgraded Flipper Flap for each Flipper Flap played this combat. Exhaust."
   },
 
 
