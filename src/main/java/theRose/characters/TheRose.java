@@ -189,6 +189,7 @@ public class TheRose extends CustomPlayer {
         retVal.add(Squish.ID);
         retVal.add(TriplerFlap.ID);
         retVal.add(FollowUpFlap.ID);
+        retVal.add(FlapFrenzy.ID);
 
 
         return retVal;

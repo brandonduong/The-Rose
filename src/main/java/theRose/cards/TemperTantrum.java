@@ -48,8 +48,8 @@ public class TemperTantrum extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Apply Temper Tantrum power to self
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new TemperTantrumPower(AbstractDungeon.player, AbstractDungeon.player, baseMagicNumber)));
+        this.addToBot(new ApplyPowerAction(p, p,
+                new TemperTantrumPower(p, p, baseMagicNumber)));
     }
 
     // Upgraded stats.

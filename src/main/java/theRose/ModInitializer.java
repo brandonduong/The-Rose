@@ -454,6 +454,7 @@ public class ModInitializer implements
         BaseMod.addCard(new Squish());
         BaseMod.addCard(new TriplerFlap());
         BaseMod.addCard(new FollowUpFlap());
+        BaseMod.addCard(new FlapFrenzy());
 
         /*
         BaseMod.addCard(new OrbSkill());
@@ -574,6 +575,7 @@ public class ModInitializer implements
     // ================ /HOOKS FOR CARD FUNCTIONALITY/ ===================
     public static boolean playedAttack; // True if player played an attack in current turn
     public static boolean playedFood; // True if player played a Food item in current turn
+    public static int playedFlipperFlappers; // Count of how many flipper flappers have been played each combat
 
     @Override
     public void receivePostEnergyRecharge() {
@@ -587,6 +589,7 @@ public class ModInitializer implements
         // Run at end of each battle
         playedAttack = false;
         playedFood = false;
+        playedFlipperFlappers = 0;
     }
 
     @Override
@@ -596,8 +599,12 @@ public class ModInitializer implements
             playedAttack = true;
         }
 
-        else if (card.tags.contains(CustomTags.FOOD)) {
+        if (card.tags.contains(CustomTags.FOOD)) {
             playedFood = true;
+        }
+
+        if (card instanceof FlipperFlap) {
+            playedFlipperFlappers += 1;
         }
 
     }

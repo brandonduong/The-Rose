@@ -144,6 +144,11 @@
     "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Add !theRose:SecondMagic! Flipper Flap to your hand.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Add !theRose:SecondMagic! Upgraded Flipper Flap to your hand."
   },
+  "theRose:FlapFrenzy": {
+    "NAME": "Flap Frenzy",
+    "DESCRIPTION": "Play !M! Flipper Flaps for each Flipper Flap played this combat. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Play !M! Upgraded Flipper Flaps for each Flipper Flap played this combat. Exhaust."
+  },
 
 
 
@@ -198,10 +203,6 @@
   "theRose:Hibernate": {
     "NAME": "Hibernate",
     "DESCRIPTION": "Consume 5 random Food items. Next turn, gain 1 !E!. End your turn. Exhaust."
-  },
-  "theRose:FlapFrenzy": {
-    "NAME": "Flap Frenzy",
-    "DESCRIPTION": "Play !M! Flipper Flaps for each Flipper Flap played this combat."
   },
   "theRose:FullOfFlap": {
     "NAME": "Full Of Flap",
