@@ -38,7 +38,7 @@ public class ChefRose extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 10;
     private static final int UPGRADE_DAMAGE = 3;
     private static final int FOOD = 1; // One random food item
 

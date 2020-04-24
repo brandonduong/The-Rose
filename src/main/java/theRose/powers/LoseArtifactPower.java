@@ -49,7 +49,7 @@ public class LoseArtifactPower extends AbstractPower implements CloneablePowerIn
     public void atEndOfTurn(boolean isPlayer) { // At the start of your turn
         this.flash();
         // Remove Artifact if stacks will go to 0
-        if (owner.hasPower("Artifact") && owner.getPower("Artifact").amount == 1) {
+        if (owner.hasPower("Artifact") && owner.getPower("Artifact").amount == this.amount) {
             this.addToBot(new RemoveSpecificPowerAction(owner, owner, "Artifact"));
         }
 

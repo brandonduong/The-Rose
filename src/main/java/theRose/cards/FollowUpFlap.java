@@ -39,10 +39,9 @@ public class FollowUpFlap extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 4;
+    private static final int DAMAGE = 3;
     private static final int CREATE = 1;
     private static final int TIMES = 2;
-    private static final int UPGRADE_TIMES = 1;
 
     // /STAT DECLARATION/
 
@@ -79,7 +78,6 @@ public class FollowUpFlap extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_TIMES);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

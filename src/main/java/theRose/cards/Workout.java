@@ -40,6 +40,7 @@ public class Workout extends AbstractDynamicCard {
     public Workout() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = BUFF;
+
     }
 
     // Actions the card should do.

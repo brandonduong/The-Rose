@@ -37,7 +37,7 @@ public class Chat extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int STACKS = 5; // Apply 5 Passivity
+    private static final int STACKS = 7; // Apply 7 Passivity
     private static final int INCREASE = 2; // += 2
     private static final int UPGRADE_INCREASE = 2; // Add 2
 

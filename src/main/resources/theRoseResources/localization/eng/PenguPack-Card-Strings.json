@@ -153,13 +153,14 @@
     "NAME": "Fluffy Fur Flex",
     "DESCRIPTION": "Gain !B! Block. Gain !M! Thorns. At the end of your turn, lose !M! Thorns."
   },
+
+
+
+
   "theRose:Angy": {
     "NAME": "Angy!",
     "DESCRIPTION": "If you took damage last turn, gain !M! Strength."
   },
-
-
-
   "theRose:RefrigeratorRaid": {
     "NAME": "Refrigerator Raid!",
     "DESCRIPTION": "Gain !M! Intangible. Fill your hand with Food items."
@@ -223,6 +224,10 @@
   "theRose:TestBuff": {
     "NAME": "Test Buff",
     "DESCRIPTION": "Gain !M! Strength. After you play a card, lose !M! Strength."
+  },
+  "theRose:TEST": {
+    "NAME": "TEST",
+    "DESCRIPTION": "Deal"
   },
 
 
