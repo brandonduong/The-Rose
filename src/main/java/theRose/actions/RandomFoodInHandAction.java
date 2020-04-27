@@ -38,8 +38,7 @@ public class RandomFoodInHandAction extends AbstractGameAction {
         if (this.upgrade) {
             card.upgrade();
         }
-
-        this.addToBot(new MakeTempCardInHandAction(card));
+        AbstractDungeon.player.hand.addToHand(card);
         this.isDone = true;
         return;
     }

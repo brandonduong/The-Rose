@@ -1,11 +1,13 @@
 package theRose.cards;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import theRose.ModInitializer;
 import theRose.actions.RandomFoodInHandAction;
 import theRose.characters.TheRose;
@@ -50,12 +52,14 @@ public class RefrigeratorRaid extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Fill hand with random Food cards
-        while(p.hand.size() < 10) {
-            this.addToBot(new RandomFoodInHandAction(this.upgraded));
-        }
         // Gain intangible
         this.addToBot(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, magicNumber)));
+
+        // Fill hand with random Food cards
+        int create = BaseMod.DEFAULT_MAX_HAND_SIZE - p.gameHandSize;
+        for(int i = 0; i < create; i++) {
+            this.addToBot(new RandomFoodInHandAction(this.upgraded));
+        }
     }
 
     // Upgraded stats.

@@ -45,8 +45,7 @@ public class LoseThornsPower extends AbstractPower implements CloneablePowerInte
 
     }
 
-    @Override
-    public void atEndOfTurn(boolean isPlayer) { // At the start of your turn
+    public void atStartOfTurn() { // At the start of your turn
         this.flash();
         // Remove Thorn if stacks will go to 0
         if (owner.hasPower("Thorns") && owner.getPower("Thorns").amount == this.amount) {

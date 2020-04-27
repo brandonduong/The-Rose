@@ -65,11 +65,11 @@ public class FoodFit extends AbstractDynamicCard {
 
         // Deal damage according to condition
         if (foodPlayed) {
-            this.addToBot(new DamageAllEnemiesAction(p, damage, damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+            this.addToBot(new DamageAllEnemiesAction(p, baseDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
 
         else {
-            this.addToBot(new DamageAllEnemiesAction(p, damage + magicNumber, damageTypeForTurn, AbstractGameAction.AttackEffect.SMASH));
+            this.addToBot(new DamageAllEnemiesAction(p, baseDamage + magicNumber, damageTypeForTurn, AbstractGameAction.AttackEffect.SMASH));
         }
     }
 
@@ -79,7 +79,6 @@ public class FoodFit extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_DAMAGE_BUFF);
-            upgradeMagicNumber(UPGRADE_DAMAGE_BUFF);
             initializeDescription();
         }
     }
