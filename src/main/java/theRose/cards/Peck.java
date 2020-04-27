@@ -1,6 +1,9 @@
 package theRose.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -14,7 +17,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class Peck extends AbstractDynamicCard {
 
     /*
-     * Peck: Apply 1 (2) vulnerable. If in flight, apply 1 (2) weak too.
+     * Peck: Apply 1 (2) Vulnerable. If in flight, apply 1 (2) Weak. Deal damage equal to your current Flight.
      */
 
     // TEXT DECLARATION
@@ -54,8 +57,12 @@ public class Peck extends AbstractDynamicCard {
         this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.baseMagicNumber, false), this.baseMagicNumber));
 
         // Only apply weak if in flight
-        if (AbstractDungeon.player.hasPower("Flight")) {
+        if (p.hasPower("Flight")) {
             this.addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.SecondMagicNumber, false), this.SecondMagicNumber));
+
+            // Deal damage
+            this.addToBot(new DamageAction(m, new DamageInfo(p, p.getPower("Flight").amount),
+                    AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
 
     }

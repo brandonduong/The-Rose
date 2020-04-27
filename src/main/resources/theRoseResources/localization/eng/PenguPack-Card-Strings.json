@@ -39,7 +39,7 @@
   },
   "theRose:Peck": {
     "NAME": "Peck",
-    "DESCRIPTION": "Apply !M! vulnerable. If in Flight, apply !theRose:SecondMagic! Weak."
+    "DESCRIPTION": "Apply !M! vulnerable. If in Flight, apply !theRose:SecondMagic! Weak. Deal damage equal to your current Flight."
   },
 
 
@@ -166,6 +166,7 @@
     "NAME": "Food Fit",
     "DESCRIPTION": "Deal !D! damage to all enemies. If no Food item was played this combat, deal an extra !M! damage."
   },
+
   "theRose:BeakSmash": {
     "NAME": "Beak Smash!",
     "DESCRIPTION": "Deal damage equal to !M! times your current Flight."

@@ -15,7 +15,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class FlipperFlap extends AbstractDynamicCard {
 
     /*
-     * Flipper Flap: Deal 1 damage to a random enemy 2 (3) times. Exhaust.
+     * Flipper Flap: Deal 1 (2) damage to a random enemy 2 times. Exhaust.
      */
 
     // TEXT DECLARATION
@@ -36,7 +36,7 @@ public class FlipperFlap extends AbstractDynamicCard {
     private static final int COST = 0;
     private static final int DAMAGE = 1;
     private static final int TIMES = 2;
-    private static final int UPGRADE_TIMES = 1;
+    private static final int UPGRADE_DAMAGE = 1;
 
     // /STAT DECLARATION/
 
@@ -65,7 +65,7 @@ public class FlipperFlap extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_TIMES);
+            upgradeDamage(UPGRADE_DAMAGE);
             initializeDescription();
         }
     }

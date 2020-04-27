@@ -37,9 +37,9 @@ public class FoodFit extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 7;
     private static final int DAMAGE_BUFF = 4;
-    private static final int UPGRADE_DAMAGE_BUFF = 4;
+    private static final int UPGRADE_DAMAGE_BUFF = 2;
 
     // /STAT DECLARATION/
 
@@ -79,6 +79,7 @@ public class FoodFit extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_DAMAGE_BUFF);
+            upgradeMagicNumber(UPGRADE_DAMAGE_BUFF);
             initializeDescription();
         }
     }

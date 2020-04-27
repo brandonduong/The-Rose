@@ -31,8 +31,8 @@ public class FoodFight extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int BUFF = 4; // 2 damage each food item
-    private static final int BUFF_UPGRADE = 2; // Add 1 to upgrade
+    private static final int BUFF = 2; // Damage each food item
+    private static final int BUFF_UPGRADE = 1;
 
     // /STAT DECLARATION/
 
