@@ -4,6 +4,7 @@ import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
@@ -56,7 +57,7 @@ public class RefrigeratorRaid extends AbstractDynamicCard {
         this.addToBot(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, magicNumber)));
 
         // Fill hand with random Food cards
-        int create = BaseMod.DEFAULT_MAX_HAND_SIZE - p.gameHandSize;
+        int create = BaseMod.DEFAULT_MAX_HAND_SIZE - p.hand.size();
         for(int i = 0; i < create; i++) {
             this.addToBot(new RandomFoodInHandAction(this.upgraded));
         }
