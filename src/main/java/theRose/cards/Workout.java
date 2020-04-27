@@ -1,6 +1,7 @@
 package theRose.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -13,7 +14,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class Workout extends AbstractDynamicCard {
 
     /*
-     * Workout: Gain 2 (3) Strength
+     * Workout: Gain 1 (2) Strength. Heal 3 HP.
      */
 
     // TEXT DECLARATION
@@ -32,23 +33,28 @@ public class Workout extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int BUFF = 2; // Give 2 Strength
+    private static final int BUFF = 1; // Give Strength
     private static final int BUFF_UPGRADE = 1; // Add 1 to upgrade
+    private static final int HEAL = 3;
 
     // /STAT DECLARATION/
 
     public Workout() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = BUFF;
+        BaseSecondMagicNumber = HEAL;
 
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Create an int which equals to your current energy times 2.
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new StrengthPower(AbstractDungeon.player, baseMagicNumber)));
+        // Gain strength
+        this.addToBot(new ApplyPowerAction(p, p,
+                new StrengthPower(p, magicNumber)));
+
+        // Heal
+        this.addToBot(new HealAction(p, p, SecondMagicNumber));
 
     }
 

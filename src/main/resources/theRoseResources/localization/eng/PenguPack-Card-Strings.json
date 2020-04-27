@@ -15,7 +15,7 @@
 
   "theRose:Workout": {
     "NAME": "Workout",
-    "DESCRIPTION": "Gain !M! Strength."
+    "DESCRIPTION": "Gain !M! Strength. Heal !theRose:SecondMagic! HP."
   },
   "theRose:FlipperFlap": {
     "NAME": "Flipper Flap",
