@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.blue.Strike_Blue;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -64,11 +65,11 @@ public class FoodFit extends AbstractDynamicCard {
 
         // Deal damage according to condition
         if (foodPlayed) {
-            this.addToBot(new DamageAllEnemiesAction(p, damage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+            this.addToBot(new DamageAllEnemiesAction(p, damage, damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
 
         else {
-            this.addToBot(new DamageAllEnemiesAction(p, damage + magicNumber, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.SMASH));
+            this.addToBot(new DamageAllEnemiesAction(p, damage + magicNumber, damageTypeForTurn, AbstractGameAction.AttackEffect.SMASH));
         }
     }
 

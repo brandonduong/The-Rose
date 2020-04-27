@@ -9,7 +9,7 @@
   },
   "theRose:Fly": {
     "NAME": "Fly High to the Sky!",
-    "DESCRIPTION": "Gain !B! Block. Gain !M! Penguin-Flight."
+    "DESCRIPTION": "Gain !B! Block. Gain !M! Flight."
   },
 
 
@@ -166,6 +166,19 @@
     "NAME": "Food Fit",
     "DESCRIPTION": "Deal !D! damage to all enemies. If no Food item was played this combat, deal an extra !M! damage."
   },
+  "theRose:BeakSmash": {
+    "NAME": "Beak Smash!",
+    "DESCRIPTION": "Deal damage equal to !M! times your current Flight."
+  },
+  "theRose:FlyHigher": {
+    "NAME": "Fly Higher!",
+    "DESCRIPTION": "Flight reduces Attack damage taken by 75% this turn. Can't gain block the rest of this turn."
+  },
+  "theRose:FlippingFlap": {
+    "NAME": "Flipping Flap",
+    "DESCRIPTION": "Gain !M! Flight. "
+  },
+
 
 
 
@@ -250,14 +263,6 @@
   "theRose:Compost": {
     "NAME": "Compost",
     "DESCRIPTION": "Exhaust a random card. Create !M! random Food items in your hand."
-  },
-  "theRose:FlyHigher": {
-    "NAME": "Fly Higher!",
-    "DESCRIPTION": "Flight reduces Attack damage taken by 50% this turn. Can't gain block the rest of this turn."
-  },
-  "theRose:FlyingFlap": {
-    "NAME": "Flying Flap",
-    "DESCRIPTION": ""
   },
   "theRose:PenguinBackRide": {
     "NAME": "Penguin Back Ride",
