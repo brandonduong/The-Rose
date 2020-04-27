@@ -456,6 +456,9 @@ public class ModInitializer implements
         BaseMod.addCard(new FollowUpFlap());
         BaseMod.addCard(new FlapFrenzy());
         BaseMod.addCard(new FluffyFurFlex());
+        BaseMod.addCard(new RefrigeratorRaid());
+        BaseMod.addCard(new Bulking());
+        BaseMod.addCard(new FoodFit());
 
         /*
         BaseMod.addCard(new OrbSkill());

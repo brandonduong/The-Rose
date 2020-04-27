@@ -1,14 +1,12 @@
 package theRose.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
-import theRose.actions.RandomFoodAction;
+import theRose.actions.RandomFoodInHandAction;
 import theRose.characters.TheRose;
 import theRose.powers.PenguinPower;
 
@@ -38,7 +36,7 @@ public class EarlyBird extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final int BUFF = 1; // Give 1 Penguin Flight
     private static final int CREATE = 1; // Create random food items
     private static final int UPGRADE_CREATE = 1;
@@ -61,7 +59,7 @@ public class EarlyBird extends AbstractDynamicCard {
 
         // Create random food items
         for (int i = 0; i < SecondMagicNumber; i++) {
-            this.addToBot(new RandomFoodAction(false));
+            this.addToBot(new RandomFoodInHandAction(false));
         }
 
     }

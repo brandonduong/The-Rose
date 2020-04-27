@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
-import theRose.actions.RandomFoodAction;
+import theRose.actions.RandomFoodInHandAction;
 import theRose.characters.TheRose;
 
 import static theRose.ModInitializer.makeCardPath;
@@ -58,7 +58,7 @@ public class ChefRose extends AbstractDynamicCard {
         this.addToBot(new DamageAction(m, new DamageInfo(p, damage), AbstractGameAction.AttackEffect.FIRE));
 
         // Create random food item
-        this.addToBot(new RandomFoodAction(this.upgraded));
+        this.addToBot(new RandomFoodInHandAction(this.upgraded));
 
     }
 

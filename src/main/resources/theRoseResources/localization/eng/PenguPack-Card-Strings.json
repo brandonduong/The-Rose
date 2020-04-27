@@ -153,7 +153,19 @@
     "NAME": "Fluffy Fur Flex",
     "DESCRIPTION": "Gain !B! Block. Gain !M! Thorns. At the end of your turn, lose !M! Thorns."
   },
-
+  "theRose:RefrigeratorRaid": {
+    "NAME": "Refrigerator Raid!",
+    "DESCRIPTION": "Gain !M! Intangible. Fill your hand with Food items. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Intangible. Fill your hand with Upgraded Food items. Exhaust."
+  },
+  "theRose:Bulking": {
+    "NAME": "Bulking",
+    "DESCRIPTION": "Whenever a Food item is eaten this turn, gain !B! Block. Consume !M! random Food item."
+  },
+  "theRose:FoodFit": {
+    "NAME": "Food Fit",
+    "DESCRIPTION": "Deal !D! damage to all enemies. If no Food item was played this combat, deal an extra !M! damage."
+  },
 
 
 
@@ -161,17 +173,9 @@
     "NAME": "Angy!",
     "DESCRIPTION": "If you took damage last turn, gain !M! Strength."
   },
-  "theRose:RefrigeratorRaid": {
-    "NAME": "Refrigerator Raid!",
-    "DESCRIPTION": "Gain !M! Intangible. Fill your hand with Food items."
-  },
   "theRose:Slap": {
     "NAME": "Slap",
     "DESCRIPTION": "Deal !D! damage. This card's damage is lowered by !M! this combat."
-  },
-  "theRose:FoodFit": {
-    "NAME": "Food Fit",
-    "DESCRIPTION": "Deal !D! damage to all enemies. If no Food item was played this turn, deal !M! instead."
   },
   "theRose:OutOfSight": {
     "NAME": "Out Of Sight",
@@ -217,7 +221,7 @@
     "NAME": "Flipper Flexer",
     "DESCRIPTION": "All cards containing \"Flap\" deal !M! more damage."
   },
-  "theRose:BodySlap": {
+  "theRose:BodySlam": {
     "NAME": "Body Slam",
     "DESCRIPTION": "Deal damage equal to 1/2 of your current HP. Lose HP equal to 1/4 of your current HP."
   },

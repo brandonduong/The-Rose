@@ -63,6 +63,7 @@ public class FlapFrenzy extends AbstractDynamicCard {
         int flipperFlaps = 0;
 
         Iterator cardsPlayed = AbstractDungeon.actionManager.cardsPlayedThisCombat.iterator();
+
         while(cardsPlayed.hasNext()) {
             AbstractCard card = (AbstractCard)cardsPlayed.next();
             if (card instanceof FlipperFlap) {
@@ -70,6 +71,7 @@ public class FlapFrenzy extends AbstractDynamicCard {
             }
         }
 
+        //
         AbstractCard card = new FlipperFlap();
         for (int i = 0; i < flipperFlaps; i++) {
             // Play x Flipper Flappers

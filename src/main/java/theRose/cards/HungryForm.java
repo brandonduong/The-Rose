@@ -54,8 +54,8 @@ public class HungryForm extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Create an int which equals to your current energy times 2.
-        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new HungryFormPower(AbstractDungeon.player, AbstractDungeon.player, baseMagicNumber)));
+        this.addToTop(new ApplyPowerAction(p, p,
+                new HungryFormPower(p, p, baseMagicNumber)));
 
     }
 

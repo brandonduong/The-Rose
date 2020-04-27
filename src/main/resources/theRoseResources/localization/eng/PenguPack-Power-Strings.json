@@ -39,5 +39,9 @@
 "theRose:FoodFightPower": {
         "NAME": "Food Fight!",
         "DESCRIPTIONS": ["Whenever you play a Food item, deal #b", " damage to a random enemy."]
+},
+"theRose:BulkingPower": {
+        "NAME": "Bulking",
+        "DESCRIPTIONS": ["Whenever you play a Food item this turn, gain #b", " Block."]
 }
 }
