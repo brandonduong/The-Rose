@@ -57,7 +57,7 @@ public class RefrigeratorRaid extends AbstractDynamicCard {
         this.addToBot(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, magicNumber)));
 
         // Fill hand with random Food cards
-        int create = BaseMod.DEFAULT_MAX_HAND_SIZE - p.hand.size();
+        int create = BaseMod.DEFAULT_MAX_HAND_SIZE - p.hand.size() + 1;
         for(int i = 0; i < create; i++) {
             this.addToBot(new RandomFoodInHandAction(this.upgraded));
         }
