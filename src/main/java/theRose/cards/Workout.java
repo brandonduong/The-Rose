@@ -2,6 +2,7 @@ package theRose.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.actions.unique.SpotWeaknessAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -41,8 +42,8 @@ public class Workout extends AbstractDynamicCard {
 
     public Workout() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = BUFF;
-        BaseSecondMagicNumber = HEAL;
+        magicNumber = baseMagicNumber = BUFF;
+        SecondMagicNumber = BaseSecondMagicNumber = HEAL;
 
     }
 

@@ -46,7 +46,7 @@ public class FoodFit extends AbstractDynamicCard {
     public FoodFit() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        baseMagicNumber = DAMAGE_BUFF;
+        magicNumber = baseMagicNumber = DAMAGE_BUFF;
     }
 
     // Actions the card should do.

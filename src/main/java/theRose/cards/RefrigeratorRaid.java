@@ -44,7 +44,7 @@ public class RefrigeratorRaid extends AbstractDynamicCard {
     public RefrigeratorRaid() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.exhaust = true;
-        this.baseMagicNumber = BUFF;
+        magicNumber = baseMagicNumber = BUFF;
     }
 
     // Actions the card should do.

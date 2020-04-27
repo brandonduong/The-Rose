@@ -44,7 +44,7 @@ public class FluffyFurFlex extends AbstractDynamicCard {
     public FluffyFurFlex() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
-        baseMagicNumber = BUFF;
+        magicNumber = baseMagicNumber = BUFF;
     }
 
     // Actions the card should do.
@@ -55,11 +55,11 @@ public class FluffyFurFlex extends AbstractDynamicCard {
 
         // Gain thorns
         this.addToBot(new ApplyPowerAction(p, p,
-                new ThornsPower(p, baseMagicNumber)));
+                new ThornsPower(p, magicNumber)));
 
         // Gain losethorns
         this.addToBot(new ApplyPowerAction(p, p,
-                new LoseThornsPower(p, p, baseMagicNumber)));
+                new LoseThornsPower(p, p, magicNumber)));
 
     }
 
