@@ -29,10 +29,6 @@
     "NAME": "Beak Drill",
     "DESCRIPTION": "Deal !D! damage 2X times."
   },
-
-
-
-
   "theRose:BeakDive": {
     "NAME": "Beak Dive",
     "DESCRIPTION": "Can only be played when in Flight. Deal !D! damage. Lose all flight."
@@ -41,11 +37,6 @@
     "NAME": "Peck",
     "DESCRIPTION": "Apply !M! vulnerable. If in Flight, apply !theRose:SecondMagic! Weak. Deal damage equal to your current Flight."
   },
-
-
-
-
-
   "theRose:UberDishes": {
     "NAME": "UberDishes",
     "DESCRIPTION": "Create !M! random Food items in your discard pile.",
@@ -166,14 +157,14 @@
     "NAME": "Food Fit",
     "DESCRIPTION": "Deal !D! damage to all enemies. If no Food item was played this combat, deal an extra !M! damage."
   },
-
   "theRose:BeakSmash": {
     "NAME": "Beak Smash!",
-    "DESCRIPTION": "Deal damage equal to !M! times your current Flight."
+    "DESCRIPTION": "Deal damage equal to !M! times your current Flight. Lose all Flight."
   },
+
   "theRose:FlyHigher": {
     "NAME": "Fly Higher!",
-    "DESCRIPTION": "Flight reduces Attack damage taken by 75% this turn. Can't gain block the rest of this turn."
+    "DESCRIPTION": "Gain !M! Flight. Flight reduces Attack damage taken by 75% this turn. Remove all Block. You cannot gain Block this turn."
   },
   "theRose:FlippingFlap": {
     "NAME": "Flipping Flap",

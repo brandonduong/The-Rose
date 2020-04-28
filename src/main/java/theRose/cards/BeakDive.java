@@ -17,7 +17,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class BeakDive extends AbstractDynamicCard {
 
     /*
-     * Beak Dive: Can only be played when in flight. Deal 15 (20) damage. Lose all flight.
+     * Beak Dive: Can only be played when in flight. Deal !D! damage. Lose all flight.
      */
 
     // TEXT DECLARATION
