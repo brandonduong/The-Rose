@@ -46,5 +46,9 @@
 "theRose:LosePenguinPower": {
         "NAME": "Flight Down",
         "DESCRIPTIONS": ["Lose #b", " Flight at the end of this turn."]
+},
+"theRose:FreezePower": {
+        "NAME": "Freeze",
+        "DESCRIPTIONS": ["Unable to act for #b", " turns. Once frozen, gain 25 Block. Becomes free if Block is broken."]
 }
 }

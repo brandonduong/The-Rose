@@ -1,6 +1,7 @@
 package theRose.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.unique.SpotWeaknessAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,7 +17,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class Angy extends AbstractDynamicCard {
 
     /*
-     * Angy: If you took damage last turn, gain !M! Strength.
+     * Angy: If you took damage last turn, gain !M! Strength and Draw 1 card.
      */
 
     // TEXT DECLARATION
@@ -36,13 +37,15 @@ public class Angy extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int BUFF = 1;
-    private static final int BUFF_UPGRADE = 1;
+    private static final int DRAW = 1;
+    private static final int UPGRADE_DRAW = 1;
 
     // /STAT DECLARATION/
 
     public Angy() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = BUFF;
+        SecondMagicNumber = BaseSecondMagicNumber = DRAW;
 
     }
 
@@ -53,6 +56,9 @@ public class Angy extends AbstractDynamicCard {
             // Gain strength
             this.addToBot(new ApplyPowerAction(p, p,
                     new StrengthPower(p, magicNumber)));
+
+            // Draw cards
+            this.addToBot(new DrawCardAction(SecondMagicNumber));
         }
     }
 
@@ -61,7 +67,7 @@ public class Angy extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(BUFF_UPGRADE);
+            upgradeSecondMagicNumber(UPGRADE_DRAW);
             initializeDescription();
         }
     }

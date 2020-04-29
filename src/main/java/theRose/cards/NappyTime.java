@@ -1,6 +1,7 @@
 package theRose.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -34,6 +35,7 @@ public class NappyTime extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
+    private static final int BLOCK = 4;
     private static final int BUFF = 1;
     private static final int BUFF_UPGRADE = 1;
 
@@ -41,12 +43,16 @@ public class NappyTime extends AbstractDynamicCard {
 
     public NappyTime() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        baseBlock = BLOCK;
         magicNumber = baseMagicNumber = BUFF;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        // Gain Block
+        this.addToBot(new GainBlockAction(p, block));
+
         // Gain Plated Armor
         this.addToBot(new ApplyPowerAction(p, p,
                 new PlatedArmorPower(p, magicNumber)));

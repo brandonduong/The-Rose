@@ -183,11 +183,11 @@
   },
   "theRose:NappyTime": {
     "NAME": "Nappy Time!",
-    "DESCRIPTION": "Gain 1 Plated Armor. End your turn."
+    "DESCRIPTION": "Gain !B! Block. Gain 1 Plated Armor. End your turn."
   },
   "theRose:Angy": {
     "NAME": "Angy!",
-    "DESCRIPTION": "If you took damage last turn, gain !M! Strength."
+    "DESCRIPTION": "If you took damage last turn, gain !M! Strength and Draw 1 card."
   },
   "theRose:Hibernate": {
     "NAME": "Hibernate",
@@ -197,16 +197,20 @@
     "NAME": "Thunder",
     "DESCRIPTION": "Unplayable. Whenever you draw this card, deal !M! damage to a random enemy. Apply !theRose:SecondMagic! Vulnerable."
   },
-
-
-
   "theRose:WitchRose": {
     "NAME": "Witch Rose",
     "DESCRIPTION": "Create !M! Thunder in your discard pile."
   },
+  "theRose:Overstory": {
+    "NAME": "Overstory",
+    "DESCRIPTION": "Add an Ethereal Flipper Flap, Chat, random Food item, and Stay Still! to your hand."
+  },
+
+
+
   "theRose:FridgeFreeze": {
     "NAME": "Fridge Freeze",
-    "DESCRIPTION": "Deal !D! damage. Apply !M! Freeze."
+    "DESCRIPTION": "Apply !M! Slow. Apply !M! Freeze."
   },
   "theRose:PenguPalace": {
     "NAME": "Pengu Palace",
@@ -215,10 +219,6 @@
   "theRose:Betray": {
     "NAME": "Betray",
     "DESCRIPTION": "Deal damage equal to 2 times an enemy's Passivity. Reduce Passivity to 0. Feel Guilty."
-  },
-  "theRose:Overstory": {
-    "NAME": "Overstory",
-    "DESCRIPTION": "Add an Ethereal Flipper Flap, Chat, random Food item, and Stay Still! to your hand."
   },
   "theRose:Chomp": {
     "NAME": "Chomp",
