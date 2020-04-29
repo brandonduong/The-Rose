@@ -15,6 +15,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
@@ -44,6 +45,7 @@ import theDefault.relics.PlaceholderRelic2;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.util.Iterator;
 import java.util.Properties;
 
 //TODO: DON'T MASS RENAME/REFACTOR
@@ -285,6 +287,7 @@ public class ModInitializer implements
     public static void initialize() {
         logger.info("========================= Initializing Default Mod. Hi. =========================");
         ModInitializer theRose = new ModInitializer();
+        foodEaten = counter = 0;
         logger.info("========================= /Default Mod Initialized. Hello World./ =========================");
     }
 
@@ -461,6 +464,7 @@ public class ModInitializer implements
         BaseMod.addCard(new FoodFit());
         BaseMod.addCard(new BeakSmash());
         BaseMod.addCard(new MidflightSnack());
+        BaseMod.addCard(new PermanentChub());
 
         /*
         BaseMod.addCard(new OrbSkill());
@@ -581,7 +585,9 @@ public class ModInitializer implements
     // ================ /HOOKS FOR CARD FUNCTIONALITY/ ===================
     public static boolean playedAttack; // True if player played an attack in current turn
     public static boolean playedFood; // True if player played a Food item in current turn
-    public static int playedFlipperFlappers; // Count of how many flipper flappers have been played each combat
+    public static int foodEaten; // Count of how many food eaten in entire game
+    public static int counter; // Count of how many food eaten this combat
+
 
     @Override
     public void receivePostEnergyRecharge() {
@@ -595,6 +601,8 @@ public class ModInitializer implements
         // Run at end of each battle
         playedAttack = false;
         playedFood = false;
+        foodEaten += counter;
+        counter = 0;
     }
 
     @Override
@@ -606,6 +614,7 @@ public class ModInitializer implements
 
         if (card.tags.contains(CustomTags.FOOD)) {
             playedFood = true;
+            counter += 1;
         }
     }
 

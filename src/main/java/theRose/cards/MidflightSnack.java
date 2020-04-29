@@ -52,8 +52,7 @@ public class MidflightSnack extends AbstractDynamicCard {
 
     public MidflightSnack() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDraw = 1;
-        baseMagicNumber = CREATE;
+        magicNumber = baseMagicNumber = CREATE;
         BaseSecondMagicNumber = SecondMagicNumber = BUFF;
     }
 
@@ -61,15 +60,15 @@ public class MidflightSnack extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Draw a card
-        this.addToBot(new DrawCardAction(draw));
+        this.addToBot(new DrawCardAction(p, DRAW));
+
+        // Reduce flight
+        this.addToBot(new ReduceFlightAction(SecondMagicNumber));
 
         // Create random food item
         for (int i = 0; i < magicNumber; i++) {
             this.addToBot(new RandomFoodInHandAction(this.upgraded));
         }
-
-        // Reduce flight
-        this.addToBot(new ReduceFlightAction(SecondMagicNumber));
 
     }
 

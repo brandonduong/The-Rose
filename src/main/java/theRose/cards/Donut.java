@@ -49,7 +49,6 @@ public class Donut extends AbstractDynamicCard {
 
     public Donut() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDraw = DRAW;
         BaseSecondMagicNumber = SecondMagicNumber = FLIGHT;
 
         baseMagicNumber = FOOD_VALUE;
@@ -63,7 +62,7 @@ public class Donut extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Draw cards
         this.addToBot(
-                new DrawCardAction(p, draw));
+                new DrawCardAction(p, DRAW));
 
         // Reduce flight
         this.addToBot(new ReduceFlightAction(SecondMagicNumber));

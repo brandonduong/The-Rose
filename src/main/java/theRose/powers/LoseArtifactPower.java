@@ -66,7 +66,7 @@ public class LoseArtifactPower extends AbstractPower implements CloneablePowerIn
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + (-this.amount) + DESCRIPTIONS[1];
     }
 
     @Override

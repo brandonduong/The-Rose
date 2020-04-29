@@ -166,6 +166,10 @@
     "DESCRIPTION": "Can only be played in Flight. Draw 1 card. Create !M! random Food item in your hand. Lose 1 Flight.",
     "UPGRADE_DESCRIPTION": "Can only be played in Flight. Draw 1 card. Create !M! random Food items in your hand. Lose 1 Flight."
   },
+  "theRose:PermanentChub": {
+    "NAME": "Permanent Chub",
+    "DESCRIPTION": "Gain Block equal to the number of Food items eaten this game. Exhaust."
+  },
 
 
 
@@ -180,10 +184,6 @@
   "theRose:TwoCanDine": {
     "NAME": "Two Can Dine",
     "DESCRIPTION": "Whenever a Food item is created, create a copy."
-  },
-  "theRose:PermanentChub": {
-    "NAME": "Permanent Chub",
-    "DESCRIPTION": "Gain Block equal to the number of Food items eaten this game.  Exhaust."
   },
   "theRose:LucidDream": {
     "NAME": "Lucid Dream",
