@@ -472,6 +472,8 @@ public class ModInitializer implements
         BaseMod.addCard(new GrannyKiss());
         BaseMod.addCard(new NappyTime());
         BaseMod.addCard(new Angy());
+        BaseMod.addCard(new Hibernate());
+        BaseMod.addCard(new Thunder());
 
         /*
         BaseMod.addCard(new OrbSkill());

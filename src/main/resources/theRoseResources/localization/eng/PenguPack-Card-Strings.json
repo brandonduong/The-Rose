@@ -193,16 +193,16 @@
     "NAME": "Hibernate",
     "DESCRIPTION": "Gain !B! Block. Consume !M! random Food items. Next turn, gain 1 !E!. End your turn."
   },
+  "theRose:Thunder": {
+    "NAME": "Thunder",
+    "DESCRIPTION": "Unplayable. Whenever you draw this card, deal !M! damage to a random enemy. Apply !theRose:SecondMagic! Vulnerable."
+  },
 
 
 
   "theRose:WitchRose": {
     "NAME": "Witch Rose",
     "DESCRIPTION": "Create !M! Thunder in your discard pile."
-  },
-  "theRose:Thunder": {
-    "NAME": "Thunder",
-    "DESCRIPTION": "Unplayable. Whenever you draw this card, deal !M! damage to a random enemy. Apply !M! Vulnerable."
   },
   "theRose:FridgeFreeze": {
     "NAME": "Fridge Freeze",
