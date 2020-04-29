@@ -35,7 +35,7 @@ public class HeadPat extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 0;
-    private static final int STACKS = 3; // For ever 3 Bribe
+    private static final int STACKS = 3; // Passivity
     private static final int UPGRADE_STACK = 2; // Add 1
     private static final int DAMAGE = 1; // 1 Damage
 

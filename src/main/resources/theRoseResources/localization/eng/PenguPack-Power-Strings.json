@@ -42,5 +42,9 @@
 "theRose:BulkingPower": {
         "NAME": "Bulking",
         "DESCRIPTIONS": ["Whenever you play a Food item this turn, gain #b", " Block."]
+},
+"theRose:LosePenguinPower": {
+        "NAME": "Flight Down",
+        "DESCRIPTIONS": ["Lose #b", " Flight at the end of this turn."]
 }
 }

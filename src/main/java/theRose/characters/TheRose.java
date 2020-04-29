@@ -168,9 +168,6 @@ public class TheRose extends CustomPlayer {
         retVal.add(Fly.ID);
         retVal.add(Peck.ID);
 
-        retVal.add(MidflightSnack.ID);
-        retVal.add(PermanentChub.ID);
-
         // TESTING ONLY (THESE ARE NOT STARTING DECK CARDS)
         /*retVal.add(Workout.ID);
         retVal.add(BeakDrill.ID);

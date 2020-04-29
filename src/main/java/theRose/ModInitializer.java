@@ -465,6 +465,9 @@ public class ModInitializer implements
         BaseMod.addCard(new BeakSmash());
         BaseMod.addCard(new MidflightSnack());
         BaseMod.addCard(new PermanentChub());
+        BaseMod.addCard(new ShinyBeakAndMe());
+        BaseMod.addCard(new LucidDream());
+        BaseMod.addCard(new GrannyKiss());
 
         /*
         BaseMod.addCard(new OrbSkill());
