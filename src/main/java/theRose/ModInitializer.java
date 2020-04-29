@@ -14,6 +14,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
@@ -86,7 +87,8 @@ public class ModInitializer implements
         PostInitializeSubscriber,
         OnCardUseSubscriber,
         PostEnergyRechargeSubscriber,
-        PostBattleSubscriber
+        PostBattleSubscriber,
+        OnStartBattleSubscriber
 {
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
@@ -592,12 +594,22 @@ public class ModInitializer implements
     public static int foodEaten; // Count of how many food eaten in entire game
     public static int counter; // Count of how many food eaten this combat
 
+    public static boolean damagedLastTurn; // True if player was damaged last turn
+    public static int hpLastTurn; // Holds players hp value last turn
+
 
     @Override
     public void receivePostEnergyRecharge() {
         // Run at start of every player's turn
         playedAttack = false;
         playedFood = false;
+
+        if (hpLastTurn != AbstractDungeon.player.currentHealth) {
+            damagedLastTurn = true;
+        }
+        else {
+            damagedLastTurn = false;
+        }
     }
 
     @Override
@@ -620,6 +632,13 @@ public class ModInitializer implements
             playedFood = true;
             counter += 1;
         }
+    }
+
+    @Override
+    public void receiveOnBattleStart(AbstractRoom room) {
+        // Run every time a battle starts
+        damagedLastTurn = false;
+        hpLastTurn = AbstractDungeon.player.currentHealth;
     }
 
     // ================ /LOAD THE KEYWORDS/ ===================

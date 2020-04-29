@@ -187,18 +187,49 @@
     "NAME": "Nappy Time!",
     "DESCRIPTION": "Gain 1 Plated Armor. End your turn."
   },
+  "theRose:Angy": {
+    "NAME": "Angy!",
+    "DESCRIPTION": "If you took damage last turn, gain !M! Strength."
+  },
 
 
 
-  "theRose:"
+  "theRose:Hibernate": {
+    "NAME": "Hibernate",
+    "DESCRIPTION": "Consume 5 random Food items. Next turn, gain 1 !E!. End your turn. Exhaust."
+  },
+  "theRose:WitchRose": {
+    "NAME": "Witch Rose",
+    "DESCRIPTION": "Create !M! Thunder in your discard pile."
+  },
+  "theRose:Thunder": {
+    "NAME": "Thunder",
+    "DESCRIPTION": "Unplayable. Whenever you draw this card, deal !M! damage to a random enemy. Apply !M! Vulnerable."
+  },
+  "theRose:FridgeFreeze": {
+    "NAME": "Fridge Freeze",
+    "DESCRIPTION": "Deal !D! damage. Apply !M! Freeze."
+  },
   "theRose:PenguPalace": {
     "NAME": "Pengu Palace",
-    "DESCRIPTION": "Add Friday, Friday's Boyfriend, Rose, Pinkguin, Blenguin, and Pabby to your hand."
+    "DESCRIPTION": "Add Friday, Friday's Boyfriend, Pinkguin, Blenguin, and Pabby to your hand. Exhaust."
   },
   "theRose:Betray": {
     "NAME": "Betray",
     "DESCRIPTION": "Deal damage equal to 2 times an enemy's Passivity. Reduce Passivity to 0. Feel Guilty."
   },
+  "theRose:Overstory": {
+    "NAME": "Overstory",
+    "DESCRIPTION": "Add an Ethereal Flipper Flap, Chat, random Food item, and Stay Still! to your hand."
+  },
+  "theRose:Chomp": {
+    "NAME": "Chomp",
+    "DESCRIPTION": "Deal damage equal to 10% of the enemy's max health. Heal HP equal to half the unblocked damage. Exhaust."
+  },
+
+
+
+
   "theRose:TwoCanDine": {
     "NAME": "Two Can Dine",
     "DESCRIPTION": "Whenever a Food item is created, create a copy."
@@ -215,14 +246,6 @@
     "NAME": "Food Rush",
     "DESCRIPTION": "Whenever you consume a Food item, have your next Attack deal !M! additional damage."
   },
-  "theRose:Overstory": {
-    "NAME": "Overstory",
-    "DESCRIPTION": "Add an Ethereal Flipper Flap, Chat, random Food item, and Stay Still! to your hand."
-  },
-  "theRose:Angy": {
-    "NAME": "Angy!",
-    "DESCRIPTION": "If you took damage last turn, gain !M! Strength."
-  },
   "theRose:Slap": {
     "NAME": "Slap",
     "DESCRIPTION": "Deal !D! damage. This card's damage is lowered by !M! this combat."
@@ -230,10 +253,6 @@
   "theRose:OutOfSight": {
     "NAME": "Out Of Sight",
     "DESCRIPTION": "Whenever you gain Flight, apply !M! Weak to a random enemy."
-  },
-  "theRose:Chomp": {
-    "NAME": "Chomp",
-    "DESCRIPTION": "Deal damage equal to 5% of the enemy's max health. Heal HP equal to unblocked damage. Exhaust."
   },
   "theRose:Reunion": {
     "NAME": "Reunion",
@@ -250,10 +269,6 @@
   "theRose:TossTheSalad": {
     "NAME": "Toss The Salad",
     "DESCRIPTION": "Deal !D! damage. Apply !M! Ranch."
-  },
-  "theRose:Hibernate": {
-    "NAME": "Hibernate",
-    "DESCRIPTION": "Consume 5 random Food items. Next turn, gain 1 !E!. End your turn. Exhaust."
   },
   "theRose:FullOfFlap": {
     "NAME": "Full Of Flap",

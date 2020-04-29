@@ -38,7 +38,7 @@ public class FoodFit extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int DAMAGE = 7;
-    private static final int DAMAGE_BUFF = 4;
+    private static final int DAMAGE_BUFF = 2;
     private static final int UPGRADE_DAMAGE_BUFF = 2;
 
     // /STAT DECLARATION/
