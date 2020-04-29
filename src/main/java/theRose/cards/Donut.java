@@ -63,8 +63,8 @@ public class Donut extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Draw cards
-        AbstractDungeon.actionManager.addToBottom(
-                new DrawCardAction(p, baseDraw));
+        this.addToBot(
+                new DrawCardAction(p, draw));
 
         // Remove Flight if stacks will go to 0
         if (p.hasPower("Flight") && p.getPower("Flight").amount == 1) {
