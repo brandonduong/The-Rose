@@ -460,6 +460,7 @@ public class ModInitializer implements
         BaseMod.addCard(new Bulking());
         BaseMod.addCard(new FoodFit());
         BaseMod.addCard(new BeakSmash());
+        BaseMod.addCard(new MidflightSnack());
 
         /*
         BaseMod.addCard(new OrbSkill());

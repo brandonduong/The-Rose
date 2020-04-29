@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
+import theRose.actions.ReduceFlightAction;
 import theRose.characters.TheRose;
 import theRose.powers.FoodEatenPower;
 import theRose.powers.PenguinPower;
@@ -39,7 +40,7 @@ public class Donut extends AbstractDynamicCard {
     private static final int COST = 0;
 
     private static final int DRAW = 1;
-    private static final int FLIGHT = -1;
+    private static final int FLIGHT = 1;
 
     private static final int FOOD_VALUE = 1;
     private static final int UPGRADE_VALUE = 1;
@@ -49,8 +50,7 @@ public class Donut extends AbstractDynamicCard {
     public Donut() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDraw = DRAW;
-        SecondMagicNumber = FLIGHT;
-        BaseSecondMagicNumber = - FLIGHT; // Display integer for description
+        BaseSecondMagicNumber = SecondMagicNumber = FLIGHT;
 
         baseMagicNumber = FOOD_VALUE;
 
@@ -65,16 +65,8 @@ public class Donut extends AbstractDynamicCard {
         this.addToBot(
                 new DrawCardAction(p, draw));
 
-        // Remove Flight if stacks will go to 0
-        if (p.hasPower("Flight") && p.getPower("Flight").amount == 1) {
-            this.addToBot(new RemoveSpecificPowerAction(p, p, "Flight"));
-        }
-
-        // Lose Flight
-        else if (p.hasPower("Flight")) {
-            this.addToBot(new ApplyPowerAction(p, p,
-                    new PenguinPower(p, SecondMagicNumber)));
-        }
+        // Reduce flight
+        this.addToBot(new ReduceFlightAction(SecondMagicNumber));
 
         // Food eaten += 1
         this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, baseMagicNumber)));

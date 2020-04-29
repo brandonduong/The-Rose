@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.powers.HelloPower;
 import theRose.ModInitializer;
 import theRose.cards.*;
 
+import javax.smartcardio.Card;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class RandomFoodConsumeAction extends AbstractGameAction {
@@ -41,8 +42,7 @@ public class RandomFoodConsumeAction extends AbstractGameAction {
         if (this.upgrade) {
             card.upgrade();
         }
-
-        this.addToBot(new NewQueueCardAction(card, p));
+        AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card, false));
         this.isDone = true;
         return;
     }

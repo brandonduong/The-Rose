@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theRose.ModInitializer;
+import theRose.actions.RandomFoodConsumeAction;
 import theRose.cards.*;
 import theRose.util.TextureLoader;
 
@@ -48,17 +49,9 @@ public class HungryFormPower extends AbstractPower implements CloneablePowerInte
 
     @Override
     public void atStartOfTurn() { // At the start of your turn
-        // Create random Food cards
-        AbstractCard card;
-        AbstractCard[] foodCards = {new Donut(), new EnergyDrink(), new FriedChicken(), new Hamburger(), new Sushi()};
-        int randomNum;
-
         // Consume food items
         for (int i = 0; i < this.amount; i++) {
-            randomNum = ThreadLocalRandom.current().nextInt(0, 5); // Random num between [0, 4]
-            card = foodCards[randomNum];
-
-            AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card, null, card.energyOnUse, true, true), true);
+            this.addToBot(new RandomFoodConsumeAction(false));
         }
     }
 

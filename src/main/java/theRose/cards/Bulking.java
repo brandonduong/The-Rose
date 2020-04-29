@@ -45,6 +45,7 @@ public class Bulking extends AbstractDynamicCard {
     public Bulking() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseBlock = BLOCK;
+        this.baseMagicNumber = CONSUME;
 
     }
 
