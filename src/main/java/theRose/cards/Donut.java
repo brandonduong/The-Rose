@@ -29,7 +29,6 @@ public class Donut extends AbstractDynamicCard {
 
     // /TEXT DECLARATION/
 
-
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.SPECIAL;
