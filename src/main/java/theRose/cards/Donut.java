@@ -68,12 +68,12 @@ public class Donut extends AbstractDynamicCard {
 
         // Remove Flight if stacks will go to 0
         if (p.hasPower("Flight") && p.getPower("Flight").amount == 1) {
-            AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(p, p, "Flight"));
+            this.addToBot(new RemoveSpecificPowerAction(p, p, "Flight"));
         }
 
         // Lose Flight
         else if (p.hasPower("Flight")) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+            this.addToBot(new ApplyPowerAction(p, p,
                     new PenguinPower(p, SecondMagicNumber)));
         }
 
