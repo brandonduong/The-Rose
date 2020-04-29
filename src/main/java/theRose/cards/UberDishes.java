@@ -38,7 +38,7 @@ public class UberDishes extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     private static final int CREATE = 4; // How many random food cards to create
     private static final int UPGRADE_CREATE = 1;

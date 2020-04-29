@@ -33,7 +33,7 @@ public class BellyBump extends AbstractDynamicCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
@@ -61,9 +61,11 @@ public class BellyBump extends AbstractDynamicCard {
             return;
         }
 
+        baseDamage = p.getPower("theRose:FoodEatenPower").amount * SecondMagicNumber;
+
         // Deal damage
         this.addToBot(
-                new DamageAction(m, new DamageInfo(p, p.getPower("theRose:FoodEatenPower").amount * SecondMagicNumber, damageTypeForTurn),
+                new DamageAction(m, new DamageInfo(p, baseDamage, damageTypeForTurn),
                         AbstractGameAction.AttackEffect.SMASH));
 
         // Reduce food eaten counter

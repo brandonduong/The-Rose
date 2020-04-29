@@ -109,7 +109,7 @@
   },
   "theRose:Chat": {
     "NAME": "Chat",
-    "DESCRIPTION": "If an enemy does not intend to attack, apply !M! Passivity. Increase this card's Passivity by !theRose:SecondMagic! for this combat."
+    "DESCRIPTION": "Apply !M! Passivity. If an enemy does not intend to attack, apply an extra !M! Passivity."
   },
   "theRose:AFishADay": {
     "NAME": "A Fish a Day!",
@@ -169,7 +169,7 @@
     "DESCRIPTION": "Gain Block equal to the number of Food items eaten this game. Exhaust."
   },
   "theRose:ShinyBeakAndMe": {
-    "NAME": "ShinyBeakAndMe!",
+    "NAME": "Shiny Beak And Me!",
     "DESCRIPTION": "Apply !M! Passivity and !theRose:SecondMagic! Weak to all enemies."
   },
   "theRose:LucidDream": {

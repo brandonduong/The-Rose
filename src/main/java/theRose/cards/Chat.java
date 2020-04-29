@@ -37,16 +37,16 @@ public class Chat extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int STACKS = 10; // Apply 7 Passivity
-    private static final int INCREASE = 2; // += 2
-    private static final int UPGRADE_INCREASE = 2; // Add 2
+    private static final int STACKS = 7; // Apply Passivity
+    private static final int STACKS_BUFF = 5; // += 2
+    private static final int UPGRADE_STACKS_BUFF = 3;
 
     // /STAT DECLARATION/
 
     public Chat() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = STACKS;
-        BaseSecondMagicNumber = SecondMagicNumber = INCREASE;
+        baseMagicNumber = magicNumber = STACKS;
+        BaseSecondMagicNumber = SecondMagicNumber = STACKS_BUFF;
 
     }
 
@@ -56,10 +56,13 @@ public class Chat extends AbstractDynamicCard {
         // Only do effect if monster doesn't intend to do damage
         if (m != null && m.getIntentBaseDmg() <= 0) {
             // Apply Passivity
-            this.addToBot(new ApplyPowerAction(m, p, new PassivityPower(m, p, this.baseMagicNumber), this.baseMagicNumber));
+            this.addToBot(new ApplyPowerAction(m, p, new PassivityPower(m, p, magicNumber + SecondMagicNumber),
+                    magicNumber + SecondMagicNumber));
+        }
 
-            // Increase amount of stacks to give next use
-            this.baseMagicNumber += this.BaseSecondMagicNumber;
+        else {
+            // Apply Passivity
+            this.addToBot(new ApplyPowerAction(m, p, new PassivityPower(m, p, magicNumber), magicNumber));
         }
 
     }
@@ -69,7 +72,7 @@ public class Chat extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeSecondMagicNumber(UPGRADE_INCREASE);
+            upgradeSecondMagicNumber(UPGRADE_STACKS_BUFF);
             initializeDescription();
         }
     }

@@ -44,8 +44,8 @@ public class Hibernate extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int BLOCK = 6;
-    private static final int CREATE = 3;
-    private static final int UPGRADE_CREATE = 2;
+    private static final int CREATE = 1;
+    private static final int UPGRADE_CREATE = 1;
     private static final int ENERGY = 1;
 
     // /STAT DECLARATION/

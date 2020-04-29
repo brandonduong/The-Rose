@@ -41,7 +41,7 @@ public class ShinyBeakAndMe extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final int STACKS = 5;
     private static final int BUFF = 1;
-    private static final int UPGRADE_BUFF = 2;
+    private static final int UPGRADE_STACKS = 2;
 
     // /STAT DECLARATION/
 
@@ -70,7 +70,7 @@ public class ShinyBeakAndMe extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeSecondMagicNumber(UPGRADE_BUFF);
+            upgradeMagicNumber(UPGRADE_STACKS);
             initializeDescription();
         }
     }

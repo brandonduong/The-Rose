@@ -15,7 +15,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class SharingIsCaring extends AbstractDynamicCard {
 
     /*
-     * Sharing is Caring: Apply 3 Bribe for the number of Food items in your hand. Exhaust all Food items.
+     * Sharing is Caring: Apply !M! Bribe for the number of Food items in your hand. Exhaust all Food items.
      */
 
     // TEXT DECLARATION
@@ -34,7 +34,7 @@ public class SharingIsCaring extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int BUFF = 3; // Bribe stacks
+    private static final int BUFF = 5; // Bribe stacks
     private static final int UPGRADE_BUFF = 2; // Add 2 Bribe stacks
 
     // /STAT DECLARATION/

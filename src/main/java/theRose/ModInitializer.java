@@ -474,6 +474,7 @@ public class ModInitializer implements
         BaseMod.addCard(new Angy());
         BaseMod.addCard(new Hibernate());
         BaseMod.addCard(new Thunder());
+        BaseMod.addCard(new WitchRose());
 
         /*
         BaseMod.addCard(new OrbSkill());
