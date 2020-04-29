@@ -183,33 +183,42 @@
     "DESCRIPTION": "Double the enemy's Passivity. Exhaust.",
     "UPGRADE_DESCRIPTION": "Triple the enemy's Passivity. Exhaust."
   },
+  "theRose:NappyTime": {
+    "NAME": "Nappy Time!",
+    "DESCRIPTION": "Gain 1 Plated Armor. End your turn."
+  },
 
 
 
-  "theRose:FlyHigher": {
-    "NAME": "Fly Higher!",
-    "DESCRIPTION": "Gain !M! Flight. Flight reduces Attack damage taken by 75% this turn. Remove all Block. You cannot gain Block this turn."
+  "theRose:"
+  "theRose:PenguPalace": {
+    "NAME": "Pengu Palace",
+    "DESCRIPTION": "Add Friday, Friday's Boyfriend, Rose, Pinkguin, Blenguin, and Pabby to your hand."
+  },
+  "theRose:Betray": {
+    "NAME": "Betray",
+    "DESCRIPTION": "Deal damage equal to 2 times an enemy's Passivity. Reduce Passivity to 0. Feel Guilty."
   },
   "theRose:TwoCanDine": {
     "NAME": "Two Can Dine",
     "DESCRIPTION": "Whenever a Food item is created, create a copy."
   },
-  "theRose:Betray": {
-    "NAME": "Betray",
-    "DESCRIPTION": "Deal damage equal to 2 times an enemy's Passivity. Reduce Passivity to 0. Apply !M! Strength to all remaining enemies."
-  },
-  "theRose:NappyTime": {
-    "NAME": "Nappy Time!",
-    "DESCRIPTION": "Gain 1 Plated Armor. End your turn."
+  "theRose:FlyHigher": {
+    "NAME": "Fly Higher!",
+    "DESCRIPTION": "Gain !M! Flight. Flight reduces Attack damage taken by 75% this turn. Remove all Block. You cannot gain Block this turn."
   },
   "theRose:BrushYourBeak": {
     "NAME": "Brush Your Beak!",
     "DESCRIPTION": ""
   },
-
-
-
-
+  "theRose:FoodRush": {
+    "NAME": "Food Rush",
+    "DESCRIPTION": "Whenever you consume a Food item, have your next Attack deal !M! additional damage."
+  },
+  "theRose:Overstory": {
+    "NAME": "Overstory",
+    "DESCRIPTION": "Add an Ethereal Flipper Flap, Chat, random Food item, and Stay Still! to your hand."
+  },
   "theRose:Angy": {
     "NAME": "Angy!",
     "DESCRIPTION": "If you took damage last turn, gain !M! Strength."
@@ -233,10 +242,6 @@
   "theRose:BubbleButt": {
     "NAME": "Bubble Butt",
     "DESCRIPTION": "Reduce damage taken by !M! for the rest of this combat."
-  },
-  "theRose:FoodRush": {
-    "NAME": "Food Rush",
-    "DESCRIPTION": "Whenever you consume a Food item, have your next Attack deal !M! additional damage."
   },
   "theRose:BellySlide": {
     "NAME": "Belly Slide",
