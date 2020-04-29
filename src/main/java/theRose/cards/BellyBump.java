@@ -17,7 +17,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class BellyBump extends AbstractDynamicCard {
 
     /*
-     * Belly Bump: Deal damage equal to the number of Food items eaten this combat. Quarter(Halve) the counter.
+     * Belly Bump: Deal damage equal to 2 times the number of Food items eaten this combat. Halve the counter.
      */
 
     // TEXT DECLARATION
@@ -40,8 +40,9 @@ public class BellyBump extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int DAMAGE = 0;
-    private static final int FACTOR = 4; // Divide by 4
-    private static final int UPGRADE_FACTOR = -2; // Divide by 2
+    private static final int MULTIPLIER = 2;
+    private static final int UPGRADE_MULTIPLIER = 1;
+    private static final int FACTOR = 2; // Divide by 2
 
     // /STAT DECLARATION/
 
@@ -49,6 +50,7 @@ public class BellyBump extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         baseMagicNumber = FACTOR;
+        BaseSecondMagicNumber = SecondMagicNumber = MULTIPLIER;
     }
 
     // Actions the card should do.
@@ -61,16 +63,11 @@ public class BellyBump extends AbstractDynamicCard {
 
         // Deal damage
         this.addToBot(
-                new DamageAction(m, new DamageInfo(p, AbstractDungeon.player.getPower("theRose:FoodEatenPower").amount, damageTypeForTurn),
+                new DamageAction(m, new DamageInfo(p, p.getPower("theRose:FoodEatenPower").amount * SecondMagicNumber, damageTypeForTurn),
                         AbstractGameAction.AttackEffect.SMASH));
 
         // Reduce food eaten counter
         int reduce = p.getPower("theRose:FoodEatenPower").amount / baseMagicNumber;
-
-        if (baseMagicNumber == 4) {
-            reduce *= 3;
-        }
-
         this.addToBot(new ReducePowerAction(p, p, "theRose:FoodEatenPower", reduce));
     }
 
@@ -80,7 +77,7 @@ public class BellyBump extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_FACTOR);
+            upgradeSecondMagicNumber(UPGRADE_MULTIPLIER);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

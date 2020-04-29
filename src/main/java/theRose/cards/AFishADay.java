@@ -35,9 +35,8 @@ public class AFishADay extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-
+    private static final int UPGRADE_COST = 0;
     private static final int BUFF = 1;
-    private static final int UPGRADE_BUFF = 1;
 
     // /STAT DECLARATION/
 
@@ -63,7 +62,7 @@ public class AFishADay extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_BUFF);
+            upgradeBaseCost(UPGRADE_COST);
             initializeDescription();
         }
     }

@@ -11,8 +11,6 @@
     "NAME": "Fly High to the Sky!",
     "DESCRIPTION": "Gain !B! Block. Gain !M! Flight."
   },
-
-
   "theRose:Workout": {
     "NAME": "Workout",
     "DESCRIPTION": "Gain !M! Strength. Heal !theRose:SecondMagic! HP."
@@ -72,8 +70,8 @@
   },
   "theRose:BellyBump": {
     "NAME": "Belly Bump",
-    "DESCRIPTION": "Deal damage equal to the number of Food items eaten this combat. Set the counter to a quarter.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to the number of Food items eaten this combat. Set the counter to a half."
+    "DESCRIPTION": "Deal damage equal to 2 times the number of Food items eaten this combat. Set the counter to a half.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to 3 times the number of Food items eaten this combat. Set the counter to a half."
   },
   "theRose:SharingIsCaring": {
     "NAME": "Sharing Is Caring",

@@ -40,6 +40,7 @@ public class RefrigeratorRaid extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 3;
+    private static final int UPGRADE_COST = 2;
     private static final int BUFF = 1;
 
     // /STAT DECLARATION/
@@ -68,6 +69,7 @@ public class RefrigeratorRaid extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeBaseCost(UPGRADE_COST);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
