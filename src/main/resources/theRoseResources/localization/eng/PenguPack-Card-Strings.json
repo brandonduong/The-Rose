@@ -189,13 +189,13 @@
     "NAME": "Angy!",
     "DESCRIPTION": "If you took damage last turn, gain !M! Strength."
   },
-
-
-
   "theRose:Hibernate": {
     "NAME": "Hibernate",
-    "DESCRIPTION": "Consume 5 random Food items. Next turn, gain 1 !E!. End your turn. Exhaust."
+    "DESCRIPTION": "Gain !B! Block. Consume !M! random Food items. Next turn, gain 1 !E!. End your turn."
   },
+
+
+
   "theRose:WitchRose": {
     "NAME": "Witch Rose",
     "DESCRIPTION": "Create !M! Thunder in your discard pile."
