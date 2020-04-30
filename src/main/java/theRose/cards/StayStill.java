@@ -39,8 +39,8 @@ public class StayStill extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int STACKS = 9;
-    private static final int UPGRADE_STACK = 3;
+    private static final int STACKS = 12;
+    private static final int UPGRADE_STACK = 4;
 
     // /STAT DECLARATION/
 
