@@ -162,7 +162,7 @@
   "theRose:MidflightSnack": {
     "NAME": "Midflight Snack",
     "DESCRIPTION": "Can only be played in Flight. Draw 1 card. Create !M! random Food item in your hand. Lose 1 Flight.",
-    "UPGRADE_DESCRIPTION": "Can only be played in Flight. Draw 1 card. Create !M! random Food items in your hand. Lose 1 Flight."
+    "UPGRADE_DESCRIPTION": "Can only be played in Flight. Draw 1 card. Create !M! random Upgraded Food item in your hand. Lose 1 Flight."
   },
   "theRose:PermanentChub": {
     "NAME": "Permanent Chub",

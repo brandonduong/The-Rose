@@ -21,7 +21,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class MidflightSnack extends AbstractDynamicCard {
 
     /*
-     * Midflight Snack: Can only be played in Flight. Draw 1 card. Create 1 (2) random Food item in your hand. Lose 1 Flight.
+     * Midflight Snack: Can only be played in Flight. Draw 1 card. Create 1 random (Upgraded) Food item in your hand. Lose 1 Flight.
      */
 
     // TEXT DECLARATION
@@ -45,7 +45,6 @@ public class MidflightSnack extends AbstractDynamicCard {
     private static final int COST = 0;
     private static final int DRAW = 1;
     private static final int CREATE = 1;
-    private static final int UPGRADE_CREATE = 1;
     private static final int BUFF = 1;
 
     // /STAT DECLARATION/
@@ -96,7 +95,6 @@ public class MidflightSnack extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_CREATE);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

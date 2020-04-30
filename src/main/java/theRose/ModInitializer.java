@@ -125,12 +125,12 @@ public class ModInitializer implements
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
 
     // Card backgrounds - The actual rectangular card.
-    private static final String ATTACK_DEFAULT_GRAY = "theRoseResources/images/512/bg_attack_default_gray.png";
-    private static final String SKILL_DEFAULT_GRAY = "theRoseResources/images/512/bg_skill_default_gray.png";
-    private static final String POWER_DEFAULT_GRAY = "theRoseResources/images/512/bg_power_default_gray.png";
+    private static final String ATTACK_DEFAULT_GRAY = "theRoseResources/images/512/bg_attack_rose_pink.png";
+    private static final String SKILL_DEFAULT_GRAY = "theRoseResources/images/512/bg_skill_rose_pink.png";
+    private static final String POWER_DEFAULT_GRAY = "theRoseResources/images/512/bg_power_rose_pink.png";
 
-    private static final String ENERGY_ORB_DEFAULT_GRAY = "theRoseResources/images/512/card_default_gray_orb.png";
-    private static final String CARD_ENERGY_ORB = "theRoseResources/images/512/card_small_orb.png";
+    private static final String ENERGY_ORB_DEFAULT_GRAY = "theRoseResources/images/512/card_rose_pink_orb.png";
+    private static final String CARD_ENERGY_ORB = "theRoseResources/images/512/card_rose_orb.png";
 
     private static final String ATTACK_DEFAULT_GRAY_PORTRAIT = "theRoseResources/images/1024/bg_attack_default_gray.png";
     private static final String SKILL_DEFAULT_GRAY_PORTRAIT = "theRoseResources/images/1024/bg_skill_default_gray.png";
