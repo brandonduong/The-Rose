@@ -62,7 +62,7 @@
   },
   "theRose:HungryForm": {
     "NAME": "Hungry Form",
-    "DESCRIPTION": "At the start of your turn, consume !M! random Food items."
+    "DESCRIPTION": "At the start of your turn, Eat !M! random Food items."
   },
   "theRose:Reorder": {
     "NAME": "Reorder",
@@ -84,7 +84,7 @@
   },
   "theRose:TakesiesBacksies" : {
     "NAME": "Takesies Backsies",
-    "DESCRIPTION": "For every !M! Passivity, reduce Passivity by !M!, deal !D! damage, and consume a random Food item."
+    "DESCRIPTION": "For every !M! Passivity, reduce Passivity by !M!, deal !D! damage, and Eat a random Food item."
   },
   "theRose:HeadPat": {
     "NAME": "Head Pat",
@@ -117,7 +117,7 @@
   },
   "theRose:FoodFight": {
     "NAME": "Food Fight!",
-    "DESCRIPTION": "Whenever you play a Food item, deal !M! damage to a random enemy."
+    "DESCRIPTION": "Whenever you Eat, deal !M! damage to a random enemy."
   },
   "theRose:Squish": {
     "NAME": "Squish",
@@ -149,11 +149,11 @@
   },
   "theRose:Bulking": {
     "NAME": "Bulking",
-    "DESCRIPTION": "Whenever a Food item is consumed this turn, gain !B! Block. Consume !M! random Food item."
+    "DESCRIPTION": "Whenever you Eat this turn, gain !B! Block. Eat !M! random Food item."
   },
   "theRose:FoodFit": {
     "NAME": "Food Fit",
-    "DESCRIPTION": "Deal !D! damage to all enemies. If no Food item was played this combat, deal an extra !M! damage."
+    "DESCRIPTION": "Deal !D! damage to all enemies. If you have not eaten this combat, deal an extra !M! damage."
   },
   "theRose:BeakSmash": {
     "NAME": "Beak Smash!",
@@ -191,7 +191,7 @@
   },
   "theRose:Hibernate": {
     "NAME": "Hibernate",
-    "DESCRIPTION": "Gain !B! Block. Consume !M! random Food items. Next turn, gain 1 [E]. End your turn."
+    "DESCRIPTION": "Gain !B! Block. Eat !M! random Food items. Next turn, gain 1 [E]. End your turn."
   },
   "theRose:Thunder": {
     "NAME": "Thunder",
@@ -215,21 +215,24 @@
     "DESCRIPTION": "Gain 3 Block. Draw !M! card. This is unaffected by Flight and Dexterity.",
     "UPGRADE_DESCRIPTION": "Gain 6 Block. Draw !M! card. This is unaffected by Flight and Dexterity."
   },
+
+
+  "theRose:Mukbang": {
+    "NAME": "Mukbang",
+    "DESCRIPTION": ""
+  },
   "theRose:Chomp": {
     "NAME": "Chomp",
     "DESCRIPTION": "Deal damage equal to 10% of the enemy's max health. Heal HP equal to half the unblocked damage. Exhaust."
   },
   "theRose:PickyEater": {
     "NAME": "Picky Eater",
-    "DESCRIPTION": "Choose one: Consume a Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi."
+    "DESCRIPTION": "Choose one: Eat a Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi."
   },
   "theRose:Chomp2": {
     "NAME": "Chomp2",
     "DESCRIPTION": "Deal !D! damage. If Fatal, gain !M! max HP."
   },
-
-
-
   "theRose:AgentRose": {
     "NAME": "Agent Rose",
     "DESCRIPTION": "Create !M! Bomb in your discard pile."

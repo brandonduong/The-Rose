@@ -38,6 +38,15 @@
       "passivity"
     ],
     "DESCRIPTION": "Reach certain milestones of Passivity to inflict debuffs. Milestones are reached at every 25% of the enemy's current HP. Once stacks reach 100% of the enemy's current HP, they flee."
+  },
+  {
+    "NAMES": [
+      "Eat",
+      "eat",
+      "eaten"
+    ],
+    "DESCRIPTION": "Refers to playing a Food item."
   }
+
 
 ]
