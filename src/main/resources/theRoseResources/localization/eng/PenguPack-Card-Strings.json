@@ -109,7 +109,7 @@
   },
   "theRose:Chat": {
     "NAME": "Chat",
-    "DESCRIPTION": "Apply !M! Passivity. If an enemy does not intend to attack, apply an extra !M! Passivity."
+    "DESCRIPTION": "Apply !M! Passivity. If an enemy does not intend to attack, apply an extra !theRose:SecondMagic! Passivity."
   },
   "theRose:AFishADay": {
     "NAME": "A Fish a Day!",

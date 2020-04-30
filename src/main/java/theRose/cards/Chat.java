@@ -18,7 +18,6 @@ public class Chat extends AbstractDynamicCard {
 
     /*
      * Chat: If an enemy does not intend to attack, apply !M! Passivity.
-     * Increase this card's Passivity by !theRose:SecondMagic! for this combat.
      */
 
     // TEXT DECLARATION

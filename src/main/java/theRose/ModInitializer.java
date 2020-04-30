@@ -88,7 +88,8 @@ public class ModInitializer implements
         OnCardUseSubscriber,
         PostEnergyRechargeSubscriber,
         PostBattleSubscriber,
-        OnStartBattleSubscriber
+        OnStartBattleSubscriber,
+        PostDungeonInitializeSubscriber
 {
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
@@ -102,7 +103,7 @@ public class ModInitializer implements
 
     //This is for the in-game mod settings panel.
     private static final String MODNAME = "Pengu Pack";
-    private static final String AUTHOR = "Brandon Duong + Gremious' Mod Making Template!"; // And pretty soon - You!
+    private static final String AUTHOR = "Brandon Duong"; // And pretty soon - You!
     private static final String DESCRIPTION = "A pack (or mod) all about penguins!";
 
     // =============== INPUT TEXTURE LOCATION =================
@@ -137,8 +138,8 @@ public class ModInitializer implements
     private static final String ENERGY_ORB_DEFAULT_GRAY_PORTRAIT = "theRoseResources/images/1024/card_default_gray_orb.png";
 
     // Character assets
-    private static final String THE_DEFAULT_BUTTON = "theRoseResources/images/charSelect/DefaultCharacterButton.png";
-    private static final String THE_DEFAULT_PORTRAIT = "theRoseResources/images/charSelect/DefaultCharacterPortraitBG.png";
+    private static final String THE_DEFAULT_BUTTON = "theRoseResources/images/charSelect/RoseButton.png";
+    private static final String THE_DEFAULT_PORTRAIT = "theRoseResources/images/charSelect/RosePortraitBG.png";
     public static final String THE_DEFAULT_SHOULDER_1 = "theRoseResources/images/char/defaultCharacter/rose witch.png";
     public static final String THE_DEFAULT_SHOULDER_2 = "theRoseResources/images/char/defaultCharacter/rose witch.png";
     public static final String THE_DEFAULT_CORPSE = "theRoseResources/images/char/defaultCharacter/rose witch.png";
@@ -289,7 +290,6 @@ public class ModInitializer implements
     public static void initialize() {
         logger.info("========================= Initializing Default Mod. Hi. =========================");
         ModInitializer theRose = new ModInitializer();
-        foodEaten = counter = 0;
         logger.info("========================= /Default Mod Initialized. Hello World./ =========================");
     }
 
@@ -302,7 +302,7 @@ public class ModInitializer implements
     public void receiveEditCharacters() {
         logger.info("Beginning to edit characters. " + "Add " + TheRose.Enums.THE_ROSE.toString());
 
-        BaseMod.addCharacter(new TheRose("the Rose", TheRose.Enums.THE_ROSE),
+        BaseMod.addCharacter(new TheRose("The Rose", TheRose.Enums.THE_ROSE),
                 THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheRose.Enums.THE_ROSE);
 
         receiveEditPotions();
@@ -601,6 +601,14 @@ public class ModInitializer implements
     public static boolean damagedLastTurn; // True if player was damaged last turn
     public static int hpLastTurn; // Holds players hp value last turn
 
+    public static boolean passive; // True if player has only beaten enemies through Passivity
+
+    @Override
+    public void receivePostDungeonInitialize() {
+        // Run once dungeon done initializing
+        foodEaten = counter = 0;
+        passive = true;
+    }
 
     @Override
     public void receivePostEnergyRecharge() {
@@ -623,6 +631,9 @@ public class ModInitializer implements
         playedFood = false;
         foodEaten += counter;
         counter = 0;
+
+        passive = passive && room.monsters.haveMonstersEscaped(); // Returns true if all monsters have escaped
+        logger.info("Passive? " + passive);
     }
 
     @Override

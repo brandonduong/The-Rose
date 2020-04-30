@@ -24,7 +24,7 @@ public class RefrigeratorRaid extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = ModInitializer.makeID(RefrigeratorRaid.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("RefrigeratorRaid.png");
 
     // /TEXT DECLARATION/
 

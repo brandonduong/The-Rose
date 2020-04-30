@@ -21,7 +21,7 @@ public class BeakDrill extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = ModInitializer.makeID(BeakDrill.class.getSimpleName());
-    public static final String IMG = makeCardPath("Beak_Drill.png");
+    public static final String IMG = makeCardPath("BeakDrill.png");
 
     // /TEXT DECLARATION/
 
