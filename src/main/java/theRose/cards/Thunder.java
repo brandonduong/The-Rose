@@ -3,6 +3,8 @@ package theRose.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.green.Reflex;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -66,6 +68,11 @@ public class Thunder extends AbstractDynamicCard {
             this.addToBot(new ApplyPowerAction(target, AbstractDungeon.player,
                     new VulnerablePower(target, magicNumber, false), magicNumber));
         }
+    }
+
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        this.cantUseMessage = "Can not be played.";
+        return false;
     }
 
     // Upgraded stats.

@@ -476,6 +476,7 @@ public class ModInitializer implements
         BaseMod.addCard(new Thunder());
         BaseMod.addCard(new WitchRose());
         BaseMod.addCard(new Overstory());
+        BaseMod.addCard(new TreadmillTreat());
 
         /*
         BaseMod.addCard(new OrbSkill());
@@ -634,7 +635,7 @@ public class ModInitializer implements
         counter = 0;
 
         passive = passive && room.monsters.haveMonstersEscaped(); // Returns true if all monsters have escaped
-        logger.info("Passive? " + passive);
+        logger.info("Passive = " + passive);
     }
 
     @Override

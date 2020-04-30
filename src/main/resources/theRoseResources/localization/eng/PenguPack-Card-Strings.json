@@ -201,6 +201,15 @@
     "NAME": "Witch Rose",
     "DESCRIPTION": "Create !M! Thunder in your discard pile."
   },
+  "theRose:Overstory": {
+    "NAME": "Overstory",
+    "DESCRIPTION": "Add an Ethereal Beak Dive, Chat, random Food item, and Stay Still! to your hand.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded Ethereal Beak Dive, Chat, random Food item, and Stay Still! to your hand."
+  },
+  "theRose:TreadmillTreat": {
+    "NAME": "Treadmill Treat",
+    "DESCRIPTION": "Draw and discard the top !M! cards in your draw pile. If a card is 0-cost, play it."
+  },
 
 
   "theRose:AgentRose": {
@@ -214,14 +223,6 @@
   "theRose:StealthRose": {
     "NAME": "Stealth Rose",
     "DESCRIPTION": "Gain !B! Block. Draw !M! card. This is unaffected by Flight."
-  },
-  "theRose:Overstory": {
-    "NAME": "Overstory",
-    "DESCRIPTION": "Add an Ethereal Beak Dive, Chat, random Food item, and Stay Still! to your hand."
-  },
-  "theRose:TreadmillTreat": {
-    "NAME": "Treadmill Treat",
-    "DESCRIPTION": "Draw and discard the top !M! cards in your draw pile. If a card is 0-cost, play it."
   },
   "theRose:FridgeFreeze": {
     "NAME": "Fridge Freeze",
