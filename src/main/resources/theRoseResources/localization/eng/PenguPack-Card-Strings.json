@@ -46,7 +46,7 @@
   },
   "theRose:Donut": {
     "NAME": "Donut",
-    "DESCRIPTION": "Draw !M! Card. Lose !theRose:SecondMagic! Flight. Exhaust."
+    "DESCRIPTION": "Draw 1 Card. Lose !theRose:SecondMagic! Flight. Exhaust."
   },
   "theRose:FriedChicken": {
     "NAME": "Fried Chicken",
@@ -79,8 +79,8 @@
   },
   "theRose:ChefRose": {
     "NAME": "Chef Rose",
-    "DESCRIPTION": "Deal !D! Damage. Add a random Food item to your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! Damage. Add a random Upgraded Food item to your hand."
+    "DESCRIPTION": "Deal !D! Damage. Add a random Food item to your hand and discard pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage. Add a random Upgraded Food item to your hand and discard pile."
   },
   "theRose:TakesiesBacksies" : {
     "NAME": "Takesies Backsies",
@@ -161,8 +161,8 @@
   },
   "theRose:MidflightSnack": {
     "NAME": "Midflight Snack",
-    "DESCRIPTION": "Can only be played in Flight. Draw 1 card. Create !M! random Food item in your hand. Lose 1 Flight.",
-    "UPGRADE_DESCRIPTION": "Can only be played in Flight. Draw 1 card. Create !M! random Upgraded Food item in your hand. Lose 1 Flight."
+    "DESCRIPTION": "Can only be played in Flight. Create !M! random Food item in your hand. Draw 1 card. Lose 1 Flight.",
+    "UPGRADE_DESCRIPTION": "Can only be played in Flight. Create !M! random Upgraded Food item in your hand. Draw 1 card. Lose 1 Flight."
   },
   "theRose:PermanentChub": {
     "NAME": "Permanent Chub",
@@ -191,30 +191,45 @@
   },
   "theRose:Hibernate": {
     "NAME": "Hibernate",
-    "DESCRIPTION": "Gain !B! Block. Consume !M! random Food items. Next turn, gain 1 !E!. End your turn."
+    "DESCRIPTION": "Gain !B! Block. Consume !M! random Food items. Next turn, gain 1 Energy. End your turn."
   },
   "theRose:Thunder": {
     "NAME": "Thunder",
-    "DESCRIPTION": "Unplayable. Whenever you draw this card, deal !M! damage to a random enemy. Apply !theRose:SecondMagic! Vulnerable."
+    "DESCRIPTION": "Unplayable. Whenever you draw this card, deal !D! damage to a random enemy. Apply !M! Vulnerable."
   },
   "theRose:WitchRose": {
     "NAME": "Witch Rose",
     "DESCRIPTION": "Create !M! Thunder in your discard pile."
   },
+
+
+  "theRose:AgentRose": {
+    "NAME": "Agent Rose",
+    "DESCRIPTION": "Create !M! Bomb in your discard pile."
+  },
+  "theRose:Bomb": {
+    "NAME": "Bomb",
+    "DESCRIPTION": "When this card has been drawn !M! times, deal !D! to all enemies."
+  },
+  "theRose:StealthRose": {
+    "NAME": "Stealth Rose",
+    "DESCRIPTION": "Gain !B! Block. Draw !M! card. This is unaffected by Flight."
+  },
   "theRose:Overstory": {
     "NAME": "Overstory",
-    "DESCRIPTION": "Add an Ethereal Flipper Flap, Chat, random Food item, and Stay Still! to your hand."
+    "DESCRIPTION": "Add an Ethereal Beak Dive, Chat, random Food item, and Stay Still! to your hand."
   },
-
-
-
+  "theRose:TreadmillTreat": {
+    "NAME": "Treadmill Treat",
+    "DESCRIPTION": "Draw and discard the top !M! cards in your draw pile. If a card is 0-cost, play it."
+  },
   "theRose:FridgeFreeze": {
     "NAME": "Fridge Freeze",
     "DESCRIPTION": "Apply !M! Slow. Apply !M! Freeze."
   },
   "theRose:PenguPalace": {
     "NAME": "Pengu Palace",
-    "DESCRIPTION": "Add Friday, Friday's Boyfriend, Pinkguin, Blenguin, and Pabby to your hand. Exhaust."
+    "DESCRIPTION": ""
   },
   "theRose:Betray": {
     "NAME": "Betray",

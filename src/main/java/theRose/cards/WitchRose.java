@@ -1,6 +1,7 @@
 package theRose.cards;
 
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -36,22 +37,22 @@ public class WitchRose extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final int CREATE = 3;
     private static final int UPGRADE_CREATE = 2;
+    private static final int THUNDER_DAMAGE = 5;
 
     // /STAT DECLARATION/
 
     public WitchRose() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = CREATE;
+        baseDamage = THUNDER_DAMAGE;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for(int i = 0; i < magicNumber; i++) {
-            AbstractCard card = new Thunder();
+        AbstractCard card = new Thunder();
 
-            this.addToBot(new MakeTempCardInHandAction(card));
-        }
+        this.addToBot(new MakeTempCardInDiscardAction(card, magicNumber));
     }
 
     // Upgraded stats.

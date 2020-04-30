@@ -21,7 +21,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class MidflightSnack extends AbstractDynamicCard {
 
     /*
-     * Midflight Snack: Can only be played in Flight. Draw 1 card. Create 1 random (Upgraded) Food item in your hand. Lose 1 Flight.
+     * Midflight Snack: Can only be played in Flight. Create 1 random (Upgraded) Food item in your hand. Draw 1 card. Lose 1 Flight.
      */
 
     // TEXT DECLARATION
@@ -58,9 +58,6 @@ public class MidflightSnack extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Draw a card
-        this.addToBot(new DrawCardAction(p, DRAW));
-
         // Reduce flight
         this.addToBot(new ReduceFlightAction(SecondMagicNumber));
 
@@ -68,6 +65,9 @@ public class MidflightSnack extends AbstractDynamicCard {
         for (int i = 0; i < magicNumber; i++) {
             this.addToBot(new RandomFoodInHandAction(this.upgraded));
         }
+
+        // Draw a card
+        this.addToBot(new DrawCardAction(p, DRAW));
 
     }
 

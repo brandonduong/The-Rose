@@ -7,11 +7,8 @@
     "DESCRIPTION": "Whenever you play a card, gain 1 dexterity this turn only."
   },
   {
-    "PROPER_NAME": "Penguin-Flight",
+    "PROPER_NAME": "Flight",
     "NAMES": [
-      "Penguin-Flight",
-      "penguin-flight",
-      "Penguin-flight",
       "flight",
       "Flight"
     ],

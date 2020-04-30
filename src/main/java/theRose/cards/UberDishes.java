@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
+import theRose.actions.RandomFoodInDiscardAction;
 import theRose.characters.TheRose;
 
 import java.util.concurrent.ThreadLocalRandom;
@@ -47,28 +48,13 @@ public class UberDishes extends AbstractDynamicCard {
 
     public UberDishes() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = CREATE;
+        baseMagicNumber = magicNumber = CREATE;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        // Create random Food cards
-        AbstractCard card;
-        AbstractCard[] foodCards = {new Donut(), new EnergyDrink(), new FriedChicken(), new Hamburger(), new Sushi()};
-        int randomNum;
-
-        for (int i = 0; i < baseMagicNumber; i++) {
-            randomNum = ThreadLocalRandom.current().nextInt(0, 5); // Random num better [0, 4]
-            card = foodCards[randomNum];
-
-            if (this.upgraded) { // If this card is upgraded, create upgraded food cards.
-                card.upgrade();
-            }
-
-            this.addToBot(new MakeTempCardInDiscardAction(card, 1));
-        }
+        this.addToBot(new RandomFoodInDiscardAction(this.upgraded, magicNumber));
     }
 
 

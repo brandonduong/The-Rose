@@ -3,9 +3,11 @@ package theRose.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
 
@@ -28,12 +30,12 @@ public class Thunder extends AbstractDynamicCard {
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.SPECIAL;
-    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
+    private static final CardTarget TARGET = CardTarget.NONE;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = -2;
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 5;
     private static final int BUFF = 1;
 
     // /STAT DECLARATION/
@@ -55,6 +57,10 @@ public class Thunder extends AbstractDynamicCard {
             // Deal damage
             this.addToBot(new DamageAction(target, new DamageInfo(AbstractDungeon.player, damage),
                     AbstractGameAction.AttackEffect.LIGHTNING));
+
+            // Thunder effects
+            AbstractDungeon.effectList.add(new LightningEffect(target.drawX, target.drawY));
+            CardCrawlGame.sound.play("ORB_LIGHTNING_EVOKE", 0.1F);
 
             // Apply vulnerable
             this.addToBot(new ApplyPowerAction(target, AbstractDungeon.player,

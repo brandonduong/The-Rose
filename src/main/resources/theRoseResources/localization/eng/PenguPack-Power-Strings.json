@@ -8,7 +8,7 @@
         "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
 },
 "theRose:PenguinFlight": {
-        "NAME": "Penguin Flight",
+        "NAME": "Flight",
         "DESCRIPTIONS": ["Reduce #yAttack damage taken by #b50%. Reduce #yBlock gained by #b25%. Lose 1 stack when damage is taken."]
 },
 "theRose:TemperTantrumPower": {
