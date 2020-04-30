@@ -217,22 +217,36 @@
   },
 
 
-  "theRose:Mukbang": {
-    "NAME": "Mukbang",
-    "DESCRIPTION": ""
+  "theRose:BigBrainRose": {
+    "NAME": "Big Brain Rose",
+    "DESCRIPTION": "Scry !M!."
   },
-  "theRose:Chomp": {
-    "NAME": "Chomp",
-    "DESCRIPTION": "Deal damage equal to 10% of the enemy's max health. Heal HP equal to half the unblocked damage. Exhaust."
-  },
-  "theRose:PickyEater": {
-    "NAME": "Picky Eater",
-    "DESCRIPTION": "Choose one: Eat a Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi."
+  "theRose:CuteRose": {
+    "NAME": "Cute Rose",
+    "DESCRIPTION": "Whenever you apply Passivity, apply !M! more."
   },
   "theRose:Chomp2": {
     "NAME": "Chomp2",
     "DESCRIPTION": "Deal !D! damage. If Fatal, gain !M! max HP."
   },
+  "theRose:PickyEater": {
+    "NAME": "Picky Eater",
+    "DESCRIPTION": "Choose one: Eat a Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi."
+  },
+  "theRose:Chomp": {
+    "NAME": "Chomp",
+    "DESCRIPTION": "Deal damage equal to 10% (15%) of the enemy's max health. Heal HP equal to half the unblocked damage. Exhaust."
+  },
+  "theRose:Betray": {
+    "NAME": "Betray",
+    "DESCRIPTION": "Deal damage equal to 2 times an enemy's Passivity. Reduce Passivity to 0. Feel Guilty."
+  },
+  "theRose:Reunion": {
+    "NAME": "Reunion",
+    "DESCRIPTION": "If the enemy is bird-like, they flee. Ethereal."
+  },
+
+
   "theRose:AgentRose": {
     "NAME": "Agent Rose",
     "DESCRIPTION": "Create !M! Bomb in your discard pile."
@@ -249,16 +263,8 @@
     "NAME": "Pengu Palace",
     "DESCRIPTION": ""
   },
-  "theRose:Betray": {
-    "NAME": "Betray",
-    "DESCRIPTION": "Deal damage equal to 2 times an enemy's Passivity. Reduce Passivity to 0. Feel Guilty."
-  },
 
 
-  "theRose:TwoCanDine": {
-    "NAME": "Two Can Dine",
-    "DESCRIPTION": "Whenever a Food item is created, create a copy."
-  },
   "theRose:FlyHigher": {
     "NAME": "Fly Higher!",
     "DESCRIPTION": "Gain !M! Flight. Flight reduces Attack damage taken by 75% this turn. Remove all Block. You cannot gain Block this turn."
@@ -278,10 +284,6 @@
   "theRose:OutOfSight": {
     "NAME": "Out Of Sight",
     "DESCRIPTION": "Whenever you gain Flight, apply !M! Weak to a random enemy."
-  },
-  "theRose:Reunion": {
-    "NAME": "Reunion",
-    "DESCRIPTION": "If the enemy is bird-like, they flee. Ethereal."
   },
   "theRose:BubbleButt": {
     "NAME": "Bubble Butt",

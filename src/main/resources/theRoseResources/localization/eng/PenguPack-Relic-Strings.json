@@ -23,5 +23,13 @@
       ".",
       "Select a card to bottle for "
     ]
+  },
+  "theRose:TwoCanDine": {
+    "NAME": "Two Can Dine",
+    "DESCRIPTION": ["At the start of combat, create 2 random Food items in your hand."]
+  },
+  "theRose:Mukbang": {
+    "NAME": "Mukbang",
+    "DESCRIPTION": ["Whenever you Eat, increment the Food Eaten counter an additional time."]
   }
 }
