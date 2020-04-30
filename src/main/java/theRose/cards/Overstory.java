@@ -19,7 +19,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class Overstory extends AbstractDynamicCard {
 
     /*
-     * Overstory: Add an (Upgraded) Ethereal Beak Dive, Chat, random Food item, and Stay Still! to your hand.
+     * Overstory: Add an (Upgraded) Exhaustive Ethereal Beak Dive, Chat, random Food item, and Stay Still! to your hand.
      */
 
     // TEXT DECLARATION
@@ -54,12 +54,14 @@ public class Overstory extends AbstractDynamicCard {
         // Create a Beak Dive
         AbstractCard card = new BeakDive();
         card.isEthereal = true;
+        card.exhaust = true;
         card.upgraded = this.upgraded;
         this.addToBot(new MakeTempCardInHandAction(card));
 
         // Create a Chat
         card = new Chat();
         card.isEthereal = true;
+        card.exhaust = true;
         card.upgraded = this.upgraded;
         this.addToBot(new MakeTempCardInHandAction(card));
 
@@ -69,6 +71,7 @@ public class Overstory extends AbstractDynamicCard {
         // Create a Stay Still!
         card = new StayStill();
         card.isEthereal = true;
+        card.exhaust = true;
         card.upgraded = this.upgraded;
         this.addToBot(new MakeTempCardInHandAction(card));
 

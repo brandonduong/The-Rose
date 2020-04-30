@@ -36,9 +36,9 @@ public class FoodFit extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
-    private static final int DAMAGE = 7;
-    private static final int DAMAGE_BUFF = 2;
+    private static final int COST = 2;
+    private static final int DAMAGE = 9;
+    private static final int DAMAGE_BUFF = 5;
     private static final int UPGRADE_DAMAGE_BUFF = 2;
 
     // /STAT DECLARATION/

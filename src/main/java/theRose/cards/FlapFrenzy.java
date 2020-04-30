@@ -38,7 +38,7 @@ public class FlapFrenzy extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 3;
+    private static final int COST = 2;
 
     // /STAT DECLARATION/
 

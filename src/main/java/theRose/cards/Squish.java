@@ -32,7 +32,7 @@ public class Squish extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
     private static final int THRESHOLD = 2; // Only work if 2 times their hp
     private static final int THRESHOLD_UPGRADE = -1; // Only work if 1 times their hp
 

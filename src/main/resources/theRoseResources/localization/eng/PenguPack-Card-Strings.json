@@ -13,7 +13,7 @@
   },
   "theRose:Workout": {
     "NAME": "Workout",
-    "DESCRIPTION": "Gain !M! Strength. Heal !theRose:SecondMagic! HP."
+    "DESCRIPTION": "Gain !M! Strength. Heal !theRose:SecondMagic! HP. Exhaust."
   },
   "theRose:FlipperFlap": {
     "NAME": "Flipper Flap",
@@ -165,7 +165,7 @@
     "UPGRADE_DESCRIPTION": "Can only be played in Flight. Create !M! random Upgraded Food item in your hand. Draw 1 card. Lose 1 Flight."
   },
   "theRose:PermanentChub": {
-    "NAME": "Permanent Chub",
+    "NAME": "Big Chubster",
     "DESCRIPTION": "Gain Block equal to the number of Food items eaten this game. Exhaust."
   },
   "theRose:ShinyBeakAndMe": {
@@ -183,7 +183,7 @@
   },
   "theRose:NappyTime": {
     "NAME": "Nappy Time!",
-    "DESCRIPTION": "Gain !B! Block. Gain 1 Plated Armor. End your turn."
+    "DESCRIPTION": "Gain !B! Block. Gain !M! Plated Armor. End your turn."
   },
   "theRose:Angy": {
     "NAME": "Angy!",
@@ -191,7 +191,7 @@
   },
   "theRose:Hibernate": {
     "NAME": "Hibernate",
-    "DESCRIPTION": "Gain !B! Block. Consume !M! random Food items. Next turn, gain 1 Energy. End your turn."
+    "DESCRIPTION": "Gain !B! Block. Consume !M! random Food items. Next turn, gain 1 [E]. End your turn."
   },
   "theRose:Thunder": {
     "NAME": "Thunder",
@@ -203,8 +203,8 @@
   },
   "theRose:Overstory": {
     "NAME": "Overstory",
-    "DESCRIPTION": "Add an Ethereal Beak Dive, Chat, random Food item, and Stay Still! to your hand.",
-    "UPGRADE_DESCRIPTION": "Add an Upgraded Ethereal Beak Dive, Chat, random Food item, and Stay Still! to your hand."
+    "DESCRIPTION": "Add an Exhaustive Ethereal Beak Dive, Chat, random Food item, and Stay Still! to your hand.",
+    "UPGRADE_DESCRIPTION": "Add an Upgraded Exhaustive Ethereal Beak Dive, Chat, random Food item, and Stay Still! to your hand."
   },
   "theRose:TreadmillTreat": {
     "NAME": "Treadmill Treat",
@@ -214,6 +214,18 @@
     "NAME": "Stealth Rose",
     "DESCRIPTION": "Gain 3 Block. Draw !M! card. This is unaffected by Flight and Dexterity.",
     "UPGRADE_DESCRIPTION": "Gain 6 Block. Draw !M! card. This is unaffected by Flight and Dexterity."
+  },
+  "theRose:Chomp": {
+    "NAME": "Chomp",
+    "DESCRIPTION": "Deal damage equal to 10% of the enemy's max health. Heal HP equal to half the unblocked damage. Exhaust."
+  },
+  "theRose:PickyEater": {
+    "NAME": "Picky Eater",
+    "DESCRIPTION": "Choose one: Consume a Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi."
+  },
+  "theRose:Chomp2": {
+    "NAME": "Chomp2",
+    "DESCRIPTION": "Deal !D! damage. If Fatal, gain !M! max HP."
   },
 
 
@@ -238,12 +250,6 @@
     "NAME": "Betray",
     "DESCRIPTION": "Deal damage equal to 2 times an enemy's Passivity. Reduce Passivity to 0. Feel Guilty."
   },
-  "theRose:Chomp": {
-    "NAME": "Chomp",
-    "DESCRIPTION": "Deal damage equal to 10% of the enemy's max health. Heal HP equal to half the unblocked damage. Exhaust."
-  },
-
-
 
 
   "theRose:TwoCanDine": {
@@ -315,15 +321,6 @@
 
 
 
-
-  "theRose:ConveyorBeltSushi": {
-    "NAME": "Conveyor Belt Sushi",
-    "DESCRIPTION": "Whenever you play a Food item, draw a card."
-  },
-  "theRose:Challenge": {
-    "NAME": "Challenge",
-    "DESCRIPTION": "If an enemy intends to attack, multi-hit attacks hit one more time this turn."
-  },
   "theRose:Compost": {
     "NAME": "Compost",
     "DESCRIPTION": "Exhaust a random card. Create !M! random Food items in your hand."
@@ -331,11 +328,6 @@
   "theRose:PenguinBackRide": {
     "NAME": "Penguin Back Ride",
     "DESCRIPTION": "Apply Passivity equal to !M! times your Flight. Lose all Flight."
-  },
-  "theRose:Chub": {
-    "NAME": "Chub",
-    "DESCRIPTION": "Gain !B! Block for every Food item eaten this combat. Set the counter to a quarter.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block for every Food item eaten this combat. Set the counter to a half."
   },
   "theRose:PerfectLanding": {
     "NAME": "Perfect Landing",
