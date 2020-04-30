@@ -2,9 +2,7 @@ package theRose.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.actions.unique.SpotWeaknessAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theRose.ModInitializer;
@@ -15,7 +13,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class Workout extends AbstractDynamicCard {
 
     /*
-     * Workout: Gain 1 (2) Strength. Heal 3 HP.
+     * Workout: Gain 1 (2) Strength. Heal 3 HP. Exhaust.
      */
 
     // TEXT DECLARATION
@@ -30,7 +28,7 @@ public class Workout extends AbstractDynamicCard {
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.POWER;
+    private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
@@ -44,7 +42,7 @@ public class Workout extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = BUFF;
         SecondMagicNumber = BaseSecondMagicNumber = HEAL;
-
+        this.exhaust = true;
     }
 
     // Actions the card should do.
