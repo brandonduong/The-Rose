@@ -477,6 +477,7 @@ public class ModInitializer implements
         BaseMod.addCard(new WitchRose());
         BaseMod.addCard(new Overstory());
         BaseMod.addCard(new TreadmillTreat());
+        BaseMod.addCard(new StealthRose());
 
         /*
         BaseMod.addCard(new OrbSkill());

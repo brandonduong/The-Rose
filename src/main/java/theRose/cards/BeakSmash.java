@@ -53,8 +53,10 @@ public class BeakSmash extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Only apply if in flight
         if (p.hasPower("Flight")) {
+            baseDamage = damage = p.getPower("Flight").amount * magicNumber;
+
             // Deal damage
-            this.addToBot(new DamageAction(m, new DamageInfo(p, p.getPower("Flight").amount * magicNumber,
+            this.addToBot(new DamageAction(m, new DamageInfo(p, damage,
                     damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         }
 

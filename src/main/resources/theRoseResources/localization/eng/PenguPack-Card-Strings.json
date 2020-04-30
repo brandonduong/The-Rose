@@ -210,6 +210,12 @@
     "NAME": "Treadmill Treat",
     "DESCRIPTION": "Draw and discard the top !M! cards in your draw pile. If a card is 0-cost, play it."
   },
+  "theRose:StealthRose": {
+    "NAME": "Stealth Rose",
+    "DESCRIPTION": "Gain 3 Block. Draw !M! card. This is unaffected by Flight and Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain 6 Block. Draw !M! card. This is unaffected by Flight and Dexterity."
+  },
+
 
 
   "theRose:AgentRose": {
@@ -219,10 +225,6 @@
   "theRose:Bomb": {
     "NAME": "Bomb",
     "DESCRIPTION": "When this card has been drawn !M! times, deal !D! to all enemies."
-  },
-  "theRose:StealthRose": {
-    "NAME": "Stealth Rose",
-    "DESCRIPTION": "Gain !B! Block. Draw !M! card. This is unaffected by Flight."
   },
   "theRose:FridgeFreeze": {
     "NAME": "Fridge Freeze",
