@@ -217,6 +217,10 @@
   },
 
 
+  "theRose:GoodReputation": {
+    "NAME": "Good Reputation",
+    "DESCRIPTION": "Apply !M! Passivity. When this enemy flees, apply its Passivity to all enemies."
+  },
   "theRose:BigBrainRose": {
     "NAME": "Big Brain Rose",
     "DESCRIPTION": "Scry !M!."
@@ -245,16 +249,19 @@
     "NAME": "Reunion",
     "DESCRIPTION": "If the enemy is bird-like, they flee. Ethereal."
   },
-
-
   "theRose:AgentRose": {
     "NAME": "Agent Rose",
     "DESCRIPTION": "Create !M! Bomb in your discard pile."
   },
   "theRose:Bomb": {
     "NAME": "Bomb",
-    "DESCRIPTION": "When this card has been drawn !M! times, deal !D! to all enemies."
+    "DESCRIPTION": "When this card has been drawn or played !M! times collectively, deal !D! to all enemies."
   },
+
+
+
+
+
   "theRose:FridgeFreeze": {
     "NAME": "Fridge Freeze",
     "DESCRIPTION": "Apply !M! Slow. Apply !M! Freeze."
@@ -263,8 +270,6 @@
     "NAME": "Pengu Palace",
     "DESCRIPTION": ""
   },
-
-
   "theRose:FlyHigher": {
     "NAME": "Fly Higher!",
     "DESCRIPTION": "Gain !M! Flight. Flight reduces Attack damage taken by 75% this turn. Remove all Block. You cannot gain Block this turn."

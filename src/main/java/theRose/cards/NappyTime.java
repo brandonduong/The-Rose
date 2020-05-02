@@ -22,7 +22,7 @@ public class NappyTime extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = ModInitializer.makeID(NappyTime.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("NappyTime.png");
 
     // /TEXT DECLARATION/
 
