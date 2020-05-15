@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import com.sun.org.apache.xpath.internal.operations.Div;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theRose.ModInitializer;
@@ -169,6 +170,8 @@ public class TheRose extends CustomPlayer {
         retVal.add(Peck.ID);
 
         retVal.add(Overstory.ID);
+        retVal.add(DivaRose.ID);
+        retVal.add(Chat.ID);
 
         // TESTING ONLY (THESE ARE NOT STARTING DECK CARDS)
         /*retVal.add(Workout.ID);

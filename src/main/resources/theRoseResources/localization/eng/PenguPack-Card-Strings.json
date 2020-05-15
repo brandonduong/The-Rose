@@ -203,7 +203,7 @@
   },
   "theRose:Overstory": {
     "NAME": "Overstory",
-    "DESCRIPTION": "Add an Exhaustive Ethereal Beak Dive, Chat, random Food item, and Stay Still! to your hand.",
+    "DESCRIPTION": "Add an Exhaust Ethereal Beak Dive, Chat, random Food item, and Stay Still! to your hand.",
     "UPGRADE_DESCRIPTION": "Add an Upgraded Exhaustive Ethereal Beak Dive, Chat, random Food item, and Stay Still! to your hand."
   },
   "theRose:TreadmillTreat": {
@@ -215,12 +215,14 @@
     "DESCRIPTION": "Gain 3 Block. Draw !M! card. This is unaffected by Flight and Dexterity.",
     "UPGRADE_DESCRIPTION": "Gain 6 Block. Draw !M! card. This is unaffected by Flight and Dexterity."
   },
-
-
-  "theRose:GoodReputation": {
-    "NAME": "Good Reputation",
+  "theRose:DivaRose": {
+    "NAME": "Diva Rose",
     "DESCRIPTION": "Apply !M! Passivity. When this enemy flees, apply its Passivity to all enemies."
   },
+
+
+
+
   "theRose:BigBrainRose": {
     "NAME": "Big Brain Rose",
     "DESCRIPTION": "Scry !M!."
