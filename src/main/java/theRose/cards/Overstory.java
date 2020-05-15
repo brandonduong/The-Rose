@@ -10,6 +10,7 @@ import theRose.ModInitializer;
 import theRose.actions.RandomFoodInHandAction;
 import theRose.cards.overstory.BeakDiveOverstory;
 import theRose.cards.overstory.ChatOverstory;
+import theRose.cards.overstory.StayStillOverstory;
 import theRose.characters.TheRose;
 
 import static theRose.ModInitializer.makeCardPath;
@@ -63,9 +64,7 @@ public class Overstory extends AbstractDynamicCard {
         this.addToBot(new RandomFoodInHandAction(this.upgraded));
 
         // Create a Stay Still!
-        card = new StayStill();
-        card.isEthereal = true;
-        card.exhaust = true;
+        card = new StayStillOverstory();
         card.upgraded = this.upgraded;
         this.addToBot(new MakeTempCardInHandAction(card));
 
