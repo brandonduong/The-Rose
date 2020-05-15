@@ -1,17 +1,15 @@
 package theRose.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
-import theRose.actions.RandomFoodInDiscardAction;
 import theRose.actions.RandomFoodInHandAction;
+import theRose.cards.overstory.BeakDiveOverstory;
+import theRose.cards.overstory.ChatOverstory;
 import theRose.characters.TheRose;
 
 import static theRose.ModInitializer.makeCardPath;
@@ -52,16 +50,12 @@ public class Overstory extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Create a Beak Dive
-        AbstractCard card = new BeakDive();
-        card.isEthereal = true;
-        card.exhaust = true;
+        AbstractCard card = new BeakDiveOverstory();
         card.upgraded = this.upgraded;
         this.addToBot(new MakeTempCardInHandAction(card));
 
         // Create a Chat
-        card = new Chat();
-        card.isEthereal = true;
-        card.exhaust = true;
+        card = new ChatOverstory();
         card.upgraded = this.upgraded;
         this.addToBot(new MakeTempCardInHandAction(card));
 

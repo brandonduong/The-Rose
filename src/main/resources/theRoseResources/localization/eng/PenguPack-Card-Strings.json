@@ -333,7 +333,7 @@
 
   "theRose:Compost": {
     "NAME": "Compost",
-    "DESCRIPTION": "Exhaust a random card. Create !M! random Food items in your hand."
+    "DESCRIPTION": "Exhaust a Food item. Gain 1 Energy."
   },
   "theRose:PenguinBackRide": {
     "NAME": "Penguin Back Ride",
