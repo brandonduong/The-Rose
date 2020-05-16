@@ -57,7 +57,8 @@ public class TreadmillTreat extends AbstractDynamicCard {
             card = p.drawPile.getTopCard();
             if (card.cost == 0) {
                 p.draw(1);
-                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card, false));
+                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card, true,
+                        0, true, true));
             }
 
             else {
