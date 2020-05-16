@@ -51,6 +51,7 @@
         "NAME": "Diva Rose",
         "DESCRIPTIONS": ["When this enemy flees, apply its Passivity to all enemies."]
 },
+
 "theRose:FreezePower": {
         "NAME": "Freeze",
         "DESCRIPTIONS": ["Unable to act for #b", " turns. Once frozen, gain 25 Block. Becomes free if Block is broken."]

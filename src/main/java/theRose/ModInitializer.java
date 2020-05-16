@@ -480,6 +480,7 @@ public class ModInitializer implements
         BaseMod.addCard(new StealthRose()); // 50th card
         BaseMod.addCard(new DivaRose());
         BaseMod.addCard(new BigBrainRose());
+        BaseMod.addCard(new Munch());
 
         /*
         BaseMod.addCard(new OrbSkill());

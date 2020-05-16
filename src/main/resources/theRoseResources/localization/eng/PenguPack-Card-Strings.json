@@ -79,8 +79,8 @@
   },
   "theRose:ChefRose": {
     "NAME": "Chef Rose",
-    "DESCRIPTION": "Deal !D! Damage. Add a random Food item to your hand and discard pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! Damage. Add a random Upgraded Food item to your hand and discard pile."
+    "DESCRIPTION": "Deal !D! damage. Add a random Food item to your hand and discard pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add a random Upgraded Food item to your hand and discard pile."
   },
   "theRose:TakesiesBacksies" : {
     "NAME": "Takesies Backsies",
@@ -208,7 +208,7 @@
   },
   "theRose:TreadmillTreat": {
     "NAME": "Treadmill Treat",
-    "DESCRIPTION": "Draw and discard the top !M! cards in your draw pile. If a card is 0-cost, play it."
+    "DESCRIPTION": "Draw and discard the top !M! cards in your draw pile. If a card is 0-cost, play it instead."
   },
   "theRose:StealthRose": {
     "NAME": "Stealth Rose",
@@ -223,25 +223,24 @@
     "NAME": "Big Brain Rose",
     "DESCRIPTION": "Scry !M!. Draw 1 card."
   },
-  "theRose:CuteRose": {
-    "NAME": "Cute Rose",
-    "DESCRIPTION": "Whenever you apply Passivity, apply !M! more."
-  },
-
-
-
-
-  "theRose:BRose": {
-    "NAME": "BRose",
-    "DESCRIPTION": ""
-  },
-  "theRose:Chomp2": {
-    "NAME": "Chomp2",
+  "theRose:Munch": {
+    "NAME": "Munch",
     "DESCRIPTION": "Deal !D! damage. If Fatal, gain !M! max HP."
   },
   "theRose:PickyEater": {
     "NAME": "Picky Eater",
     "DESCRIPTION": "Choose one: Eat a Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi."
+  },
+
+
+
+  "theRose:CuteRose": {
+    "NAME": "Cute Rose",
+    "DESCRIPTION": "Whenever you apply Passivity, apply !M! more."
+  },
+  "theRose:BRose": {
+    "NAME": "BRose",
+    "DESCRIPTION": ""
   },
   "theRose:Chomp": {
     "NAME": "Chomp",

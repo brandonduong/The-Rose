@@ -170,6 +170,7 @@ public class TheRose extends CustomPlayer {
         retVal.add(Peck.ID);
 
         retVal.add(BigBrainRose.ID);
+        retVal.add(Munch.ID);
 
         // TESTING ONLY (THESE ARE NOT STARTING DECK CARDS)
         /*retVal.add(Workout.ID);
