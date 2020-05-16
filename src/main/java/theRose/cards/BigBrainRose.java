@@ -1,13 +1,11 @@
 package theRose.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.ScryAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
-import theRose.powers.PassivityPower;
 
 import static theRose.ModInitializer.makeCardPath;
 
@@ -47,11 +45,11 @@ public class BigBrainRose extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Draw cards
-        this.addToBot(new DrawCardAction(p, DRAW));
-
         // Scry
         this.addToBot(new ScryAction(magicNumber));
+
+        // Draw cards
+        this.addToBot(new DrawCardAction(p, DRAW));
     }
 
     // Upgraded stats.

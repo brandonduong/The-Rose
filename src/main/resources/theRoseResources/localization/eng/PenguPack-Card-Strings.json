@@ -219,18 +219,18 @@
     "NAME": "Diva Rose",
     "DESCRIPTION": "Apply !M! Passivity. When this enemy flees, apply its Passivity to all enemies."
   },
-
-
-
-
   "theRose:BigBrainRose": {
     "NAME": "Big Brain Rose",
-    "DESCRIPTION": "Scry !M!. Draw !theRose:SecondMagic! card."
+    "DESCRIPTION": "Scry !M!. Draw 1 card."
   },
   "theRose:CuteRose": {
     "NAME": "Cute Rose",
     "DESCRIPTION": "Whenever you apply Passivity, apply !M! more."
   },
+
+
+
+
   "theRose:BRose": {
     "NAME": "BRose",
     "DESCRIPTION": ""
