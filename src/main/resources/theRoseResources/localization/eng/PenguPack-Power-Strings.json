@@ -25,7 +25,7 @@
 },
 "theRose:PassivityPower": {
         "NAME": "Passivity",
-        "DESCRIPTIONS": ["Current Milestone: ", ". Milestones are reached at every 25% of the enemy's current HP. Once stacks reach 100% of the enemy's current HP, they flee."]
+        "DESCRIPTIONS": ["Current Milestone: ", ". Milestones are reached at every 25% of the enemy's current HP. If stacks reach 100% of the enemy's current HP, they will flee."]
 },
 "theRose:LoseArtifactPower": {
         "NAME": "Artifact Down",

@@ -49,10 +49,12 @@ public class DivaRosePower extends AbstractPower implements CloneablePowerInterf
 
     }
     @Override
-    public void onAfterCardPlayed(AbstractCard usedCard) {
-        int passivity = this.owner.getPower("theRose:PassivityPower").amount;
+    public void atStartOfTurn() {
+        // Check if owner is fleeing
+        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead() && this.owner.isEscaping) {
+            // Apply passivity to all enemies
+            int passivity = this.owner.getPower("theRose:PassivityPower").amount;
 
-        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead() && this.owner.currentHealth <= passivity && !this.owner.isDying) {
             Iterator monsters = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
             while(monsters.hasNext()) {

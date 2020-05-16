@@ -6,7 +6,6 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.EscapeAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -75,11 +74,8 @@ public class PassivityPower extends AbstractPower implements CloneablePowerInter
         // Fourth milestone reached at >= 100% current HP
         if (milestone == 3 && this.amount >= this.owner.currentHealth) {
             milestone += 1;
-            // Flee handling
-            if (!this.owner.isDying) {
-                AbstractDungeon.actionManager.addToBottom(new TalkAction(this.owner, "Have a good day!", 0.3F, 2.5F));
-                AbstractDungeon.actionManager.addToBottom(new EscapeAction((AbstractMonster) this.owner));
-            }
+
+            this.owner.applyStartOfTurnPowers();
         }
 
         // Prevents softlocks
@@ -94,6 +90,18 @@ public class PassivityPower extends AbstractPower implements CloneablePowerInter
     @Override
     public void atStartOfTurn() {
         onAfterUseCard(null, null);
+
+        // Flee handling
+        if (!this.owner.isDying && milestone == 4) {
+            this.owner.isEscaping = true;
+            AbstractDungeon.actionManager.addToBottom(new TalkAction(this.owner, "Have a good day!", 0.3F, 2.5F));
+            AbstractDungeon.actionManager.addToBottom(new EscapeAction((AbstractMonster) this.owner));
+        }
+    }
+
+    @Override
+    public void onInitialApplication() {
+        atStartOfTurn();
     }
 
     @Override
