@@ -225,7 +225,7 @@
   },
   "theRose:Munch": {
     "NAME": "Munch",
-    "DESCRIPTION": "Deal !D! damage. If Fatal, gain !M! max HP."
+    "DESCRIPTION": "Deal !D! damage. If Fatal, gain !M! max HP. Exhaust."
   },
   "theRose:PickyEater": {
     "NAME": "Picky Eater",

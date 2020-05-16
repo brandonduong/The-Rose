@@ -46,6 +46,7 @@ public class Munch extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = HEALTH;
+        this.exhaust = true;
     }
 
     // Actions the card should do.
