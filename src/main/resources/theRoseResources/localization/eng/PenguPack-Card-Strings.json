@@ -225,11 +225,15 @@
 
   "theRose:BigBrainRose": {
     "NAME": "Big Brain Rose",
-    "DESCRIPTION": "Scry !M!."
+    "DESCRIPTION": "Scry !M!. Draw !theRose:SecondMagic! card."
   },
   "theRose:CuteRose": {
     "NAME": "Cute Rose",
     "DESCRIPTION": "Whenever you apply Passivity, apply !M! more."
+  },
+  "theRose:BRose": {
+    "NAME": "BRose",
+    "DESCRIPTION": ""
   },
   "theRose:Chomp2": {
     "NAME": "Chomp2",
