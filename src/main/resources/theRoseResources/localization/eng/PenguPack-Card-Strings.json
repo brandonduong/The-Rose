@@ -229,7 +229,8 @@
   },
   "theRose:PickyEater": {
     "NAME": "Picky Eater",
-    "DESCRIPTION": "Choose one: Eat a Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi."
+    "DESCRIPTION": "Choose one: Create a Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi, in your hand.",
+    "UPGRADE_DESCRIPTION": "Choose one: Create an Upgraded Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi, in your hand."
   },
 
 

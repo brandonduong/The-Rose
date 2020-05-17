@@ -481,6 +481,7 @@ public class ModInitializer implements
         BaseMod.addCard(new DivaRose());
         BaseMod.addCard(new BigBrainRose());
         BaseMod.addCard(new Munch());
+        BaseMod.addCard(new PickyEater());
 
         /*
         BaseMod.addCard(new OrbSkill());
