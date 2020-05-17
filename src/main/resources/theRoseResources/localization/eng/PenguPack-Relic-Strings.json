@@ -31,5 +31,9 @@
   "theRose:Mukbang": {
     "NAME": "Mukbang",
     "DESCRIPTION": ["Whenever you Eat, increment the Food Eaten counter an additional time."]
+  },
+  "theRose:CuteRose": {
+    "NAME": "Cute Rose",
+    "DESCRIPTION": ["At the start of combat, apply 10 Passivity to all enemies."]
   }
 }

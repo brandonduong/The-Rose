@@ -225,7 +225,7 @@
   },
   "theRose:Munch": {
     "NAME": "Munch",
-    "DESCRIPTION": "Deal !D! damage. If Fatal, gain !M! max HP. Exhaust."
+    "DESCRIPTION": "Deal !D! damage. If Fatal, raise your Max Hp by !M!. Exhaust."
   },
   "theRose:PickyEater": {
     "NAME": "Picky Eater",
@@ -234,11 +234,23 @@
   },
 
 
-
-  "theRose:CuteRose": {
-    "NAME": "Cute Rose",
-    "DESCRIPTION": "Whenever you apply Passivity, apply !M! more."
+  "theRose:AgentRose": {
+    "NAME": "Agent Rose",
+    "DESCRIPTION": "Create !M! Bomb in your discard pile. Exhaust."
   },
+  "theRose:Bomb": {
+    "NAME": "Agent Rose's Bomb",
+    "DESCRIPTION": "Whenever you draw this card, reduce its cost by !M!. Deal !D! to all enemies. Play 1 Mission Accomplished. Exhaust."
+  },
+  "theRose:MissionAccomplished": {
+    "NAME": "Mission Accomplished.",
+    "DESCRIPTION": "Agent Rose has fulfilled her assigned duties. Gain !M! Gold. Exhaust."
+  },
+
+
+
+
+
   "theRose:BRose": {
     "NAME": "BRose",
     "DESCRIPTION": ""
@@ -254,14 +266,6 @@
   "theRose:Reunion": {
     "NAME": "Reunion",
     "DESCRIPTION": "If the enemy is bird-like, they flee. Ethereal."
-  },
-  "theRose:AgentRose": {
-    "NAME": "Agent Rose",
-    "DESCRIPTION": "Create !M! Bomb in your discard pile."
-  },
-  "theRose:Bomb": {
-    "NAME": "Bomb",
-    "DESCRIPTION": "When this card has been drawn or played !M! times collectively, deal !D! to all enemies."
   },
 
 
