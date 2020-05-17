@@ -1,11 +1,8 @@
 package theRose.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
@@ -36,6 +33,7 @@ public class Bomb extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 12;
+    private static final int UPGRADE_COST = 10;
     private static final int DAMAGE = 100;
     private static final int REDUCE = 1;
 
@@ -45,6 +43,7 @@ public class Bomb extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = REDUCE;
+        this.exhaust = true;
     }
 
     @Override
@@ -64,6 +63,7 @@ public class Bomb extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeBaseCost(UPGRADE_COST);
             initializeDescription();
         }
     }

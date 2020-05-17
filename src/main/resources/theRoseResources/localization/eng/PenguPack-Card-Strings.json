@@ -236,7 +236,8 @@
 
   "theRose:AgentRose": {
     "NAME": "Agent Rose",
-    "DESCRIPTION": "Create !M! Bomb in your discard pile. Exhaust."
+    "DESCRIPTION": "Create !M! Bomb in your discard pile. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Create !M! Upgraded Bomb in your discard pile. Exhaust."
   },
   "theRose:Bomb": {
     "NAME": "Agent Rose's Bomb",
