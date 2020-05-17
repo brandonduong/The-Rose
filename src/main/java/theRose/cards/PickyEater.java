@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
+import theRose.actions.PickyEaterAction;
 import theRose.characters.TheRose;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class PickyEater extends AbstractDynamicCard {
 
     /*
-     * Picky Eater: Choose one: Create a Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi, in your hand.
+     * Picky Eater: Choose one: Create 1 (Upgraded) Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi, in your hand.
      */
 
     // TEXT DECLARATION
@@ -69,7 +70,8 @@ public class PickyEater extends AbstractDynamicCard {
             }
         }
 
-        this.addToBot(new ChooseOneAction(foodChoices));
+        this.addToBot(new PickyEaterAction(this.upgraded, foodChoices));
+
     }
 
 
