@@ -3,7 +3,9 @@ package theRose.cards;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
+import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
@@ -56,6 +58,9 @@ public class Bomb extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Deal damage
         this.addToBot(new DamageAllEnemiesAction(p, baseDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+
+        // Play card
+        AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(new MissionAccomplished(), false));
     }
 
     // Upgraded stats.

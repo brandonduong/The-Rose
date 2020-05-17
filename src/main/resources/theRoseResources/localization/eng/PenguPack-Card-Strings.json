@@ -232,8 +232,6 @@
     "DESCRIPTION": "Choose one: Create a Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi, in your hand.",
     "UPGRADE_DESCRIPTION": "Choose one: Create an Upgraded Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi, in your hand."
   },
-
-
   "theRose:AgentRose": {
     "NAME": "Agent Rose",
     "DESCRIPTION": "Create !M! Bomb in your discard pile. Exhaust.",
