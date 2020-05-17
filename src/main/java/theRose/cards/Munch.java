@@ -53,12 +53,13 @@ public class Munch extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Deal damage
-        this.addToBot(new DamageAction(m, new DamageInfo(p, damage)));
+        m.damage(new DamageInfo(p, damage));
 
         // Gain max hp if fatal + not a minion
         if ((m.isDying || m.currentHealth <= 0) && !m.halfDead && !m.hasPower("Minion")) {
             p.increaseMaxHp(magicNumber, true);
         }
+
     }
 
     // Upgraded stats.
