@@ -56,11 +56,11 @@ public class Bomb extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Deal damage
-        this.addToBot(new DamageAllEnemiesAction(p, baseDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
-
         // Play card
         AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(new MissionAccomplished(), false));
+
+        // Deal damage
+        this.addToBot(new DamageAllEnemiesAction(p, baseDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
     }
 
     // Upgraded stats.
