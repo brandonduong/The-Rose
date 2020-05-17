@@ -56,13 +56,13 @@ public class TreadmillTreat extends AbstractDynamicCard {
         for(int i = 0; i < magicNumber && i < cards; i++) {
             card = p.drawPile.getTopCard();
             if (card.cost == 0) {
-                p.draw(1);
+                this.addToBot(new DrawCardAction(1));
                 AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card, true,
                         0, true, true));
             }
 
             else {
-                p.draw(1);
+                this.addToBot(new DrawCardAction(1));
                 this.addToBot(new DiscardSpecificCardAction(card));
             }
         }
