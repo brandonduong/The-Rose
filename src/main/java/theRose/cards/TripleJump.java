@@ -33,10 +33,10 @@ public class TripleJump extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
     private static final int DAMAGE = 3;
     private static final int UPGRADE_DAMAGE = 1;
-    private static final int BUFF = 1; // Give 1 Penguin Flight
+    private static final int BUFF = 3; // Give 1 Penguin Flight
     private static final int TIMES = 3; // Number of times to deal damage
 
 
