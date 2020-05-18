@@ -92,7 +92,7 @@ public class PassivityPower extends AbstractPower implements CloneablePowerInter
         onAfterUseCard(null, null);
 
         // Flee handling
-        if (!this.owner.isDying && milestone == 4) {
+        if (!this.owner.isDying && milestone == 4 && !this.owner.isEscaping) {
             this.owner.isEscaping = true;
             AbstractDungeon.actionManager.addToBottom(new TalkAction(this.owner, "Have a good day!", 0.3F, 2.5F));
             AbstractDungeon.actionManager.addToBottom(new EscapeAction((AbstractMonster) this.owner));

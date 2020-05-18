@@ -44,7 +44,7 @@ public class Bulking extends AbstractDynamicCard {
 
     public Bulking() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock = BLOCK;
+        this.BaseSecondMagicNumber = SecondMagicNumber = BLOCK;
         this.baseMagicNumber = CONSUME;
 
     }
@@ -53,7 +53,7 @@ public class Bulking extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Gain !B! Bulking power
-        this.addToBot(new ApplyPowerAction(p, p, new BulkingPower(p, p, block)));
+        this.addToBot(new ApplyPowerAction(p, p, new BulkingPower(p, p, SecondMagicNumber)));
 
         // Consume random food item
         this.addToBot(new RandomFoodConsumeAction(false));

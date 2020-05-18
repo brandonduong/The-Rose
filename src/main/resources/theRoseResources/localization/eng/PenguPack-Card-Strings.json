@@ -149,7 +149,7 @@
   },
   "theRose:Bulking": {
     "NAME": "Bulking",
-    "DESCRIPTION": "Whenever you Eat this turn, gain !B! Block. Eat !M! random Food item."
+    "DESCRIPTION": "Whenever you Eat this turn, gain !theRose:SecondMagic! Block. Eat !M! random Food item."
   },
   "theRose:FoodFit": {
     "NAME": "Food Fit",
@@ -203,8 +203,8 @@
   },
   "theRose:Overstory": {
     "NAME": "Overstory",
-    "DESCRIPTION": "Add an Exhaust Ethereal Beak Dive, Chat, random Food item, and Stay Still! to your hand.",
-    "UPGRADE_DESCRIPTION": "Add an Upgraded Exhaustive Ethereal Beak Dive, Chat, random Food item, and Stay Still! to your hand."
+    "DESCRIPTION": "Create an Exhausting Ethereal Beak Dive, Chat, random Food item, and Stay Still! in your hand.",
+    "UPGRADE_DESCRIPTION": "Create an Upgraded Exhausting Ethereal Beak Dive, Chat, random Food item, and Stay Still! in your hand."
   },
   "theRose:TreadmillTreat": {
     "NAME": "Treadmill Treat",
@@ -249,10 +249,13 @@
 
 
 
-
+  "theRose:BodySlam": {
+    "NAME": "Body Slam",
+    "DESCRIPTION": "Deal damage equal to 1/2 of your current HP. Lose HP equal to 1/4 of your current HP."
+  },
   "theRose:BRose": {
     "NAME": "BRose",
-    "DESCRIPTION": ""
+    "DESCRIPTION": "Steal !M! Fresh Fish. Exhaust."
   },
   "theRose:Chomp": {
     "NAME": "Chomp",
@@ -266,11 +269,6 @@
     "NAME": "Reunion",
     "DESCRIPTION": "If the enemy is bird-like, they flee. Ethereal."
   },
-
-
-
-
-
   "theRose:FridgeFreeze": {
     "NAME": "Fridge Freeze",
     "DESCRIPTION": "Apply !M! Slow. Apply !M! Freeze."
@@ -323,10 +321,6 @@
     "NAME": "Flipper Flexer",
     "DESCRIPTION": "All cards containing \"Flap\" deal !M! more damage."
   },
-  "theRose:BodySlam": {
-    "NAME": "Body Slam",
-    "DESCRIPTION": "Deal damage equal to 1/2 of your current HP. Lose HP equal to 1/4 of your current HP."
-  },
   "theRose:TestBuff": {
     "NAME": "Test Buff",
     "DESCRIPTION": "Gain !M! Strength. After you play a card, lose !M! Strength."
@@ -335,11 +329,6 @@
     "NAME": "TEST",
     "DESCRIPTION": "Deal"
   },
-
-
-
-
-
   "theRose:Compost": {
     "NAME": "Compost",
     "DESCRIPTION": "Exhaust a Food item. Gain 1 Energy."
@@ -363,45 +352,5 @@
   "theRose:GustOfWind": {
     "NAME": "Gust Of Wind",
     "DESCRIPTION": "Can only be played in Flight. Deal !D! damage for every 1 Flight."
-  },
-  "theRose:ShortHop": {
-    "NAME": "Short Hop",
-    "DESCRIPTION": "Can only be played out of Flight. Gain 1 Flight. At the end of your turn, lose 1 Flight."
-  },
-
-
-  "theRose:DefaultUncommonAttack": {
-    "NAME": "Big slap",
-    "DESCRIPTION": "Deal !D! Damage."
-  },
-  "theRose:DefaultUncommonSkill": {
-    "NAME": "A Better Defend",
-    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
-  },
-  "theRose:DefaultUncommonPower": {
-    "NAME": "Weirdness",
-    "DESCRIPTION": "Gain X theRose:Keywords.",
-    "UPGRADE_DESCRIPTION": "Gain X +1 theRose:Keywords."
-  },
-  "theRose:DefaultRareAttack": {
-    "NAME": "TOUCH",
-    "DESCRIPTION": "Deal !D! Damage."
-  },
-  "theRose:DefaultRareSkill": {
-    "NAME": "For Each Loop x2",
-    "DESCRIPTION": "Apply !M! vulnerable to all enemies, 2 times.",
-    "UPGRADE_DESCRIPTION": "Apply !M! vulnerable to all enemies, 3 times."
-  },
-  "theRose:DefaultRarePower": {
-    "NAME": "In-Progress Form",
-    "DESCRIPTION": "At the start of your turn, play a TOUCH."
-  },
-  "theRose:DefaultSecondMagicNumberSkill": {
-    "NAME": "Cool 2 Number Card",
-    "DESCRIPTION": "Apply !M! vulnerable and !theRose:SecondMagic! poison to an enemy."
-  },
-  "theRose:OrbSkill": {
-    "NAME": "Get Orb",
-    "DESCRIPTION": "Channel 1 Default Orb."
   }
 }

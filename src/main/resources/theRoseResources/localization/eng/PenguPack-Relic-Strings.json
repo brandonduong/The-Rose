@@ -35,5 +35,9 @@
   "theRose:CuteRose": {
     "NAME": "Cute Rose",
     "DESCRIPTION": ["At the start of combat, apply 10 Passivity to all enemies."]
+  },
+  "theRose:FreshFish": {
+    "NAME": "Fresh Fish",
+    "DESCRIPTION": ["Raise your Max HP by 3."]
   }
 }
