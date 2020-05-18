@@ -1,14 +1,21 @@
 package theRose.cards;
 
+import com.evacipated.cardcrawl.mod.stslib.actions.common.AutoplayCardAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.actions.common.PlayTopCardAction;
 import com.megacrit.cardcrawl.actions.common.ReduceCostAction;
+import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
+
+import javax.smartcardio.Card;
 
 import static theRose.ModInitializer.makeCardPath;
 
@@ -57,7 +64,8 @@ public class Bomb extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Play card
-        AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(new MissionAccomplished(), false));
+        this.addToBot(new MakeTempCardInDrawPileAction(new MissionAccomplished(), 1, false, false, false));
+        this.addToBot(new PlayTopCardAction(p, true));
 
         // Deal damage
         this.addToBot(new DamageAllEnemiesAction(p, baseDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));

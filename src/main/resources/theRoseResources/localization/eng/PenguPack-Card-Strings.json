@@ -208,7 +208,7 @@
   },
   "theRose:TreadmillTreat": {
     "NAME": "Treadmill Treat",
-    "DESCRIPTION": "Draw and discard the top !M! cards in your draw pile. If a card is 0-cost, play it instead."
+    "DESCRIPTION": "Draw and discard !M! cards. If a card is 0-cost, play it instead."
   },
   "theRose:StealthRose": {
     "NAME": "Stealth Rose",
