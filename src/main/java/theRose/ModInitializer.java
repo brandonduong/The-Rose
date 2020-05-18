@@ -447,7 +447,7 @@ public class ModInitializer implements
         BaseMod.addCard(new BellyBump());
         BaseMod.addCard(new SharingIsCaring());
         BaseMod.addCard(new ChefRose());
-        BaseMod.addCard(new TakesiesBacksies());
+        // BaseMod.addCard(new TakesiesBacksies()); // NEEDS A REWORK
         BaseMod.addCard(new HeadPat());
         BaseMod.addCard(new StayStill());
         BaseMod.addCard(new Sprint());
