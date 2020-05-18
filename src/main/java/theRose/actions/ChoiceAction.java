@@ -9,13 +9,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
 
-public class PickyEaterAction extends AbstractGameAction {
+public class ChoiceAction extends AbstractGameAction {
     private AbstractPlayer p;
     private boolean upgrade;
 
     private final ArrayList<AbstractCard> choices;
 
-    public PickyEaterAction(boolean upgrade, ArrayList<AbstractCard> choices) {
+    public ChoiceAction(boolean upgrade, ArrayList<AbstractCard> choices) {
         this.upgrade = upgrade;
 
         this.p = AbstractDungeon.player;

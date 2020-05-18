@@ -1,13 +1,12 @@
 package theRose.cards;
 
-import com.megacrit.cardcrawl.actions.watcher.ChooseOneAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
-import theRose.actions.PickyEaterAction;
+import theRose.actions.ChoiceAction;
 import theRose.characters.TheRose;
 
 import java.util.ArrayList;
@@ -54,6 +53,7 @@ public class PickyEater extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        // Create list of choices
         ArrayList<AbstractCard> foodChoices = new ArrayList();
         foodChoices.add(new Donut());
         foodChoices.add(new EnergyDrink());
@@ -70,8 +70,8 @@ public class PickyEater extends AbstractDynamicCard {
             }
         }
 
-        this.addToBot(new PickyEaterAction(this.upgraded, foodChoices));
-
+        // Create choice action
+        this.addToBot(new ChoiceAction(this.upgraded, foodChoices));
     }
 
 
