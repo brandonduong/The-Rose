@@ -239,11 +239,11 @@
   },
   "theRose:Bomb": {
     "NAME": "Agent Rose's Bomb",
-    "DESCRIPTION": "Whenever you draw this card, reduce its cost by !M!. Deal !D! to all enemies. Play 1 Mission Accomplished. Exhaust."
+    "DESCRIPTION": "Whenever you draw this card, reduce its cost by !M!. Create 1 Mission Accomplished in your hand. Exhaust."
   },
   "theRose:MissionAccomplished": {
     "NAME": "Mission Accomplished.",
-    "DESCRIPTION": "Agent Rose has fulfilled her assigned duties. Gain !M! Gold. Exhaust."
+    "DESCRIPTION": "Agent Rose has fulfilled her assigned duties. Deal !D! to all enemies. Gain !M! Gold. Exhaust."
   },
 
 
