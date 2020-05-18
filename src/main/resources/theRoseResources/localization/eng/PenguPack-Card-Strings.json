@@ -104,8 +104,8 @@
   },
   "theRose:EarlyBird": {
     "NAME": "Early Bird",
-    "DESCRIPTION": "Gain !M! Flight. Add a random Food item to your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Flight. Add !theRose:SecondMagic! random Food items to your hand."
+    "DESCRIPTION": "Gain !M! Flight. Deal damage equal to 2 times your current Flight. Add a random Food item to your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Flight. Deal damage equal to 2 times your current Flight. Add !theRose:SecondMagic! random Food items to your hand."
   },
   "theRose:Chat": {
     "NAME": "Chat",
