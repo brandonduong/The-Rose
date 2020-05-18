@@ -51,8 +51,9 @@ public class TreadmillTreat extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard card;
+        int cards = p.drawPile.size();
 
-        for(int i = 0; i < magicNumber; i++) {
+        for(int i = 0; i < magicNumber && i < cards; i++) {
             card = p.drawPile.getTopCard();
             if (card.cost == 0) {
                 p.draw(1);
