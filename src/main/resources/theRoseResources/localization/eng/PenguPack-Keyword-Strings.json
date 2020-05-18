@@ -46,6 +46,12 @@
       "eaten"
     ],
     "DESCRIPTION": "Refers to playing a Food item."
+  },
+  {
+    "NAMES": [
+      "Thunder"
+    ],
+    "DESCRIPTION": "Thunder is an Unplayable card such that whenever drawn, deal 5 damage to a random enemy and apply 1 Vulnerable."
   }
 
 

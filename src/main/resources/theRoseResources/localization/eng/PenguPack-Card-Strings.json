@@ -17,7 +17,7 @@
   },
   "theRose:FlipperFlap": {
     "NAME": "Flipper Flap",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Exhaust."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Gain !M! Flight. Exhaust."
   },
   "theRose:TemperTantrum": {
     "NAME": "Temper Tantrum",
