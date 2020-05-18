@@ -174,7 +174,7 @@
   },
   "theRose:LucidDream": {
     "NAME": "Lucid Dream",
-    "DESCRIPTION": "Can only be played out of Flight. Gain !M! Flight. At the end of your turn, lose !M! Flight."
+    "DESCRIPTION": "Gain !M! Flight. At the end of your turn, lose !M! Flight. Draw 1 card."
   },
   "theRose:GrannyKiss": {
     "NAME": "Granny Kiss!",
@@ -249,6 +249,10 @@
 
 
 
+  "theRose:De-FlightfulFlap": {
+    "NAME": "De-Flightful Flap",
+    "DESCRIPTION": "Gain 1 Flight for all your cards containing \"Flap\"."
+  },
   "theRose:BodySlam": {
     "NAME": "Body Slam",
     "DESCRIPTION": "Deal damage equal to 1/2 of your current HP. Lose HP equal to 1/4 of your current HP."

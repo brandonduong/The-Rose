@@ -20,7 +20,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class LucidDream extends AbstractDynamicCard {
 
     /*
-     * Lucid Dream: Can only be played out of Flight. Gain !M! Flight. At the end of your turn, lose !M! Flight.
+     * Lucid Dream: Gain !M! Flight. At the end of your turn, lose !M! Flight.
      */
 
     // TEXT DECLARATION
@@ -40,6 +40,7 @@ public class LucidDream extends AbstractDynamicCard {
     private static final int COST = 0;
     private static final int BUFF = 3;
     private static final int UPGRADE_BUFF = 1;
+    private static final int DRAW = 1;
 
     // /STAT DECLARATION/
 
@@ -56,25 +57,9 @@ public class LucidDream extends AbstractDynamicCard {
 
         // Gain Stacks of Lose Flight
         this.addToBot(new ApplyPowerAction(p, p, new LosePenguinPower(p, p, magicNumber), magicNumber));
-    }
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        boolean canUse = super.canUse(p, m);
-        if (!canUse) {
-            return false;
-        } else {
-            // Can only use if not in flight
-            if (!p.hasPower("Flight")) {
-                canUse = true;
-            }
-            else {
-                canUse = false;
-                this.cantUseMessage = "Can only be used out of flight.";
-            }
-
-            return canUse;
-        }
+        // Draw a card
+        this.addToBot(new DrawCardAction(p, DRAW));
     }
 
     // Upgraded stats.
