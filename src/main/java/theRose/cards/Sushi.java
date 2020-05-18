@@ -22,7 +22,7 @@ public class Sushi extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = ModInitializer.makeID(Sushi.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Sushi.png");
 
     // /TEXT DECLARATION/
 
