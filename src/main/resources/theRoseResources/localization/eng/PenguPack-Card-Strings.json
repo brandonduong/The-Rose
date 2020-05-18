@@ -9,15 +9,15 @@
   },
   "theRose:Fly": {
     "NAME": "Fly High to the Sky!",
-    "DESCRIPTION": "Gain !B! Block. Gain !M! Flight."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Flight."
   },
   "theRose:Workout": {
     "NAME": "Workout",
-    "DESCRIPTION": "Gain !M! Strength. Heal !theRose:SecondMagic! HP. Exhaust."
+    "DESCRIPTION": "Gain !M! Strength. Heal !theRose:SecondMagic! HP. NL Exhaust."
   },
   "theRose:FlipperFlap": {
     "NAME": "Flipper Flap",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. Gain !M! Flight. Exhaust."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Gain !M! Flight. NL Exhaust."
   },
   "theRose:TemperTantrum": {
     "NAME": "Temper Tantrum",
@@ -42,23 +42,23 @@
   },
   "theRose:EnergyDrink": {
     "NAME": "Energy Drink",
-    "DESCRIPTION": "Gain 1 Energy. Gain !theRose:SecondMagic! Flight. Exhaust."
+    "DESCRIPTION": "Gain 1 Energy. Gain !theRose:SecondMagic! Flight. NL Exhaust."
   },
   "theRose:Donut": {
     "NAME": "Donut",
-    "DESCRIPTION": "Draw 1 Card. Lose !theRose:SecondMagic! Flight. Exhaust."
+    "DESCRIPTION": "Draw 1 Card. Lose !theRose:SecondMagic! Flight. NL Exhaust."
   },
   "theRose:FriedChicken": {
     "NAME": "Fried Chicken",
-    "DESCRIPTION": "Gain !M! Strength. At the end of this turn, lose !M! Strength. Exhaust."
+    "DESCRIPTION": "Gain !M! Strength. At the end of this turn, lose !M! Strength. NL Exhaust."
   },
   "theRose:Sushi": {
     "NAME": "Sushi",
-    "DESCRIPTION": "Gain !M! Dexterity. At the end of this turn, lose !M! Dexterity. Exhaust."
+    "DESCRIPTION": "Gain !M! Dexterity. At the end of this turn, lose !M! Dexterity. NL Exhaust."
   },
   "theRose:Hamburger": {
     "NAME": "Hamburger",
-    "DESCRIPTION": "Gain !B! Block. This cards counts as 3 Food items. Exhaust."
+    "DESCRIPTION": "Gain !B! Block. This cards counts as 3 Food items. NL Exhaust."
   },
   "theRose:HungryForm": {
     "NAME": "Hungry Form",
