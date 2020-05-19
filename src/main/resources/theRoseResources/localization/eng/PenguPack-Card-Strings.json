@@ -229,8 +229,8 @@
   },
   "theRose:PickyEater": {
     "NAME": "Picky Eater",
-    "DESCRIPTION": "Deal !D! damage. Choose one: Create a Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi, in your hand.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Choose one: Create an Upgraded Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi, in your hand."
+    "DESCRIPTION": "Choose one: Create a Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi, in your hand.",
+    "UPGRADE_DESCRIPTION": "Choose one: Create an Upgraded Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi, in your hand."
   },
   "theRose:AgentRose": {
     "NAME": "Agent Rose",
