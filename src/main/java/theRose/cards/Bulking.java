@@ -35,7 +35,7 @@ public class Bulking extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 2;
+    private static final int COST = 0;
     private static final int BLOCK = 1;
     private static final int UPGRADE_BLOCK = 1;
     private static final int CONSUME = 1;

@@ -651,12 +651,14 @@ public class ModInitializer implements
 
         Iterator var1 = room.monsters.monsters.iterator();
 
-        while (var1.hasNext())
-        AbstractMonster m;
-        do {
-            befriended += 1;
-            m = (AbstractMonster)var1.next();
-        } while(m.escaped);
+        while (var1.hasNext()) {
+            AbstractMonster m = (AbstractMonster) var1.next();
+            if (m.escaped) {
+                befriended += 1;
+            }
+        }
+
+        logger.info("Befriended = " + befriended);
     }
 
     @Override
