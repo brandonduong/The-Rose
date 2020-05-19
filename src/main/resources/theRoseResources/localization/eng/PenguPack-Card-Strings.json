@@ -13,7 +13,7 @@
   },
   "theRose:Workout": {
     "NAME": "Workout",
-    "DESCRIPTION": "Gain !M! Strength. Heal !theRose:SecondMagic! HP. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Strength. NL Heal !theRose:SecondMagic! HP. NL Exhaust."
   },
   "theRose:FlipperFlap": {
     "NAME": "Flipper Flap",
@@ -157,7 +157,7 @@
   },
   "theRose:BeakSmash": {
     "NAME": "Beak Smash!",
-    "DESCRIPTION": "Deal damage equal to !M! times your current Flight. Lose all Flight."
+    "DESCRIPTION": "Deal damage equal to !M! times your current Flight. NL Lose all Flight."
   },
   "theRose:MidflightSnack": {
     "NAME": "Midflight Snack",
