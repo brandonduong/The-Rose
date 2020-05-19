@@ -27,7 +27,7 @@ public class MidflightSnack extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = ModInitializer.makeID(MidflightSnack.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Attack.png");
 
     // /TEXT DECLARATION/
 
@@ -38,8 +38,8 @@ public class MidflightSnack extends AbstractDynamicCard {
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
