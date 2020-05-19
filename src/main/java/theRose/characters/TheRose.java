@@ -169,33 +169,6 @@ public class TheRose extends CustomPlayer {
         retVal.add(Fly.ID);
         retVal.add(Peck.ID);
 
-        // TESTING ONLY (THESE ARE NOT STARTING DECK CARDS)
-        /*retVal.add(Workout.ID);
-        retVal.add(BeakDrill.ID);
-        retVal.add(FlipperFlap.ID);
-        retVal.add(TemperTantrum.ID);
-        retVal.add(BeakDive.ID);
-        retVal.add(UberDishes.ID);
-        retVal.add(HungryForm.ID);
-        retVal.add(Reorder.ID);
-        retVal.add(BellyBump.ID);
-        retVal.add(SharingIsCaring.ID);
-        retVal.add(ChefRose.ID);
-        retVal.add(TakesiesBacksies.ID);
-        retVal.add(HeadPat.ID);
-        retVal.add(StayStill.ID);
-        retVal.add(Sprint.ID);
-        retVal.add(FoodFight.ID);
-         */
-        /*
-        retVal.add(Squish.ID);
-        retVal.add(Squish.ID);
-        retVal.add(TriplerFlap.ID);
-        retVal.add(FollowUpFlap.ID);
-        retVal.add(FlapFrenzy.ID);
-        retVal.add(FluffyFurFlex.ID);
-        */
-
         return retVal;
     }
 

@@ -52,12 +52,16 @@ public class Overstory extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Create a Beak Dive
         AbstractCard card = new BeakDiveOverstory();
-        card.upgraded = this.upgraded;
+        if (this.upgraded) {
+            card.upgrade();
+        }
         this.addToBot(new MakeTempCardInHandAction(card));
 
         // Create a Chat
         card = new ChatOverstory();
-        card.upgraded = this.upgraded;
+        if (this.upgraded) {
+            card.upgrade();
+        }
         this.addToBot(new MakeTempCardInHandAction(card));
 
         // Create random food item in hand
@@ -65,7 +69,9 @@ public class Overstory extends AbstractDynamicCard {
 
         // Create a Stay Still!
         card = new StayStillOverstory();
-        card.upgraded = this.upgraded;
+        if (this.upgraded) {
+            card.upgrade();
+        }
         this.addToBot(new MakeTempCardInHandAction(card));
 
     }
