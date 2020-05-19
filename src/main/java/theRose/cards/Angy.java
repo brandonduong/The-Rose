@@ -36,8 +36,8 @@ public class Angy extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int BUFF = 1;
-    private static final int DRAW = 1;
+    private static final int BUFF = 2;
+    private static final int DRAW = 2;
     private static final int UPGRADE_DRAW = 1;
 
     // /STAT DECLARATION/
