@@ -42,33 +42,39 @@ public class MidflightSnack extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 0;
-    private static final int DRAW = 1;
+    private static final int COST = 1;
     private static final int CREATE = 1;
     private static final int BUFF = 1;
+    private static final int MULTIPLIER = 2;
 
     // /STAT DECLARATION/
 
     public MidflightSnack() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = CREATE;
-        BaseSecondMagicNumber = SecondMagicNumber = BUFF;
+        BaseSecondMagicNumber = SecondMagicNumber = MULTIPLIER;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Reduce flight
-        this.addToBot(new ReduceFlightAction(SecondMagicNumber));
+        // Deal damage
+        // Only apply if in flight
+        if (p.hasPower("Flight")) {
+            baseDamage = damage = p.getPower("Flight").amount * MULTIPLIER;
+
+            // Deal damage
+            this.addToBot(new DamageAction(m, new DamageInfo(p, damage,
+                    damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        }
 
         // Create random food item
         for (int i = 0; i < magicNumber; i++) {
             this.addToBot(new RandomFoodInHandAction(this.upgraded));
         }
 
-        // Draw a card
-        this.addToBot(new DrawCardAction(p, DRAW));
-
+        // Reduce flight
+        this.addToBot(new ReduceFlightAction(BUFF));
     }
 
     @Override

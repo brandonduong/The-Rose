@@ -161,8 +161,8 @@
   },
   "theRose:MidflightSnack": {
     "NAME": "Midflight Snack",
-    "DESCRIPTION": "Can only be played in Flight. Create !M! random Food item in your hand. Draw 1 card. Lose 1 Flight.",
-    "UPGRADE_DESCRIPTION": "Can only be played in Flight. Create !M! random Upgraded Food item in your hand. Draw 1 card. Lose 1 Flight."
+    "DESCRIPTION": "Deal damage equal to !theRose:SecondMagic! times your current Flight. Create !M! random Food item in your hand. Lose 1 Flight.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to !theRose:SecondMagic! times your current Flight. Create !M! random Upgraded Food item in your hand. Lose 1 Flight."
   },
   "theRose:PermanentChub": {
     "NAME": "Big Chubster",
