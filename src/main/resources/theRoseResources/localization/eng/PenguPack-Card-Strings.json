@@ -79,8 +79,8 @@
   },
   "theRose:ChefRose": {
     "NAME": "Chef Rose",
-    "DESCRIPTION": "Deal !D! damage. Add a random Food item to your hand and discard pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Add a random Upgraded Food item to your hand and discard pile."
+    "DESCRIPTION": "Deal !D! damage. Create a random Food item in your hand and discard pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Create a random Upgraded Food item to your hand and discard pile."
   },
   "theRose:TakesiesBacksies" : {
     "NAME": "Takesies Backsies",
@@ -229,8 +229,8 @@
   },
   "theRose:PickyEater": {
     "NAME": "Picky Eater",
-    "DESCRIPTION": "Choose one: Create a Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi, in your hand.",
-    "UPGRADE_DESCRIPTION": "Choose one: Create an Upgraded Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi, in your hand."
+    "DESCRIPTION": "Deal !D! damage. Choose one: Create a Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi, in your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Choose one: Create an Upgraded Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi, in your hand."
   },
   "theRose:AgentRose": {
     "NAME": "Agent Rose",
@@ -249,6 +249,10 @@
 
 
 
+  "theRose:BirdBuffet": {
+    "NAME": "Bird Buffet",
+    "DESCRIPTION": "Create a random Food item in your hand for every 1 Flight. Lose all Flight."
+  },
   "theRose:De-FlightfulFlap": {
     "NAME": "De-Flightful Flap",
     "DESCRIPTION": "Gain 1 Flight for all your cards containing \"Flap\"."
