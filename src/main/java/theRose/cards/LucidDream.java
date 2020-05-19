@@ -38,7 +38,7 @@ public class LucidDream extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 0;
-    private static final int BUFF = 3;
+    private static final int BUFF = 2;
     private static final int UPGRADE_BUFF = 1;
     private static final int DRAW = 1;
 
