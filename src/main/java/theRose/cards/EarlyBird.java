@@ -71,6 +71,14 @@ public class EarlyBird extends AbstractDynamicCard {
             this.addToBot(new DamageAction(m, new DamageInfo(p, damage,
                     damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         }
+        else {
+            baseDamage = damage = (magicNumber) * MULTIPLIER;
+            this.calculateCardDamage(m);
+
+            // Deal damage
+            this.addToBot(new DamageAction(m, new DamageInfo(p, damage,
+                    damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        }
 
         // Create random food items
         for (int i = 0; i < SecondMagicNumber; i++) {
