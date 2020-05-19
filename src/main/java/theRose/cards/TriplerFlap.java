@@ -50,6 +50,7 @@ public class TriplerFlap extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        // Create Flipper Flappers in hand
         for(int i = 0; i < baseMagicNumber; i++) {
             AbstractCard card = new FlipperFlap();
 
