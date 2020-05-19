@@ -76,7 +76,7 @@ public class Sprint extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_DRAW);
+            upgradeMagicNumber(UPGRADE_DRAW);
             initializeDescription();
         }
     }
