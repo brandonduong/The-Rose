@@ -1,5 +1,6 @@
 package theRose.cards;
 
+import basemod.abstracts.CustomSavable;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,7 +15,7 @@ import java.util.Iterator;
 import static theRose.ModInitializer.foodEaten;
 import static theRose.ModInitializer.makeCardPath;
 
-public class PermanentChub extends AbstractDynamicCard {
+public class PermanentChub extends AbstractDynamicCard implements CustomSavable<Integer> {
 
     /*
      * Permanent Chub: Gain Block equal to the number of Food items eaten this game. Exhaust. (!B)
@@ -38,6 +39,8 @@ public class PermanentChub extends AbstractDynamicCard {
 
     private static final int COST = 2;
     private static final int UPGRADE_COST = 1;
+
+    private static int total_eaten;
 
     // /STAT DECLARATION/
 
@@ -73,5 +76,16 @@ public class PermanentChub extends AbstractDynamicCard {
             upgradeBaseCost(UPGRADE_COST);
             initializeDescription();
         }
+    }
+
+    // Save total
+    @Override
+    public Integer onSave() {
+        return foodEaten;
+    }
+
+    @Override
+    public void onLoad(Integer num) {
+        foodEaten = num;
     }
 }
