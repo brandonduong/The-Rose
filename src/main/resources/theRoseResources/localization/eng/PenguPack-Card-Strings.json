@@ -195,7 +195,7 @@
   },
   "theRose:Thunder": {
     "NAME": "Thunder",
-    "DESCRIPTION": "Unplayable. Whenever you draw this card, deal !D! damage to a random enemy. Apply !M! Vulnerable."
+    "DESCRIPTION": "Unplayable. Whenever you draw this card, deal !D! damage to a random enemy, apply !M! Vulnerable, and Draw !theRose:SecondMagic! card."
   },
   "theRose:WitchRose": {
     "NAME": "Witch Rose",

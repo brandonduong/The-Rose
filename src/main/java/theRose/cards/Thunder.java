@@ -18,7 +18,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class Thunder extends AbstractDynamicCard {
 
     /*
-     * Thunder: Unplayable. Whenever you draw this card, deal !M! damage to a random enemy. Apply !M! Vulnerable.
+     * Thunder: Unplayable. Whenever you draw this card, deal !D! damage to a random enemy, apply !M! Vulnerable, and Draw 1 card.
      */
 
     // TEXT DECLARATION
@@ -37,8 +37,9 @@ public class Thunder extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = -2;
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 7;
     private static final int BUFF = 1;
+    private static final int DRAW = 1;
 
     // /STAT DECLARATION/
 
@@ -46,6 +47,7 @@ public class Thunder extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = BUFF;
+        SecondMagicNumber = BaseSecondMagicNumber = DRAW;
     }
 
     // Actions the card should do.
@@ -68,6 +70,8 @@ public class Thunder extends AbstractDynamicCard {
             this.addToBot(new ApplyPowerAction(target, AbstractDungeon.player,
                     new VulnerablePower(target, magicNumber, false), magicNumber));
         }
+
+        this.addToBot(new DrawCardAction(SecondMagicNumber));
     }
 
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
