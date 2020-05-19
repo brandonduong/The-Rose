@@ -17,7 +17,7 @@
   },
   "theRose:FlipperFlap": {
     "NAME": "Flipper Flap",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Gain !M! Flight. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Gain !theRose:SecondMagic! Flight. NL Exhaust."
   },
   "theRose:TemperTantrum": {
     "NAME": "Temper Tantrum",
@@ -161,8 +161,8 @@
   },
   "theRose:MidflightSnack": {
     "NAME": "Midflight Snack",
-    "DESCRIPTION": "Deal damage equal to !theRose:SecondMagic! times your current Flight. Create !M! random Food item in your hand. Lose 1 Flight.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to !theRose:SecondMagic! times your current Flight. Create !M! random Upgraded Food item in your hand. Lose 1 Flight."
+    "DESCRIPTION": "Deal damage equal to !theRose:SecondMagic! times your current Flight. NL Create !M! random Food item in your hand. NL Lose 1 Flight.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to !theRose:SecondMagic! times your current Flight. NL Create !M! random Upgraded Food item in your hand. NL Lose 1 Flight."
   },
   "theRose:PermanentChub": {
     "NAME": "Big Chubster",

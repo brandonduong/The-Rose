@@ -77,25 +77,6 @@ public class MidflightSnack extends AbstractDynamicCard {
         this.addToBot(new ReduceFlightAction(BUFF));
     }
 
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        boolean canUse = super.canUse(p, m);
-        if (!canUse) {
-            return false;
-        } else {
-            // Can only use if in flight
-            if (p.hasPower("Flight")) {
-                canUse = true;
-            }
-            else {
-                canUse = false;
-                this.cantUseMessage = "Can only be used in flight.";
-            }
-
-            return canUse;
-        }
-    }
-
     // Upgraded stats.
     @Override
     public void upgrade() {
