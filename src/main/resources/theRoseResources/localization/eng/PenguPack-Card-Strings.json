@@ -121,7 +121,7 @@
   },
   "theRose:Squish": {
     "NAME": "Squish",
-    "DESCRIPTION": "If your current HP is over or equal to !M! times the enemy's, set their HP to 0. Exhaust."
+    "DESCRIPTION": "If your current HP is over or equal to !M! times the enemy's, set their HP to 0. NL Exhaust."
   },
   "theRose:TriplerFlap": {
     "NAME": "Tripler Flap",
