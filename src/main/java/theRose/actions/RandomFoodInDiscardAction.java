@@ -33,15 +33,18 @@ public class RandomFoodInDiscardAction extends AbstractGameAction {
     public void update() {
         AbstractCard card;
         AbstractCard[] foodCards = {new Donut(), new EnergyDrink(), new FriedChicken(), new Hamburger(), new Sushi()};
-        int randomNum = ThreadLocalRandom.current().nextInt(0, 5); // Random num between [0, 4]
 
-        card = foodCards[randomNum];
+        for (int i = 0; i < amount; i++) {
+            int randomNum = ThreadLocalRandom.current().nextInt(0, 5); // Random num between [0, 4]
 
-        if (this.upgrade) {
-            card.upgrade();
+            card = foodCards[randomNum];
+
+            if (this.upgrade) {
+                card.upgrade();
+            }
+
+            this.addToBot(new MakeTempCardInDiscardAction(card, 1));
         }
-
-        this.addToBot(new MakeTempCardInDiscardAction(card, amount));
         this.isDone = true;
         return;
     }
