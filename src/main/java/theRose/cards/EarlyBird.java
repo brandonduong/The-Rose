@@ -58,6 +58,9 @@ public class EarlyBird extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        // Gain flight (Penguin Power)
+        this.addToBot(new ApplyPowerAction(p, p, new PenguinPower(p, magicNumber)));
+
         // Deal damage
         // Only apply if in flight
         if (p.hasPower("Flight")) {
@@ -67,9 +70,6 @@ public class EarlyBird extends AbstractDynamicCard {
             this.addToBot(new DamageAction(m, new DamageInfo(p, damage,
                     damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         }
-
-        // Gain flight (Penguin Power)
-        this.addToBot(new ApplyPowerAction(p, p, new PenguinPower(p, magicNumber)));
 
         // Create random food items
         for (int i = 0; i < SecondMagicNumber; i++) {
