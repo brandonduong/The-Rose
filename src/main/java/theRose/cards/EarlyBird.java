@@ -64,7 +64,8 @@ public class EarlyBird extends AbstractDynamicCard {
         // Deal damage
         // Only apply if in flight
         if (p.hasPower("Flight")) {
-            baseDamage = damage = p.getPower("Flight").amount * MULTIPLIER;
+            baseDamage = damage = (p.getPower("Flight").amount + magicNumber) * MULTIPLIER;
+            this.calculateCardDamage(m);
 
             // Deal damage
             this.addToBot(new DamageAction(m, new DamageInfo(p, damage,
