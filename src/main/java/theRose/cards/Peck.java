@@ -60,8 +60,11 @@ public class Peck extends AbstractDynamicCard {
         if (p.hasPower("Flight")) {
             this.addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.SecondMagicNumber, false), this.SecondMagicNumber));
 
+            baseDamage = p.getPower("Flight").amount * magicNumber;
+            this.calculateCardDamage(m);
+
             // Deal damage
-            this.addToBot(new DamageAction(m, new DamageInfo(p, p.getPower("Flight").amount, damageTypeForTurn),
+            this.addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                     AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
 

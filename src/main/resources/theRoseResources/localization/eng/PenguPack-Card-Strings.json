@@ -174,7 +174,7 @@
   },
   "theRose:LucidDream": {
     "NAME": "Lucid Dream",
-    "DESCRIPTION": "Gain !M! Flight. At the end of your turn, lose !M! Flight. Draw 1 card."
+    "DESCRIPTION": "Gain !M! Flight. At the end of your turn, lose !M! Flight. NL Draw 1 card."
   },
   "theRose:GrannyKiss": {
     "NAME": "Granny Kiss!",
@@ -183,7 +183,7 @@
   },
   "theRose:NappyTime": {
     "NAME": "Nappy Time!",
-    "DESCRIPTION": "Gain !B! Block. Gain !M! Plated Armor. End your turn."
+    "DESCRIPTION": "Gain !B! Block. Gain !M! Plated Armor. NL End your turn."
   },
   "theRose:Angy": {
     "NAME": "Angy!",
@@ -248,14 +248,28 @@
 
 
 
-
+  "theRose:FullForce": {
+    "NAME": "Full Force",
+    "DESCRIPTION": "Deal !D! damage. Gain !B! Block. If a Food item was eaten this turn, deal and gain !M! extra."
+  },
+  "theRose:FoodComa": {
+    "NAME": ""
+  },
+  "theRose:Temptation": {
+    "NAME": "Temptation",
+    "DESCRIPTION": "Choose one: Dreaded Diet, or Bird Buffet"
+  },
+  "theRose:DreadedDiet": {
+    "NAME": "Dreaded Diet",
+    "DESCRIPTION": "Gain 1 Flight for every Food item in your hand. Exhaust all Food items."
+  },
   "theRose:BirdBuffet": {
     "NAME": "Bird Buffet",
     "DESCRIPTION": "Create a random Food item in your hand for every 1 Flight. Lose all Flight."
   },
   "theRose:De-FlightfulFlap": {
     "NAME": "De-Flightful Flap",
-    "DESCRIPTION": "Gain 1 Flight for all your cards containing \"Flap\"."
+    "DESCRIPTION": "Gain 1 Flight for all your cards containing \"Flap\". Deal !M! damage for every 1 Flight."
   },
   "theRose:BodySlam": {
     "NAME": "Body Slam",
