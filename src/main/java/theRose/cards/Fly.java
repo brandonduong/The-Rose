@@ -36,7 +36,6 @@ public class Fly extends AbstractDynamicCard {
     private static final int BLOCK = 3;
     private static final int BUFF = 1; // Give 1 Penguin Flight
     private static final int UPGRADE_BLOCK = 2; // Add 2 to upgrade
-    private static final int UPGRADE_BUFF = 1;
 
     // /STAT DECLARATION/
 
@@ -63,8 +62,7 @@ public class Fly extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_BUFF);
-            upgradeMagicNumber(UPGRADE_BUFF);
+            upgradeBlock(UPGRADE_BLOCK);
             initializeDescription();
         }
     }

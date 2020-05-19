@@ -38,7 +38,7 @@ public class BeakSmash extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 2;
-    private static final int MULTIPLIER = 5;
+    private static final int MULTIPLIER = 4;
     private static final int UPGRADE_MULTIPLIER = 1;
 
     // /STAT DECLARATION/
