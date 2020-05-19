@@ -38,6 +38,7 @@ public class FluffyFurFlex extends AbstractDynamicCard {
     private static final int BLOCK = 5;
     private static final int UPGRADE_BLOCK = 3;
     private static final int BUFF = 4; // Thorns
+    private static final int UPGRADE_BUFF = 2;
 
     // /STAT DECLARATION/
 
@@ -69,6 +70,7 @@ public class FluffyFurFlex extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_BLOCK);
+            upgradeMagicNumber(UPGRADE_BUFF);
             initializeDescription();
         }
     }
