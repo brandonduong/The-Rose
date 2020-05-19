@@ -43,9 +43,8 @@ public class MidflightSnack extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int CREATE = 1;
+    private static final int CREATE = 3;
     private static final int UPGRADE_CREATE = 1;
-    private static final int BUFF = 1;
     private static final int MULTIPLIER = 2;
 
     // /STAT DECLARATION/
@@ -75,7 +74,7 @@ public class MidflightSnack extends AbstractDynamicCard {
         }
 
         // Reduce flight
-        this.addToBot(new ReduceFlightAction(BUFF));
+        this.addToBot(new ReduceFlightAction(magicNumber));
     }
 
     // Upgraded stats.
