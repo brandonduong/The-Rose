@@ -30,6 +30,7 @@ import theRose.cards.*;
 import theRose.characters.TheRose;
 
 
+import theRose.fields.BefriendedSave;
 import theRose.fields.FoodEatenSave;
 import theRose.relics.ChickenWings;
 import theRose.relics.PenguinWings;
@@ -490,6 +491,7 @@ public class ModInitializer implements
         BaseMod.addCard(new FullForce());
 
         BaseMod.addSaveField("foodEaten", new FoodEatenSave());
+        BaseMod.addSaveField("befriended", new BefriendedSave());
 
         /*
         BaseMod.addCard(new OrbSkill());
