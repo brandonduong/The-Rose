@@ -34,7 +34,7 @@ public class GrannyKiss extends AbstractDynamicCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;

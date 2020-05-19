@@ -252,6 +252,22 @@
 
 
 
+  "theRose:LunchLadyRose": {
+    "NAME": "Lunch Lady Rose",
+    "DESCRIPTION": "Apply !M! Passivity. Create !M! Picky Eater in your hand."
+  },
+  "theRose:FightOrFlight": {
+    "NAME": "Fight or Flight",
+    "DESCRIPTION": "Choose one: Deal !D! damage, Gain !M! Flight, Apply !theRose:SecondMagic!."
+  },
+  "theRose:FlyBy": {
+    "NAME": "Fly-By",
+    "DESCRIPTION": "Deal damage equal to !M! times your current Flight to all enemies."
+  },
+  "theRose:PeacefulPicnic": {
+    "NAME": "",
+    "DESCRIPTION": ""
+  },
   "theRose:FoodComa": {
     "NAME": ""
   },
