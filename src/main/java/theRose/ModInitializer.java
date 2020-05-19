@@ -485,6 +485,7 @@ public class ModInitializer implements
         BaseMod.addCard(new AgentRose());
         BaseMod.addCard(new Bomb());
         BaseMod.addCard(new MissionAccomplished());
+        BaseMod.addCard(new FullForce());
 
         /*
         BaseMod.addCard(new OrbSkill());
