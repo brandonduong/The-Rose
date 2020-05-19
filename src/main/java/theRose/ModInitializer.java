@@ -30,6 +30,7 @@ import theRose.cards.*;
 import theRose.characters.TheRose;
 
 
+import theRose.fields.FoodEatenSave;
 import theRose.relics.ChickenWings;
 import theRose.relics.PenguinWings;
 import theRose.util.TextureLoader;
@@ -487,6 +488,8 @@ public class ModInitializer implements
         BaseMod.addCard(new Bomb());
         BaseMod.addCard(new MissionAccomplished());
         BaseMod.addCard(new FullForce());
+
+        BaseMod.addSaveField("foodEaten", new FoodEatenSave());
 
         /*
         BaseMod.addCard(new OrbSkill());

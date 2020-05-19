@@ -15,7 +15,7 @@ import java.util.Iterator;
 import static theRose.ModInitializer.foodEaten;
 import static theRose.ModInitializer.makeCardPath;
 
-public class PermanentChub extends AbstractDynamicCard implements CustomSavable<Integer> {
+public class PermanentChub extends AbstractDynamicCard {
 
     /*
      * Permanent Chub: Gain Block equal to the number of Food items eaten this game. Exhaust. (!B)
@@ -39,8 +39,6 @@ public class PermanentChub extends AbstractDynamicCard implements CustomSavable<
 
     private static final int COST = 2;
     private static final int UPGRADE_COST = 1;
-
-    private static int total_eaten;
 
     // /STAT DECLARATION/
 
@@ -78,14 +76,4 @@ public class PermanentChub extends AbstractDynamicCard implements CustomSavable<
         }
     }
 
-    // Save total
-    @Override
-    public Integer onSave() {
-        return foodEaten;
-    }
-
-    @Override
-    public void onLoad(Integer num) {
-        foodEaten = num;
-    }
 }
