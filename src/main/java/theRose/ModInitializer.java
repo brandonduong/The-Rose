@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.beyond.Donu;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -613,12 +614,14 @@ public class ModInitializer implements
     public static int hpLastTurn; // Holds players hp value last turn
 
     public static boolean passive; // True if player has only beaten enemies through Passivity
+    public static int befriended; // Counts how many have been befriended
 
     @Override
     public void receivePostDungeonInitialize() {
         // Run once dungeon done initializing
         foodEaten = counter = 0;
         passive = true;
+        befriended = 0;
     }
 
     @Override
@@ -645,6 +648,15 @@ public class ModInitializer implements
 
         passive = passive && room.monsters.haveMonstersEscaped(); // Returns true if all monsters have escaped
         logger.info("Passive = " + passive);
+
+        Iterator var1 = room.monsters.monsters.iterator();
+
+        while (var1.hasNext())
+        AbstractMonster m;
+        do {
+            befriended += 1;
+            m = (AbstractMonster)var1.next();
+        } while(m.escaped);
     }
 
     @Override
