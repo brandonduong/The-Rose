@@ -64,7 +64,7 @@ public class Bulking extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_BLOCK);
+            upgradeSecondMagicNumber(UPGRADE_BLOCK);
             initializeDescription();
         }
     }
