@@ -29,7 +29,7 @@
   },
   "theRose:BeakDive": {
     "NAME": "Beak Dive",
-    "DESCRIPTION": "Can only be played when in Flight. Deal !D! damage. Lose all Flight."
+    "DESCRIPTION": "Can only be played when in Flight. NL Deal !D! damage. NL Lose all Flight."
   },
   "theRose:Peck": {
     "NAME": "Peck",
@@ -212,8 +212,8 @@
   },
   "theRose:StealthRose": {
     "NAME": "Stealth Rose",
-    "DESCRIPTION": "Gain 3 Block. Draw !M! card. This is unaffected by Flight and Dexterity.",
-    "UPGRADE_DESCRIPTION": "Gain 6 Block. Draw !M! card. This is unaffected by Flight and Dexterity."
+    "DESCRIPTION": "Gain 5 Block. Draw !M! card. This is unaffected by Flight and Dexterity.",
+    "UPGRADE_DESCRIPTION": "Gain 8 Block. Draw !M! card. This is unaffected by Flight and Dexterity."
   },
   "theRose:DivaRose": {
     "NAME": "Diva Rose",

@@ -33,7 +33,7 @@ public class Chat extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final int STACKS = 7; // Apply Passivity
     private static final int STACKS_BUFF = 5; // += 2
-    private static final int UPGRADE_STACKS_BUFF = 3;
+    private static final int UPGRADE_STACKS_ALL = 2;
 
     // /STAT DECLARATION/
 
@@ -66,7 +66,8 @@ public class Chat extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeSecondMagicNumber(UPGRADE_STACKS_BUFF);
+            upgradeMagicNumber(UPGRADE_STACKS_ALL);
+            upgradeSecondMagicNumber(UPGRADE_STACKS_ALL);
             initializeDescription();
         }
     }

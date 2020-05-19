@@ -30,7 +30,7 @@ public class FoodFight extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int BUFF = 2; // Damage each food item
     private static final int BUFF_UPGRADE = 1;
 

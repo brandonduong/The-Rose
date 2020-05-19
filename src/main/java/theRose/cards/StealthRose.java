@@ -40,7 +40,7 @@ public class StealthRose extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int BLOCK = 4;
+    private static final int BLOCK = 5;
     private static final int UPGRADE_BLOCK = 3;
     private static final int DRAW = 1;
 
