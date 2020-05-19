@@ -58,7 +58,7 @@ public class FullForce extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Check if a food was played this combat
-        Iterator cardsPlayed = AbstractDungeon.actionManager.cardsPlayedThisCombat.iterator();
+        Iterator cardsPlayed = AbstractDungeon.actionManager.cardsPlayedThisTurn.iterator();
         boolean foodPlayed = false;
 
         while(cardsPlayed.hasNext()) {
