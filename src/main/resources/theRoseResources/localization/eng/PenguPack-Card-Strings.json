@@ -273,11 +273,12 @@
     "DESCRIPTION": "Deal damage equal to !M! times your current Flight to all enemies."
   },
   "theRose:PeacefulPicnic": {
-    "NAME": "",
-    "DESCRIPTION": ""
+    "NAME": "Peaceful Picnic",
+    "DESCRIPTION": "Apply !M! Passivity to all enemies. Create 1 random Food item for every 1 enemy."
   },
   "theRose:FoodComa": {
-    "NAME": ""
+    "NAME": "Food Coma",
+    "DESCRIPTION": "Increase your Food Eaten counter by !M!. End your turn."
   },
   "theRose:Temptation": {
     "NAME": "Temptation",
