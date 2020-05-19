@@ -660,7 +660,6 @@ public class ModInitializer implements
 
         logger.info("Befriended = " + befriended);
         logger.info("Food Eaten Total = " + foodEaten);
-        logger.info("Food Eaten This Combat = " + counter);
     }
 
     @Override
