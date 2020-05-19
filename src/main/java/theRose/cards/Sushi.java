@@ -45,8 +45,8 @@ public class Sushi extends AbstractDynamicCard {
 
     public Sushi() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = BUFF;
-        BaseSecondMagicNumber = FOOD_VALUE;
+        baseMagicNumber = magicNumber = FOOD_VALUE;
+        BaseSecondMagicNumber = SecondMagicNumber = BUFF;
 
         this.tags.add(CustomTags.FOOD);
         exhaust = true;
@@ -56,13 +56,13 @@ public class Sushi extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Gain 1 Dexterity
-        this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, baseMagicNumber), baseMagicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, SecondMagicNumber), SecondMagicNumber));
 
         // Gain 1 Stacks of Lose Dexterity Power
-        this.addToBot(new ApplyPowerAction(p, p, new LoseDexterityPower(p, baseMagicNumber), baseMagicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new LoseDexterityPower(p, SecondMagicNumber), SecondMagicNumber));
 
         // Food eaten += 1
-        this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, BaseSecondMagicNumber)));
+        this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, magicNumber)));
     }
 
 
@@ -71,7 +71,7 @@ public class Sushi extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeSecondMagicNumber(UPGRADE_VALUE);
+            upgradeMagicNumber(UPGRADE_VALUE);
             initializeDescription();
         }
     }

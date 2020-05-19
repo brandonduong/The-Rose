@@ -50,11 +50,11 @@
   },
   "theRose:FriedChicken": {
     "NAME": "Fried Chicken",
-    "DESCRIPTION": "Gain !M! Strength. At the end of this turn, lose !M! Strength. NL Exhaust."
+    "DESCRIPTION": "Gain !theRose:SecondMagic! Strength. At the end of this turn, lose !theRose:SecondMagic! Strength. NL Exhaust."
   },
   "theRose:Sushi": {
     "NAME": "Sushi",
-    "DESCRIPTION": "Gain !M! Dexterity. At the end of this turn, lose !M! Dexterity. NL Exhaust."
+    "DESCRIPTION": "Gain !theRose:SecondMagic! Dexterity. At the end of this turn, lose !theRose:SecondMagic! Dexterity. NL Exhaust."
   },
   "theRose:Hamburger": {
     "NAME": "Hamburger",
@@ -321,7 +321,7 @@
   },
   "theRose:PenguPalace": {
     "NAME": "Pengu Palace",
-    "DESCRIPTION": ""
+    "DESCRIPTION": "Deal damage and gain Block equal to !M! times the number of enemies Befriended."
   },
   "theRose:FlyHigher": {
     "NAME": "Fly Higher!",

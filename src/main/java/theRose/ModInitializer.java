@@ -676,7 +676,7 @@ public class ModInitializer implements
 
         if (card.tags.contains(CustomTags.FOOD)) {
             playedFood = true;
-            counter += 1;
+            counter += card.baseMagicNumber;
         }
     }
 
