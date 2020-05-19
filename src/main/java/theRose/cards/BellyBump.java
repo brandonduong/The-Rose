@@ -62,6 +62,7 @@ public class BellyBump extends AbstractDynamicCard {
         }
 
         baseDamage = p.getPower("theRose:FoodEatenPower").amount * SecondMagicNumber;
+        this.calculateCardDamage(m);
 
         // Deal damage
         this.addToBot(
