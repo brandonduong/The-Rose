@@ -52,6 +52,12 @@
       "Thunder"
     ],
     "DESCRIPTION": "Thunder is an Unplayable card such that whenever drawn, deal 5 damage to a random enemy and apply 1 Vulnerable."
+  },
+  {
+    "NAMES": [
+      "Bomb"
+    ],
+    "DESCRIPTION": "Agent Rose's Bomb is a 10 (8) cost card that deals 100 damage to all enemies. Whenever drawn, its cost is reduced by 1."
   }
 
 

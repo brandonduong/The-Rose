@@ -38,8 +38,8 @@ public class Bomb extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 12;
-    private static final int UPGRADE_COST = 10;
+    private static final int COST = 10;
+    private static final int UPGRADE_COST = 8;
     private static final int REDUCE = 1;
 
     // /STAT DECLARATION/
