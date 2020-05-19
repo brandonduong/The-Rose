@@ -121,7 +121,7 @@
   },
   "theRose:Squish": {
     "NAME": "Squish",
-    "DESCRIPTION": "If your current HP is !M! times the enemy's, set their HP to 0. Exhaust."
+    "DESCRIPTION": "If your current HP is over or equal to !M! times the enemy's, set their HP to 0. Exhaust."
   },
   "theRose:TriplerFlap": {
     "NAME": "Tripler Flap",
@@ -245,13 +245,13 @@
     "NAME": "Mission Accomplished.",
     "DESCRIPTION": "Agent Rose has fulfilled her assigned duties. NL Deal !D! to all enemies. Gain !M! Gold. Exhaust."
   },
-
-
-
   "theRose:FullForce": {
     "NAME": "Full Force",
     "DESCRIPTION": "Deal !D! damage. Gain !B! Block. If a Food item was eaten this turn, deal and gain !M! extra."
   },
+
+
+
   "theRose:FoodComa": {
     "NAME": ""
   },

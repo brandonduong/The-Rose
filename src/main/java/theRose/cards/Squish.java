@@ -47,7 +47,7 @@ public class Squish extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (m.currentHealth * 2 <= p.currentHealth) { // If enemy health below threshold, kill
+        if (m.currentHealth * magicNumber <= p.currentHealth) { // If enemy health below threshold, kill
             this.addToBot(new DamageAction(m, new DamageInfo(p, p.currentHealth), AbstractGameAction.AttackEffect.SMASH));
         }
     }
