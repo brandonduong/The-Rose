@@ -37,8 +37,8 @@
   },
   "theRose:UberDishes": {
     "NAME": "UberDishes",
-    "DESCRIPTION": "Create !M! random Food items in your discard pile.",
-    "UPGRADE_DESCRIPTION": "Create !M! random Upgraded Food items in your discard pile."
+    "DESCRIPTION": "Create !M! random Food items in your draw pile.",
+    "UPGRADE_DESCRIPTION": "Create !M! random Upgraded Food items in your draw pile."
   },
   "theRose:EnergyDrink": {
     "NAME": "Energy Drink",
@@ -70,8 +70,8 @@
   },
   "theRose:BellyBump": {
     "NAME": "Belly Bump",
-    "DESCRIPTION": "Deal damage equal to 2 times the number of Food items eaten this combat. Set the counter to a half.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to 3 times the number of Food items eaten this combat. Set the counter to a half."
+    "DESCRIPTION": "Deal damage equal to 2 times your Food Eaten counter. Set the counter to a half.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to 3 times your Food Eaten counter. Set the counter to a half."
   },
   "theRose:SharingIsCaring": {
     "NAME": "Sharing Is Caring",
@@ -250,6 +250,11 @@
     "DESCRIPTION": "Deal !D! damage. Gain !B! Block. If a Food item was eaten this turn, deal and gain !M! extra."
   },
 
+  "theRose:BabyRose": {
+    "NAME": "Baby Rose",
+    "DESCRIPTION": "Create !M! Picky Eater in your discard pile."
+  },
+
 
 
   "theRose:": {
@@ -296,6 +301,16 @@
     "NAME": "De-Flightful Flap",
     "DESCRIPTION": "Gain 1 Flight for all your cards containing \"Flap\". Deal !M! damage for every 1 Flight."
   },
+  "theRose:Betray": {
+    "NAME": "Betray",
+    "DESCRIPTION": "Deal damage equal to 2 times an enemy's Passivity. Reduce Passivity to 0. Feel Guilty."
+  },
+  "theRose:Reunion": {
+    "NAME": "Reunion",
+    "DESCRIPTION": "If the enemy is bird-like, they flee. Ethereal."
+  },
+
+
   "theRose:BodySlam": {
     "NAME": "Body Slam",
     "DESCRIPTION": "Deal damage equal to 1/2 of your current HP. Lose HP equal to 1/4 of your current HP."
@@ -307,14 +322,6 @@
   "theRose:Chomp": {
     "NAME": "Chomp",
     "DESCRIPTION": "Deal damage equal to 10% (15%) of the enemy's max health. Heal HP equal to half the unblocked damage. Exhaust."
-  },
-  "theRose:Betray": {
-    "NAME": "Betray",
-    "DESCRIPTION": "Deal damage equal to 2 times an enemy's Passivity. Reduce Passivity to 0. Feel Guilty."
-  },
-  "theRose:Reunion": {
-    "NAME": "Reunion",
-    "DESCRIPTION": "If the enemy is bird-like, they flee. Ethereal."
   },
   "theRose:FridgeFreeze": {
     "NAME": "Fridge Freeze",

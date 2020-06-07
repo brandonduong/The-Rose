@@ -60,7 +60,16 @@
       "bomb"
     ],
     "DESCRIPTION": "Agent Rose's Bomb is a 10 (8) cost card that deals 100 damage to all enemies. Whenever drawn, its cost is reduced by 1."
+  },
+  {
+    "PROPER_NAME": "Picky Eater",
+    "NAMES": [
+      "Picky Eater",
+      "Picky",
+      "Eater",
+      "picky",
+      "eater"
+    ],
+    "DESCRIPTION": "Picky Eaters are 0-cost Skill cards that read \"Choose one: Create 1 (Upgraded) Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi, in your hand.\""
   }
-
-
 ]
