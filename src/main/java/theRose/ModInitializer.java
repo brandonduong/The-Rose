@@ -8,20 +8,17 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.beyond.Donu;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
@@ -448,7 +445,7 @@ public class ModInitializer implements
         BaseMod.addCard(new HungryForm());
         BaseMod.addCard(new Reorder());
         BaseMod.addCard(new BellyBump());
-        BaseMod.addCard(new SharingIsCaring());
+        BaseMod.addCard(new LunchLadyRose());
         BaseMod.addCard(new ChefRose());
         // BaseMod.addCard(new TakesiesBacksies()); // NEEDS A REWORK
         BaseMod.addCard(new HeadPat());
@@ -621,13 +618,14 @@ public class ModInitializer implements
 
     public static boolean passive; // True if player has only beaten enemies through Passivity
     public static int befriended; // Counts how many have been befriended
+    public static int killed; // Counts how many have been killed
 
     @Override
     public void receivePostDungeonInitialize() {
         // Run once dungeon done initializing
         foodEaten = counter = 0;
         passive = true;
-        befriended = 0;
+        befriended = killed = 0;
     }
 
     @Override
@@ -662,9 +660,13 @@ public class ModInitializer implements
             if (m.escaped) {
                 befriended += 1;
             }
+            else {
+                killed += 1;
+            }
         }
 
         logger.info("Befriended = " + befriended);
+        logger.info("Killed = " + killed);
         logger.info("Food Eaten Total = " + foodEaten);
     }
 

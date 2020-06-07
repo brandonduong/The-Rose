@@ -256,6 +256,11 @@
   },
 
 
+  "theRose:FightOrFlight": {
+    "NAME": "Fight or Flight",
+    "DESCRIPTION": "Choose one: Deal !D! damage, Gain !M! Flight, or apply !theRose:SecondMagic! Passivity."
+  },
+
   "theRose:": {
     "NAME": "",
     "DESCRIPTION": "Increase your Food Eaten counter by !M!. Gain Block equal to your Food Eaten counter."
@@ -263,10 +268,6 @@
   "theRose:Regurgitate": {
     "NAME": "Regurgitate",
     "DESCRIPTION": "For every !M! Food Eaten, lose !M! Food Eaten, deal !D! damage, and create a random Food item in your hand."
-  },
-  "theRose:FightOrFlight": {
-    "NAME": "Fight or Flight",
-    "DESCRIPTION": "Choose one: Deal !D! damage, Gain !M! Flight, Apply !theRose:SecondMagic!."
   },
   "theRose:FlyBy": {
     "NAME": "Fly-By",

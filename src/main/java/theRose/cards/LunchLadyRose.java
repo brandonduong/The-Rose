@@ -12,7 +12,7 @@ import theRose.powers.PassivityPower;
 
 import static theRose.ModInitializer.makeCardPath;
 
-public class SharingIsCaring extends AbstractDynamicCard {
+public class LunchLadyRose extends AbstractDynamicCard {
 
     /*
      * Sharing is Caring: Apply !M! Bribe for the number of Food items in your hand. Exhaust all Food items.
@@ -20,7 +20,7 @@ public class SharingIsCaring extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = ModInitializer.makeID(SharingIsCaring.class.getSimpleName());
+    public static final String ID = ModInitializer.makeID(LunchLadyRose.class.getSimpleName());
     public static final String IMG = makeCardPath("Skill.png");
 
     // /TEXT DECLARATION/
@@ -39,7 +39,7 @@ public class SharingIsCaring extends AbstractDynamicCard {
 
     // /STAT DECLARATION/
 
-    public SharingIsCaring() {
+    public LunchLadyRose() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = BUFF;
     }
