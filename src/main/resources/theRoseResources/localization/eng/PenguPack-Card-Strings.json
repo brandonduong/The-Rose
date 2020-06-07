@@ -70,8 +70,8 @@
   },
   "theRose:BellyBump": {
     "NAME": "Belly Bump",
-    "DESCRIPTION": "Deal damage equal to 2 times your Food Eaten counter. Set the counter to a half.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to 3 times your Food Eaten counter. Set the counter to a half."
+    "DESCRIPTION": "Deal damage equal to 2 times your Food Eaten counter.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to 3 times your Food Eaten counter."
   },
   "theRose:LunchLadyRose": {
     "NAME": "Lunch Lady Rose",
@@ -256,26 +256,21 @@
   },
 
 
-  "theRose:FightOrFlight": {
-    "NAME": "Fight or Flight",
-    "DESCRIPTION": "Choose one: Deal !D! damage, Gain !M! Flight, or apply !theRose:SecondMagic! Passivity."
+  "theRose:SnackAttack": {
+    "NAME": "Snack Attack",
+    "DESCRIPTION": "Eat 1 random Food item. Deal damage equal to !M! times your Food Eaten counter. If"
   },
-
-  "theRose:": {
-    "NAME": "",
+  "theRose:FightOrFlightOrDelight": {
+    "NAME": "Fight or Flight or Delight",
+    "DESCRIPTION": "Choose one: Deal !D! damage, Gain !M! Flight, or increase your Food Eaten counter by !theRose:SecondMagic!."
+  },
+  "theRose:BigBlubber": {
+    "NAME": "Big Blubber",
     "DESCRIPTION": "Increase your Food Eaten counter by !M!. Gain Block equal to your Food Eaten counter."
   },
   "theRose:AngelRose": {
     "NAME": "Angel Rose",
     "DESCRIPTION": "Can only be played if you have defeated all previous enemies with Passivity. ?"
-  },
-  "theRose:Regurgitate": {
-    "NAME": "Regurgitate",
-    "DESCRIPTION": "For every !M! Food Eaten, lose !M! Food Eaten, deal !D! damage, and create a random Food item in your hand."
-  },
-  "theRose:FlyBy": {
-    "NAME": "Fly-By",
-    "DESCRIPTION": "Deal damage equal to !M! times your current Flight to all enemies."
   },
   "theRose:PeacefulPicnic": {
     "NAME": "Peaceful Picnic",
@@ -284,18 +279,6 @@
   "theRose:FoodComa": {
     "NAME": "Food Coma",
     "DESCRIPTION": "Increase your Food Eaten counter by !M!. End your turn."
-  },
-  "theRose:Temptation": {
-    "NAME": "Temptation",
-    "DESCRIPTION": "Choose one: Dreaded Diet, or Bird Buffet"
-  },
-  "theRose:DreadedDiet": {
-    "NAME": "Dreaded Diet",
-    "DESCRIPTION": "Gain 1 Flight for every Food item in your hand. Exhaust all Food items."
-  },
-  "theRose:BirdBuffet": {
-    "NAME": "Bird Buffet",
-    "DESCRIPTION": "Create a random Food item in your hand for every 1 Flight. Lose all Flight."
   },
   "theRose:De-FlightfulFlap": {
     "NAME": "De-Flightful Flap",
@@ -311,6 +294,14 @@
   },
 
 
+  "theRose:Regurgitate": {
+    "NAME": "Regurgitate",
+    "DESCRIPTION": "For every !M! Food Eaten, lose !M! Food Eaten, deal !D! damage, and create a random Food item in your hand."
+  },
+  "theRose:FlyBy": {
+    "NAME": "Fly-By",
+    "DESCRIPTION": "Deal damage equal to !M! times your current Flight to all enemies."
+  },
   "theRose:BodySlam": {
     "NAME": "Body Slam",
     "DESCRIPTION": "Deal damage equal to 1/2 of your current HP. Lose HP equal to 1/4 of your current HP."

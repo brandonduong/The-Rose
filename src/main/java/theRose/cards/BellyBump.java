@@ -70,8 +70,8 @@ public class BellyBump extends AbstractDynamicCard {
                         AbstractGameAction.AttackEffect.SMASH));
 
         // Reduce food eaten counter
-        int reduce = p.getPower("theRose:FoodEatenPower").amount / baseMagicNumber;
-        this.addToBot(new ReducePowerAction(p, p, "theRose:FoodEatenPower", reduce));
+        // int reduce = p.getPower("theRose:FoodEatenPower").amount / baseMagicNumber;
+        // this.addToBot(new ReducePowerAction(p, p, "theRose:FoodEatenPower", reduce));
     }
 
 
