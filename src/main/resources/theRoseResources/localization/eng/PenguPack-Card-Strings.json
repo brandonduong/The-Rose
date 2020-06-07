@@ -96,7 +96,7 @@
   },
   "theRose:Sprint": {
     "NAME": "Sprint",
-    "DESCRIPTION": "Can only be played if no Food item was played this turn and not in Flight. NL Draw !M! Cards."
+    "DESCRIPTION": "Can only be played if no Food item was played this turn. NL Draw !M! Cards. NL Lose all Flight."
   },
   "theRose:TripleJump": {
     "NAME": "Triple Jump",
@@ -256,9 +256,14 @@
   },
 
 
+
+  "theRose:NinjaRose": {
+    "NAME": "Ninja Rose",
+    "DESCRIPTION": "Gain !M! Strength. Create !theRose:SecondMagic! Flipper Flap in your hand."
+  },
   "theRose:SnackAttack": {
     "NAME": "Snack Attack",
-    "DESCRIPTION": "Deal damage equal to !M! times your Food Eaten counter. If"
+    "DESCRIPTION": "Deal damage equal to 2 times your Food Eaten counter. If you've eaten over !theRose:SecondMagic! Food items this game, deal an extra !M! damage."
   },
   "theRose:FightOrFlightOrDelight": {
     "NAME": "Fight or Flight or Delight",

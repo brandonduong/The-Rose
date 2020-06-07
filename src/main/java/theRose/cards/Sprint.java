@@ -1,6 +1,7 @@
 package theRose.cards;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
@@ -43,9 +44,11 @@ public class Sprint extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         // Draw cards
         this.addToBot(new DrawCardAction(p, baseMagicNumber));
+
+        // Lose all flight
+        this.addToBot(new RemoveSpecificPowerAction(p, p, "Flight"));
     }
 
     @Override
@@ -55,16 +58,12 @@ public class Sprint extends AbstractDynamicCard {
             return false;
         } else {
             // Can only use if no attack played this turn and not in flight
-            if (!ModInitializer.playedFood && !p.hasPower("Flight")) {
+            if (!ModInitializer.playedFood) {
                 canUse = true;
             }
             else if (ModInitializer.playedFood){
                 canUse = false;
                 this.cantUseMessage = "Can only be used if no food consumed.";
-            }
-            else {
-                canUse = false;
-                this.cantUseMessage = "Can only be used if not in Flight.";
             }
 
             return canUse;
