@@ -58,10 +58,10 @@ public class ShinyBeakAndMe extends AbstractDynamicCard {
 
         while(monsters.hasNext()) {
             AbstractMonster mo = (AbstractMonster)monsters.next();
-            this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, SecondMagicNumber, false),
-                    SecondMagicNumber, true, AbstractGameAction.AttackEffect.NONE));
             this.addToBot(new ApplyPowerAction(mo, p, new PassivityPower(mo, p, magicNumber), magicNumber,
                     true, AbstractGameAction.AttackEffect.NONE));
+            this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, SecondMagicNumber, false),
+                    SecondMagicNumber, true, AbstractGameAction.AttackEffect.NONE));
         }
     }
 
