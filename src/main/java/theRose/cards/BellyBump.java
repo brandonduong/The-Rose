@@ -40,7 +40,7 @@ public class BellyBump extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int DAMAGE = 0;
-    private static final int MULTIPLIER = 2;
+    private static final int MULTIPLIER = 3;
     private static final int UPGRADE_MULTIPLIER = 1;
     private static final int FACTOR = 2; // Divide by 2
 
