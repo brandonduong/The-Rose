@@ -73,8 +73,8 @@
     "DESCRIPTION": "Deal damage equal to 2 times your Food Eaten counter. Set the counter to a half.",
     "UPGRADE_DESCRIPTION": "Deal damage equal to 3 times your Food Eaten counter. Set the counter to a half."
   },
-  "theRose:SharingIsCaring": {
-    "NAME": "Sharing Is Caring",
+  "theRose:LunchLadyRose": {
+    "NAME": "Lunch Lady Rose",
     "DESCRIPTION": "Apply !M! Passivity for the number of Food items in your hand. Exhaust all Food items."
   },
   "theRose:ChefRose": {
@@ -249,12 +249,11 @@
     "NAME": "Full Force",
     "DESCRIPTION": "Deal !D! damage. Gain !B! Block. If a Food item was eaten this turn, deal and gain !M! extra."
   },
-
   "theRose:BabyRose": {
     "NAME": "Baby Rose",
-    "DESCRIPTION": "Create !M! Picky Eater in your discard pile."
+    "DESCRIPTION": "Create !M! Picky Eater in your discard pile.",
+    "UPGRADE_DESCRIPTION": "Create !M! Upgraded Picky Eater in your discard pile."
   },
-
 
 
   "theRose:": {
@@ -264,10 +263,6 @@
   "theRose:Regurgitate": {
     "NAME": "Regurgitate",
     "DESCRIPTION": "For every !M! Food Eaten, lose !M! Food Eaten, deal !D! damage, and create a random Food item in your hand."
-  },
-  "theRose:LunchLadyRose": {
-    "NAME": "Lunch Lady Rose",
-    "DESCRIPTION": "Apply !M! Passivity. Create !M! Picky Eater in your hand."
   },
   "theRose:FightOrFlight": {
     "NAME": "Fight or Flight",

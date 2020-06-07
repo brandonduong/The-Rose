@@ -489,6 +489,7 @@ public class ModInitializer implements
         BaseMod.addCard(new Bomb());
         BaseMod.addCard(new MissionAccomplished());
         BaseMod.addCard(new FullForce());
+        BaseMod.addCard(new BabyRose());
 
         BaseMod.addSaveField("foodEaten", new FoodEatenSave());
         BaseMod.addSaveField("befriended", new BefriendedSave());
