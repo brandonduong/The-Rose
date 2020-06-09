@@ -71,5 +71,16 @@
       "eater"
     ],
     "DESCRIPTION": "Picky Eaters are 0-cost Skill cards that read \"Choose one: Create 1 (Upgraded) Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi, in your hand.\""
+  },
+  {
+   "PROPER_NAME": "Flired Up",
+    "NAMES": [
+      "Flired Up",
+      "Flired",
+      "Up",
+      "flired",
+      "up"
+    ],
+    "DESCRIPTION": "Your next card deals extra damage."
   }
 ]

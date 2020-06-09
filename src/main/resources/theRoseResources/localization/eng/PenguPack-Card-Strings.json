@@ -251,15 +251,15 @@
   },
   "theRose:BabyRose": {
     "NAME": "Baby Rose",
-    "DESCRIPTION": "Create !M! Picky Eater in your discard pile.",
-    "UPGRADE_DESCRIPTION": "Create !M! Upgraded Picky Eater in your discard pile."
+    "DESCRIPTION": "Gain !theRose:SecondMagic! Flired Up. Create !M! Picky Eater in your discard pile.",
+    "UPGRADE_DESCRIPTION": "Gain !theRose:SecondMagic! Flired Up. Create !M! Upgraded Picky Eater in your discard pile."
   },
 
 
 
   "theRose:NinjaRose": {
     "NAME": "Ninja Rose",
-    "DESCRIPTION": "Gain !M! Strength. Create !theRose:SecondMagic! Flipper Flap in your hand."
+    "DESCRIPTION": "Gain !M! Flired Up. Create !theRose:SecondMagic! Flipper Flap in your hand."
   },
   "theRose:SnackAttack": {
     "NAME": "Snack Attack",
