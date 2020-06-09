@@ -262,7 +262,8 @@
 
   "theRose:NinjaRose": {
     "NAME": "Ninja Rose",
-    "DESCRIPTION": "Choose one: Create any \"Rose\" card in your hand."
+    "DESCRIPTION": "Choose one: Create any \"Rose\" card in your hand.",
+    "UPGRADE_DESCRIPTION": "Choose one: Create any Upgraded \"Rose\" card in your hand."
   },
 
 
