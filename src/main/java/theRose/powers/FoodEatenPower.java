@@ -31,6 +31,8 @@ public class FoodEatenPower extends AbstractPower implements CloneablePowerInter
     private static final Texture tex84 = TextureLoader.getTexture("theRoseResources/images/powers/placeholder_power84.png");
     private static final Texture tex32 = TextureLoader.getTexture("theRoseResources/images/powers/placeholder_power32.png");
 
+    private static int milestone = 0;
+
     public FoodEatenPower(final AbstractCreature owner, final AbstractCreature source, final int amount) {
         name = NAME;
         ID = POWER_ID;
@@ -51,11 +53,25 @@ public class FoodEatenPower extends AbstractPower implements CloneablePowerInter
 
     @Override
     public void onAfterUseCard(final AbstractCard card, final UseCardAction action) {
-        int strength = this.amount / 5; // Gain 1 strength for every !M! stacks
+        // First milestone reached at 5
+        if (milestone == 0 && this.amount >= 5) {
+            milestone += 1;
+            // Gain strength
+            this.addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, 1)));
+        }
+        // Second milestone reached at >= 10
+        if (milestone == 1 && this.amount >= 10) {
+            milestone += 1;
+            // Gain strength
+            this.addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, 1)));
+        }
 
-        // Gain strength
-        this.addToBot(new ApplyPowerAction(owner, owner,
-                new StrengthPower(owner, strength)));
+        // Third milestone reached at >= 15
+        if (milestone == 2 && this.amount >= 15) {
+            milestone += 1;
+            // Gain strength
+            this.addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, 1)));
+        }
 
         updateDescription();
 

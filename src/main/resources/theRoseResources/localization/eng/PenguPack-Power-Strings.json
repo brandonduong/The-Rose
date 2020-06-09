@@ -17,7 +17,7 @@
 },
 "theRose:FoodEatenPower": {
         "NAME": "Food Eaten",
-        "DESCRIPTIONS": ["Eaten ", " Food item.", " Food items.", " Gain #b1 Strength for every #b5 Food Eaten."]
+        "DESCRIPTIONS": ["Eaten ", " Food item.", " Food items.", " Gain #b1 Strength for every #b5 Food Eaten for a maximum of 3."]
 },
 "theRose:HungryFormPower": {
         "NAME": "Hungry Form",
