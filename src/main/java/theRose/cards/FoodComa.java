@@ -59,7 +59,7 @@ public class FoodComa extends AbstractDynamicCard {
 
         // Deal damage
         this.addToBot(
-                new DamageAllEnemiesAction(p, baseDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.SMASH));
+                new DamageAllEnemiesAction(p, baseDamage + magicNumber, damageTypeForTurn, AbstractGameAction.AttackEffect.SMASH));
     }
 
     //Upgraded stats.

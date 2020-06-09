@@ -267,8 +267,6 @@
     "NAME": "Big Blubber",
     "DESCRIPTION": "Increase your Food Eaten counter by !M!. Gain Block equal to your Food Eaten counter."
   },
-
-
   "theRose:FoodComa": {
     "NAME": "Food Coma",
     "DESCRIPTION": "Increase your Food Eaten counter by !M!. Deal damage to all enemies equal to your Food Eaten counter. End your turn."

@@ -56,7 +56,7 @@ public class BigBlubber extends AbstractDynamicCard {
             counter = p.getPower("theRose:FoodEatenPower").amount;
         }
 
-        this.addToBot(new GainBlockAction(p, p, counter));
+        this.addToBot(new GainBlockAction(p, p, counter + magicNumber));
     }
 
     //Upgraded stats.

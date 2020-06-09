@@ -491,6 +491,7 @@ public class ModInitializer implements
         BaseMod.addCard(new BRose()); // 60th card
         BaseMod.addCard(new NinjaRose());
         BaseMod.addCard(new BigBlubber());
+        BaseMod.addCard(new FoodComa());
 
         BaseMod.addSaveField("foodEaten", new FoodEatenSave());
         BaseMod.addSaveField("befriended", new BefriendedSave());
