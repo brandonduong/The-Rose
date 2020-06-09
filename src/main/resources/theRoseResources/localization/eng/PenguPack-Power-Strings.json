@@ -51,7 +51,7 @@
         "NAME": "Diva Rose",
         "DESCRIPTIONS": ["When this enemy flees, apply its Passivity to all enemies."]
 },
-"theRose:FliredUp": {
+"theRose:FliredUpPower": {
         "NAME": "Flired Up!",
         "DESCRIPTIONS": ["Your next card deals #b", " extra damage."]
 }

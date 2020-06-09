@@ -67,6 +67,6 @@ public class FliredUpPower extends AbstractPower implements CloneablePowerInterf
 
     @Override
     public AbstractPower makeCopy() {
-        return new LoseThornsPower(owner, source, amount);
+        return new FliredUpPower(owner, source, amount);
     }
 }
