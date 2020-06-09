@@ -3,12 +3,18 @@ package theRose.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import theRose.ModInitializer;
 import theRose.cards.FlipperFlap;
 import theRose.util.TextureLoader;
@@ -44,17 +50,24 @@ public class FoodEatenPower extends AbstractPower implements CloneablePowerInter
     }
 
     @Override
-    public void atStartOfTurn() { // At the start of your turn
+    public void onAfterUseCard(final AbstractCard card, final UseCardAction action) {
+        int strength = this.amount / 5; // Gain 1 strength for every !M! stacks
+
+        // Gain strength
+        this.addToBot(new ApplyPowerAction(owner, owner,
+                new StrengthPower(owner, strength)));
+
+        updateDescription();
 
     }
 
     @Override
     public void updateDescription() {
         if (this.amount == 1) {
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + DESCRIPTIONS[3];
         }
         else {
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2] + DESCRIPTIONS[3];
         }
     }
 

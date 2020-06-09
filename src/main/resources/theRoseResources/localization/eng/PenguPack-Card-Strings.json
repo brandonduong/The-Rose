@@ -256,7 +256,7 @@
   },
   "theRose:BRose": {
     "NAME": "BRose",
-    "DESCRIPTION": "Gain !M! Flired Up."
+    "DESCRIPTION": "Gain !theRose:SecondMagic! Flired Up."
   },
   "theRose:NinjaRose": {
     "NAME": "Ninja Rose",
@@ -265,6 +265,11 @@
   },
 
 
+
+  "theRose:FoodComa": {
+    "NAME": "Food Coma",
+    "DESCRIPTION": "Increase your Food Eaten counter by !M!. Deal !D! damage to all enemies. End your turn."
+  },
   "theRose:BigBlubber": {
     "NAME": "Big Blubber",
     "DESCRIPTION": "Increase your Food Eaten counter by !M!. Gain Block equal to your Food Eaten counter."
@@ -286,10 +291,6 @@
   "theRose:PeacefulPicnic": {
     "NAME": "Peaceful Picnic",
     "DESCRIPTION": "Apply !M! Passivity to all enemies. Create 1 random Food item for every 1 enemy."
-  },
-  "theRose:FoodComa": {
-    "NAME": "Food Coma",
-    "DESCRIPTION": "Increase your Food Eaten counter by !M!. End your turn."
   },
   "theRose:De-FlightfulFlap": {
     "NAME": "De-Flightful Flap",
