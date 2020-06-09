@@ -254,17 +254,19 @@
     "DESCRIPTION": "Gain !theRose:SecondMagic! Flired Up. Create !M! Picky Eater in your discard pile.",
     "UPGRADE_DESCRIPTION": "Gain !theRose:SecondMagic! Flired Up. Create !M! Upgraded Picky Eater in your discard pile."
   },
-
+  "theRose:BRose": {
+    "NAME": "BRose",
+    "DESCRIPTION": "Gain !M! Flired Up."
+  },
 
 
   "theRose:NinjaRose": {
     "NAME": "Ninja Rose",
-    "DESCRIPTION": "Gain !M! Flired Up."
-  },
-  "theRose:": {
-    "NAME": "",
     "DESCRIPTION": "Choose one: Create any \"Rose\" card in your hand."
   },
+
+
+
   "theRose:SnackAttack": {
     "NAME": "Snack Attack",
     "DESCRIPTION": "Deal damage equal to 2 times your Food Eaten counter. If you've eaten over !theRose:SecondMagic! Food items this game, deal an extra !M! damage."
@@ -314,10 +316,6 @@
   "theRose:BodySlam": {
     "NAME": "Body Slam",
     "DESCRIPTION": "Deal damage equal to 1/2 of your current HP. Lose HP equal to 1/4 of your current HP."
-  },
-  "theRose:BRose": {
-    "NAME": "BRose",
-    "DESCRIPTION": "Steal !M! Fresh Fish. Exhaust."
   },
   "theRose:Chomp": {
     "NAME": "Chomp",

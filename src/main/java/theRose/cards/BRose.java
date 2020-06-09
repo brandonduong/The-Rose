@@ -1,24 +1,17 @@
 package theRose.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import theRose.ModInitializer;
-import theRose.actions.RandomFoodInDiscardAction;
-import theRose.actions.RandomFoodInDrawAction;
 import theRose.characters.TheRose;
 import theRose.powers.FliredUpPower;
 
-import java.util.concurrent.ThreadLocalRandom;
-
 import static theRose.ModInitializer.makeCardPath;
 
-public class NinjaRose extends AbstractDynamicCard {
+public class BRose extends AbstractDynamicCard {
 
     /*
      * Ninja Rose: Gain !theRose:SecondMagic! Flired Up.
@@ -26,7 +19,7 @@ public class NinjaRose extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = ModInitializer.makeID(NinjaRose.class.getSimpleName());
+    public static final String ID = ModInitializer.makeID(BRose.class.getSimpleName());
     public static final String IMG = makeCardPath("Skill.png");
 
     // Upgraded description
@@ -48,7 +41,7 @@ public class NinjaRose extends AbstractDynamicCard {
     private static final int UPGRADE_BUFF = 1;
     // /STAT DECLARATION/
 
-    public NinjaRose() {
+    public BRose() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         BaseSecondMagicNumber = SecondMagicNumber = BUFF;
     }
