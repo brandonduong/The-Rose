@@ -259,7 +259,11 @@
 
   "theRose:NinjaRose": {
     "NAME": "Ninja Rose",
-    "DESCRIPTION": "Gain !M! Flired Up. Create !theRose:SecondMagic! Flipper Flap in your hand."
+    "DESCRIPTION": "Gain !M! Flired Up."
+  },
+  "theRose:": {
+    "NAME": "",
+    "DESCRIPTION": "Choose one: Create any \"Rose\" card in your hand."
   },
   "theRose:SnackAttack": {
     "NAME": "Snack Attack",

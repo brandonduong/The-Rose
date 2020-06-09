@@ -45,6 +45,7 @@ public class BabyRose extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int BUFF = 3;
+    private static final int UPGRADE_BUFF = 2;
     private static final int CREATE = 2;
     // /STAT DECLARATION/
 
@@ -71,6 +72,7 @@ public class BabyRose extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeSecondMagicNumber(UPGRADE_BUFF);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
