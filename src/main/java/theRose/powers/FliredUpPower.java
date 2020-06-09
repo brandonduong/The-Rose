@@ -49,12 +49,16 @@ public class FliredUpPower extends AbstractPower implements CloneablePowerInterf
     }
 
     public float atDamageGive(float damage, DamageInfo.DamageType type) {
+        return type == DamageInfo.DamageType.NORMAL ? damage + (float)this.amount : damage;
+    }
+
+    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         this.flash();
 
         // Remove FliredUpPower
         this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "theRose:FliredUpPower"));
-        return type == DamageInfo.DamageType.NORMAL ? damage + (float)this.amount : damage;
     }
+
 
     @Override
     public void updateDescription() {

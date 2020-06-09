@@ -170,6 +170,8 @@ public class TheRose extends CustomPlayer {
         retVal.add(Peck.ID);
 
         retVal.add(BabyRose.ID);
+        retVal.add(NinjaRose.ID);
+        retVal.add(BRose.ID);
 
         return retVal;
     }

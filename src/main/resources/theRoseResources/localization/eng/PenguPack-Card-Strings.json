@@ -258,14 +258,17 @@
     "NAME": "BRose",
     "DESCRIPTION": "Gain !M! Flired Up."
   },
-
-
   "theRose:NinjaRose": {
     "NAME": "Ninja Rose",
     "DESCRIPTION": "Choose one: Create any \"Rose\" card in your hand.",
     "UPGRADE_DESCRIPTION": "Choose one: Create any Upgraded \"Rose\" card in your hand."
   },
 
+
+  "theRose:BigBlubber": {
+    "NAME": "Big Blubber",
+    "DESCRIPTION": "Increase your Food Eaten counter by !M!. Gain Block equal to your Food Eaten counter."
+  },
 
 
   "theRose:SnackAttack": {
@@ -275,10 +278,6 @@
   "theRose:FightOrFlightOrDelight": {
     "NAME": "Fight or Flight or Delight",
     "DESCRIPTION": "Choose one: Deal !D! damage, Gain !M! Flight, or increase your Food Eaten counter by !theRose:SecondMagic!."
-  },
-  "theRose:BigBlubber": {
-    "NAME": "Big Blubber",
-    "DESCRIPTION": "Increase your Food Eaten counter by !M!. Gain Block equal to your Food Eaten counter."
   },
   "theRose:AngelRose": {
     "NAME": "Angel Rose",
