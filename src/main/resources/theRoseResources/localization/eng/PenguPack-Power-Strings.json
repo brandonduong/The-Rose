@@ -53,6 +53,6 @@
 },
 "theRose:FliredUpPower": {
         "NAME": "Flired Up!",
-        "DESCRIPTIONS": ["Your next card deals #b", " extra damage."]
+        "DESCRIPTIONS": ["Your next Attack deals #b", " extra damage."]
 }
 }
