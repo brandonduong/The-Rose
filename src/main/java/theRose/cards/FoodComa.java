@@ -55,7 +55,10 @@ public class FoodComa extends AbstractDynamicCard {
         // Food eaten += 1
         this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, magicNumber)));
 
-        baseDamage = p.getPower("theRose:FoodEatenPower").amount;
+        baseDamage = 0;
+        if (p.hasPower("theRose:FoodEatenPower")) {
+            baseDamage = p.getPower("theRose:FoodEatenPower").amount;
+        }
 
         // Deal damage
         this.addToBot(
