@@ -263,16 +263,15 @@
     "DESCRIPTION": "Choose one: Create any \"Rose\" card in your hand.",
     "UPGRADE_DESCRIPTION": "Choose one: Create any Upgraded \"Rose\" card in your hand."
   },
-
+  "theRose:BigBlubber": {
+    "NAME": "Big Blubber",
+    "DESCRIPTION": "Increase your Food Eaten counter by !M!. Gain Block equal to your Food Eaten counter."
+  },
 
 
   "theRose:FoodComa": {
     "NAME": "Food Coma",
-    "DESCRIPTION": "Increase your Food Eaten counter by !M!. Deal !D! damage to all enemies. End your turn."
-  },
-  "theRose:BigBlubber": {
-    "NAME": "Big Blubber",
-    "DESCRIPTION": "Increase your Food Eaten counter by !M!. Gain Block equal to your Food Eaten counter."
+    "DESCRIPTION": "Increase your Food Eaten counter by !M!. Deal damage to all enemies equal to your Food Eaten counter. End your turn."
   },
 
 

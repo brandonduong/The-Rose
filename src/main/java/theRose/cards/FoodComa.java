@@ -1,8 +1,13 @@
 package theRose.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
@@ -10,16 +15,16 @@ import theRose.powers.FoodEatenPower;
 
 import static theRose.ModInitializer.makeCardPath;
 
-public class BigBlubber extends AbstractDynamicCard {
+public class FoodComa extends AbstractDynamicCard {
 
     /*
-     * BigBlubber: Increase your Food Eaten counter by !M!. Gain Block equal to your Food Eaten counter.
+     * Food Coma: Increase your Food Eaten counter by !M!. Deal damage to all enemies equal to your Food Eaten counter. End your turn.
      */
 
 
     // TEXT DECLARATION
 
-    public static final String ID = ModInitializer.makeID(BigBlubber.class.getSimpleName());
+    public static final String ID = ModInitializer.makeID(FoodComa.class.getSimpleName());
     public static final String IMG = makeCardPath("Skill.png");
 
     // /TEXT DECLARATION/
@@ -33,13 +38,13 @@ public class BigBlubber extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int BUFF = 3;
-    private static final int UPGRADE_BUFF = 1;
+    private static final int UPGRADE_COST = 0;
+    private static final int BUFF = 4;
 
     // /STAT DECLARATION/
 
 
-    public BigBlubber() {
+    public FoodComa() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = BUFF;
     }
@@ -50,13 +55,11 @@ public class BigBlubber extends AbstractDynamicCard {
         // Food eaten += 1
         this.addToBot(new ApplyPowerAction(p, p, new FoodEatenPower(p, p, magicNumber)));
 
-        // Gain block
-        int counter = 0;
-        if (p.hasPower("theRose:FoodEatenPower")) {
-            counter = p.getPower("theRose:FoodEatenPower").amount;
-        }
+        baseDamage = p.getPower("theRose:FoodEatenPower").amount;
 
-        this.addToBot(new GainBlockAction(p, p, counter));
+        // Deal damage
+        this.addToBot(
+                new DamageAllEnemiesAction(p, baseDamage, damageTypeForTurn, AbstractGameAction.AttackEffect.SMASH));
     }
 
     //Upgraded stats.
@@ -64,7 +67,7 @@ public class BigBlubber extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_BUFF);
+            upgradeBaseCost(UPGRADE_COST);
             initializeDescription();
         }
     }

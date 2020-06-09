@@ -8,6 +8,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -487,8 +488,9 @@ public class ModInitializer implements
         BaseMod.addCard(new MissionAccomplished());
         BaseMod.addCard(new FullForce());
         BaseMod.addCard(new BabyRose());
-        BaseMod.addCard(new BRose());
+        BaseMod.addCard(new BRose()); // 60th card
         BaseMod.addCard(new NinjaRose());
+        BaseMod.addCard(new BigBlubber());
 
         BaseMod.addSaveField("foodEaten", new FoodEatenSave());
         BaseMod.addSaveField("befriended", new BefriendedSave());
