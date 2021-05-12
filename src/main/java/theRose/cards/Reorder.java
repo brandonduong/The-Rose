@@ -4,6 +4,7 @@ import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -21,7 +22,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class Reorder extends AbstractDynamicCard {
 
     /*
-     * Reorder: Return all Exhausted Food items to your hand. Exhaust.
+     * Reorder: Play all Exhausted Food items to your hand. Exhaust.
      */
 
     // TEXT DECLARATION
@@ -73,7 +74,7 @@ public class Reorder extends AbstractDynamicCard {
                 if (p.hand.size() >= BaseMod.MAX_HAND_SIZE){
                     AbstractDungeon.player.discardPile.addToTop(c);
                 } else {
-                    AbstractDungeon.player.hand.addToHand(c);
+                    AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(c, false));
                 }
                 cardsToExhaust.add(c);
                 c.unfadeOut();

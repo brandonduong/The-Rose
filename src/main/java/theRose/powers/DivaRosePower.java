@@ -55,10 +55,7 @@ public class DivaRosePower extends AbstractPower implements CloneablePowerInterf
             // Apply passivity to all enemies
             int passivity = this.owner.getPower("theRose:PassivityPower").amount;
 
-            Iterator monsters = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
-
-            while(monsters.hasNext()) {
-                AbstractMonster mo = (AbstractMonster)monsters.next();
+            for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
                 this.addToBot(new ApplyPowerAction(mo, AbstractDungeon.player,
                         new PassivityPower(mo, AbstractDungeon.player, passivity), passivity,
                         true, AbstractGameAction.AttackEffect.NONE));

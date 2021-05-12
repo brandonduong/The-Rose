@@ -47,7 +47,7 @@ public class FriedChicken extends AbstractDynamicCard {
         BaseSecondMagicNumber =  SecondMagicNumber = BUFF;
 
         this.tags.add(CustomTags.FOOD);
-        exhaust = true;
+        this.exhaust = true;
     }
 
     // Actions the card should do.

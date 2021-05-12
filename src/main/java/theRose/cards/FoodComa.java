@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -63,6 +64,9 @@ public class FoodComa extends AbstractDynamicCard {
         // Deal damage
         this.addToBot(
                 new DamageAllEnemiesAction(p, baseDamage + magicNumber, damageTypeForTurn, AbstractGameAction.AttackEffect.SMASH));
+
+        // End turn
+        this.addToBot(new PressEndTurnButtonAction());
     }
 
     //Upgraded stats.

@@ -2,7 +2,6 @@ package theRose.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -17,15 +16,15 @@ import java.util.Iterator;
 
 import static theRose.ModInitializer.makeCardPath;
 
-public class FullForce extends AbstractDynamicCard {
+public class Bloated extends AbstractDynamicCard {
 
     /*
-     * Full Force: Deal !D! damage. Gain !B! Block. If a Food item was eaten this turn, deal and gain !M! extra.
+     * Bloated: Deal !D! damage. Gain !B! Block. If a Food item was eaten this turn, deal and gain !M! extra.
      */
 
     // TEXT DECLARATION
 
-    public static final String ID = ModInitializer.makeID(FullForce.class.getSimpleName());
+    public static final String ID = ModInitializer.makeID(Bloated.class.getSimpleName());
     public static final String IMG = makeCardPath("Attack.png");
 
     // /TEXT DECLARATION/
@@ -38,20 +37,22 @@ public class FullForce extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
-    private static final int DAMAGE = 5;
-    private static final int BLOCK = 3;
-    private static final int DAMAGE_BLOCK_BUFF = 2;
-    private static final int UPGRADE_BASE = 1;
-    private static final int UPGRADE_BUFF = 2;
+    private static final int COST = 0;
+    private static final int DAMAGE = 2;
+    private static final int BLOCK = 2;
+    private static final int DAMAGE_BLOCK_BUFF = 1;
+    private static final int UPGRADE_BASE = 2;
+    private static final int UPGRADE_BUFF = 1;
+    private static final int DRAW = 1;
 
     // /STAT DECLARATION/
 
-    public FullForce() {
+    public Bloated() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         baseBlock = BLOCK;
         baseMagicNumber = magicNumber = DAMAGE_BLOCK_BUFF;
+        baseDraw = DRAW;
     }
 
     // Actions the card should do.
@@ -75,6 +76,9 @@ public class FullForce extends AbstractDynamicCard {
 
             // Gain block
             this.addToBot(new GainBlockAction(p, p, block + magicNumber));
+
+            // Draw cards
+            this.addToBot(new DrawCardAction(p, draw));
         }
 
         else {
@@ -84,6 +88,7 @@ public class FullForce extends AbstractDynamicCard {
             // Gain block
             this.addToBot(new GainBlockAction(p, p, block));
         }
+
     }
 
     // Upgraded stats.

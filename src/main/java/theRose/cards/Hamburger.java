@@ -14,7 +14,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class Hamburger extends AbstractDynamicCard {
 
     /*
-     * Hamburger: Gain 6 Block. This card counts as 3 Food items. Exhaust.
+     * Hamburger: Gain !B! Block. This card counts as !M! Food items. Exhaust.
      */
 
     // TEXT DECLARATION
@@ -34,10 +34,10 @@ public class Hamburger extends AbstractDynamicCard {
 
     private static final int COST = 0;
 
-    private static final int BLOCK = 6;
+    private static final int BLOCK = 3;
 
-    private static final int FOOD_VALUE = 3;
-    private static final int UPGRADE_VALUE = 3;
+    private static final int FOOD_VALUE = 2;
+    private static final int UPGRADE_VALUE = 2;
 
     // /STAT DECLARATION/
 
@@ -47,7 +47,7 @@ public class Hamburger extends AbstractDynamicCard {
         baseMagicNumber = FOOD_VALUE;
 
         this.tags.add(CustomTags.FOOD);
-        exhaust = true;
+        this.exhaust = true;
     }
 
     // Actions the card should do.

@@ -5,6 +5,8 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
@@ -24,6 +26,10 @@ public class Squish extends AbstractDynamicCard {
 
     // /TEXT DECLARATION/
 
+    // Upgraded description
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
 
     // STAT DECLARATION
 
@@ -33,23 +39,23 @@ public class Squish extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 2;
-    private static final int THRESHOLD = 2; // Only work if 2 times their hp
-    private static final int THRESHOLD_UPGRADE = -1; // Only work if 1 times their hp
+    private static final int MULTIPLIER = 2; // half hp
+    private static final int MULTIPLIER_UPGRADE = -2/3; // Only work if 1 times their hp
 
     // /STAT DECLARATION/
 
     public Squish() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = THRESHOLD;
+        baseMagicNumber = MULTIPLIER;
         exhaust = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (m.currentHealth * magicNumber <= p.currentHealth) { // If enemy health below threshold, kill
-            this.addToBot(new DamageAction(m, new DamageInfo(p, p.currentHealth), AbstractGameAction.AttackEffect.SMASH));
-        }
+        baseDamage = damage = p.currentHealth/magicNumber;
+        this.calculateCardDamage(m);
+        this.addToBot(new DamageAction(m, new DamageInfo(p, damage), AbstractGameAction.AttackEffect.SMASH));
     }
 
     // Upgraded stats.
@@ -57,7 +63,8 @@ public class Squish extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(THRESHOLD_UPGRADE);
+            upgradeMagicNumber(MULTIPLIER_UPGRADE);
+            rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

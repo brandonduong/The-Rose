@@ -12,7 +12,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class BigBrainRose extends AbstractDynamicCard {
 
     /*
-     * Big Brain Rose: Scry !M!. Draw 1 card.
+     * Big Brain Rose: Scry !M!. Draw 1 card. Exhaust.
      */
 
     // TEXT DECLARATION
@@ -32,14 +32,16 @@ public class BigBrainRose extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int SCRY = 5;
-    private static final int UPGRADE_SCRY = 2;
     private static final int DRAW = 1;
+    private static final int UPGRADE_DRAW = 1;
 
     // /STAT DECLARATION/
 
     public BigBrainRose() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = SCRY;
+        BaseSecondMagicNumber = SecondMagicNumber = DRAW;
+        this.exhaust = true;
     }
 
     // Actions the card should do.
@@ -49,7 +51,7 @@ public class BigBrainRose extends AbstractDynamicCard {
         this.addToBot(new ScryAction(magicNumber));
 
         // Draw cards
-        this.addToBot(new DrawCardAction(p, DRAW));
+        this.addToBot(new DrawCardAction(p, SecondMagicNumber));
     }
 
     // Upgraded stats.
@@ -57,7 +59,7 @@ public class BigBrainRose extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_SCRY);
+            upgradeSecondMagicNumber(UPGRADE_DRAW);
             initializeDescription();
         }
     }

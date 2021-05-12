@@ -49,7 +49,7 @@ public class LosePenguinPower extends AbstractPower implements CloneablePowerInt
     public void atEndOfTurn(boolean isPlayer) { // At the end of your turn
         this.flash();
         // Remove Flight if stacks will go to 0
-        if (owner.hasPower("Flight") && owner.getPower("Flight").amount == this.amount) {
+        if (owner.hasPower("Flight") && owner.getPower("Flight").amount <= this.amount) {
             this.addToBot(new RemoveSpecificPowerAction(owner, owner, "Flight"));
         }
 
@@ -66,7 +66,7 @@ public class LosePenguinPower extends AbstractPower implements CloneablePowerInt
 
     @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + (-this.amount) + DESCRIPTIONS[1];
+        description = DESCRIPTIONS[0] + (this.amount) + DESCRIPTIONS[1];
     }
 
     @Override

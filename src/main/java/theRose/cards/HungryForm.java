@@ -5,6 +5,7 @@ import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.daily.mods.GreenCards;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -17,7 +18,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class HungryForm extends AbstractDynamicCard {
 
     /*
-     * Hungry Form: At the start of your turn, consume 2 (3) random food item(s).
+     * Hungry Form: At the start of your turn, consume 2 (3) random food item(s). Ethereal.
      */
 
     // TEXT DECLARATION
@@ -38,8 +39,8 @@ public class HungryForm extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 3;
-    private static final int CONSUME = 2; // Consume 1
+    private static final int COST = 1;
+    private static final int CONSUME = 3; // Consume 1
     private static final int CONSUME_UPGRADE = 1; // Add 1 to upgrade
 
     // /STAT DECLARATION/
@@ -48,6 +49,7 @@ public class HungryForm extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = CONSUME;
         this.tags.add(BaseModCardTags.FORM);
+        this.isEthereal = true;
     }
 
     // Actions the card should do.

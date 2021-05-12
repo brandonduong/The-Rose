@@ -37,8 +37,8 @@ public class Angy extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int BUFF = 2;
-    private static final int DRAW = 2;
-    private static final int UPGRADE_DRAW = 1;
+    private static final int DRAW = 1;
+    private static final int UPGRADE_BUFF = 1;
 
     // /STAT DECLARATION/
 
@@ -52,13 +52,13 @@ public class Angy extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        // Draw cards
+        this.addToBot(new DrawCardAction(SecondMagicNumber));
+
         if (damagedLastTurn) {
             // Gain strength
             this.addToBot(new ApplyPowerAction(p, p,
                     new StrengthPower(p, magicNumber)));
-
-            // Draw cards
-            this.addToBot(new DrawCardAction(SecondMagicNumber));
         }
     }
 
@@ -67,7 +67,7 @@ public class Angy extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeSecondMagicNumber(UPGRADE_DRAW);
+            upgradeMagicNumber(UPGRADE_BUFF);
             initializeDescription();
         }
     }

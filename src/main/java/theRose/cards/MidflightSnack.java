@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
+import theRose.actions.RandomFoodConsumeAction;
 import theRose.actions.RandomFoodInHandAction;
 import theRose.actions.ReduceFlightAction;
 import theRose.characters.TheRose;
@@ -21,7 +22,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class MidflightSnack extends AbstractDynamicCard {
 
     /*
-     * Midflight Snack: Can only be played in Flight. Create 1 random (Upgraded) Food item in your hand. Draw 1 card. Lose 1 Flight.
+     * Midflight Snack:
      */
 
     // TEXT DECLARATION
@@ -70,11 +71,11 @@ public class MidflightSnack extends AbstractDynamicCard {
 
         // Create random food item
         for (int i = 0; i < magicNumber; i++) {
-            this.addToBot(new RandomFoodInHandAction(this.upgraded));
+            this.addToBot(new RandomFoodConsumeAction(this.upgraded));
         }
 
-        // Reduce flight
-        this.addToBot(new ReduceFlightAction(magicNumber));
+        // Lose all flight
+        this.addToBot(new RemoveSpecificPowerAction(p, p, "Flight"));
     }
 
     // Upgraded stats.

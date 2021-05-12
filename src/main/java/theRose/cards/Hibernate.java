@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.watcher.PressEndTurnButtonAction;
 import com.megacrit.cardcrawl.cards.red.ThunderClap;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
@@ -72,7 +73,7 @@ public class Hibernate extends AbstractDynamicCard {
         this.addToBot(new ApplyPowerAction(p, p, new EnergizedPower(p, SecondMagicNumber), SecondMagicNumber));
 
         // End turn
-        this.addToBot(new PressEndTurnButtonAction());
+        p.loseEnergy(999);
     }
 
     // Upgraded stats.

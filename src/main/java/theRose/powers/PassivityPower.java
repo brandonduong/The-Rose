@@ -6,8 +6,10 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.EscapeAction;
+import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -41,7 +43,7 @@ public class PassivityPower extends AbstractPower implements CloneablePowerInter
         this.amount = amount;
         this.source = source;
 
-        type = PowerType.BUFF;
+        type = PowerType.DEBUFF;
         isTurnBased = false;
 
         // We load those textures here.
@@ -57,12 +59,12 @@ public class PassivityPower extends AbstractPower implements CloneablePowerInter
         // First milestone reached at >= 25% current HP
         if (milestone == 0 && this.amount >= this.owner.currentHealth * 0.25F) {
             milestone += 1;
-            this.addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new WeakPower(this.owner, 2, false)));
+            this.addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new WeakPower(this.owner, 99, false)));
         }
         // Second milestone reached at >= 50% current HP
         if (milestone == 1 && this.amount >= this.owner.currentHealth * 0.5F) {
             milestone += 1;
-            this.addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new VulnerablePower(this.owner, 2, false)));
+            this.addToBot(new ApplyPowerAction(this.owner, AbstractDungeon.player, new VulnerablePower(this.owner, 99, false)));
         }
 
         // Third milestone reached at >= 75% current HP
@@ -74,34 +76,24 @@ public class PassivityPower extends AbstractPower implements CloneablePowerInter
         // Fourth milestone reached at >= 100% current HP
         if (milestone == 3 && this.amount >= this.owner.currentHealth) {
             milestone += 1;
-
-            this.owner.applyStartOfTurnPowers();
         }
 
         // Prevents softlocks
-        if (AbstractDungeon.getCurrRoom().monsters.monsters.isEmpty()) {
+        if (AbstractDungeon.getCurrRoom().monsters.monsters.isEmpty() || AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
             AbstractDungeon.getCurrRoom().cannotLose = false;
+            this.owner.isDying = true;
         }
-
-        updateDescription();
-
-    }
-
-    @Override
-    public void atStartOfTurn() {
-        onAfterUseCard(null, null);
 
         // Flee handling
         if (!this.owner.isDying && milestone == 4 && !this.owner.isEscaping) {
             this.owner.isEscaping = true;
             AbstractDungeon.actionManager.addToBottom(new TalkAction(this.owner, "Have a good day!", 0.3F, 2.5F));
             AbstractDungeon.actionManager.addToBottom(new EscapeAction((AbstractMonster) this.owner));
+            this.owner.applyStartOfTurnPowers();
         }
-    }
 
-    @Override
-    public void onInitialApplication() {
-        atStartOfTurn();
+        updateDescription();
+
     }
 
     @Override

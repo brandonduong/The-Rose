@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.EnergizedPower;
 import theRose.ModInitializer;
 import theRose.characters.TheRose;
 import theRose.powers.FoodEatenPower;
@@ -49,15 +50,14 @@ public class EnergyDrink extends AbstractDynamicCard {
         SecondMagicNumber = BaseSecondMagicNumber = FLIGHT;
 
         this.tags.add(CustomTags.FOOD);
-        exhaust = true;
+        this.exhaust = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Gain Energy
-        AbstractDungeon.actionManager.addToBottom(
-                new GainEnergyAction(ENERGY_GAIN));
+        this.addToBot(new ApplyPowerAction(p, p, new EnergizedPower(p, ENERGY_GAIN), ENERGY_GAIN));
 
         // Gain Flight
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,

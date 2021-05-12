@@ -36,7 +36,7 @@ public class BeakDive extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 11;
+    private static final int DAMAGE = 7;
     private static final int UPGRADE_DAMAGE = 3;
 
     // /STAT DECLARATION/

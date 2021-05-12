@@ -45,6 +45,7 @@ public class WitchRose extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = CREATE;
         baseDamage = THUNDER_DAMAGE;
+        this.exhaust = true;
     }
 
     // Actions the card should do.

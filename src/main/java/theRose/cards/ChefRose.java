@@ -62,7 +62,7 @@ public class ChefRose extends AbstractDynamicCard {
         this.addToBot(new RandomFoodInHandAction(this.upgraded));
 
         // Create random food item in discard pile
-        this.addToBot(new RandomFoodInDiscardAction(this.upgraded, magicNumber));
+        // this.addToBot(new RandomFoodInDiscardAction(this.upgraded, magicNumber));
 
     }
 

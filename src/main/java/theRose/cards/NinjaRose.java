@@ -17,7 +17,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class NinjaRose extends AbstractDynamicCard {
 
     /*
-     * NinjaRose: Choose one: Create 1 (Upgraded) Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi, in your hand.
+     * NinjaRose: Choose one: Create any (Upgraded) "Rose" card in your hand. Ethereal. Exhaust.
      */
 
     // TEXT DECLARATION
@@ -48,6 +48,8 @@ public class NinjaRose extends AbstractDynamicCard {
     public NinjaRose() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = CHOOSE;
+        this.isEthereal = true;
+        this.exhaust = true;
     }
 
     // Actions the card should do.
@@ -61,7 +63,7 @@ public class NinjaRose extends AbstractDynamicCard {
         roseChoices.add(new BRose());
         roseChoices.add(new ChefRose());
         roseChoices.add(new DivaRose());
-        roseChoices.add(new ChefRose());
+        // roseChoices.add(new ChefRose());
         roseChoices.add(new LunchLadyRose());
         roseChoices.add(new NinjaRose());
         roseChoices.add(new StealthRose());

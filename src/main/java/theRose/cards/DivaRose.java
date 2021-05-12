@@ -13,7 +13,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class DivaRose extends AbstractDynamicCard {
 
     /*
-     * Diva Rose: Apply !M! Passivity. When this enemy flees, apply its Passivity to all enemies.
+     * Diva Rose: Apply !M! Passivity. When this enemy flees, apply its Passivity to all enemies. Exhaust.
      */
 
     // TEXT DECLARATION
@@ -31,8 +31,8 @@ public class DivaRose extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 2;
-    private static final int STACKS = 4; // Passivity
+    private static final int COST = 1;
+    private static final int STACKS = 6; // Passivity
     private static final int UPGRADE_STACK = 3;
     private static final int BUFF = 1;
 
@@ -42,15 +42,16 @@ public class DivaRose extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = magicNumber = STACKS;
         BaseSecondMagicNumber = SecondMagicNumber = BUFF;
+        exhaust = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new ApplyPowerAction(m, p, new DivaRosePower(m, p, SecondMagicNumber)));
+
         // Apply Passivity
         this.addToBot(new ApplyPowerAction(m, p, new PassivityPower(m, p, magicNumber), magicNumber));
-
-        this.addToBot(new ApplyPowerAction(m, p, new DivaRosePower(m, p, SecondMagicNumber)));
     }
 
     // Upgraded stats.

@@ -54,7 +54,7 @@ public class Donut extends AbstractDynamicCard {
         baseMagicNumber = FOOD_VALUE;
 
         this.tags.add(CustomTags.FOOD);
-        exhaust = true;
+        this.exhaust = true;
     }
 
     // Actions the card should do.

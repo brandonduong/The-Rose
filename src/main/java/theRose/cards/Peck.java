@@ -36,10 +36,11 @@ public class Peck extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
+    private static final int UPGRADE_COST = 0;
     private static final int BUFF = 1; // Vulnerable stacks
-    private static final int UPGRADE_BUFF = 1;
+    //private static final int UPGRADE_BUFF = 1;
     private static final int BUFF_2 = 1; // Weak stacks
-    private static final int UPGRADE_BUFF_2 = 1;
+    //private static final int UPGRADE_BUFF_2 = 1;
 
     // /STAT DECLARATION/
 
@@ -60,7 +61,7 @@ public class Peck extends AbstractDynamicCard {
         if (p.hasPower("Flight")) {
             this.addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.SecondMagicNumber, false), this.SecondMagicNumber));
 
-            baseDamage = p.getPower("Flight").amount;
+            damage = baseDamage = p.getPower("Flight").amount;
             this.calculateCardDamage(m);
 
             // Deal damage
@@ -75,8 +76,9 @@ public class Peck extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_BUFF);
-            upgradeSecondMagicNumber(UPGRADE_BUFF_2);
+            //upgradeMagicNumber(UPGRADE_BUFF);
+            //upgradeSecondMagicNumber(UPGRADE_BUFF_2);
+            upgradeBaseCost(UPGRADE_COST);
             initializeDescription();
         }
     }

@@ -25,7 +25,7 @@
   },
   "theRose:BeakDrill": {
     "NAME": "Beak Drill",
-    "DESCRIPTION": "Deal !D! damage 2X times."
+    "DESCRIPTION": "Deal !D! damage !M!X times."
   },
   "theRose:BeakDive": {
     "NAME": "Beak Dive",
@@ -33,7 +33,7 @@
   },
   "theRose:Peck": {
     "NAME": "Peck",
-    "DESCRIPTION": "Apply !M! vulnerable. If in Flight, apply !theRose:SecondMagic! Weak. Deal damage equal to your current Flight."
+    "DESCRIPTION": "Deal damage equal to your current Flight. Apply !M! Vulnerable. NL If in Flight, apply !theRose:SecondMagic! Weak."
   },
   "theRose:UberDishes": {
     "NAME": "UberDishes",
@@ -42,7 +42,7 @@
   },
   "theRose:EnergyDrink": {
     "NAME": "Energy Drink",
-    "DESCRIPTION": "Gain 1 Energy. Gain !theRose:SecondMagic! Flight. NL Exhaust."
+    "DESCRIPTION": "Next turn gain 1 [E]. Gain !theRose:SecondMagic! Flight. NL Exhaust."
   },
   "theRose:Donut": {
     "NAME": "Donut",
@@ -58,29 +58,28 @@
   },
   "theRose:Hamburger": {
     "NAME": "Hamburger",
-    "DESCRIPTION": "Gain !B! Block. This cards counts as 3 Food items. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. This cards counts as !M! Food items. NL Exhaust."
   },
   "theRose:HungryForm": {
     "NAME": "Hungry Form",
-    "DESCRIPTION": "At the start of your turn, Eat !M! random Food items."
+    "DESCRIPTION": "At the start of your turn, Eat !M! random Food items. Ethereal."
   },
   "theRose:Reorder": {
     "NAME": "Reorder",
-    "DESCRIPTION": "Return all Exhausted Food items to your hand. NL Exhaust."
+    "DESCRIPTION": "Play all Exhausted Food items to your hand. NL Exhaust."
   },
   "theRose:BellyBump": {
     "NAME": "Belly Bump",
-    "DESCRIPTION": "Deal damage equal to 3 times your Food Eaten counter.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to 4 times your Food Eaten counter."
+    "DESCRIPTION": "Deal damage equal to !theRose:SecondMagic! times your Food Eaten counter. Halve the counter."
   },
   "theRose:LunchLadyRose": {
     "NAME": "Lunch Lady Rose",
-    "DESCRIPTION": "Apply !M! Passivity for the number of Food items in your hand. Exhaust all Food items."
+    "DESCRIPTION": "Apply !M! Passivity. Apply a random Food item."
   },
   "theRose:ChefRose": {
     "NAME": "Chef Rose",
-    "DESCRIPTION": "Deal !D! damage. Create a random Food item in your hand and discard pile.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Create a random Upgraded Food item to your hand and discard pile."
+    "DESCRIPTION": "Deal !D! damage. Create a random Food item in your hand.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. Create a random Upgraded Food item to your hand."
   },
   "theRose:TakesiesBacksies" : {
     "NAME": "Takesies Backsies",
@@ -91,7 +90,7 @@
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Passivity. NL Add a copy of this card to your discard pile."
   },
   "theRose:StayStill": {
-    "NAME": "Stay Still!",
+    "NAME": "Play Dead",
     "DESCRIPTION": "Can only be played if no Attack was played this turn. Apply !M! Passivity to all enemies. End your turn."
   },
   "theRose:Sprint": {
@@ -104,16 +103,16 @@
   },
   "theRose:EarlyBird": {
     "NAME": "Early Bird",
-    "DESCRIPTION": "Gain !M! Flight. Deal damage equal to 2 times your current Flight. Add a random Food item to your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Flight. Deal damage equal to 2 times your current Flight. Add !theRose:SecondMagic! random Food items to your hand."
+    "DESCRIPTION": "Gain !M! Flight. Deal damage equal to your current Flight. Add a random Food item to your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !M! Flight. Deal damage equal to your current Flight. Add !theRose:SecondMagic! random Food items to your hand."
   },
   "theRose:Chat": {
     "NAME": "Chat",
     "DESCRIPTION": "Apply !M! Passivity. If an enemy does not intend to attack, apply an extra !theRose:SecondMagic! Passivity."
   },
   "theRose:AFishADay": {
-    "NAME": "A Fish a Day!",
-    "DESCRIPTION": "Gain !M! Artifact. At the end of this turn, lose !M! Artifact. NL Exhaust."
+    "NAME": "Funky Fish",
+    "DESCRIPTION": "Gain !M! Artifact. At the start of your next turn, lose !M! Artifact. NL Exhaust."
   },
   "theRose:FoodFight": {
     "NAME": "Food Fight!",
@@ -121,7 +120,8 @@
   },
   "theRose:Squish": {
     "NAME": "Squish",
-    "DESCRIPTION": "If your current HP is over or equal to !M! times the enemy's, set their HP to 0. NL Exhaust."
+    "DESCRIPTION": "Deal damage equal to 50% of your current HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to 75% of your current HP. NL Exhaust."
   },
   "theRose:TriplerFlap": {
     "NAME": "Tripler Flap",
@@ -135,11 +135,11 @@
   },
   "theRose:FlapFrenzy": {
     "NAME": "Flap Frenzy",
-    "DESCRIPTION": "Play a Flipper Flap for each Flipper Flap played this combat. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Play an Upgraded Flipper Flap for each Flipper Flap played this combat. Exhaust."
+    "DESCRIPTION": "Play a Flipper Flap for each 0-cost card played this combat. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Play an Upgraded Flipper Flap for each 0-cost card played this combat. NL Exhaust."
   },
   "theRose:FluffyFurFlex": {
-    "NAME": "Fluffy Fur Flex",
+    "NAME": "Fur Flex",
     "DESCRIPTION": "Gain !B! Block. Gain !M! Thorns. At the start of your next turn, lose !M! Thorns."
   },
   "theRose:RefrigeratorRaid": {
@@ -161,15 +161,15 @@
   },
   "theRose:MidflightSnack": {
     "NAME": "Midflight Snack",
-    "DESCRIPTION": "Deal damage equal to !theRose:SecondMagic! times your current Flight. NL Create !M! random Food item in your hand. NL Lose 1 Flight.",
-    "UPGRADE_DESCRIPTION": "Deal damage equal to !theRose:SecondMagic! times your current Flight. NL Create !M! random Upgraded Food item in your hand. NL Lose 1 Flight."
+    "DESCRIPTION": "Deal damage equal to !theRose:SecondMagic! times your current Flight. NL Eat !M! random Food items. NL Lose all Flight.",
+    "UPGRADE_DESCRIPTION": "Deal damage equal to !theRose:SecondMagic! times your current Flight. NL Eat !M! random Upgraded Food items. NL Lose all Flight."
   },
   "theRose:PermanentChub": {
     "NAME": "Big Chubster",
     "DESCRIPTION": "Gain Block equal to the number of Food items eaten this game. Exhaust."
   },
   "theRose:ShinyBeakAndMe": {
-    "NAME": "Shiny Beak And Me!",
+    "NAME": "Blinding Beak!",
     "DESCRIPTION": "Apply !M! Passivity and !theRose:SecondMagic! Weak to all enemies."
   },
   "theRose:LucidDream": {
@@ -178,8 +178,8 @@
   },
   "theRose:GrannyKiss": {
     "NAME": "Granny Kiss!",
-    "DESCRIPTION": "Double the enemy's Passivity. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Triple the enemy's Passivity. Exhaust."
+    "DESCRIPTION": "Double the enemy's Passivity. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Triple the enemy's Passivity. NL Exhaust."
   },
   "theRose:NappyTime": {
     "NAME": "Nappy Time!",
@@ -187,11 +187,11 @@
   },
   "theRose:Angy": {
     "NAME": "Angy!",
-    "DESCRIPTION": "If you took damage last turn, gain !M! Strength and Draw 1 card."
+    "DESCRIPTION": "Draw 1 card. If you took damage last turn, gain !M! Strength."
   },
   "theRose:Hibernate": {
     "NAME": "Hibernate",
-    "DESCRIPTION": "Gain !B! Block. Eat !M! random Food items. Next turn, gain 1 [E]. End your turn."
+    "DESCRIPTION": "Gain !B! Block. Eat !M! random Food items. Next turn, gain 1 [E]. NL Lose all energy."
   },
   "theRose:Thunder": {
     "NAME": "Thunder",
@@ -199,12 +199,12 @@
   },
   "theRose:WitchRose": {
     "NAME": "Witch Rose",
-    "DESCRIPTION": "Create !M! Thunder in your discard pile."
+    "DESCRIPTION": "Create !M! Thunder in your discard pile. NL Exhaust."
   },
   "theRose:Overstory": {
     "NAME": "Overstory",
-    "DESCRIPTION": "Create an Exhausting Ethereal Beak Dive, Chat, random Food item, and Stay Still! in your hand.",
-    "UPGRADE_DESCRIPTION": "Create an Upgraded Exhausting Ethereal Beak Dive, Chat, random Food item, and Stay Still! in your hand."
+    "DESCRIPTION": "Create a random Food item in your hand. Choose one: Create an Exhaust Ethereal Beak Dive, Chat, or Play Dead in your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Create a random Food item in your hand. Choose one: Create an Upgraded Exhaust Ethereal Beak Dive, Chat, or Play Dead in your hand. NL Exhaust."
   },
   "theRose:TreadmillTreat": {
     "NAME": "Treadmill Treat",
@@ -217,15 +217,15 @@
   },
   "theRose:DivaRose": {
     "NAME": "Diva Rose",
-    "DESCRIPTION": "Apply !M! Passivity. When this enemy flees, apply its Passivity to all enemies."
+    "DESCRIPTION": "Apply !M! Passivity. When this enemy flees, apply its Passivity to all enemies. NL Exahust."
   },
   "theRose:BigBrainRose": {
     "NAME": "Big Brain Rose",
-    "DESCRIPTION": "Scry !M!. Draw 1 card."
+    "DESCRIPTION": "Scry !M!. Draw !theRose:SecondMagic! card. NL Exhaust."
   },
   "theRose:Munch": {
     "NAME": "Munch",
-    "DESCRIPTION": "Deal !D! damage. If Fatal, raise your Max Hp by !M!. Exhaust."
+    "DESCRIPTION": "Deal !D! damage. If Fatal, raise your Max Hp by !M!. NL Exhaust."
   },
   "theRose:PickyEater": {
     "NAME": "Picky Eater",
@@ -245,23 +245,23 @@
     "NAME": "Mission Accomplished.",
     "DESCRIPTION": "Agent Rose has fulfilled her assigned duties. NL Deal !D! to all enemies. Gain !M! Gold. Exhaust."
   },
-  "theRose:FullForce": {
-    "NAME": "Full Force",
-    "DESCRIPTION": "Deal !D! damage. Gain !B! Block. If a Food item was eaten this turn, deal and gain !M! extra."
+  "theRose:Bloated": {
+    "NAME": "Bloated",
+    "DESCRIPTION": "Deal !D! damage. Gain !B! Block. If a Food item was eaten this turn, deal and gain !M! extra, and Draw 1 card."
   },
   "theRose:BabyRose": {
     "NAME": "Baby Rose",
-    "DESCRIPTION": "Gain !theRose:SecondMagic! Flired Up. Create !M! Picky Eater in your discard pile.",
-    "UPGRADE_DESCRIPTION": "Gain !theRose:SecondMagic! Flired Up. Create !M! Upgraded Picky Eater in your discard pile."
+    "DESCRIPTION": "Gain !theRose:SecondMagic! Flipped Off. Choose one: Create a Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi, in your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !theRose:SecondMagic! Flipped Off. Choose one: Create an Upgraded Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi, in your hand."
   },
   "theRose:BRose": {
-    "NAME": "BRose",
-    "DESCRIPTION": "Gain !theRose:SecondMagic! Flired Up."
+    "NAME": "Body Builder Rose",
+    "DESCRIPTION": "Gain !theRose:SecondMagic! Flipped Off."
   },
   "theRose:NinjaRose": {
     "NAME": "Ninja Rose",
-    "DESCRIPTION": "Choose one: Create any \"Rose\" card in your hand.",
-    "UPGRADE_DESCRIPTION": "Choose one: Create any Upgraded \"Rose\" card in your hand."
+    "DESCRIPTION": "Choose one: Create any \"Rose\" card in your hand. NL Ethereal. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose one: Create any Upgraded \"Rose\" card in your hand. NL Ethereal. NL Exhaust."
   },
   "theRose:BigBlubber": {
     "NAME": "Big Blubber",
@@ -269,7 +269,7 @@
   },
   "theRose:FoodComa": {
     "NAME": "Food Coma",
-    "DESCRIPTION": "Increase your Food Eaten counter by !M!. Deal damage to all enemies equal to your Food Eaten counter. End your turn."
+    "DESCRIPTION": "Increase your Food Eaten counter by !M!. Deal damage equal to your Food Eaten counter to all enemies. End your turn."
   },
 
 
@@ -295,7 +295,7 @@
   },
   "theRose:Betray": {
     "NAME": "Betray",
-    "DESCRIPTION": "Deal damage equal to 2 times an enemy's Passivity. Reduce Passivity to 0. Feel Guilty."
+    "DESCRIPTION": "Instantly kill any non-boss, non-elite enemy that has at least 1 stack of Passivity. Remove this card from your deck."
   },
   "theRose:Reunion": {
     "NAME": "Reunion",
@@ -381,7 +381,7 @@
   },
   "theRose:Compost": {
     "NAME": "Compost",
-    "DESCRIPTION": "Exhaust a Food item. Gain 1 Energy."
+    "DESCRIPTION": "Exhaust a Food item. Gain 1 [E]."
   },
   "theRose:PenguinBackRide": {
     "NAME": "Penguin Back Ride",

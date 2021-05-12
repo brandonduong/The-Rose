@@ -12,7 +12,7 @@
       "flight",
       "Flight"
     ],
-    "DESCRIPTION": "Reduce #yAttack damage taken by #b25%. Reduce #yBlock gained by #b12.5%. Lose 1 stack when damage is taken."
+    "DESCRIPTION": "Reduce #yAttack damage taken by #b25%. Reduce #yBlock gained by #b20%. Lose 1 stack when damage is taken."
   },
   {
     "PROPER_NAME": "Flipper Flap",
@@ -23,14 +23,14 @@
       "flipper",
       "flap"
     ],
-    "DESCRIPTION": "Flipper Flaps are 0-cost Attack cards dealing 1 damage to a random enemy 2 (3) times, and gain 1 Flight. Exhaust."
+    "DESCRIPTION": "Flipper Flaps are 0-cost Attack cards dealing 1 (2) damage to a random enemy 2 times, and gain 1 Flight. Exhaust."
   },
   {
     "NAMES": [
       "Food",
       "food"
     ],
-    "DESCRIPTION": "Food items are a variety of 0-cost Skill cards that grant small bonuses. Exhaust. If Upgraded, counts as twice the amount of food eaten."
+    "DESCRIPTION": "Food items are a variety of 0-cost Skill cards that grant small bonuses. Ethereal. Exhaust. If Upgraded, counts as twice the amount of food eaten."
   },
   {
     "NAMES": [
@@ -59,7 +59,7 @@
       "Bomb",
       "bomb"
     ],
-    "DESCRIPTION": "Agent Rose's Bomb is a 10 (8) cost card that deals 100 damage to all enemies. Whenever drawn, its cost is reduced by 1."
+    "DESCRIPTION": "Agent Rose's Bomb is a 10 (8) cost card that deals 100 damage to all enemies and gives 50 gold. Whenever drawn, its cost is reduced by 1."
   },
   {
     "PROPER_NAME": "Picky Eater",
@@ -73,13 +73,13 @@
     "DESCRIPTION": "Picky Eaters are 0-cost Skill cards that read \"Choose one: Create 1 (Upgraded) Donut, Energy Drink, Fried Chicken, Hamburger, or Sushi, in your hand.\""
   },
   {
-   "PROPER_NAME": "Flired Up",
+   "PROPER_NAME": "Flipped Off",
     "NAMES": [
-      "Flired Up",
-      "Flired",
-      "Up",
-      "flired",
-      "up"
+      "Flipped Off",
+      "Flipped",
+      "Off",
+      "flipped",
+      "off"
     ],
     "DESCRIPTION": "Your next Attack deals X extra damage."
   }

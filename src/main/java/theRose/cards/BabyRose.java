@@ -9,11 +9,14 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import theRose.ModInitializer;
+import theRose.actions.ChoiceAction;
 import theRose.actions.RandomFoodInDiscardAction;
 import theRose.actions.RandomFoodInDrawAction;
 import theRose.characters.TheRose;
 import theRose.powers.FliredUpPower;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.concurrent.ThreadLocalRandom;
 
 import static theRose.ModInitializer.makeCardPath;
@@ -62,8 +65,25 @@ public class BabyRose extends AbstractDynamicCard {
         this.addToBot(new ApplyPowerAction(p, p,
                 new FliredUpPower(p, p, SecondMagicNumber)));
 
-        AbstractCard card = new PickyEater();
-        this.addToBot(new MakeTempCardInDiscardAction(card, magicNumber));
+        // Create list of choices
+        ArrayList<AbstractCard> foodChoices = new ArrayList<AbstractCard>();
+        foodChoices.add(new Donut());
+        foodChoices.add(new EnergyDrink());
+        foodChoices.add(new FriedChicken());
+        foodChoices.add(new Hamburger());
+        foodChoices.add(new Sushi());
+
+        if (this.upgraded) {
+            Iterator choices = foodChoices.iterator();
+
+            while(choices.hasNext()) {
+                AbstractCard c = (AbstractCard)choices.next();
+                c.upgrade();
+            }
+        }
+
+        // Create choice action
+        this.addToBot(new ChoiceAction(this.upgraded, foodChoices));
     }
 
 

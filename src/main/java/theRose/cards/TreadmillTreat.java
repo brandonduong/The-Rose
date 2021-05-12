@@ -1,17 +1,11 @@
 package theRose.cards;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardQueueItem;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
-import theRose.actions.ReduceFlightAction;
+import theRose.actions.TreadmillTreatFollowUpAction;
 import theRose.characters.TheRose;
-import theRose.powers.FoodEatenPower;
 
 import static theRose.ModInitializer.makeCardPath;
 
@@ -35,7 +29,7 @@ public class TreadmillTreat extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
-    private static final int COST = 0;
+    private static final int COST = 1;
 
     private static final int DRAW = 3;
     private static final int UPGRADE_DRAW = 2;
@@ -50,21 +44,8 @@ public class TreadmillTreat extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard card;
-        int cards = p.drawPile.size();
-
-        for(int i = 0; i < magicNumber && i < cards; i++) {
-            card = p.drawPile.getTopCard();
-            if (card.cost == 0) {
-                p.draw(1);
-                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(card, true,
-                        0, true, true));
-            }
-
-            else {
-                p.draw(1);
-                this.addToBot(new DiscardSpecificCardAction(card));
-            }
+        for(int i = 0; i < magicNumber; i++) {
+            this.addToBot(new TreadmillTreatFollowUpAction());
         }
     }
 

@@ -57,7 +57,7 @@ public class FlapFrenzy extends AbstractDynamicCard {
 
         while(cardsPlayed.hasNext()) {
             AbstractCard card = (AbstractCard)cardsPlayed.next();
-            if (card instanceof FlipperFlap) {
+            if (card.cost == 0) {
                 ++flipperFlaps;
             }
         }

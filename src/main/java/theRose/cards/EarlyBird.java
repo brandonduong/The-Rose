@@ -43,7 +43,7 @@ public class EarlyBird extends AbstractDynamicCard {
     private static final int BUFF = 2; // Give 1 Penguin Flight
     private static final int CREATE = 1; // Create random food items
     private static final int UPGRADE_BUFF = 1;
-    private static final int MULTIPLIER = 2;
+    private static final int MULTIPLIER = 1;
 
 
     // /STAT DECLARATION/

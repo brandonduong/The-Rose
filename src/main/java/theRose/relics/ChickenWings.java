@@ -5,11 +5,14 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.defect.EvokeOrbAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
 import theRose.ModInitializer;
@@ -23,7 +26,7 @@ public class ChickenWings extends CustomRelic implements ClickableRelic { // You
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
      * StSLib for Clickable Relics
      *
-     * Usable once per fight. Right click: Heal for a percent of your current block. (10% + 5% for every other food relic)
+     * Usable once per fight. Right click: Gain 2 Strength. At the end of this turn, lose 2 Strength.
      */
 
     // ID, images, text.
@@ -60,8 +63,13 @@ public class ChickenWings extends CustomRelic implements ClickableRelic { // You
             // AbstractDungeon.actionManager.addToBottom(new VFXAction( // Visual Effect Action of the nails applies on a random monster's position.
             //        new CollectorCurseEffect(AbstractDungeon.getRandomMonster().hb.cX, AbstractDungeon.getRandomMonster().hb.cY), 2.0F));
 
-            AbstractDungeon.actionManager.addToBottom(new HealAction(AbstractDungeon.player,
-                    AbstractDungeon.player, (AbstractDungeon.player.currentBlock / 10))); // Heal for 10% of current block + 5% for each food relic
+            // Gain 1 Strength
+            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(
+                    AbstractDungeon.player, 2), 2));
+
+            // Gain 1 Stacks of Lose Strength Power
+            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseStrengthPower(
+                    AbstractDungeon.player, 2), 2));
         }
         // See that talk action? It has DESCRIPTIONS[1] instead of just hard-coding "You are mine" inside.
         // DO NOT HARDCODE YOUR STRINGS ANYWHERE, it's really bad practice to have "Strings" in your code:
@@ -86,7 +94,9 @@ public class ChickenWings extends CustomRelic implements ClickableRelic { // You
 
     public void atTurnStart() {
         isPlayerTurn = true; // It's our turn!
-        beginLongPulse(); // Pulse while the player can click on it.
+        if (!usedThisFight) {
+            beginLongPulse(); // Pulse while the player can click on it.
+        }
     }
     
     @Override

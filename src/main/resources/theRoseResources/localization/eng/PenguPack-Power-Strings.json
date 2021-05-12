@@ -9,7 +9,7 @@
 },
 "theRose:PenguinFlight": {
         "NAME": "Flight",
-        "DESCRIPTIONS": ["Reduce #yAttack damage taken by #b25%. Reduce #yBlock gained by #b12.5%. Lose 1 stack when damage is taken."]
+        "DESCRIPTIONS": ["Reduce #yAttack damage taken by #b25%. Reduce #yBlock gained by #b20%. Lose 1 stack when damage is taken."]
 },
 "theRose:TemperTantrumPower": {
         "NAME": "Temper Tantrum",
@@ -52,7 +52,7 @@
         "DESCRIPTIONS": ["When this enemy flees, apply its Passivity to all enemies."]
 },
 "theRose:FliredUpPower": {
-        "NAME": "Flired Up!",
+        "NAME": "Flipped Off!",
         "DESCRIPTIONS": ["Your next Attack deals #b", " extra damage."]
 }
 }

@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -37,7 +38,7 @@ public class FliredUpPower extends AbstractPower implements CloneablePowerInterf
         this.amount = amount;
         this.source = source;
 
-        type = PowerType.DEBUFF;
+        type = PowerType.BUFF;
         isTurnBased = false;
 
         // We load those textures here.
@@ -52,11 +53,14 @@ public class FliredUpPower extends AbstractPower implements CloneablePowerInterf
         return type == DamageInfo.DamageType.NORMAL ? damage + (float)this.amount : damage;
     }
 
-    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        this.flash();
+    public void onUseCard(AbstractCard card, UseCardAction action) {
+        if (card.type == AbstractCard.CardType.ATTACK) {
+            this.flash();
 
-        // Remove FliredUpPower
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "theRose:FliredUpPower"));
+            // Remove FliredUpPower
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, "theRose:FliredUpPower"));
+        }
+
     }
 
 

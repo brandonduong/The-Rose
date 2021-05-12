@@ -3,15 +3,23 @@
     "NAME": "Penguin Wings",
     "FLAVOR": "Chicken wing defence.",
     "DESCRIPTIONS": [
-      "Gain #b1 #yFlight at the start of every battle."
+      "[#2aecd7]Usable [#2aecd7]once [#2aecd7]per [#2aecd7]battle.[] NL Gain #b1 #yFlight.",
+      "Wee!"
     ]
   },
   "theRose:ChickenWings": {
     "NAME": "Chicken Wings",
-    "FLAVOR": "Tasty. She acquired this cannibalistic taste from her sweet carer.",
+    "FLAVOR": "Tasty. Reminiscent of her sweet carer.",
     "DESCRIPTIONS": [
-      "[#2aecd7]Usable [#2aecd7]once [#2aecd7]per [#2aecd7]battle.[] NL #yHeal for 10% of your current block + 5% for every food relic.",
+      "[#2aecd7]Usable [#2aecd7]once [#2aecd7]per [#2aecd7]battle.[] NL Gain #b2 #yStrength. At the end of this turn, lose #b2 #yStrength.",
       "Mmm!"
+    ]
+  },
+  "theRose:PidgeonWings": {
+    "NAME": "Pidgeon Wings",
+    "FLAVOR": "Don't ask where these came from.",
+    "DESCRIPTIONS": [
+      "At the start of each battle, gain #b3 #yFlight."
     ]
   },
   "theRose:BottledPlaceholderRelic": {

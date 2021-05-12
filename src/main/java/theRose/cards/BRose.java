@@ -14,7 +14,7 @@ import static theRose.ModInitializer.makeCardPath;
 public class BRose extends AbstractDynamicCard {
 
     /*
-     * Ninja Rose: Gain !theRose:SecondMagic! Flired Up.
+     * Body Builder Rose: Gain !theRose:SecondMagic! Flired Up.
      */
 
     // TEXT DECLARATION
@@ -37,8 +37,8 @@ public class BRose extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 0;
-    private static final int BUFF = 4;
-    private static final int UPGRADE_BUFF = 1;
+    private static final int BUFF = 3;
+    private static final int UPGRADE_BUFF = 2;
     // /STAT DECLARATION/
 
     public BRose() {

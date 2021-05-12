@@ -3,12 +3,12 @@ package theRose;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
+import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.utils.compression.lzma.Base;
 import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
@@ -32,6 +32,7 @@ import theRose.fields.BefriendedSave;
 import theRose.fields.FoodEatenSave;
 import theRose.relics.ChickenWings;
 import theRose.relics.PenguinWings;
+import theRose.relics.PidgeonWings;
 import theRose.util.TextureLoader;
 import theRose.util.IDCheckDontTouchPls;
 import theRose.variables.RoseCustomVariable;
@@ -393,7 +394,8 @@ public class ModInitializer implements
 
         // BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
 
-        BaseMod.addRelicToCustomPool(new ChickenWings(), TheRose.Enums.COLOR_GRAY);
+        BaseMod.addRelic(new ChickenWings(), RelicType.SHARED);
+        BaseMod.addRelic(new PidgeonWings(), RelicType.SHARED);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         //BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
@@ -482,11 +484,11 @@ public class ModInitializer implements
         BaseMod.addCard(new DivaRose());
         BaseMod.addCard(new BigBrainRose());
         BaseMod.addCard(new Munch());
-        BaseMod.addCard(new PickyEater());
+        //BaseMod.addCard(new PickyEater());
         BaseMod.addCard(new AgentRose());
         BaseMod.addCard(new Bomb());
         BaseMod.addCard(new MissionAccomplished());
-        BaseMod.addCard(new FullForce());
+        BaseMod.addCard(new Bloated());
         BaseMod.addCard(new BabyRose());
         BaseMod.addCard(new BRose()); // 60th card
         BaseMod.addCard(new NinjaRose());

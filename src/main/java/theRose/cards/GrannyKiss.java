@@ -55,8 +55,8 @@ public class GrannyKiss extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int current = 0;
-        if (m.hasPower("theRose:Passivity")) {
-            current = m.getPower("theRose:Passivity").amount;
+        if (m.hasPower("theRose:PassivityPower")) {
+            current = m.getPower("theRose:PassivityPower").amount;
         }
 
         // Apply Passivity

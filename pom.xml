@@ -62,7 +62,7 @@
                         <phase>package</phase>
                         <configuration>
                             <target>
-                                <copy file="target/theRose.jar" tofile="C:/Program Files (x86)/steam/steamapps/common/SlayTheSpire/mods/theRose.jar"/>
+                                <copy file="target/theRose.jar" tofile="D:/Program Files (x86)/steam/steamapps/common/SlayTheSpire/mods/theRose.jar"/>
                             </target>
                         </configuration>
                         <goals>

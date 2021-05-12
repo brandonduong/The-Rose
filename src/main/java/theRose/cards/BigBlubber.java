@@ -33,7 +33,7 @@ public class BigBlubber extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int BUFF = 3;
+    private static final int BUFF = 2;
     private static final int UPGRADE_BUFF = 1;
 
     // /STAT DECLARATION/
@@ -55,8 +55,10 @@ public class BigBlubber extends AbstractDynamicCard {
         if (p.hasPower("theRose:FoodEatenPower")) {
             counter = p.getPower("theRose:FoodEatenPower").amount;
         }
+        baseBlock = block = counter + magicNumber;
+        this.applyPowersToBlock();
 
-        this.addToBot(new GainBlockAction(p, p, counter + magicNumber));
+        this.addToBot(new GainBlockAction(p, p, block));
     }
 
     //Upgraded stats.

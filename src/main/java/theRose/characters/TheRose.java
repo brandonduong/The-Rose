@@ -62,8 +62,8 @@ public class TheRose extends CustomPlayer {
     // =============== BASE STATS =================
 
     public static final int ENERGY_PER_TURN = 3;
-    public static final int STARTING_HP = 70;
-    public static final int MAX_HP = 70;
+    public static final int STARTING_HP = 60;
+    public static final int MAX_HP = 60;
     public static final int STARTING_GOLD = 99;
     public static final int CARD_DRAW = 5;
     public static final int ORB_SLOTS = 0;
@@ -168,12 +168,6 @@ public class TheRose extends CustomPlayer {
 
         retVal.add(Fly.ID);
         retVal.add(Peck.ID);
-
-        retVal.add(BabyRose.ID);
-        retVal.add(NinjaRose.ID);
-        retVal.add(BRose.ID);
-        retVal.add(BigBlubber.ID);
-        retVal.add(FoodComa.ID);
 
         return retVal;
     }

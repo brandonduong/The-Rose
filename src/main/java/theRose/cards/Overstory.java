@@ -7,18 +7,22 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theRose.ModInitializer;
+import theRose.actions.ChoiceAction;
 import theRose.actions.RandomFoodInHandAction;
 import theRose.cards.overstory.BeakDiveOverstory;
 import theRose.cards.overstory.ChatOverstory;
 import theRose.cards.overstory.StayStillOverstory;
 import theRose.characters.TheRose;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 import static theRose.ModInitializer.makeCardPath;
 
 public class Overstory extends AbstractDynamicCard {
 
     /*
-     * Overstory: Add an (Upgraded) Exhaustive Ethereal Beak Dive, Chat, random Food item, and Stay Still! to your hand.
+     * Overstory: Add an (Upgraded) Exhaustive Ethereal Beak Dive, Chat, random Food item, and Stay Still! to your hand. Exhaust.
      */
 
     // TEXT DECLARATION
@@ -45,35 +49,33 @@ public class Overstory extends AbstractDynamicCard {
 
     public Overstory() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        this.exhaust = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Create a Beak Dive
-        AbstractCard card = new BeakDiveOverstory();
-        if (this.upgraded) {
-            card.upgrade();
-        }
-        this.addToBot(new MakeTempCardInHandAction(card));
-
-        // Create a Chat
-        card = new ChatOverstory();
-        if (this.upgraded) {
-            card.upgrade();
-        }
-        this.addToBot(new MakeTempCardInHandAction(card));
-
         // Create random food item in hand
         this.addToBot(new RandomFoodInHandAction(this.upgraded));
 
-        // Create a Stay Still!
-        card = new StayStillOverstory();
-        if (this.upgraded) {
-            card.upgrade();
-        }
-        this.addToBot(new MakeTempCardInHandAction(card));
+        // Create list of choices
+        ArrayList<AbstractCard> cardChoices = new ArrayList<AbstractCard>();
+        cardChoices.add(new BeakDiveOverstory());
+        cardChoices.add(new ChatOverstory());
+        cardChoices.add(new StayStillOverstory());
 
+
+        if (this.upgraded) {
+            Iterator choices = cardChoices.iterator();
+
+            while(choices.hasNext()) {
+                AbstractCard c = (AbstractCard)choices.next();
+                c.upgrade();
+            }
+        }
+
+        // Create choice action
+        this.addToBot(new ChoiceAction(this.upgraded, cardChoices));
     }
 
     // Upgraded stats.

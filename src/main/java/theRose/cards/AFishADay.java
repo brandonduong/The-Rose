@@ -16,13 +16,13 @@ import static theRose.ModInitializer.makeCardPath;
 public class AFishADay extends AbstractDynamicCard {
 
     /*
-     * A Fish A Day: Gain !M! Artifact. At the end of this turn, lose !M! Artifact. Exhaust.
+     * A Fish A Day: Gain !M! Artifact. At the start of your next turn, lose !M! Artifact. Exhaust.
      */
 
     // TEXT DECLARATION
 
     public static final String ID = ModInitializer.makeID(AFishADay.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String IMG = makeCardPath("Fishies.png");
 
     // /TEXT DECLARATION/
 
@@ -35,8 +35,8 @@ public class AFishADay extends AbstractDynamicCard {
     public static final CardColor COLOR = TheRose.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int UPGRADE_COST = 0;
     private static final int BUFF = 1;
+    private static final int UPGRADE_BUFF = 1;
 
     // /STAT DECLARATION/
 
@@ -62,7 +62,7 @@ public class AFishADay extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADE_COST);
+            upgradeMagicNumber(UPGRADE_BUFF);
             initializeDescription();
         }
     }
